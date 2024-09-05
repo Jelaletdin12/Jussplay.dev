@@ -1,4 +1,4 @@
-import { useGSAP } from "@gsap/react";
+//import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
@@ -145,27 +145,25 @@ function Home() {
           scrub: true,
         },
       });
-	  
-      heroAnim.to("#heroText1", { x: -400, opacity: 0 });
-      heroAnim.to("#heroText2", { x: 400, opacity: 0 }, "<");
+      heroAnim.to("#heroText1", { x: -300, opacity: 0 });
+      heroAnim.to("#heroText2", { x: 300, opacity: 0 }, "<");
       heroAnim.to("#logoLottie", { y: -400 }, "<");
       heroAnim.to("#about", { y: -450, opacity: 1 }, "<");
-
-      gsap.fromTo(
-        "#about",
-        { y: -450, opacity: 0 },
-        {
-          scrollTrigger: {
-            trigger: "#about",
-            start: "top bottom",
-            end: "top top",
-            scrub: true,
-			      immediateRender: false,
-          },
-          y: 0,
-          opacity: 0,
-        }
-      );
+      // gsap.fromTo(
+      //   "#about",
+      //   { y: -450, opacity: 0 },
+      //   {
+      //     scrollTrigger: {
+      //       trigger: "#about",
+      //       start: "top bottom",
+      //       end: "top top",
+      //       scrub: true,
+			//       immediateRender: false,
+      //     },
+      //     y: 0,
+      //     opacity: 0,
+      //   }
+      // );
     });
 
     return () => {
@@ -221,7 +219,7 @@ function Home() {
               id="heroText2"
               className={styles.main_heroSection_motto_lowerText}
             >
-              we will make itt
+              we will make it
             </div>
           </h1>
         </div>
@@ -229,6 +227,7 @@ function Home() {
           className={
             styles.main_intro + " " + (flag && styles.main_intro_onhover)
           }
+          style={{opacity: 0}}
           id="about"
         >
           {" "}
