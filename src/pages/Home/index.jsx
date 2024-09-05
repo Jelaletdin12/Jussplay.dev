@@ -255,7 +255,7 @@ function Home() {
       <section
         className={styles.main_work}
         id="projects"
-        style={{ marginTop: "100vh" }}
+        // style={{ marginTop: "100vh" }}
       >
         <h2>
           Selected Projects
