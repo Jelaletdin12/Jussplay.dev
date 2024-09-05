@@ -141,7 +141,7 @@ function Home() {
         scrollTrigger: {
           trigger: "#hero",
           start: "top top",
-          end: "bottom top",
+          end: "+=700",
           scrub: true,
         },
       });
