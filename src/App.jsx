@@ -8,7 +8,7 @@ import { NotFoundPage } from './pages/Error/NotFoundPage'
 import play from './assets/play.png'
 import pause from './assets/pause.png'
 import playing from './assets/playing.png'
-//import CustomScroll from './components/scroll/CustomScroll'
+// import CustomScroll from './components/scroll/CustomScroll'
 
 const Home = lazy(() => import('./pages/Home'))
 const Loader = lazy(() => import('./pages/Loader'))

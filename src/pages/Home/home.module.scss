@@ -6,17 +6,18 @@
     //width: 100%;
     padding-left: 45px;
     // padding-top: 100px;
-    // position: sticky;
-    // position: -webkit-sticky;
-    // top: 0;
-    // left: 0;
-    // z-index: 1;
+    position: sticky;
+    position: -webkit-sticky;
+    left: 0;
+    z-index: 1;
     margin-bottom: 60px;
+    width: 100%;
     //will-change: transform;
 
-    // -webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	  // animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	  animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     
+
     &_motto {
       color: $white;
       font-size: 58px;

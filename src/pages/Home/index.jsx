@@ -1,4 +1,4 @@
-//import { useGSAP } from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
@@ -94,18 +94,6 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    const heroAnim = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#hero",
-        start: "top top",
-        end: "+=700",
-        scrub: true,
-      },
-    });
-    heroAnim.to("#heroText1", { x: -300, opacity: 0 });
-    heroAnim.to("#heroText2", { x: 300, opacity: 0 }, "<");
-    heroAnim.to("#logoLottie", { y: -400 }, "<");
-    heroAnim.to("#about", { y: -450, opacity: 1 }, "<");
     // const handleScroll = () => {
     //   if (window.scrollY > 790) {
     //     setFlag(true);
@@ -149,28 +137,47 @@ function Home() {
     // });
 
     // mm.add("(max-width: 520px)", () => {
-     
-    //   gsap.fromTo(
-    //     "#about",
-    //     { y: -450, opacity: 0 },
-    //     {
-    //       scrollTrigger: {
-    //         trigger: "#about",
-    //         start: "top bottom",
-    //         end: "top top",
-    //         scrub: true,
-		// 	      immediateRender: false,
-    //       },
-    //       y: 0,
-    //       opacity: 0,
-    //     }
-    //   );
+      // const heroAnim = gsap.timeline({
+  
+      // });
+	  
+      // heroAnim.to("#heroText1", { x: -300, opacity: 0 });
+      // heroAnim.to("#heroText2", { x: 300, opacity: 0 }, "<");
+      // heroAnim.to("#logoLottie", { y: -400 }, "<");
+
+
+      // gsap.fromTo(
+      //   "#about",
+      //   { y: -450, opacity: 0 },
+      //   {
+      //     scrollTrigger: {
+      //       trigger: "#about",
+      //       start: "top bottom",
+      //       end: "top top",
+      //       scrub: true,
+			//       immediateRender: false,
+      //     },
+      //     y: 0,
+      //     opacity: 0,
+      //   }
+      // );
     // });
 
     // return () => {
     //   window.removeEventListener("scroll", handleScroll);
     //   mm.revert();
     // };
+
+    gsap.to("#about", { 
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top top",
+        end: "+=520",
+        scrub: true
+      },
+      y: -450, 
+      opacity: 1 
+    });
   }, []);
   return (
     <main className={styles.main} ref={container}>
@@ -178,6 +185,7 @@ function Home() {
       <section
         className={styles.main_heroSection}
         id="hero"
+        style={{ top: "0" }}
       >
         <div className="gradient-bg">
           <svg xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +227,7 @@ function Home() {
               id="heroText2"
               className={styles.main_heroSection_motto_lowerText}
             >
-              we will make it
+              we will make itt
             </div>
           </h1>
         </div>
@@ -227,7 +235,6 @@ function Home() {
           className={
             styles.main_intro + " " + (flag && styles.main_intro_onhover)
           }
-          style={{opacity: 0}}
           id="about"
         >
           {" "}
@@ -255,7 +262,7 @@ function Home() {
       <section
         className={styles.main_work}
         id="projects"
-        // style={{ marginTop: "100vh" }}
+        style={{ marginTop: "700px" }}
       >
         <h2>
           Selected Projects
