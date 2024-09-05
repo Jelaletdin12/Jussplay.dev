@@ -145,10 +145,12 @@ function Home() {
           scrub: true,
         },
       });
+	  
       heroAnim.to("#heroText1", { x: -400, opacity: 0 });
       heroAnim.to("#heroText2", { x: 400, opacity: 0 }, "<");
       heroAnim.to("#logoLottie", { y: -400 }, "<");
       heroAnim.to("#about", { y: -450, opacity: 1 }, "<");
+
       gsap.fromTo(
         "#about",
         { y: -450, opacity: 0 },
@@ -158,7 +160,7 @@ function Home() {
             start: "top bottom",
             end: "top top",
             scrub: true,
-			immediateRender: false
+			      immediateRender: false,
           },
           y: 0,
           opacity: 0,
