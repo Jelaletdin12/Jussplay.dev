@@ -178,7 +178,6 @@ function Home() {
       <section
         className={styles.main_heroSection}
         id="hero"
-        style={{ top: "0" }}
       >
         <div className="gradient-bg">
           <svg xmlns="http://www.w3.org/2000/svg">
@@ -256,7 +255,7 @@ function Home() {
       <section
         className={styles.main_work}
         id="projects"
-        style={{ marginTop: "700px" }}
+        style={{ marginTop: "100vh" }}
       >
         <h2>
           Selected Projects
