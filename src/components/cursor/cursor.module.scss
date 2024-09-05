@@ -1,0 +1,25 @@
+// src/CustomCursor.module.scss
+body {
+    cursor: none; /* Hide the default cursor */
+  }
+  
+  .customCursor {
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+    position: absolute;
+    padding: 0.3rem;
+    background-color: #fff;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    @media screen and (max-width:720px){
+      display: none;
+    }
+  }
+  
+  .hover {
+    transform: scale(1.5);
+  }
+  

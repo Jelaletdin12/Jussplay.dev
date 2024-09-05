@@ -1,0 +1,220 @@
+@import "../../constants/colors.scss";
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 0;
+  position: relative;
+  z-index: 5;
+  font-family: 'Space Grotesk';
+  
+  &_logo {
+    color: $white;
+    margin-left: 30px;
+    height: 100px;
+    width: 100px;
+  }
+  &_nav {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid $white;
+    border-right: none;
+    padding: 10px 22px;
+    right: 0;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      li {
+        position: relative;
+        color: $inactiveGray;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        text-transform: uppercase;
+        transition: all 0.2s;
+        & a:hover {
+          color: $white;
+        }
+
+        @media screen and (max-width: 900px) {
+          & {
+            font-size: 16px;
+          }
+        }
+      }
+      
+    }
+
+    @media screen and (max-width: 768px) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  &_menuBtn {
+    color: $white;
+    margin-right: 30px;
+    border: 1px solid $white;
+    padding: 6px 16px;
+    text-transform: uppercase;
+    border-radius: 20px;
+
+    transition: all 0.2s;
+    font-family: SGrotReg, sans-serif;
+    font-size: 22px;
+    display: none;
+    &:hover {
+      background-color: $white;
+      color: #191919;
+    }
+
+    @media screen and (max-width: 768px) {
+      & {
+        display: initial;
+      }
+    }
+  }
+
+  &_menu_inactive {
+    position: fixed;
+    left: 0;
+    top: -100%;
+    background: linear-gradient(to left top, #272727, #383838);
+    height: 100vh;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    // animation: disappearToTop 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+    display: none;
+  }
+
+  &_menu_active {
+    position: fixed;
+    left: 0%;
+    top: 0;
+    background: linear-gradient(to left top, #272727, #383838);
+    height: 100vh;
+    z-index: 500;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    // animation: appearFromTop 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+    width: 100%;
+  }
+
+  &_menu {
+    &_diagonal {
+      background-color: #191919;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+
+      // transform: rotate(-30deg) ;
+
+      li {
+        font-family: SGrotReg, sans-serif;
+        font-size: 38px;
+        font-weight: 400;
+        line-height: 57.92px;
+        text-align: center;
+        color: $white;
+        transition: all 0.2s;
+        text-transform: uppercase;
+
+        // transform: rotate(30deg) translate(-500px);
+        // animation: appearFromTopLetters 1s cubic-bezier(0.77, 0, 0.175, 1) 0.4s forwards;
+        margin: 70px 0;
+        & a:hover {
+          opacity: 0.8;
+        }
+        & a {
+          color: $white;
+        }
+      }
+    }
+
+    &_close {
+      position: absolute;
+      color: $white;
+      right: 6%;
+      top: 3%;
+      font-size: 60px;
+
+      transition: all 0.2s;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &_socials {
+      position: absolute;
+      bottom: 3%;
+      left: 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      &_icons {
+        display: flex;
+        gap: 15px;
+        color: $white;
+        font-size: 32px;
+        align-items: center;
+        a {
+          color: #fff;
+        }
+      }
+
+      &_pageLinks {
+        font-family: SGrotReg, sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// @keyframes appearFromTop {
+//   0% {
+//     top: -100%;
+//     opacity: 0;
+//   }
+//   100% {
+//     top: 0;
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// }
+
+// @keyframes disappearToTop {
+//   from {
+//     opacity: 1;
+//     top: 0;
+//   }
+//   to {
+//     top: -100%;
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes appearFromTopLetters {
+//  0%{
+//   transform: rotate(90deg) translateY(-500px);
+//   opacity: 0;
+//  }
+//  100%{
+//   transform:  rotate(90deg) translateY(0);
+//   opacity: 1;
+//  }
+// }

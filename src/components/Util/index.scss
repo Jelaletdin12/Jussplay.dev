@@ -1,0 +1,80 @@
+.wrapper {
+  //display: flex;
+  position: relative;
+
+  height: 100vh;
+
+  // all 800px elements + all 100vw elements + margins-right on all but the last element
+  width: calc((800px * 8) + ((100vw - 20px) * 3) + (10px * 10));
+
+  padding: 0px 10px;
+
+  border-bottom: 10vh white solid;
+  background-color: white;
+}
+
+.thumbnail {
+  display: inline-block;
+
+  height: 100vh;
+
+  // will become 800px in width because of the padding
+  width: 100vw;
+  color: white;
+
+  padding: 10px;
+  font-weight: 800;
+
+  border-radius: 10px;
+
+  margin-right: 10px;
+
+  opacity: 0.8;
+}
+
+.thumbnail:nth-child(3) {
+  background-color: gray;
+  margin-left: 100px;
+}
+
+.thumbnail:nth-child(4) {
+  background-color: orange;
+  margin-left: 200px;
+}
+
+.thumbnail:nth-child(5) {
+  background-color: purple;
+}
+
+.thumbnail:nth-child(6) {
+  background-color: black;
+}
+
+.thumbnail:nth-child(7) {
+  background-color: green;
+}
+
+.thumbnail:nth-child(8) {
+  background-color: darkred;
+}
+
+.thumbnail:nth-child(9) {
+  background-color: teal;
+}
+
+.thumbnail:nth-child(10) {
+  background-color: steelblue;
+}
+
+.thumbnail:nth-child(11) {
+  background-color: salmon;
+}
+
+.thumbnail:last-child {
+  margin-right: 0px;
+}
+
+.full {
+  // the second extra '-20px' on here is just related to the fake-pinning and having space to the right side, when it happens
+  width: calc(100vw - 20px - 20px);
+}

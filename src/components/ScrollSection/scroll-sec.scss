@@ -1,0 +1,262 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  @media screen and (max-width:500px) {
+    display: none;
+  }
+}
+
+// Block to animate
+.anim-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  @media screen and (max-width:520px) {
+    display: none;
+  }
+}
+
+// Pin stuff
+.pin-el {
+  display: block;
+  position: relative;
+  text-align: center;
+  background-color: #0a0a0a;
+  //margin-top: 120px;
+  z-index: 1;
+  &__chapters {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    @media screen and (max-width:500px) {
+      position: relative;
+      //uytgeden yerim
+    }
+
+    span {
+      height: 100%;
+      .text-content {
+        width: 50%;
+        height: 100%;
+        padding: 100px 30px;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 1250px) {
+          & {
+            width: 100%;
+            padding: 120px 30px;
+          }
+        }
+        @media screen and (max-width:500px){
+          padding: 30px 30px
+        }
+
+        &_sectionMotto {
+          font-family: Inter, sans-serif;
+          font-size: 32px;
+          font-weight: 700;
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff;
+          @media screen and (max-width: 1250px) {
+            & {
+              font-size: 22px;
+              font-family: SGrotBold, sans-serif;
+              text-align: left;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            & {
+              font-size: 16px;
+            }
+          }
+        }
+
+        &_sectionP,
+        &_sectionP2 {
+          font-family: Inter, sans-serif;
+          font-size: 32px;
+          font-weight: 400;
+          text-align: center;
+          margin-top: 15px;
+          text-transform: uppercase;
+          color: #ffffff;
+          @media screen and (max-width: 1250px) {
+            & {
+              font-size: 22px;
+              text-align: left;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            & {
+              font-size: 16px;
+            }
+          }
+        }
+
+        &_sectionP2 {
+          @media screen and (max-width: 1250px) {
+            & {
+              margin-top: auto;
+              text-align: right;
+            }
+          }
+        }
+
+        &_title {
+          font-family: SGrotReg, sans-serif;
+          font-size: 100px;
+          font-weight: 400;
+          text-align: center;
+          text-transform: uppercase;
+          margin-top: 15px;
+          @media screen and (max-width: 1250px) {
+            & {
+              font-size: 50px;
+              text-align: left;
+            }
+          }
+          @media screen and (max-width: 429px) {
+            & {
+              font-size: 36px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 100vh;
+  }
+
+  &__card {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 99;
+    width: 100%;
+    transform: translate(-50%, -50%);
+
+    &::before {
+      display: block;
+      padding-bottom: 100%;
+      content: "";
+    }
+  }
+
+  &__link {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 65%;
+    // z-index: 11;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+
+    
+
+    @media screen and (max-width: 1250px) {
+      & {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    img {
+      height: 550px;
+      width: 440px;
+      object-fit: cover;
+      border-radius: 10px;
+      z-index: 111;
+
+      @media screen and (max-width: 1250px) {
+        & {
+          height: 380px;
+          width: 300px;
+        }
+      }
+    }
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+  &__link2 {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    // z-index: 11;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 400ms ease-in-out;
+    padding: 15px;// uytgeden yerim
+    @media screen and (max-width:500px) {
+      display: flex;
+      img{
+        height: 310px;
+        width: 380px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+    background-color: red;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+  color: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}

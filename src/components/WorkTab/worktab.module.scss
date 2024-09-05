@@ -1,0 +1,128 @@
+@import "../../constants/colors.scss";
+
+.worktab {
+  display: flex;
+  border-right: none;
+  border-left: none;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  // z-index: 11;
+
+  &_image {
+    position: absolute;
+    top: 0;
+    width: 350px;
+    height: 190px;
+    opacity: 0;
+    transform: scale(0.4);
+    margin-top: -50px;
+    background-size: cover;
+    border-radius: 5px;
+    background-color: $backgroundBlack;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media  screen and (max-width: 520px) {
+      width: 180px;
+      height: 100px;
+    }
+  }
+  &_numberName {
+    display: flex;
+    color: $white;
+    gap: 90px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.04px;
+    &_name {
+      text-transform: uppercase;
+    }
+
+    @media screen and (max-width: 768px) {
+      & {
+        gap: 45px;
+      }
+    }
+    @media screen and (max-width: 520px) {
+      & {
+        gap: 20px;
+      }
+    }
+    @media screen and (max-width :442px) {
+      gap: 15px;
+    }
+    @media screen and (max-width :442px) {
+      font-size: 14px;
+    }
+    @media screen and (max-width :392px) {
+      gap: 6px;
+    }
+  }
+
+  &_typeLaunch {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    @media screen and (max-width: 768px) {
+      & {
+        gap: 45px;
+      }
+    }
+    @media screen and (max-width: 520px) {
+      & {
+        gap: 20px;
+      }
+    }
+    @media screen and (max-width :442px) {
+      gap: 15px;
+    }
+    @media screen and (max-width :392px) {
+      gap: 5px;
+    }
+    
+    &_type {
+      color: $white;
+      font-family: Inter, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23.04px;
+      text-transform: uppercase;
+      @media screen and (max-width :442px) {
+        font-size: 14px;
+      }
+    }
+
+    &_launch {
+      background-color: transparent;
+      border: none;
+      color: $white;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      //cursor: pointer;
+      transition: all 0.3s;
+      &_arrow {
+        background-color: $white;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px;
+        border-radius: 50%;
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        gap: 12px;
+      }
+      &:hover &_arrow {
+        margin-bottom: 2px;
+      }
+    }
+  }
+}

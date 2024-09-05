@@ -1,0 +1,142 @@
+@import "../../constants/colors.scss";
+
+.footer {
+  background-color: $footerBg;
+  padding: 45px;
+  position: relative;
+  z-index: 1;
+  &_upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      & {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+
+    &_logoContainer {
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 768px) {
+        & {
+          flex-direction: column;
+        }
+      }
+    }
+
+    &_logo {
+      width: 80px;
+      height: 80px;
+      img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+      }
+    }
+    &_motto {
+      font-family: Hell, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: -0.18000000715255737px;
+      color: $footerText;
+      display: flex;
+      flex-direction: column;
+      @media screen and (max-width: 768px) {
+        & {
+          text-align: center;
+        }
+      }
+    }
+
+    &_links {
+      display: flex;
+      gap: 45px;
+      &_col {
+        display: flex;
+        flex-direction: column;
+        &_title {
+          font-family: SGrotReg, sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          letter-spacing: 1.2000000476837158px;
+          text-align: left;
+          color: $footerLinkTitle;
+          text-transform: uppercase;
+        }
+
+        ul {
+          margin-top: 5px;
+          li {
+            font-family: Hell, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            color: $footerText;
+            text-decoration: underline;
+            transition: all 0.2s;
+           
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_lower {
+    font-family: SGrotReg, sans-serif;
+    font-size: 180px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    color: $footerText;
+    margin-top: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 1400px) {
+      & {
+        font-size: 160px;
+        text-align: center;
+      }
+    }
+    @media screen and (max-width: 1250px) {
+      & {
+        font-size: 140px;
+        text-align: center;
+      }
+    }
+    @media screen and (max-width: 1100px) {
+      & {
+        font-size: 120px;
+        text-align: center;
+      }
+    }
+    @media screen and (max-width: 950px) {
+      & {
+        font-size: 90px;
+        text-align: center;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      & {
+        font-size: 60px;
+        margin-top: 90px;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      & {
+        font-size: 40px;
+      }
+    }
+  }
+}

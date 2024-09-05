@@ -1,0 +1,116 @@
+@import "./constants/colors.scss";
+
+@font-face {
+  font-family: "SGrotReg";
+  src: url("../fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SGrotBold";
+  src: url("../public/fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SGrotLight";
+  src: url("../public/fonts/SpaceGrotesk-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/fonts/Inter-Regular.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Hell";
+  src: url("../public/fonts/HelveticaNeueLight.otf"), format("opentype");
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./assets/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+}
+
+html {
+  overflow-x: hidden;
+  @media screen and (max-width:520px) {
+    overflow-x: hidden !important;
+  }
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: $backgroundBlack;
+  font-family: SGrotReg, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $inactiveGray;
+}
+
+.swiper-slide{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  opacity: 0.3; 
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.swiper-slide-active {
+  opacity: 1; 
+  transform: scale(1.1);
+  color: #ffffff;
+}
+.swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 0.3;
+  transform: scale(0.5); 
+}
+
+.mySwiper {
+ height: 300px;
+}
+
+
+//Loader experience part
+.title-lottie {
+	font-size: 24px;
+	transition: all 0.6s ease-in-out; 
+}
+
+
+@media (max-width: 520px) {
+	.title-lottie {
+		font-size: 16px;
+	}
+  .title-lottie__anim {
+    animation: slideOut 0.6s ease-in-out forwards; 
+    font-size: 16px;
+  }
+}
+
+
+.title-lottie__anim {
+	animation: slideOut 0.6s ease-in-out forwards; 
+}
+
+
+@keyframes slideOut {
+	0% {
+		transform: translateX(0); 
+		opacity: 1; 
+	}
+	100% {
+		transform: translateX(-100%); 
+		opacity: 0; 
+	}
+}

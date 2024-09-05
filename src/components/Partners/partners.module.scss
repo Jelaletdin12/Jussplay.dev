@@ -1,0 +1,44 @@
+@import "../../constants/colors.scss";
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15vh 0 15vh 0;
+  background-color: #0a0a0a;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (max-width: 520px) {
+    padding: 15vh 0 15vh 0;
+  }
+
+  &_trustedText {
+    font-family: SGrotReg, sans-serif;
+    text-align: center;
+    color: $white;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+}
+
+.framecon{
+  width: auto;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width:520px){
+    margin-left: 5px;
+  }
+  img{
+    width: auto;
+    object-fit: contain;
+    max-width: 100%;
+    display: flex;
+    filter: grayscale(1);
+    aspect-ratio: 4/4;
+    height: 75px;
+    align-items: center;
+  }
+}
