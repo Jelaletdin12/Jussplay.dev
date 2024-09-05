@@ -56,7 +56,21 @@ function Home() {
   const interBubble = useRef();
   const [flag, setFlag] = useState(false);
 
+
+
   useEffect(() => {
+    gsap.to("#about", { 
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top top",
+        end: "+=520",
+        scrub: true
+      },
+      y: -450, 
+      opacity: 1 
+    });
+
+    
     const handleLoad = () => {
       ScrollTrigger.refresh();
     };
@@ -168,16 +182,7 @@ function Home() {
     //   mm.revert();
     // };
 
-    gsap.to("#about", { 
-      scrollTrigger: {
-        trigger: "#about",
-        start: "top top",
-        end: "+=520",
-        scrub: true
-      },
-      y: -450, 
-      opacity: 1 
-    });
+
   }, []);
   return (
     <main className={styles.main} ref={container}>
