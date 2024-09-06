@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+//import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import { FaArrowTurnDown } from "react-icons/fa6";
 import emplas from "../../assets/emplascase.png";
@@ -14,6 +14,7 @@ import WorkTab from "../../components/WorkTab";
 import transition from "../../pageTransition";
 import "./gradient.scss";
 import styles from "./home.module.scss";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -145,6 +146,7 @@ function Home() {
           scrub: true,
           invalidateOnRefresh: true,
           refreshPriority: 1,
+          markers: true,
         },
       });
 	  
