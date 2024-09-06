@@ -146,7 +146,6 @@ function Home() {
           scrub: true,
           invalidateOnRefresh: true,
           refreshPriority: 1,
-          markers: true,
         },
       });
 	  

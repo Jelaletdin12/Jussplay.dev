@@ -40,6 +40,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  @media screen and (min-width:768px){
+    cursor: none;
+  };
   //cursor: none;
 }
 

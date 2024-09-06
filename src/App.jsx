@@ -57,7 +57,7 @@ export default function App() {
 
 	return (
 		<AnimatePresence mode='wait'>
-			{/* <CustomCursor /> */}
+			<CustomCursor />
 			<audio ref={audioRef} src='/MenuSound.m4a' type='audio/mpeg' loop />
 			<div
 				style={{
