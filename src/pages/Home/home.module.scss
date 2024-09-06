@@ -36,7 +36,7 @@
       &_lowerText {
         margin-left: 750px;
         will-change: opacity;
-        // will-change: transform;
+        will-change: transform;
         // transform: translateZ(0);
         // margin-top: 30px;
       }
@@ -79,6 +79,7 @@
       flex-direction: column;
       width: 90%;
       will-change: opacity;
+      will-change: transform;
       
     }
     p {
@@ -238,7 +239,7 @@
   .heroText1{
     margin-left: 80px;
     will-change: opacity;
-    //will-change: transform;
+    will-change: transform;
     // transform: translateZ(0);
     @media screen and (max-width:520px){
       margin-left: 0;
