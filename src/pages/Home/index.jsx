@@ -57,20 +57,6 @@ function Home() {
   const [flag, setFlag] = useState(false);
 
   useEffect(() => {
-      const heroAnim = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#hero",
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-	  
-    heroAnim.to("#heroText1", { x: -300, opacity: 0 });
-    heroAnim.to("#heroText2", { x: 300, opacity: 0 }, "<");
-    heroAnim.to("#logoLottie", { y: -400 }, "<");
-    heroAnim.to("#about", { y: -450, opacity: 1 }, "<");
-
     const handleLoad = () => {
       ScrollTrigger.refresh();
     };
@@ -118,73 +104,73 @@ function Home() {
 
     window.addEventListener("scroll", handleScroll);
 
-    // const mm = gsap.matchMedia();
+    const mm = gsap.matchMedia();
 
-    // mm.add("(min-width: 521px)", () => {
-    //   const heroAnim = gsap.timeline({
-    //     scrollTrigger: {
-    //       trigger: "#hero",
-    //       start: "top top",
-    //       end: "bottom top",
-    //       scrub: true,
-    //     },
-    //   });
-    //   heroAnim.to("#heroText1", { x: -200, opacity: 0 });
-    //   heroAnim.to("#heroText2", { x: 200, opacity: 0 }, "<");
-    //   heroAnim.to("#logoLottie", { x: 300 }, "<");
-    //   heroAnim.to("#about", { y: -550, opacity: 1 }, "<");
+    mm.add("(min-width: 521px)", () => {
+      const heroAnim = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+      heroAnim.to("#heroText1", { x: -200, opacity: 0 });
+      heroAnim.to("#heroText2", { x: 200, opacity: 0 }, "<");
+      heroAnim.to("#logoLottie", { x: 300 }, "<");
+      heroAnim.to("#about", { y: -550, opacity: 1 }, "<");
 
-    //   gsap.fromTo(
-    //     "#about",
-    //     { y: -500, opacity: 0 },
-    //     {
-    //       scrollTrigger: {
-    //         trigger: "#about",
-    //         start: "top bottom",
-    //         end: "top top",
-    //         scrub: true,
-    //       },
-    //       y: 0,
-    //       opacity: 0,
-    //     }
-    //   );
-    // });
+      gsap.fromTo(
+        "#about",
+        { y: -500, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: "#about",
+            start: "top bottom",
+            end: "top top",
+            scrub: true,
+          },
+          y: 0,
+          opacity: 0,
+        }
+      );
+    });
 
-    // mm.add("(max-width: 520px)", () => {
-    //   const heroAnim = gsap.timeline({
-    //     scrollTrigger: {
-    //       trigger: "#hero",
-    //       start: "top top",
-    //       end: "bottom top",
-    //       scrub: true,
-    //     },
-    //   });
+    mm.add("(max-width: 520px)", () => {
+      const heroAnim = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
 	  
-    //   heroAnim.to("#heroText1", { x: -300, opacity: 0 });
-    //   heroAnim.to("#heroText2", { x: 300, opacity: 0 }, "<");
-    //   heroAnim.to("#logoLottie", { y: -400 }, "<");
-    //   heroAnim.to("#about", { y: -450, opacity: 1 }, "<");
+      heroAnim.to("#heroText1", { x: -300, opacity: 0 });
+      heroAnim.to("#heroText2", { x: 300, opacity: 0 }, "<");
+      heroAnim.to("#logoLottie", { y: -400 }, "<");
+      heroAnim.to("#about", { y: -450, opacity: 1 }, "<");
 
-    //   gsap.fromTo(
-    //     "#about",
-    //     { y: -450, opacity: 0 },
-    //     {
-    //       scrollTrigger: {
-    //         trigger: "#about",
-    //         start: "top bottom",
-    //         end: "top top",
-    //         scrub: true,
-		// 	      immediateRender: false,
-    //       },
-    //       y: 0,
-    //       opacity: 0,
-    //     }
-    //   );
-    // });
+      gsap.fromTo(
+        "#about",
+        { y: -450, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: "#about",
+            start: "top bottom",
+            end: "top top",
+            scrub: true,
+			      immediateRender: false,
+          },
+          y: 0,
+          opacity: 0,
+        }
+      );
+    });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      // mm.revert();
+      mm.revert();
     };
   }, []);
   return (

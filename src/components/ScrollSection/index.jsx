@@ -23,19 +23,18 @@ const ScrollSection = () => {
       const container = containerRef.current;
       const pin = pinRef.current;
       const animEl = animElRef.current;
-
+  
+      // Mevcut tüm tetikleyicileri öldür
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-
+  
       if (window.innerWidth > 500) {
         let pinActive = false;
-
+  
         ScrollTrigger.create({
           pin: pin,
           trigger: container,
           start: "top top",
-          end: `+=${
-            window.innerHeight * pin.querySelectorAll(".pin-el__link").length
-          }`,
+          end: `+=${window.innerHeight * pin.querySelectorAll(".pin-el__link").length}`,
           onToggle: (self) => {
             pinActive = self.isActive;
           },
@@ -43,14 +42,14 @@ const ScrollSection = () => {
             const progress = Number(self.progress.toFixed(3));
             const titles = pin.querySelectorAll(".pin-el__link");
             const total = titles.length;
-
+  
             titles.forEach((title, i) => {
               const oldIndex = i;
               const newIndex = oldIndex + 1;
-
+  
               if (progress > oldIndex / total && progress < newIndex / total) {
                 titles[oldIndex].classList.add("is-active");
-
+  
                 if (self.direction === 1 && oldIndex > 0) {
                   titles[oldIndex - 1].classList.remove("is-active");
                 } else if (self.direction === -1 && newIndex < titles.length) {
@@ -60,24 +59,27 @@ const ScrollSection = () => {
             });
           },
         });
-
+  
         const run = () => {
           const bounds = animEl.getBoundingClientRect();
           animEl.style.width = `${bounds.width}px`;
           animEl.style.height = `${bounds.height}px`;
           animEl.style.transform = `translate3d(0, ${bounds.top}px, 0)`;
-
+  
           window.requestAnimationFrame(run);
         };
-
+  
         run();
       }
     };
+  
     handleResize();
     window.addEventListener("resize", handleResize);
-
+  
     return () => {
       window.removeEventListener("resize", handleResize);
+  
+      // Yine tüm tetikleyicileri kaldır
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
