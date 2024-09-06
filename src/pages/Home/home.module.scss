@@ -71,12 +71,15 @@
     display: flex;
     align-items: center;
     justify-content: start;
+    opacity: 0;
     // flex-direction: column;
     width: 50%;
     // margin: 0 auto;
     @media screen and (max-width:520px) {
       flex-direction: column;
       width: 90%;
+      will-change: opacity;
+      
     }
     p {
       font-size: 25px;
@@ -126,7 +129,7 @@
     &_onhover {
       p {
         color: rgba($color: #fff, $alpha: 0.3);
-        will-change: opacity;
+        
         // will-change: transform;
         // transform: translateZ(0);
 
@@ -225,6 +228,7 @@
   justify-content: space-around;
   flex-direction: column;
   padding: 0 10vh 0 10vh;
+  
   @media screen and (max-width: 520px) {
     flex-direction: column;
     align-items: center;
