@@ -31,8 +31,10 @@ const ScrollSection = () => {
         let pinActive = false;
   
         ScrollTrigger.create({
+          scrub: true,
           pin: pin,
           trigger: container,
+          invalidateOnRefresh: true,
           start: "top top",
           end: `+=${window.innerHeight * pin.querySelectorAll(".pin-el__link").length}`,
           onToggle: (self) => {
@@ -70,6 +72,7 @@ const ScrollSection = () => {
         };
   
         run();
+        ScrollTrigger.refresh();
       }
     };
   
@@ -81,6 +84,7 @@ const ScrollSection = () => {
   
       // Yine tüm tetikleyicileri kaldır
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.refresh();
     };
   }, []);
 
