@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import "./scroll-sec.scss";
+import debounce from 'debounce';
+
 
 import game from "../../assets/game.png";
 import web from "../../assets/web.jpeg";
@@ -19,27 +21,25 @@ const ScrollSection = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = debounce(() => {
       const container = containerRef.current;
       const pin = pinRef.current;
       const animEl = animElRef.current;
   
-      // Mevcut tüm tetikleyicileri öldür
+      // Tüm ScrollTrigger'ları öldür
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   
       if (window.innerWidth > 500) {
-        let pinActive = false;
-  
+        // Masaüstü görünümü için kod burada
         ScrollTrigger.create({
           scrub: true,
           pin: pin,
           trigger: container,
           invalidateOnRefresh: true,
+          refreshPriority: 1,
+          markers: false,
           start: "top top",
           end: `+=${window.innerHeight * pin.querySelectorAll(".pin-el__link").length}`,
-          onToggle: (self) => {
-            pinActive = self.isActive;
-          },
           onUpdate: (self) => {
             const progress = Number(self.progress.toFixed(3));
             const titles = pin.querySelectorAll(".pin-el__link");
@@ -62,32 +62,49 @@ const ScrollSection = () => {
           },
         });
   
-        const run = () => {
+        const updateAnimEl = () => {
           const bounds = animEl.getBoundingClientRect();
           animEl.style.width = `${bounds.width}px`;
           animEl.style.height = `${bounds.height}px`;
           animEl.style.transform = `translate3d(0, ${bounds.top}px, 0)`;
-  
-          window.requestAnimationFrame(run);
+
+          window.requestAnimationFrame(updateAnimEl);
         };
   
-        run();
+        updateAnimEl();
         ScrollTrigger.refresh();
+      } else {
+        // Mobil görünümde işlemler
+        if (pin) {
+          pin.style.position = 'relative';
+          pin.style.height = 'auto';
+        }
+        
+        // Mobilde resimlerin boyutunu ve düzenini ayarla
+        const images = pin.querySelectorAll('.pin-el__link img');
+        images.forEach((img) => {
+          img.style.width = '100%';
+          img.style.height = 'auto';
+          img.style.objectFit = 'cover';
+        });
+  
+        // Animasyonları devre dışı bırakabilir veya daha basit animasyonlar kullanabilirsin
+        animEl.style.transform = `none`;
+        animEl.style.width = 'auto';
+        animEl.style.height = 'auto';
       }
-    };
+    }, 200);
   
     handleResize();
     window.addEventListener("resize", handleResize);
   
     return () => {
       window.removeEventListener("resize", handleResize);
-  
-      // Yine tüm tetikleyicileri kaldır
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      ScrollTrigger.refresh();
     };
   }, []);
-
+  
+  
   return (
     <>
       <div className="pin-el" ref={containerRef} id="work">
@@ -118,7 +135,7 @@ const ScrollSection = () => {
                 experiences.
               </p>
               <div className="pin-el__link2">
-                <img src={game} alt="game" />
+                <img src={game} alt="game" id="car" />
               </div>
               <p className="text-content_sectionP2">
                 our dedicated team harnesses the latest technologies to deliver

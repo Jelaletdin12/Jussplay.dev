@@ -229,6 +229,7 @@
   justify-content: space-around;
   flex-direction: column;
   padding: 0 10vh 0 10vh;
+  //overflow-x: hidden;
   
   @media screen and (max-width: 520px) {
     flex-direction: column;

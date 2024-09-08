@@ -106,7 +106,7 @@ function Home() {
     window.addEventListener("scroll", handleScroll);
 
     const mm = gsap.matchMedia();
-
+    
     mm.add("(min-width: 521px)", () => {
       const heroAnim = gsap.timeline({
         scrollTrigger: {
@@ -148,6 +148,7 @@ function Home() {
           refreshPriority: 1,
         },
       });
+   
 	  
       heroAnim.to("#heroText1", { x: -300, opacity: 0 });
       heroAnim.to("#heroText2", { x: 300, opacity: 0 }, "<");
@@ -224,7 +225,7 @@ function Home() {
               id="heroText2"
               className={styles.main_heroSection_motto_lowerText}
             >
-              we will make itt
+              we will make it
             </div>
           </h1>
         </div>

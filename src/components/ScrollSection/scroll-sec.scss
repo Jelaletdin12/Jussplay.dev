@@ -183,6 +183,7 @@ canvas {
     justify-content: center;
     opacity: 0;
     transition: opacity 400ms ease-in-out;
+    will-change: opacity;
 
     
 
@@ -230,7 +231,7 @@ canvas {
       display: flex;
       img{
         height: 310px;
-        width: 380px;
+        //width: 380px;
         object-fit: cover;
         border-radius: 10px;
       }
@@ -259,4 +260,10 @@ img {
   max-width: 100%;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 500px) {
+  .pin-el__link2 #car {
+    width: 340px !important;
+  }
 }
