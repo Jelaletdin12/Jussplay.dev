@@ -183,7 +183,7 @@ canvas {
     justify-content: center;
     opacity: 0;
     transition: opacity 400ms ease-in-out;
-    will-change: opacity;
+    will-change: opacity, transform;
 
     
 
@@ -227,6 +227,7 @@ canvas {
     opacity: 1;
     transition: opacity 400ms ease-in-out;
     padding: 15px;// uytgeden yerim
+    will-change: opacity;
     @media screen and (max-width:500px) {
       display: flex;
       img{
@@ -234,6 +235,7 @@ canvas {
         //width: 380px;
         object-fit: cover;
         border-radius: 10px;
+        will-change: opacity, transform;
       }
     }
   }

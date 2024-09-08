@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useLayoutEffect  } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -15,14 +15,14 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 const ScrollSection = () => {
   const containerRef = useRef(null);
   const pinRef = useRef(null);
-  // const animElRef = useRef(null); // Comment alındı
+  // const animElRef = useRef(null); 
   const [index, setIndex] = useState(0);
 
-  useEffect(() => {
+  useLayoutEffect (() => {
     const handleResize = debounce(() => {
       const container = containerRef.current;
       const pin = pinRef.current;
-      // const animEl = animElRef.current; // Comment alındı
+      // const animEl = animElRef.current; 
 
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 
