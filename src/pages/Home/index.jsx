@@ -106,7 +106,7 @@ function Home() {
     window.addEventListener("scroll", handleScroll);
 
     const mm = gsap.matchMedia();
-    
+
     mm.add("(min-width: 521px)", () => {
       const heroAnim = gsap.timeline({
         scrollTrigger: {
@@ -120,21 +120,6 @@ function Home() {
       heroAnim.to("#heroText2", { x: 200, opacity: 0 }, "<");
       heroAnim.to("#logoLottie", { x: 300 }, "<");
       heroAnim.to("#about", { y: -550, opacity: 1 }, "<");
-
-      // gsap.fromTo(
-      //   "#about",
-      //   { y: -500, opacity: 0 },
-      //   {
-      //     scrollTrigger: {
-      //       trigger: "#about",
-      //       start: "top bottom",
-      //       end: "top top",
-      //       scrub: true,
-      //     },
-      //     y: 0,
-      //     opacity: 0,
-      //   }
-      // );
     });
 
     mm.add("(max-width: 520px)", () => {
@@ -148,28 +133,11 @@ function Home() {
           refreshPriority: 1,
         },
       });
-   
-	  
+
       heroAnim.to("#heroText1", { x: -300, opacity: 0 });
       heroAnim.to("#heroText2", { x: 300, opacity: 0 }, "<");
       heroAnim.to("#logoLottie", { y: -400 }, "<");
       heroAnim.to("#about", { y: -450, opacity: 1 }, "<");
-
-      // gsap.fromTo(
-      //   "#about",
-      //   { y: -450, opacity: 0 },
-      //   {
-      //     scrollTrigger: {
-      //       trigger: "#about",
-      //       start: "top bottom",
-      //       end: "top top",
-      //       scrub: true,
-			//       immediateRender: false,
-      //     },
-      //     y: 0,
-      //     opacity: 0,
-      //   }
-      // );
     });
 
     return () => {
@@ -234,7 +202,6 @@ function Home() {
             styles.main_intro + " " + (flag && styles.main_intro_onhover)
           }
           id="about"
-          
         >
           {" "}
           <div>

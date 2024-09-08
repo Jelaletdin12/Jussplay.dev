@@ -106,6 +106,9 @@
       right: 20%;
       margin: 0;
     }
+    @media screen and (max-width:429px) {
+      right: 17%;
+    }
   }
 
   &.yellow {
@@ -131,8 +134,11 @@
     bottom: 5%;
     right: 40%;
     @media screen and (max-width:520px) {
-      right: 9% !important;
+      right: 6%;
       margin: 0;
+    }
+    @media screen and (max-width:429px) {
+      right: 5%;
     }
   }
 }
