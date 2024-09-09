@@ -1,0 +1,83 @@
+.service{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.up{
+    height: 100vh;
+}
+
+
+.content{
+    position: relative;
+  z-index: 1; // İçeriğin resimlerin üzerinde olmasını sağlar
+  top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    h1{
+        font-size: 58px;
+        font-weight: 400;
+        font-family: "Space Grotesk";
+    }
+}
+.bg{
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 0; // Resimlerin arka planda olmasını sağlar
+  background-color: #000;
+}
+
+button {
+    font-size: 18px;
+    border-radius: 99px;
+    border-color: transparent;
+    width: 184px;
+    height: 48px;
+    font-family: "Space Grotesk";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    @media screen and (max-width:520px){
+      font-size: 15px;
+      width: 150px;
+    }
+}
+
+.down {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   //z-index: 1;
+  }
+  
+  .canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //z-index: 0;
+  }
+  
+  #canvas {
+    background-color: black; // Canvas arka planı
+    width: 100%;
+    height: 100%;
+  }
+  
+  .head{
+    position: relative;
+    z-index: 1;
+  }

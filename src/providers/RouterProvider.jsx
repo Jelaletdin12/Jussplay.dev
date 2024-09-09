@@ -12,6 +12,7 @@ import ContactUs from '../pages/ContactUs'
 import { NotFoundPage } from '../pages/Error/NotFoundPage'
 import Home from '../pages/Home'
 import Industry from '../pages/Industry'
+import Service from '../pages/Service'
 
 const BubbleError = () => {
 	const error = useRouteError()
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
 			{
 				path: 'aboutus',
 				element: <About />,
+				errorElement: <BubbleError />,
+			},
+			{
+				path: 'service',
+				element: <Service />,
 				errorElement: <BubbleError />,
 			},
 			{
