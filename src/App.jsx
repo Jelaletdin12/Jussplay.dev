@@ -15,6 +15,7 @@ const ContactUs = lazy(() => import('./pages/ContactUs'))
 const Career = lazy(() => import('./pages/Career'))
 const Industry = lazy(() => import('./pages/Industry'))
 const About = lazy(() => import('./pages/About'))
+const Service = lazy(() => import('./pages/Service'))
 
 export default function App() {
 	const location = useLocation()
@@ -94,6 +95,7 @@ export default function App() {
 					<Route path='/career' element={<Career />} />
 					<Route path='/industry' element={<Industry />} />
 					<Route path='/aboutus' element={<About />} />
+					<Route path='/service' element={<Service />} />
 					<Route path='*' element={<NotFoundPage />} />
 					<Route path='' element={<NotFoundPage />} />
 				</Routes>
