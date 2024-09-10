@@ -44,7 +44,9 @@ export default memo(function Header() {
             onMouseLeave={handleMouseLeave}
             onClick={playSound}
           >
+            <Link to={'/service'}>
             Services
+            </Link>
             {activeDropdown === "services" && (
               <DropdownContent dropdownType="services" />
             )}
