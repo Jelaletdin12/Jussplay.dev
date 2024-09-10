@@ -1,17 +1,40 @@
-.page__error {
-	text-align: center;
-	h1 {
-		color: red;
-		font-size: 30px;
+.page {
+	&__error {
+		height: 100vh;
+		width: 100%;
 	}
-	h2 {
-		font-size: 24px;
-	}
-	p {
+	&__content {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
-		gap: 10px;
-		color: white;
-		font-size: 20px;
+		align-items: center;
+		height: 60%;
+		h1 {
+			background: linear-gradient(180deg, #4e1678 0%, #c60bc5 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			color: transparent; /* Для других браузеров */
+
+			font-size: 40px;
+		}
+		span {
+			background: linear-gradient(180deg, #4e1678 0%, #c60bc5 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			color: transparent; /* Для других браузеров */
+		}
+		h2 {
+			font-size: 24px;
+			padding: 15px 0;
+		}
+		p {
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+			color: white;
+			font-size: 20px;
+		}
 	}
 }

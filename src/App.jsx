@@ -1,13 +1,12 @@
 import { AnimatePresence } from 'framer-motion'
 import { lazy, Suspense, useCallback, useRef, useState } from 'react'
-import Lottie from 'react-lottie'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import sound from './assets/lottieSound.json'
+import pause from './assets/pause.png'
+import play from './assets/play.png'
+import playing from './assets/playing.png'
 import CustomCursor from './components/cursor'
 import { NotFoundPage } from './pages/Error/NotFoundPage'
-import play from './assets/play.png'
-import pause from './assets/pause.png'
-import playing from './assets/playing.png'
 // import CustomScroll from './components/scroll/CustomScroll'
 
 const Home = lazy(() => import('./pages/Home'))
@@ -38,7 +37,7 @@ export default function App() {
 		if (audioRef.current) {
 			if (isPlaying) {
 				audioRef.current.pause()
-				setIsPaused(true) 
+				setIsPaused(true)
 			} else {
 				audioRef.current.play()
 				setIsPaused(false)
@@ -80,9 +79,13 @@ export default function App() {
 						For Better Experience Please Turn On Sound
 					</h1>
 				)}
-				{!isPlaying && !isPaused && <img src={play} alt="Play" style={{width: '40px'}} />}
-				{isPlaying && !isPaused && <img src={playing} style={{width: '40px'}} alt="Playing" />}
-				{isPaused && <img src={pause} alt="Pause" style={{width: '40px'}} />}
+				{!isPlaying && !isPaused && (
+					<img src={play} alt='Play' style={{ width: '40px' }} />
+				)}
+				{isPlaying && !isPaused && (
+					<img src={playing} style={{ width: '40px' }} alt='Playing' />
+				)}
+				{isPaused && <img src={pause} alt='Pause' style={{ width: '40px' }} />}
 			</div>
 			<Suspense fallback={<div>Loading...</div>}>
 				<Routes location={location} key={location.pathname}>
