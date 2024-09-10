@@ -36,16 +36,20 @@
 }
 
 button {
-    font-size: 18px;
-    border-radius: 99px;
-    border-color: transparent;
-    width: 184px;
-    height: 48px;
-    font-family: "Space Grotesk";
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 18px;
+  width: 176px;
+  border-radius: 99px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:hover {
+    background-color: white;
+    color: black;}
     @media screen and (max-width:520px){
       font-size: 15px;
       width: 150px;
@@ -68,7 +72,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    //z-index: 0;
+    z-index: 0;
   }
   
   #canvas {
@@ -76,8 +80,25 @@ button {
     width: 100%;
     height: 100%;
   }
-  
-  .head{
+  head{
+    //position: relative;
+    //z-index: 1;
+  }
+
+  .start{
     position: relative;
+    color: #ffffff;
+    font-size: 36px;
+    top: -250px;
+    left: -450px;
     z-index: 1;
   }
+  .choose{
+    position: relative;
+    z-index: 1;
+    font-size: 36px;
+    color: #ffffff;
+    top: -150px;
+    right: -400px
+  }
+  
