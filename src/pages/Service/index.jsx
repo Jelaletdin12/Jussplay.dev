@@ -8,6 +8,8 @@ import { HashLink } from "react-router-hash-link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ParticleComponent from './particle'
+import bg3 from '../../assets/bg3.png';
+import bg4 from '../../assets/bg4.png';
 
 const Service = () => {
 
@@ -21,17 +23,16 @@ const Service = () => {
 
   return (
     <>
-  
         <Header />
     <section className={styles.service}>
       <div className={styles.up}>
         <div className={styles.bg}>
           <img src={left} alt="left image" />
           <img src={right} alt="right image" />
+        </div>
           <header className={styles.header}>
         <h1 className={styles.title}>Implement your <br /> ideas with Jussplay.dev</h1>
       </header>
-        </div>
         <div className={styles.content}>
           <HashLink to={"#startJourney"} smooth>
             <button className={styles.button}>
@@ -41,9 +42,12 @@ const Service = () => {
         </div>
       </div>
       
-      <div className={styles.pageContainer}>
+      <div className={styles.pageContainer} id="startJourney">
       <section className={styles.journeySection}>
-        <h2>Start your journey with us</h2>
+        <h2>Start your journey <br /> with us</h2>
+      </section>
+       <section className={styles.chooseSection} style={{position: 'relative', zIndex:'1', top:'250px', left: '85%'}}>
+        <h2 className={styles.sectionTitle} >Just choose <br /> what you need</h2>
       </section>
       <section className={styles.servicesSection}>
         <h2 className={styles.sectionTitle}>Our services</h2>
@@ -123,14 +127,12 @@ const Service = () => {
           />
         </div>
         <div className={styles.canvas}>
+          <img src={bg3} alt="" />
+          {/* <img src={bg4} alt="" /> */}
           {/* <CanvasAnimation /> */}
           {/* <ParticleComponent/> */}
         </div>
       </section>
-      <section className={styles.chooseSection}>
-        <h2 className={styles.sectionTitle}>Just choose what you need</h2>
-      </section>
-        
     </div>
     </section>
     <Footer />
