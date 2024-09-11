@@ -125,9 +125,10 @@ head {
 
 .header {
   text-align: center;
-  margin: 20px 0;
+  //margin: 20px 0;
+  top: 150px;
   z-index: 1;
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,15 +138,12 @@ head {
   font-size: 56px;
   //font-weight: bold;
   color: #fff;
-  top: 100px;
-  position: relative;
-  left: 480px;
 }
 
 .journeySection {
-  text-align: left;
-  margin-left: 10%;
-  margin-top: 50px;
+  position: relative;
+  top: 140px;
+  left: 150px;
 
   h2 {
     font-size: 1.5rem;
@@ -160,82 +158,89 @@ head {
   justify-content: center;
   gap: 70px;
 
-  .sectionTitle {
-    font-size: 1.8rem;
-    color: #fff;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .servicesList {
+  .servicesSection {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    position: relative;
-    z-index: 1;
-    flex-direction: column;
-  }
-}
+    justify-content: center;
+    gap: 70px;
 
-.serviceCard {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
+    .sectionTitle {
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
 
-  .serviceTitle {
-    font-size: 1.2rem;
-    color: #f5f5f5;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 20px;
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 2px;
-      background-color: rgba(153, 69, 255, 1);
+    .servicesList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+      flex-direction: column;
     }
   }
 
-  p {
-    color: #ddd;
-  }
+  .serviceCard {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
 
-  .serviceDetails {
-    font-size: 0.9rem;
-    color: #aaa;
-    margin-top: 10px;
-    text-transform: uppercase;
-  }
-
-  .serviceDescription,
-  .serviceDetails {
-    color: #ddd;
-    margin-left: 15px;
-    position: relative;
-
-    &::before {
-      content: "•";
-      position: absolute;
-      left: -10px;
-      color: #fff;
+    .serviceTitle {
+      font-size: 1.2rem;
+      color: #f5f5f5;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background-color: rgba(153, 69, 255, 1);
+      }
     }
-  }
 
-  .chooseSection {
-    text-align: right;
-    margin-right: 10%;
-    margin-top: 50px;
-    position: relative;
-    z-index: 1;
+    p {
+      color: #ddd;
+    }
 
-    h2 {
-      font-size: 1.5rem;
-      color: #fff;
+    .serviceDetails {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    .serviceDescription,
+    .serviceDetails {
+      color: #ddd;
+      margin-left: 15px;
+      position: relative;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: -10px;
+        color: #fff;
+      }
+    }
+
+    .chooseSection {
+      text-align: right;
+      margin-right: 10%;
+      margin-top: 50px;
+      position: relative;
+      z-index: 1;
+      color: red;
+
+      h2 {
+        font-size: 1.5rem;
+        color: #fff;
+      }
     }
   }
 }

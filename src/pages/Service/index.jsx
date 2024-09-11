@@ -1,6 +1,4 @@
 /* eslint-disable react/prop-types */
-import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
 import { IoIosArrowForward } from 'react-icons/io'
 import { HashLink } from 'react-router-hash-link'
 import right from '../../assets/img1.png'
@@ -9,6 +7,9 @@ import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import transition from '../../pageTransition'
 import styles from './service.module.scss'
+import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+
 const Service = () => {
 	const [isAnimatingBg, setIsAnimatingBg] = useState(false)
 	const ServiceCard = ({ title, description, details }) => (
