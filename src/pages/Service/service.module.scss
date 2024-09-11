@@ -158,89 +158,83 @@ head {
   justify-content: center;
   gap: 70px;
 
-  .servicesSection {
+  .sectionTitle {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .servicesList {
     display: flex;
-    justify-content: center;
-    gap: 70px;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+  }
+}
 
-    .sectionTitle {
-      font-size: 1.8rem;
-      color: #fff;
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 1;
-    }
+.serviceCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
 
-    .servicesList {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      position: relative;
-      z-index: 1;
-      flex-direction: column;
+  .serviceTitle {
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background-color: rgba(153, 69, 255, 1);
     }
   }
 
-  .serviceCard {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
+  p {
+    color: #ddd;
+  }
 
-    .serviceTitle {
-      font-size: 1.2rem;
-      color: #f5f5f5;
-      margin-bottom: 10px;
-      position: relative;
-      padding-left: 20px;
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 2px;
-        background-color: rgba(153, 69, 255, 1);
-      }
+  .serviceDetails {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+
+  .serviceDescription,
+  .serviceDetails {
+    color: #ddd;
+    margin-left: 15px;
+    position: relative;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: -10px;
+      color: #fff;
     }
+  }
 
-    p {
-      color: #ddd;
-    }
+  .chooseSection {
+    text-align: right;
+    margin-right: 10%;
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+    color: red;
 
-    .serviceDetails {
-      font-size: 0.9rem;
-      color: #aaa;
-      margin-top: 10px;
-      text-transform: uppercase;
-    }
-
-    .serviceDescription,
-    .serviceDetails {
-      color: #ddd;
-      margin-left: 15px;
-      position: relative;
-
-      &::before {
-        content: "•";
-        position: absolute;
-        left: -10px;
-        color: #fff;
-      }
-    }
-
-    .chooseSection {
-      text-align: right;
-      margin-right: 10%;
-      margin-top: 50px;
-      position: relative;
-      z-index: 1;
-      color: red;
-
-      h2 {
-        font-size: 1.5rem;
-        color: #fff;
-      }
+    h2 {
+      font-size: 1.5rem;
+      color: #fff;
     }
   }
 }

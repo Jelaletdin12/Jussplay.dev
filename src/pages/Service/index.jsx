@@ -1,17 +1,14 @@
-/* eslint-disable react/prop-types */
 import { IoIosArrowForward } from 'react-icons/io'
 import { HashLink } from 'react-router-hash-link'
+import bg3 from '../../assets/bg3.png'
 import right from '../../assets/img1.png'
 import left from '../../assets/img2.png'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import transition from '../../pageTransition'
 import styles from './service.module.scss'
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 
 const Service = () => {
-	const [isAnimatingBg, setIsAnimatingBg] = useState(false)
 	const ServiceCard = ({ title, description, details }) => (
 		<div className={styles.serviceCard}>
 			<h3 className={styles.serviceTitle}>{title}</h3>
@@ -20,42 +17,20 @@ const Service = () => {
 		</div>
 	)
 
-	useEffect(() => {
-		setTimeout(() => {
-			setIsAnimatingBg(true)
-		}, 100)
-	}, [])
-
 	return (
 		<>
 			<Header />
 			<section className={styles.service}>
 				<div className={styles.up}>
 					<div className={styles.bg}>
-						<motion.img
-							initial={{ opacity: 0, scale: 0, y: '-100vh', x: '-100vh' }}
-							animate={
-								isAnimatingBg ? { opacity: 1, scale: 1, y: 0, x: 0 } : {}
-							}
-							transition={{ duration: 0.9, ease: 'easeInOut' }}
-							src={left}
-							alt='left image'
-						/>
-						<motion.img
-							initial={{ opacity: 0, scale: 0, y: '-100vh', x: '100vh' }}
-							animate={
-								isAnimatingBg ? { opacity: 2, scale: 1, y: 0, x: 0 } : {}
-							}
-							transition={{ duration: 1, ease: 'easeInOut' }}
-							src={right}
-							alt='right image'
-						/>
-						<header className={styles.header}>
-							<h1 className={styles.title}>
-								Implement your <br /> ideas with Jussplay.dev
-							</h1>
-						</header>
+						<img src={left} alt='left image' />
+						<img src={right} alt='right image' />
 					</div>
+					<header className={styles.header}>
+						<h1 className={styles.title}>
+							Implement your <br /> ideas with Jussplay.dev
+						</h1>
+					</header>
 					<div className={styles.content}>
 						<HashLink to={'#startJourney'} smooth>
 							<button className={styles.button}>
@@ -65,9 +40,24 @@ const Service = () => {
 					</div>
 				</div>
 
-				<div className={styles.pageContainer}>
+				<div className={styles.pageContainer} id='startJourney'>
 					<section className={styles.journeySection}>
-						<h2>Start your journey with us</h2>
+						<h2>
+							Start your journey <br /> with us
+						</h2>
+					</section>
+					<section
+						className={styles.chooseSection}
+						style={{
+							position: 'relative',
+							zIndex: '1',
+							top: '250px',
+							left: '85%',
+						}}
+					>
+						<h2 className={styles.sectionTitle}>
+							Just choose <br /> what you need
+						</h2>
 					</section>
 					<section className={styles.servicesSection}>
 						<h2 className={styles.sectionTitle}>Our services</h2>
@@ -147,12 +137,11 @@ const Service = () => {
 							/>
 						</div>
 						<div className={styles.canvas}>
+							<img src={bg3} alt='' />
+							{/* <img src={bg4} alt="" /> */}
 							{/* <CanvasAnimation /> */}
 							{/* <ParticleComponent/> */}
 						</div>
-					</section>
-					<section className={styles.chooseSection}>
-						<h2 className={styles.sectionTitle}>Just choose what you need</h2>
 					</section>
 				</div>
 			</section>
