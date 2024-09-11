@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { IoIosArrowForward } from 'react-icons/io'
 import { HashLink } from 'react-router-hash-link'
 import bg3 from '../../assets/bg3.png'
@@ -7,8 +10,10 @@ import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import transition from '../../pageTransition'
 import styles from './service.module.scss'
+// import bg4 from '../../assets/bg4.png';
 
 const Service = () => {
+	const [isAnimatingBg, setIsAnimatingBg] = useState(false)
 	const ServiceCard = ({ title, description, details }) => (
 		<div className={styles.serviceCard}>
 			<h3 className={styles.serviceTitle}>{title}</h3>
@@ -17,14 +22,36 @@ const Service = () => {
 		</div>
 	)
 
+	useEffect(() => {
+		setTimeout(() => {
+			setIsAnimatingBg(true)
+		}, 500)
+	}, [])
+
 	return (
 		<>
 			<Header />
 			<section className={styles.service}>
 				<div className={styles.up}>
 					<div className={styles.bg}>
-						<img src={left} alt='left image' />
-						<img src={right} alt='right image' />
+						<motion.img
+							initial={{ opacity: 0, scale: 0, y: '-100vh', x: '-100vh' }}
+							animate={
+								isAnimatingBg ? { opacity: 2, scale: 1, y: 0, x: 0 } : {}
+							}
+							transition={{ duration: 1, ease: 'easeInOut' }}
+							src={left}
+							alt='left image'
+						/>
+						<motion.img
+							initial={{ opacity: 0, scale: 0, y: '-100vh', x: '100vh' }}
+							animate={
+								isAnimatingBg ? { opacity: 2, scale: 1, y: 0, x: 0 } : {}
+							}
+							transition={{ duration: 1, ease: 'easeInOut' }}
+							src={right}
+							alt='right image'
+						/>
 					</div>
 					<header className={styles.header}>
 						<h1 className={styles.title}>
