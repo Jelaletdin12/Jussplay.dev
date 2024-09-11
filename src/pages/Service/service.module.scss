@@ -1,3 +1,16 @@
+// Animation BG-top
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 .service {
   // display: flex;
   // flex-direction: column;
@@ -35,7 +48,6 @@
   z-index: 0;
   background-color: #000;
 }
-
 button {
   background-color: transparent;
   color: white;

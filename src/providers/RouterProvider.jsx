@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom'
 import App from '../App'
 import About from '../pages/About'
+import Blockchain from '../pages/Blockchain'
 import Career from '../pages/Career'
 import ContactUs from '../pages/ContactUs'
 import { NotFoundPage } from '../pages/Error/NotFoundPage'
@@ -54,6 +55,11 @@ const router = createBrowserRouter([
 			{
 				path: 'service',
 				element: <Service />,
+				errorElement: <BubbleError />,
+			},
+			{
+				path: 'blockchain',
+				element: <Blockchain />,
 				errorElement: <BubbleError />,
 			},
 			{

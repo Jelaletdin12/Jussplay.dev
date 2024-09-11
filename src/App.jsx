@@ -6,6 +6,7 @@ import pause from './assets/pause.png'
 import play from './assets/play.png'
 import playing from './assets/playing.png'
 import CustomCursor from './components/cursor'
+import Blockchain from './pages/Blockchain'
 import { NotFoundPage } from './pages/Error/NotFoundPage'
 // import CustomScroll from './components/scroll/CustomScroll'
 
@@ -96,6 +97,7 @@ export default function App() {
 					<Route path='/industry' element={<Industry />} />
 					<Route path='/aboutus' element={<About />} />
 					<Route path='/service' element={<Service />} />
+					<Route path='/blockchain' element={<Blockchain />} />
 					<Route path='*' element={<NotFoundPage />} />
 					<Route path='' element={<NotFoundPage />} />
 				</Routes>
