@@ -10,6 +10,7 @@ import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import transition from '../../pageTransition'
 import styles from './service.module.scss'
+import bg from "../../assets/backg.png"
 // import bg4 from '../../assets/bg4.png';
 
 const Service = () => {
@@ -164,7 +165,7 @@ const Service = () => {
 							/>
 						</div>
 						<div className={styles.canvas}>
-							<img src={bg3} alt='' />
+							<img src={bg} alt='' />
 							{/* <img src={bg4} alt="" /> */}
 							{/* <CanvasAnimation /> */}
 							{/* <ParticleComponent/> */}

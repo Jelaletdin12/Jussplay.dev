@@ -107,7 +107,7 @@ head {
 .pageContainer {
   background-color: #000;
   color: white;
-  font-family: "Arial", sans-serif;
+  font-family: "Space Grotesk";
   position: relative;
 }
 
@@ -145,6 +145,8 @@ head {
   display: flex;
   justify-content: center;
   gap: 70px;
+  margin-top: 300px;
+  padding-bottom: 15px;
 
   .sectionTitle {
     font-size: 1.8rem;
