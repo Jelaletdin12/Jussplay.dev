@@ -10,6 +10,7 @@ import Footer from "../../components/Footer";
 import ParticleComponent from './particle'
 import bg3 from '../../assets/bg3.png';
 import bg4 from '../../assets/bg4.png';
+import bg from '../../assets/backg.png';
 
 const Service = () => {
 
@@ -127,7 +128,7 @@ const Service = () => {
           />
         </div>
         <div className={styles.canvas}>
-          <img src={bg3} alt="" />
+          <img src={bg} alt="" />
           {/* <img src={bg4} alt="" /> */}
           {/* <CanvasAnimation /> */}
           {/* <ParticleComponent/> */}
