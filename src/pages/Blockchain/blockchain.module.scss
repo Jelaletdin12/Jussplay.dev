@@ -1,3 +1,265 @@
+@import "../../constants/colors.scss";
+
 .page__blockchain {
+	background-color: #111;
 	color: #fff;
+	min-height: 100vh;
+	position: relative;
+}
+
+.bgImg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 750px;
+	border-radius: 0px, 0px, 65px, 65px;
+}
+
+.headerBlockchain {
+	position: relative;
+	z-index: 50;
+	padding: 50px 0 0 0;
+}
+
+.blockchainContainer {
+	max-width: 1620px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+.headerBlockchainRow {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// Title
+.headerTitle {
+	max-width: 777px;
+	h1 {
+		font-weight: 400;
+		font-size: 58px;
+
+		/* line-height: 58px; */
+		line-height: 0.99862;
+		color: #fff;
+	}
+	p {
+		font-weight: 400;
+		font-size: 20px;
+		max-width: 640px;
+
+		/* line-height: 25px; */
+		line-height: 1.25;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 38px 0 55px 0;
+		span {
+			display: block;
+			margin: 20px 0 0 0;
+		}
+	}
+}
+
+.blockchainBtn {
+	background-color: transparent;
+	color: white;
+	border: 1px solid white;
+	padding: 10px 20px;
+	font-size: 18px;
+	width: 176px;
+	border-radius: 99px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&:hover {
+		background-color: white;
+		color: black;
+	}
+}
+
+// Form
+.blockchainForm {
+	background-color: #fff;
+	border-radius: 10px;
+}
+.form {
+	padding: 59px 53px 42px 46px;
+}
+.formTitle {
+	font-weight: 500;
+	font-size: 28px;
+	color: #000;
+	margin: 0 0 50px 0;
+}
+
+// Input
+
+@mixin input {
+	border: none;
+	border-bottom: 1px solid #8d8d8d;
+	outline: none;
+	font-size: 12px;
+	color: #888;
+	font-family: MontReg, MontR, sans-serif;
+	padding: 14px 0 5px 0;
+	background-color: transparent;
+	width: 85%;
+}
+
+.inputCol label {
+	position: relative;
+	width: 100%;
+	display: block;
+	margin: 50px 0 0 0;
+}
+
+.inputCol input {
+	@include input;
+}
+
+.inputColMessage input {
+	@include input;
+	width: 500px;
+}
+
+.inputColMessage label {
+	position: relative;
+	width: 100%;
+	display: block;
+	margin: 50px 0 0 0;
+}
+
+.inputColMessage textarea {
+	resize: none;
+	overflow-y: hidden;
+	@include input;
+}
+
+.inputCol textarea {
+	resize: none;
+	overflow-y: hidden;
+	@include input;
+}
+
+.placeholder {
+	color: $backgroundBlack;
+	font-family: SGrotReg, sans-serif;
+
+	font-size: 18px;
+	position: absolute;
+	text-align: start;
+	top: -0.8em;
+	left: 0;
+	transition: all ease-in-out 0.3s;
+}
+
+.placeholderActive {
+	transform: scale(0.8571) translateY(-1.7rem);
+	left: -4px;
+	color: $backgroundBlack;
+}
+.placeholderActivePhone {
+	transform: scale(0.8571) translateY(-1.7rem);
+	left: -20px;
+	color: $backgroundBlack;
+}
+.placeholderActiveArea {
+	transform: scale(0.8571) translateY(-1.9rem);
+	left: -5px;
+	color: $backgroundBlack;
+}
+
+// Flip BTN
+
+$speed: 0.3s;
+
+.btnForm {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	margin: 30px 0 0 0;
+}
+
+.btnFlipBlockchain {
+	opacity: 1;
+	outline: 0;
+
+	line-height: 40px;
+	position: relative;
+	text-align: center;
+	letter-spacing: 1px;
+	display: inline-block;
+	text-decoration: none;
+	font-family: SGrotReg, sans-serif;
+	text-transform: uppercase;
+	border-radius: 50px;
+	font-size: 14px;
+	// cursor: pointer;
+	font-weight: 400;
+
+	@media screen and (max-width: 900px) {
+		& {
+			border-radius: 10px;
+			width: 100%;
+		}
+	}
+
+	&:hover {
+		&:after {
+			opacity: 1;
+			transform: translateY(0) rotateX(0);
+		}
+
+		&:before {
+			opacity: 0;
+			transform: translateY(-50%) rotateX(-90deg);
+		}
+	}
+
+	&:after {
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		display: block;
+		transition: $speed;
+		position: absolute;
+		content: attr(data-back);
+		transform: translateY(50%) rotateX(-90deg);
+		padding: 10px 0;
+	}
+
+	&:before {
+		top: 0;
+		left: 0;
+		opacity: 1;
+		display: block;
+		padding: 5px 30px;
+		line-height: 40px;
+		transition: $speed;
+		position: relative;
+		content: attr(data-front);
+		transform: translateY(0) rotateX(0);
+	}
+}
+
+// Content
+.sectionContent {
+	margin: 250px 0 779px 0;
+}
+
+.contentTitle {
+	margin: 175px auto;
+	h1 {
+		font-weight: 400;
+		font-size: 58px;
+		max-width: 90%;
+
+		/* line-height: 58px; */
+		line-height: 0.99862;
+		color: #fff;
+	}
 }
