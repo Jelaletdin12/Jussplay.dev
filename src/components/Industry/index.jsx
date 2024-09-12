@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
-import Typewriter from "typewriter-effect/dist/core";
+import PropTypes from "prop-types"
+import { useEffect, useRef, useState } from "react"
+import Typewriter from "typewriter-effect/dist/core"
 
 const Section = ({ title, description, imageSrc, frameClassName }) => {
   const titleRef = useRef(null);
