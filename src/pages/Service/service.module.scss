@@ -1,39 +1,38 @@
-.service{
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    margin: 0;
-    padding: 0;
+.service {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
-.up{
-    height: 79vh;
+.up {
+  height: 79vh;
 }
 
-
-.content{
-    position: relative;
-  z-index: 1; 
+.content {
+  position: relative;
+  z-index: 1;
   top: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-    h1{
-        font-size: 58px;
-        font-weight: 400;
-        font-family: "Space Grotesk";
-    }
+  h1 {
+    font-size: 58px;
+    font-weight: 400;
+    font-family: "Space Grotesk";
+  }
 }
-.bg{
-    position: absolute;
+.bg {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
-  z-index: 0; 
+  z-index: 0;
   background-color: #000;
 }
 
@@ -51,185 +50,179 @@ button {
   align-items: center;
   &:hover {
     background-color: white;
-    color: black;}
-    @media screen and (max-width:520px){
-      font-size: 15px;
-      width: 150px;
-    }
+    color: black;
+  }
+  @media screen and (max-width: 520px) {
+    font-size: 15px;
+    width: 150px;
+  }
 }
 
 .down {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-   //z-index: 1;
-  }
-  
-  .canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-  
-  #canvas {
-    background-color: black; // Canvas arka planı
-    width: 100%;
-    height: 100%;
-  }
-  head{
-    //position: relative;
-    //z-index: 1;
-  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  //z-index: 1;
+}
 
-  .start{
-    position: relative;
-    color: #ffffff;
-    font-size: 36px;
-    top: -250px;
-    left: -450px;
-    z-index: 1;
-  }
-  .choose{
-    position: relative;
-    z-index: 1;
-    font-size: 36px;
-    color: #ffffff;
-    top: -150px;
-    right: -400px
-  }
-  
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
 
+#canvas {
+  background-color: black; // Canvas arka planı
+  width: 100%;
+  height: 100%;
+}
+head {
+  //position: relative;
+  //z-index: 1;
+}
 
+.start {
+  position: relative;
+  color: #ffffff;
+  font-size: 36px;
+  top: -250px;
+  left: -450px;
+  z-index: 1;
+}
+.choose {
+  position: relative;
+  z-index: 1;
+  font-size: 36px;
+  color: #ffffff;
+  top: -150px;
+  right: -400px;
+}
 
-  .pageContainer {
-    background-color: #000;
-    color: white;
-    font-family: 'Arial', sans-serif;
-    position: relative;
-  }
-  
-  .header {
-    text-align: center;
-    //margin: 20px 0;
-    top:150px;
-    z-index: 1;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .title {
-    font-size: 56px;
-    //font-weight: bold;
+.pageContainer {
+  background-color: #000;
+  color: white;
+  font-family: "Arial", sans-serif;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  //margin: 20px 0;
+  top: 150px;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 56px;
+  //font-weight: bold;
+  color: #fff;
+}
+
+.journeySection {
+  position: relative;
+  top: 140px;
+  left: 150px;
+
+  h2 {
+    font-size: 1.5rem;
     color: #fff;
+    position: relative;
+    z-index: 1;
   }
-  
-  .journeySection {
-   position: relative;
-   top: 140px;
-   left: 150px;
-    
-    h2 {
-      font-size: 1.5rem;
-      color: #fff;
-      position: relative;
-      z-index: 1;
-    }
-  }
-  
-  .servicesSection {
-    display: flex;
-    justify-content: center;
-    gap: 70px;
+}
 
-    
-    .sectionTitle {
-      font-size: 1.8rem;
-      color: #fff;
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 1;
-    }
-  
-    .servicesList {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      position: relative;
-      z-index: 1;
-      flex-direction: column;
-    }
+.servicesSection {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+
+  .sectionTitle {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
   }
-  
-  .serviceCard {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    
-    .serviceTitle {
-      font-size: 1.2rem;
-      color: #f5f5f5;
-      margin-bottom: 10px;
-      position: relative;
-      padding-left: 20px;
-      &::before {
-        content: '';
+
+  .servicesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+  }
+}
+
+.serviceCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+
+  .serviceTitle {
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    &::before {
+      content: "";
       position: absolute;
-      left: 0; 
+      left: 0;
       top: 0;
-      height: 100%; 
+      height: 100%;
       width: 2px;
       background-color: rgba(153, 69, 255, 1);
+    }
+  }
 
-      }
-    
-    }
-  
-    p {
-      color: #ddd;
-    }
-  
-    .serviceDetails {
-      font-size: 0.9rem;
-      color: #aaa;
-      margin-top: 10px;
-      text-transform: uppercase;
-    }
+  p {
+    color: #ddd;
+  }
 
-    .serviceDescription, .serviceDetails {
-      color: #ddd;
-      margin-left: 15px;
-      position: relative;
-    
-      &::before {
-        content: '•';
-        position: absolute;
-        left: -10px;
-        color: #fff;
-      }
-    }
+  .serviceDetails {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
 
-  
+  .serviceDescription,
+  .serviceDetails {
+    color: #ddd;
+    margin-left: 15px;
+    position: relative;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: -10px;
+      color: #fff;
+    }
+  }
+
   .chooseSection {
     text-align: right;
     margin-right: 10%;
     margin-top: 50px;
     position: relative;
-   z-index: 1;
-   color: red;
-    
+    z-index: 1;
+    color: red;
+
     h2 {
       font-size: 1.5rem;
       color: #fff;
-      
     }
   }
 }
