@@ -31,6 +31,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@media (max-width: 1024px) {
+		flex-wrap: wrap;
+		gap: 20px;
+	}
 }
 
 // Title
@@ -39,7 +43,9 @@
 	h1 {
 		font-weight: 400;
 		font-size: 58px;
-
+		@media (max-width: 1024px) {
+			font-size: 45px;
+		}
 		/* line-height: 58px; */
 		line-height: 0.99862;
 		color: #fff;
@@ -57,6 +63,9 @@
 		span {
 			display: block;
 			margin: 20px 0 0 0;
+		}
+		@media (max-width: 1024px) {
+			font-size: 16px;
 		}
 	}
 }
@@ -84,9 +93,15 @@
 .blockchainForm {
 	background-color: #fff;
 	border-radius: 10px;
+	@media (max-width: 1024px) {
+		margin-left: auto;
+	}
 }
 .form {
 	padding: 59px 53px 42px 46px;
+	@media (max-width: 1024px) {
+		padding: 40px;
+	}
 }
 .formTitle {
 	font-weight: 500;

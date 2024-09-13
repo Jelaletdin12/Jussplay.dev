@@ -1,20 +1,19 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import gsap from "gsap"
 //import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useEffect, useRef, useState } from "react";
-import { FaArrowTurnDown } from "react-icons/fa6";
-import emplas from "../../assets/emplascase.png";
-import kidstime from "../../assets/kidstime.png";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import LogoLottie from "../../components/Lottie/Lottie";
-import Partners from "../../components/Partners";
-import ScrollSection from "../../components/ScrollSection";
-import WorkTab from "../../components/WorkTab";
-import transition from "../../pageTransition";
-import "./gradient.scss";
-import styles from "./home.module.scss";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useEffect, useRef, useState } from "react"
+import { FaArrowTurnDown } from "react-icons/fa6"
+import emplas from "../../assets/emplascase.png"
+import kidstime from "../../assets/kidstime.png"
+import Footer from "../../components/Footer"
+import Header from "../../components/Header"
+import LogoLottie from "../../components/Lottie/Lottie"
+import Partners from "../../components/Partners"
+import ScrollSection from "../../components/ScrollSection"
+import WorkTab from "../../components/WorkTab"
+import transition from "../../pageTransition"
+import "./gradient.scss"
+import styles from "./home.module.scss"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -151,7 +150,7 @@ function Home() {
       <section
         className={styles.main_heroSection}
         id="hero"
-        style={{ top: "0" }}
+        // style={{ top: "0" }}
       >
         <div className="gradient-bg">
           <svg xmlns="http://www.w3.org/2000/svg">
