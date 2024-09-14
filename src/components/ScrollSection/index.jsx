@@ -74,6 +74,7 @@ const ScrollSection = () => {
         ScrollTrigger.refresh();
       } else {
         // Mobile
+        ScrollTrigger.normalizeScroll(true);
         if (pin) {
           pin.style.position = "relative";
           pin.style.height = "auto";
