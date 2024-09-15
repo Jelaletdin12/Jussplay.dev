@@ -123,7 +123,7 @@ function Home() {
     });
 
     mm.add("(max-width: 520px)", () => {
-      ScrollTrigger.normalizeScroll(true);
+      //ScrollTrigger.normalizeScroll(true);
       const heroAnim = gsap.timeline({
         scrollTrigger: {
           trigger: "#hero",
