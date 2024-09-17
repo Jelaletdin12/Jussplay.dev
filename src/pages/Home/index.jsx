@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import gsap from 'gsap'
 //import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -54,13 +55,9 @@ const workTabs = [
 function Home() {
 	const container = useRef()
 	const interBubble = useRef()
-<<<<<<< HEAD
 	const scrollYMainSectionHere = useRef(null)
 	const [flag, setFlag] = useState(false)
 	const [isTopRemoved, setIsTopRemoved] = useState(false)
-=======
-	const [flag, setFlag] = useState(false)
->>>>>>> 204f168aa5f52745a3a9ef4c3a6a5a310faf8b81
 
 	useEffect(() => {
 		const handleLoad = () => {
@@ -101,29 +98,17 @@ function Home() {
 
 	useEffect(() => {
 		const handleScroll = () => {
-<<<<<<< HEAD
 			// Оптимизация управления флагами
 			setFlag(window.scrollY > 790)
 			setIsTopRemoved(window.scrollY >= 1630)
-=======
-			if (window.scrollY > 790) {
-				setFlag(true)
-			} else if (window.scrollY < 750) {
-				setFlag(false)
-			}
->>>>>>> 204f168aa5f52745a3a9ef4c3a6a5a310faf8b81
 		}
 
 		window.addEventListener('scroll', handleScroll)
 
 		const mm = gsap.matchMedia()
 
-<<<<<<< HEAD
 		// Функция для анимации на ширине экрана >= 521px
 		const animateForLargeScreens = () => {
-=======
-		mm.add('(min-width: 521px)', () => {
->>>>>>> 204f168aa5f52745a3a9ef4c3a6a5a310faf8b81
 			const heroAnim = gsap.timeline({
 				scrollTrigger: {
 					trigger: '#hero',
@@ -136,16 +121,10 @@ function Home() {
 			heroAnim.to('#heroText2', { x: 200, opacity: 0 }, '<')
 			heroAnim.to('#logoLottie', { x: 300 }, '<')
 			heroAnim.to('#about', { y: -550, opacity: 1 }, '<')
-<<<<<<< HEAD
 		}
 
 		// Функция для анимации на ширине экрана <= 520px
 		const animateForSmallScreens = () => {
-=======
-		})
-
-		mm.add('(max-width: 520px)', () => {
->>>>>>> 204f168aa5f52745a3a9ef4c3a6a5a310faf8b81
 			const heroAnim = gsap.timeline({
 				scrollTrigger: {
 					trigger: '#hero',
@@ -156,7 +135,6 @@ function Home() {
 					refreshPriority: 1,
 				},
 			})
-<<<<<<< HEAD
 			heroAnim.to('#heroText1', { x: -300, opacity: 0 })
 			heroAnim.to('#heroText2', { x: 300, opacity: 0 }, '<')
 			heroAnim.to('#logoLottie', { y: -400 }, '<')
@@ -166,21 +144,12 @@ function Home() {
 		// Регистрация медиазапросов
 		mm.add('(min-width: 521px)', animateForLargeScreens)
 		mm.add('(max-width: 520px)', animateForSmallScreens)
-=======
-
-			heroAnim.to('#heroText1', { x: -300, opacity: 0 })
-			heroAnim.to('#heroText2', { x: 300, opacity: 0 }, '<')
-			heroAnim.to('#logoLottie', { y: -400 }, '<')
-			heroAnim.to('#about', { y: -450, opacity: 1 }, '<')
-		})
->>>>>>> 204f168aa5f52745a3a9ef4c3a6a5a310faf8b81
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
 			mm.revert()
 		}
 	}, [])
-<<<<<<< HEAD
 
 	return (
 		<main className={styles.main} ref={container}>
@@ -287,112 +256,6 @@ function Home() {
 				</div>
 			</section>
 
-=======
-	return (
-		<main className={styles.main} ref={container}>
-			<Header />
-			<section
-				className={styles.main_heroSection}
-				id='hero'
-				// style={{ top: "0" }}
-			>
-				<div className='gradient-bg'>
-					<svg xmlns='http://www.w3.org/2000/svg'>
-						<defs>
-							<filter id='goo'>
-								<feGaussianBlur
-									in='SourceGraphic'
-									stdDeviation='10'
-									result='blur'
-								/>
-								<feColorMatrix
-									in='blur'
-									mode='matrix'
-									values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8'
-									result='goo'
-								/>
-								<feBlend in='SourceGraphic' in2='goo' />
-							</filter>
-						</defs>
-					</svg>
-					<div className='gradients-container'>
-						<div className='g1'></div>
-						<div className='g2'></div>
-						<div className='g3'></div>
-						<div className='g4'></div>
-						<div className='g5'></div>
-						<div ref={interBubble} className='interactive'></div>
-					</div>
-				</div>
-				<div className={styles.heroSecWithVideo}>
-					<h1 className={styles.main_heroSection_motto}>
-						<div className={styles.heroText1} id='heroText1'>
-							just say it
-						</div>
-						<div id='logoLottie'>
-							<LogoLottie></LogoLottie>
-						</div>
-						<div
-							id='heroText2'
-							className={styles.main_heroSection_motto_lowerText}
-						>
-							we will make it
-						</div>
-					</h1>
-				</div>
-				<section
-					className={
-						styles.main_intro + ' ' + (flag && styles.main_intro_onhover)
-					}
-					id='about'
-				>
-					{' '}
-					<div>
-						<p>
-							Welcome to <span>JussPlay Labs</span>,
-						</p>
-						<p>
-							where your <span>digital dreams</span>
-						</p>
-						<p>turn into reality! Specializing</p>
-						<p>
-							in cutting-edge <span>web and mobile</span>
-						</p>
-						<p>development, along with stunning</p>
-						<p>
-							<span>design services.</span>
-						</p>
-						<p>our team of experts is here to make it</p>
-						<p>happen.</p>
-						<p>Let's build something amazing together!</p>
-					</div>
-				</section>
-			</section>
-			<section
-				className={styles.main_work}
-				id='projects'
-				// style={{ marginTop: '700px' }}
-			>
-				<h2>
-					Selected Projects
-					<FaArrowTurnDown size={12} />
-				</h2>
-				<div>
-					{workTabs.map(wt => (
-						<WorkTab
-							name={wt.name}
-							order={wt.id}
-							key={wt.id}
-							type={wt.type}
-							isTop={wt.isTop}
-							isBottom={wt.isBottom}
-							img={wt.img}
-						/>
-					))}
-				</div>
-			</section>
-
->>>>>>> 204f168aa5f52745a3a9ef4c3a6a5a310faf8b81
 			<ScrollSection />
 			<Partners />
 			<Footer />
