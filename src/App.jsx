@@ -6,7 +6,8 @@ import pause from './assets/pause.png'
 import play from './assets/play.png'
 import playing from './assets/playing.png'
 import CustomCursor from './components/cursor'
-import Blockchain from './pages/Blockchain'
+//import Blockchain from './pages/Blockchain'
+//import Token from './pages/Token'
 import { NotFoundPage } from './pages/Error/NotFoundPage'
 // import CustomScroll from './components/scroll/CustomScroll'
 
@@ -17,6 +18,8 @@ const Career = lazy(() => import('./pages/Career'))
 const Industry = lazy(() => import('./pages/Industry'))
 const About = lazy(() => import('./pages/About'))
 const Service = lazy(() => import('./pages/Service'))
+const Blockchain = lazy(() => import('./pages/Blockchain'))
+const Token = lazy(() => import('./pages/Token'))
 
 export default function App() {
 	const location = useLocation()
@@ -98,6 +101,7 @@ export default function App() {
 					<Route path='/aboutus' element={<About />} />
 					<Route path='/service' element={<Service />} />
 					<Route path='/blockchain' element={<Blockchain />} />
+					<Route path='/token' element={<Token />} />
 					<Route path='*' element={<NotFoundPage />} />
 					<Route path='' element={<NotFoundPage />} />
 				</Routes>

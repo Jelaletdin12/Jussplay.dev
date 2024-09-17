@@ -1,0 +1,80 @@
+.features {
+  padding: 50px;
+  background-color: #000;
+
+  h2 {
+    color: white;
+    margin-bottom: 40px;
+  }
+
+  .featuresBox {
+    display: flex;
+    gap: 15px;
+    background-color: #111111;
+    margin-left: 150px;
+    margin-right: 150px;
+
+    .boxContent {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      justify-content: center;
+      align-items: flex-start;
+      p {
+        color: #ffffff;
+      }
+    }
+  }
+
+  /* Platform Bilgisi */
+  .platformInfo {
+    display: flex;
+    gap: 15px;
+    padding-top: 50px;
+    .platformImgFrame {
+      width: 50%;
+    }
+    .platformItems {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .platformItem {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      p {
+        color: #ffffff;
+      }
+    }
+
+    .platformContent {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* NFT Faydaları */
+  .nftBenefits {
+    display: flex;
+    gap: 25px;
+    padding-top: 50px;
+
+    h2 {
+      color: #ffffff;
+      margin-bottom: 40px;
+    }
+    p {
+      color: #ffffff;
+    }
+
+    .benefitsGrid {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 50%;
+    }
+  }
+}
+

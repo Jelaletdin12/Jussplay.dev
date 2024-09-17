@@ -1,0 +1,42 @@
+.frame{
+    display: flex;
+    padding: 25px;
+
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    p{
+        color: #ffffff;
+    }
+}
+
+.service{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 50%;
+
+    .items {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 45%;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+
+      h3 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #ffffff;
+      }
+    }
+  }
+}
