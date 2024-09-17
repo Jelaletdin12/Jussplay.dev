@@ -148,8 +148,10 @@ const Services = () => {
           <h3>COINBASE CLONE</h3>
         </div>
       </div>
-      <div style={{display: 'flex', justifyContent:'center'}}>
-        <button className={styles.consultationButton}>CONSULT OUR NFT MARKETPLACE EXPERTS <IoIosArrowForward /></button>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <button className={styles.consultationButton}>
+          CONSULT OUR NFT MARKETPLACE EXPERTS <IoIosArrowForward />
+        </button>
       </div>
     </section>
   );

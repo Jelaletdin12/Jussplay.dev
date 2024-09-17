@@ -1,17 +1,45 @@
-import React from 'react';
-import styles from './nftCards.module.scss';
-import nftArt from '../../assets/token/nftArt.png';
-
+import React from "react";
+import styles from "./nftCards.module.scss";
+import nftArt from "../../assets/token/nftArt.png";
 
 const NftCards = () => {
   const nftData = [
-    { title: 'NFT For Art', description: 'Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.', imgSrc: nftArt },
-    { title: 'NFT For Art', description: 'Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.', imgSrc: nftArt },
-    { title: 'NFT For Art', description: 'Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.', imgSrc: nftArt },
-    { title: 'NFT For Art', description: 'Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.', imgSrc: nftArt },
-    { title: 'NFT For Art', description: 'Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.', imgSrc: nftArt },
-    { title: 'NFT For Art', description: 'Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.', imgSrc: nftArt },
-   
+    {
+      title: "NFT For Art",
+      description:
+        "Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.",
+      imgSrc: nftArt,
+    },
+    {
+      title: "NFT For Art",
+      description:
+        "Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.",
+      imgSrc: nftArt,
+    },
+    {
+      title: "NFT For Art",
+      description:
+        "Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.",
+      imgSrc: nftArt,
+    },
+    {
+      title: "NFT For Art",
+      description:
+        "Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.",
+      imgSrc: nftArt,
+    },
+    {
+      title: "NFT For Art",
+      description:
+        "Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.",
+      imgSrc: nftArt,
+    },
+    {
+      title: "NFT For Art",
+      description:
+        "Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.",
+      imgSrc: nftArt,
+    },
   ];
 
   return (

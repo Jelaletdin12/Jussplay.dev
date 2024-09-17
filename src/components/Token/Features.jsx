@@ -52,7 +52,6 @@ const Features = () => {
         </div>
       </div>
 
-      {/* Ek İçerikler */}
       <div className={styles.platformInfo}>
         <div className={styles.platformImgFrame}>
           <img src={mix} alt="" />
@@ -70,7 +69,6 @@ const Features = () => {
         </div>
       </div>
 
-      {/* NFT İlişkisi ve Faydalar */}
       <div className={styles.nftBenefits}>
         <div className={styles.benefitsGrid}>
           <h2>
