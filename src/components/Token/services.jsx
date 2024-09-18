@@ -10,6 +10,7 @@ import nft6 from "../../assets/token/nft6.png";
 import binance from "../../assets/token/binance.png";
 import rar from "../../assets/token/Rarible.jpg";
 import coinbase from "../../assets/token/coinbase.png";
+import { color } from "framer-motion";
 
 const Services = () => {
   return (

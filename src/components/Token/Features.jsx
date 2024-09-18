@@ -7,6 +7,7 @@ import frame2 from "../../assets/token/frame2.png";
 import frame3 from "../../assets/token/frame4.png";
 import frame4 from "../../assets/token/frame3.png";
 import big from "../../assets/token/big.png";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Features = () => {
   const platformInfo = [
@@ -48,7 +49,7 @@ const Features = () => {
             Become a frontrunner in the virtual space with our reliable NFT
             marketplace development services.
           </p>
-          <button>Meet with us</button>
+          <button>Meet with us <IoIosArrowForward /></button>
         </div>
       </div>
 

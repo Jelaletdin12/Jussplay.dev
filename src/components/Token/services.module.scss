@@ -11,6 +11,9 @@
   p {
     color: #ffffff;
   }
+  h2, p{
+    font-family: SGrotReg;
+  }
 
   .serviceList {
     display: flex;
@@ -18,7 +21,7 @@
     flex-wrap: wrap;
 
     .serviceItem {
-      background-color: #1a1a1a;
+      // background-color: #1a1a1a;
       color: white;
       padding: 20px;
       border-radius: 10px;
@@ -71,6 +74,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    gap: 10px;
     @media screen and (max-width: 520px) {
       font-size: 15px;
     }
