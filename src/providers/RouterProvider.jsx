@@ -14,6 +14,7 @@ import { NotFoundPage } from '../pages/Error/NotFoundPage'
 import Home from '../pages/Home'
 import Industry from '../pages/Industry'
 import Service from '../pages/Service'
+import TokenNFT from '../pages/Token'
 
 const BubbleError = () => {
 	const error = useRouteError()
@@ -60,6 +61,16 @@ const router = createBrowserRouter([
 			{
 				path: 'blockchain',
 				element: <Blockchain />,
+				errorElement: <BubbleError />,
+			},
+			{
+				path: 'token',
+				element: <TokenNFT />,
+				errorElement: <BubbleError />,
+			},
+			{
+				path: 'metaverse',
+				element: '',
 				errorElement: <BubbleError />,
 			},
 			{

@@ -20,6 +20,7 @@ const About = lazy(() => import('./pages/About'))
 const Service = lazy(() => import('./pages/Service'))
 const Blockchain = lazy(() => import('./pages/Blockchain'))
 const Token = lazy(() => import('./pages/Token'))
+const Metaverse = lazy(() => import('./pages/Metaverse'))
 
 export default function App() {
 	const location = useLocation()
@@ -102,6 +103,7 @@ export default function App() {
 					<Route path='/service' element={<Service />} />
 					<Route path='/blockchain' element={<Blockchain />} />
 					<Route path='/token' element={<Token />} />
+					<Route path='/metaverse' element={<Metaverse />} />
 					<Route path='*' element={<NotFoundPage />} />
 					<Route path='' element={<NotFoundPage />} />
 				</Routes>
