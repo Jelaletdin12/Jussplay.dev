@@ -1,7 +1,7 @@
 @import "../../constants/colors.scss";
 
 .page__blockchain {
-	background-color: #111;
+	background-color: #000;
 	color: #fff;
 	min-height: 100vh;
 	position: relative;
@@ -12,13 +12,13 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 750px;
+	height: 800px;
 	border-radius: 0px, 0px, 65px, 65px;
 }
 
 .headerBlockchain {
 	position: relative;
-	z-index: 50;
+	z-index: 1;
 	padding: 50px 0 0 0;
 }
 

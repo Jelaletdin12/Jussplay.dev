@@ -1,6 +1,7 @@
-import styles from './dropdown.module.scss' // Assume you have appropriate CSS
 import { PiTriangleFill } from 'react-icons/pi'
+import styles from './dropdown.module.scss' // Assume you have appropriate CSS
 
+import { Link } from 'react-router-dom'
 import cardano from '../../assets/blockchain/cardano-icon.svg'
 import cryptoEx from '../../assets/blockchain/crypto-exchange-icon.svg'
 import cryptoWallet from '../../assets/blockchain/crypto-wallet-icon.svg'
@@ -9,12 +10,12 @@ import hyperledger from '../../assets/blockchain/hyperledger-icon.svg'
 import metaverse from '../../assets/blockchain/metaverse-development-icon.svg'
 import nftGame from '../../assets/blockchain/nft-game-icon.svg'
 import nftToken from '../../assets/blockchain/nft-token-icon.svg'
+import polygon from '../../assets/blockchain/polygon-icon.svg'
 import ripple from '../../assets/blockchain/ripple-icon.svg'
 import solana from '../../assets/blockchain/solana-icon.svg'
 import stellar from '../../assets/blockchain/stellar-icon.svg'
 import webDev from '../../assets/blockchain/web3-development-icon.svg'
 import webGame from '../../assets/blockchain/web3-game-icon.svg'
-import polygon from '../../assets/blockchain/polygon-icon.svg'
 import chainTest from '../../assets/service/blockchain-testing-icon.svg'
 
 export const DropdownBlockchain = () => {
@@ -30,33 +31,39 @@ export const DropdownBlockchain = () => {
 							<div>
 								<img src={nftGame} alt='' />
 							</div>
-							<div>
-								<h6>NFT Game Development</h6>
-								<p>Rule the next gaming era with our NFT game solution.</p>
-							</div>
+							<Link to={'/blockchain'}>
+								<div>
+									<h6>NFT Game Development</h6>
+									<p>Rule the next gaming era with our NFT game solution.</p>
+								</div>
+							</Link>
 						</div>
 						<div className={styles.dropdown__wrap}>
 							<div>
 								<img src={nftToken} alt='' />
 							</div>
-							<div>
-								<h6>NFT Token Development</h6>
-								<p>
-									Launch NFT tokens on Ethereum, Binance, Solana, and others.
-								</p>
-							</div>
+							<Link to='/token'>
+								<div>
+									<h6>NFT Token Development</h6>
+									<p>
+										Launch NFT tokens on Ethereum, Binance, Solana, and others.
+									</p>
+								</div>
+							</Link>
 						</div>
 						<div className={styles.dropdown__wrap}>
 							<div>
 								<img src={metaverse} alt='' />
 							</div>
-							<div>
-								<h6>Metaverse Development</h6>
-								<p>
-									Empowering startups and enterprises to strengthen their
-									footprint.
-								</p>
-							</div>
+							<Link to='/metaverse'>
+								<div>
+									<h6>Metaverse Development</h6>
+									<p>
+										Empowering startups and enterprises to strengthen their
+										footprint.
+									</p>
+								</div>
+							</Link>
 						</div>
 						<div className={styles.dropdown__wrap}>
 							<div>

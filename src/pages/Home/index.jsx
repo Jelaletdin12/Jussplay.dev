@@ -55,7 +55,6 @@ const workTabs = [
 function Home() {
 	const container = useRef()
 	const interBubble = useRef()
-	const scrollYMainSectionHere = useRef(null)
 	const [flag, setFlag] = useState(false)
 	const [isTopRemoved, setIsTopRemoved] = useState(false)
 
@@ -158,7 +157,6 @@ function Home() {
 				className={styles.main_heroSection}
 				id='hero'
 				style={{ top: isTopRemoved ? null : '0' }}
-				ref={scrollYMainSectionHere}
 			>
 				<div className='gradient-bg'>
 					<svg xmlns='http://www.w3.org/2000/svg'>
