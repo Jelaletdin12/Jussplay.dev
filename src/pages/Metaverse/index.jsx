@@ -7,7 +7,7 @@ import { HeaderBlockchain } from '../../components/Blockchain/HeaderBlockchain'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import { MetaverseFeatures } from '../../components/Metaverse/Features/MetaverseFeatures'
-import { MetaversePlatform } from '../../components/Metaverse/Platform/MetaversePlatform'
+import { Platform } from '../../components/Metaverse/Platform/Platform'
 import { MetaverseService } from '../../components/Metaverse/Services/MetaverseService'
 import { MetaverseServicesInclude } from '../../components/Metaverse/ServicesInclude/MetaverseServicesInclude'
 import { MetaverseSolutions } from '../../components/Metaverse/Solutions/MetaverseSolutions'
@@ -16,7 +16,7 @@ import { CustomScroll } from '../../components/scroll/CustomScroll'
 import {
 	subTitleHeaderBlockchain,
 	titleHeaderBlockchain,
-} from '../../components/Util/contentBlockchainPage'
+} from '../../components/Util/dataBlockchainPage'
 import {
 	subTitlePlatform,
 	subTitleTechnologyUpsurge,
@@ -40,14 +40,14 @@ const Metaverse = () => {
 				<main className={styles.main__metaverse}>
 					<MetaverseSolutions />
 					<MetaverseService />
-					<MetaversePlatform
+					<Platform
 						image={image01}
 						title={titlePlatform}
 						subTitle={subTitlePlatform}
 					/>
 					<MetaverseServicesInclude />
 					<MetaverseFeatures />
-					<MetaversePlatform
+					<Platform
 						image={image02}
 						title={titleTechnologyUpsurge}
 						subTitle={subTitleTechnologyUpsurge}

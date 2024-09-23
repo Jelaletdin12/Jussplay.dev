@@ -1,9 +1,9 @@
 import { HashLink } from 'react-router-hash-link'
 
-import styles from '../../../pages/Metaverse/metaverse.module.scss'
 import { IoIosArrowForward } from 'react-icons/io'
+import styles from '../../../pages/Metaverse/metaverse.module.scss'
 
-export const MetaversePlatform = ({ image, title, subTitle }) => {
+export const Platform = ({ image, title, subTitle }) => {
 	return (
 		<section className={styles.section__platform}>
 			<div className={styles.metaverseContainer}>

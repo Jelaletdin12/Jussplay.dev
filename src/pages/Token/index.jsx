@@ -13,7 +13,7 @@ import Services from '../../components/Token/services'
 import {
 	subTitleNFTTokenHeaderBlockchain,
 	titleNFTTokenHeaderBlockchain,
-} from '../../components/Util/contentBlockchainPage'
+} from '../../components/Util/dataBlockchainPage'
 import styles from './token.module.scss'
 
 const token = () => {

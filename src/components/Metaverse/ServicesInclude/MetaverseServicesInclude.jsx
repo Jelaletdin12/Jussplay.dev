@@ -1,17 +1,17 @@
+import { TitleBlockchain } from '../../../pages/Blockchain/TitleBlockchain'
 import styles from '../../../pages/Metaverse/metaverse.module.scss'
 import {
 	serviceIncludeContentLeft,
 	serviceIncludeContentRight,
 	titleServiceInclude,
 } from '../../Util/contentMetaverse'
-import { TitleMetaverse } from '../TitleMetaverse'
 import { AboutServicesInclude } from './AboutServicesInclude'
 
 export const MetaverseServicesInclude = () => {
 	return (
 		<section className={styles.sectionInclude}>
 			<div className={styles.metaverseContainer}>
-				<TitleMetaverse title={titleServiceInclude} />
+				<TitleBlockchain title={titleServiceInclude} />
 				<div className={styles.serviceInclude__row}>
 					<div className={styles.serviceInclude__col}>
 						{serviceIncludeContentLeft.map(item => (

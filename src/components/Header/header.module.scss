@@ -7,8 +7,15 @@
   padding: 30px 0;
   position: relative;
   z-index: 5;
-  font-family: 'Space Grotesk';
-  
+  font-family: "Space Grotesk";
+  @media (max-width: 768px) {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    img {
+      padding: 0 0 0 30px;
+    }
+  }
+
   &_logo {
     color: $white;
     margin-left: 30px;
@@ -46,7 +53,6 @@
           }
         }
       }
-      
     }
 
     @media screen and (max-width: 768px) {

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import classNames from 'classnames'
 import { memo, useCallback, useState } from 'react'
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
@@ -14,7 +15,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Navigation } from 'swiper/modules'
 
-export default memo(function Header() {
+export default memo(function Header({ children }) {
 	const [isMenuActive, setIsMenuActive] = useState(false)
 	const [activeDropdown, setActiveDropdown] = useState(null)
 	const audio = new Audio(select)
@@ -94,6 +95,7 @@ export default memo(function Header() {
 			>
 				menu
 			</div>
+			{children}
 			<div
 				className={classNames({
 					[styles.header_menu_active]: isMenuActive,
