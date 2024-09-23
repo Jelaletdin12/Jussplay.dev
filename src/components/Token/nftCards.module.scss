@@ -1,11 +1,30 @@
 .nftCards {
-  padding: 50px;
-  background-color: #111;
+  padding: 0 30px 40px 30px;
+  background-color: #000;
+
+  .mobileParagh {
+    display: none;
+    @media screen and (max-width: 520px) {
+      display: block;
+      text-align: center;
+      color: #ffffff;
+      padding-bottom: 25px;
+      text-transform: uppercase;
+    }
+  }
 
   h2 {
     color: white;
     text-align: center;
     margin-bottom: 40px;
+    @media screen and (max-width: 520px) {
+      font-family: 25px;
+      text-align: center;
+    }
+  }
+  h2,
+  p {
+    font-family: SGrotReg;
   }
 
   .cardList {
@@ -13,12 +32,19 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
+    @media screen and (max-width: 520px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     .card {
       color: white;
       width: 448px;
       height: 421px;
       text-align: center;
+      @media screen and (max-width: 520px) {
+        width: 300px;
+        height: 280px;
+      }
 
       h3 {
         margin: 15px 0;
@@ -38,6 +64,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @media screen and (max-width: 520px) {
+          max-width: 300px;
+        }
         img {
           width: 100%;
           height: auto;

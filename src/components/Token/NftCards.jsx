@@ -45,6 +45,7 @@ const NftCards = () => {
   return (
     <section className={styles.nftCards}>
       <h2>NFT Token Development Company For Your Niche NFT Project</h2>
+      <p className={styles.mobileParagh}>Achieve your dream of launching an NFT marketplace in any niche. As a top-rated NFT marketplace development company, we build NFT solutions that align with your business idea and give you a competitive edge. Explore our NFT marketplace solutions forte</p>
       <div className={styles.cardList}>
         {nftData.map((nft, index) => (
           <div className={styles.card} key={index}>
