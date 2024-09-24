@@ -1,5 +1,6 @@
 // Assets
 import bg from '../../assets/blockchain/01.png'
+import logo from '../../assets/blockchain/logo.png'
 import image01 from '../../assets/Metaverse/Platform/01.png'
 import image02 from '../../assets/Metaverse/TechnologyUpsurge/01.png'
 // Components
@@ -14,24 +15,30 @@ import { MetaverseSolutions } from '../../components/Metaverse/Solutions/Metaver
 import { CustomScroll } from '../../components/scroll/CustomScroll'
 // Utils
 import {
-	subTitleHeaderBlockchain,
-	titleHeaderBlockchain,
-} from '../../components/Util/dataBlockchainPage'
-import {
 	subTitlePlatform,
 	subTitleTechnologyUpsurge,
 	titlePlatform,
 	titleTechnologyUpsurge,
 } from '../../components/Util/contentMetaverse'
+import {
+	subTitleHeaderBlockchain,
+	titleHeaderBlockchain,
+} from '../../components/Util/dataBlockchainPage'
 // Style && Effects
+import { Link } from 'react-router-dom'
 import transition from '../../pageTransition'
 import styles from './metaverse.module.scss'
 // ==========
+
 const Metaverse = () => {
 	return (
 		<CustomScroll>
 			<div className={styles.page__metaverse}>
-				<Header />
+				<Header>
+					<Link to={'/home'}>
+						<img src={logo} alt='logo' />
+					</Link>
+				</Header>
 				<HeaderBlockchain
 					title={titleHeaderBlockchain}
 					subtitle={subTitleHeaderBlockchain}
