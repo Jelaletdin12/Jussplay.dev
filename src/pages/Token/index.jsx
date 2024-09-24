@@ -31,7 +31,7 @@ const token = () => {
 				<Features />
 				<div className={styles.frame}>
 					<div className={styles.header}>
-						<h2>Non Fungible Token and Blockchain Relationship</h2>
+						<h2>Non Fungible Token and Blockchain Relationship</h2>
 						<p>
 							Do not confuse the NFT with crypto. The only thing they have in
 							common is Blockchain. Have a look at it how ?
