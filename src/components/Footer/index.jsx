@@ -1,7 +1,12 @@
 /* eslint-disable react/display-name */
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/logo.png'
+// Assets
+// Logo 1V
+// import logo from '../../assets/logo.png'
+// Logo 2V
+import logo from '../../assets/blockchain/logo.png'
+// Styles
 import styles from './footer.module.scss'
 
 const Footer = React.memo(() => {
@@ -9,9 +14,11 @@ const Footer = React.memo(() => {
 		<footer className={styles.footer}>
 			<div className={styles.footer_upper}>
 				<div className={styles.footer_upper_logoContainer}>
-					<div className={styles.footer_upper_logo}>
-						<img src={logo} alt='Jussplay Logo' />
-					</div>
+					<Link to={'/home'}>
+						<div className={styles.footer_upper_logo}>
+							<img src={logo} alt='Jussplay Logo' />
+						</div>
+					</Link>
 					<div className={styles.footer_upper_motto}>
 						<span>Just say it</span>
 						<span>We will make it</span>
