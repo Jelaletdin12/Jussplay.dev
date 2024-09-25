@@ -408,3 +408,46 @@
 		}
 	}
 }
+
+// Stack =======================
+.section__stack {
+	margin-top: 150px;
+}
+.stack__row {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 558px));
+	grid-template-rows: auto;
+	place-content: center;
+	place-items: center;
+	gap: 40px;
+	@media (max-width: 430px) {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+}
+.stack__card {
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 20px 0;
+	h1 {
+		font-weight: 500;
+		font-size: 22px;
+		margin-bottom: 20px;
+
+		/* line-height: 25px; */
+		line-height: 1.13636;
+		text-transform: uppercase;
+		text-align: center;
+		color: #000;
+		@media (max-width: 430px) {
+			font-size: 18px;
+
+			/* line-height: 25px; */
+			line-height: 1.38889;
+		}
+	}
+	&_image {
+		img {
+			max-width: 100%;
+		}
+	}
+}

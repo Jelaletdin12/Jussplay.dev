@@ -16,6 +16,11 @@ import features02 from '../../assets/Metaverse/Features/img/01.png'
 import features03 from '../../assets/Metaverse/Features/img/02.png'
 import features04 from '../../assets/Metaverse/Features/img/03.png'
 import features05 from '../../assets/Metaverse/Features/img/04.png'
+// Stack ====================
+import stack01 from '../../assets/Metaverse/Stack/01.png'
+import stack02 from '../../assets/Metaverse/Stack/02.png'
+import stack03 from '../../assets/Metaverse/Stack/03.png'
+import stack04 from '../../assets/Metaverse/Stack/04.png'
 //! Data ==================
 // Solution
 export const titleSolution = `Rely on Allrounder Metaverse Solutions Development Company`
@@ -221,3 +226,34 @@ export const titleTechnologyUpsurge =
 	'Our Blockchain and NFT Technology Upsurge Metaverse Solution Development'
 
 export const subTitleTechnologyUpsurge = `When it comes to modern technology, NFT, and crypto-assets, RisingMax, the top metaverse development company in NYC, USA, is always known for holistic solutions.`
+
+//  Technology Stack =============================
+
+export const titleStack = `Technology Stack We Deploy For Non Fungible Token Development`
+
+export const subTitleStack = `We present to you the different verticals we hold expertise as a non fungible token development company. Our non fungible token development technology stack forte includes.`
+
+// Cards
+
+export const cardsStack = [
+	{
+		id: 1,
+		title: 'Blockchain Platform',
+		image: stack01,
+	},
+	{
+		id: 1,
+		title: 'Storage Platform',
+		image: stack02,
+	},
+	{
+		id: 1,
+		title: 'NFT Standard',
+		image: stack03,
+	},
+	{
+		id: 1,
+		title: 'Blockchain Platform',
+		image: stack04,
+	},
+]

@@ -18,8 +18,13 @@
     }
 
     &_logoContainer {
-      display: flex;
-      align-items: center;
+      // logo 1V
+      // display: flex;
+      // align-items: center;
+      // gap: 20px;
+
+      // New Logo 2V
+      display: block;
       @media screen and (max-width: 768px) {
         & {
           flex-direction: column;
@@ -80,7 +85,6 @@
             color: $footerText;
             text-decoration: underline;
             transition: all 0.2s;
-           
 
             &:hover {
               opacity: 0.8;
