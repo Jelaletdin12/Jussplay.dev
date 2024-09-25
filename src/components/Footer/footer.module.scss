@@ -18,13 +18,10 @@
     }
 
     &_logoContainer {
-      // logo 1V
-      // display: flex;
-      // align-items: center;
-      // gap: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
 
-      // New Logo 2V
-      display: block;
       @media screen and (max-width: 768px) {
         & {
           flex-direction: column;
