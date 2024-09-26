@@ -26,6 +26,7 @@ import {
 } from '../../components/Util/dataBlockchainPage'
 // Style && Effects
 import { Link } from 'react-router-dom'
+import { Stack } from '../../components/Metaverse/Stack/Stack'
 import transition from '../../pageTransition'
 import styles from './metaverse.module.scss'
 // ==========
@@ -59,6 +60,7 @@ const Metaverse = () => {
 						title={titleTechnologyUpsurge}
 						subTitle={subTitleTechnologyUpsurge}
 					/>
+					<Stack />
 				</main>
 				<Footer />
 			</div>
