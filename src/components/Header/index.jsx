@@ -95,7 +95,7 @@ export default memo(function Header({ children }) {
 			>
 				menu
 			</div>
-			{children}
+			<div className={styles.header__logo}>{children}</div>
 			<div
 				className={classNames({
 					[styles.header_menu_active]: isMenuActive,
@@ -177,6 +177,28 @@ export default memo(function Header({ children }) {
 							<li>
 								<Link to='/contactus' style={{ color: '#fff' }}>
 									Contact us
+								</Link>
+							</li>
+						</SwiperSlide>
+						<SwiperSlide>
+							<li>
+								<Link to='/blockchain' style={{ color: '#fff' }}>
+									Blockchain
+								</Link>
+							</li>
+						</SwiperSlide>
+
+						<SwiperSlide>
+							<li>
+								<Link to='/token' style={{ color: '#fff' }}>
+									Token
+								</Link>
+							</li>
+						</SwiperSlide>
+						<SwiperSlide>
+							<li>
+								<Link to='/metaverse' style={{ color: '#fff' }}>
+									Metaverse
 								</Link>
 							</li>
 						</SwiperSlide>
