@@ -207,6 +207,9 @@
 	width: 100%;
 	display: block;
 	margin: 50px 0 0 0;
+	@media (max-width: 320px) {
+		margin-top: 70px;
+	}
 }
 
 .inputCol input {
@@ -250,6 +253,9 @@
 	top: -0.8em;
 	left: 0;
 	transition: all ease-in-out 0.3s;
+	@media (max-width: 320px) {
+		top: -2em;
+	}
 }
 
 .placeholderActive {
