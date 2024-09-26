@@ -123,4 +123,4 @@ const token = () => {
   );
 };
 
-export default transition(token);
+export default transition(token)

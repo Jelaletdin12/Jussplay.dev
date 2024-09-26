@@ -16,6 +16,11 @@ import features02 from '../../assets/Metaverse/Features/img/01.png'
 import features03 from '../../assets/Metaverse/Features/img/02.png'
 import features04 from '../../assets/Metaverse/Features/img/03.png'
 import features05 from '../../assets/Metaverse/Features/img/04.png'
+// Stack ====================
+import stack01 from '../../assets/Metaverse/Stack/01.png'
+import stack02 from '../../assets/Metaverse/Stack/02.png'
+import stack03 from '../../assets/Metaverse/Stack/03.png'
+import stack04 from '../../assets/Metaverse/Stack/04.png'
 //! Data ==================
 // Solution
 export const titleSolution = `Rely on Allrounder Metaverse Solutions Development Company`
@@ -76,21 +81,18 @@ export const itemServiceLeft = [
 		title: 'Build Virtual Presence',
 		text: `Sit back and relax! The virtual sphere of the metaverse establishes efficiently to produce more values and benefits for everyone in the cluster.`,
 		image: service01,
-		style: { marginLeft: 20 },
 	},
 	{
 		id: 2,
 		title: 'Virtual Environment',
 		text: `Metaverse gives you such a splendid environment that enables the group users to communicate seamlessly in a very generous manner.`,
 		image: service02,
-		style: { marginLeft: 20 },
 	},
 	{
 		id: 3,
 		title: 'Virtual Events',
 		text: `Building up a platform for virtual events to take place allows meetings, various trade shows, presentations, and launching of a product,etc.`,
 		image: service03,
-		style: { marginLeft: 20 },
 	},
 ]
 
@@ -100,21 +102,19 @@ export const itemServiceRight = [
 		title: 'Virtual Communication',
 		text: `Metaverse can deliver you such unbelievable virtual communication that you wouldn’t have experienced ever before.`,
 		image: service04,
-		style: { marginLeft: 20 },
+		style: { marginLeft: 0 },
 	},
 	{
 		id: 2,
 		title: 'No Border Barriers',
 		text: `What if nothing is impossible, aye? Metaverse virtual sphere gives you wings to fly as you wish. All the universe gotta be yours, if you dream it, you gotta get it!`,
 		image: service05,
-		style: { marginLeft: 55 },
 	},
 	{
 		id: 3,
 		title: 'High ROI',
 		text: `Metaverse is capable enough to reach your business out to the real arena of virtual targeted audience to bring you a bounty of profits with high ROI.`,
 		image: service06,
-		style: { marginLeft: 55 },
 	},
 ]
 
@@ -226,3 +226,34 @@ export const titleTechnologyUpsurge =
 	'Our Blockchain and NFT Technology Upsurge Metaverse Solution Development'
 
 export const subTitleTechnologyUpsurge = `When it comes to modern technology, NFT, and crypto-assets, RisingMax, the top metaverse development company in NYC, USA, is always known for holistic solutions.`
+
+//  Technology Stack =============================
+
+export const titleStack = `Technology Stack We Deploy For Non Fungible Token Development`
+
+export const subTitleStack = `We present to you the different verticals we hold expertise as a non fungible token development company. Our non fungible token development technology stack forte includes.`
+
+// Cards
+
+export const cardsStack = [
+	{
+		id: 1,
+		title: 'Blockchain Platform',
+		image: stack01,
+	},
+	{
+		id: 1,
+		title: 'Storage Platform',
+		image: stack02,
+	},
+	{
+		id: 1,
+		title: 'NFT Standard',
+		image: stack03,
+	},
+	{
+		id: 1,
+		title: 'Blockchain Platform',
+		image: stack04,
+	},
+]
