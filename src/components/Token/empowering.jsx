@@ -14,6 +14,11 @@ import blockchain from "../../assets/token/blockchain.png";
 import block from "../../assets/token/block.png";
 import nft from "../../assets/token/nft.png";
 import storage from "../../assets/token/storage.png";
+import customized from "../../assets/token/customized.png";
+import supportive from "../../assets/token/supportive.png";
+import securityrich from "../../assets/token/securityrich.png";
+import transparent from "../../assets/token/transparent.png";
+import leftimg from "../../assets/token/leftimg.png";
 import { IoIosArrowForward } from "react-icons/io";
 
 
@@ -40,10 +45,10 @@ const EmpoweringSection = () => {
       ];
 
       const reasons = [
-        { title: "Core Team of NFT Experts", description: "We have a team of skilled and experienced developers..." },
-        { title: "Project Confidentiality", description: "Our NFT development company uses non-disclosure agreements..." },
-        { title: "Expertise in Blockchain Platforms", description: "Our NFT development team has expertise in working on multiple blockchain platforms..." },
-        { title: "Quick and Agile Development", description: "Our team implements a quick development approach to provide on-time delivery..." }
+        { title: "Core Team of NFT Experts", description: "We have a team of skilled and experienced blockchain experts with in-depth knowledge of blockchain protocols and NFT standards.", img: customized, },
+        { title: "Project Confidentiality", description: "As a reliable NFT development company, we sign a non-disclosure agreement to assure our customers that we never reveal any project-related information.", img: securityrich, },
+        { title: "Expertise in Blockchain Platforms", description: "Our NFT development team has expertise in working on multiple blockchain platforms, including Ethereum", img: transparent, },
+        { title: "Quick and Agile Development", description: "Our team implements an agile development approach to provide on-time delivery of continuously tested NFTs.", img: supportive }
       ];
 
   return (
@@ -61,6 +66,14 @@ const EmpoweringSection = () => {
           <button>Meet with us <IoIosArrowForward /></button>
         </div>
       </div>
+    </section>
+
+    <section className={styles.alternative}>
+    <div className={styles.alterImg}><img src={leftimg} alt="" /></div>
+    <div className={styles.alterDes}>
+      <h2>An Alternative To Traditional Finance With NFT Token Development Company</h2>
+      <p>Non-fungible tokens store identifying data in their smart contracts that make them unique. Every NFT represents a particular real-world asset and cannot be directly converted to and from another token. With RisingMax end-to-end NFT token development services, individuals and institutions can ensure total ownership of their assets.</p>
+    </div>
     </section>
 
     <section className={styles.featuresContainer}>
@@ -90,10 +103,12 @@ const EmpoweringSection = () => {
     </section>
 
     <section className={styles.whyUsContainer}>
-      <h2 className={styles.title}>Why Are We a Trusted NFT Token Development Company?</h2>
+      <h2 className={styles.title}>Why Are We a Trusted NFT Token Development Company?</h2>
+      <p className={styles.titledes}>We dominate our business domain to assist our clients in developing NFT-based platforms and become a dominating force in their industry. Leveraging our expertise in NFT token development, we transform your innovative business ideas into reality.</p>
       <div className={styles.reasonsGrid}>
         {reasons.map((reason, index) => (
           <div key={index} className={styles.reasonCard}>
+            <img src={reason.img} alt="" />
             <h3 className={styles.cardTitle}>{reason.title}</h3>
             <p className={styles.cardDescription}>{reason.description}</p>
           </div>
