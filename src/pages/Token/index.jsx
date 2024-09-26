@@ -10,19 +10,14 @@ import { CustomScroll } from "../../components/scroll/CustomScroll";
 import Features from "../../components/Token/Features";
 import NftCards from "../../components/Token/NftCards";
 import Services from "../../components/Token/services";
+import FeatureCards from "../../components/Token/featureCards";
+import EmpoweringSection from "../../components/Token/empowering";
 import {
-<<<<<<< HEAD
-	subTitleNFTTokenHeaderBlockchain,
-	titleNFTTokenHeaderBlockchain,
-} from '../../components/Util/dataBlockchainPage'
-import styles from './token.module.scss'
-=======
   subTitleNFTTokenHeaderBlockchain,
   titleNFTTokenHeaderBlockchain,
-} from "../../components/Util/contentBlockchainPage";
+} from "../../components/Util/dataBlockchainPage";
 import styles from "./token.module.scss";
 import transition from "../../pageTransition";
->>>>>>> 552debf79814685cea981f31216085d131f1ef85
 
 const token = () => {
   return (
@@ -119,6 +114,8 @@ const token = () => {
             </div>
           </div>
         </div>
+        <FeatureCards/>
+        <EmpoweringSection />
         <img className={styles.bgImg} src={bg} alt="" />
         <Footer />
       </div>
