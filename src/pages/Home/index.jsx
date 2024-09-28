@@ -95,35 +95,62 @@ function Home() {
 		move()
 	}, [])
 
-	useEffect(() => {
-		const handleScroll = () => {
-			// Оптимизация управления флагами
-			setFlag(window.scrollY > 790)
-			setIsTopRemoved(window.scrollY >= 1630)
+	const debounce = (callback, wait) => {
+		let timeout
+		return function (...args) {
+			clearTimeout(timeout)
+			timeout = setTimeout(() => callback.apply(this, args), wait)
 		}
+	}
+
+	useEffect(() => {
+		const handleScroll = debounce(() => {
+			// Оптимизация управления флагами
+			setFlag(window.scrollY >= 790)
+			setIsTopRemoved(window.scrollY >= 1650)
+		}, 100)
 
 		window.addEventListener('scroll', handleScroll)
 
 		const mm = gsap.matchMedia()
 
-		// Функция для анимации на ширине экрана >= 521px
-		const animateForLargeScreens = () => {
-			const heroAnim = gsap.timeline({
-				scrollTrigger: {
-					trigger: '#hero',
-					start: 'top top',
-					end: 'bottom top',
-					scrub: true,
-				},
-			})
-			heroAnim.to('#heroText1', { x: -200, opacity: 0 })
-			heroAnim.to('#heroText2', { x: 200, opacity: 0 }, '<')
-			heroAnim.to('#logoLottie', { x: 300 }, '<')
-			heroAnim.to('#about', { y: -550, opacity: 1 }, '<')
-		}
+		// const animateForLargeScreens = () => {
+		// 	const heroAnim = gsap.timeline({
+		// 		scrollTrigger: {
+		// 			trigger: '#hero',
+		// 			start: 'top top',
+		// 			end: 'bottom top',
+		// 			scrub: true,
+		// 		},
+		// 	})
+		// 	heroAnim.to('#heroText1', { x: -200, opacity: 0 })
+		// 	heroAnim.to('#heroText2', { x: 200, opacity: 0 }, '<=')
+		// 	heroAnim.to('#logoLottie', { x: 300 }, '<=')
+		// 	heroAnim.to('#about', { y: -550, opacity: 1 }, '<=')
+		// }
 
-		// Функция для анимации на ширине экрана <= 520px
-		const animateForSmallScreens = () => {
+		// const animateForSmallScreens = () => {
+		// 	const heroAnim = gsap.timeline({
+		// 		scrollTrigger: {
+		// 			trigger: '#hero',
+		// 			start: 'top top',
+		// 			end: 'bottom top',
+		// 			scrub: true,
+		// 			invalidateOnRefresh: true,
+		// 			refreshPriority: 1,
+		// 		},
+		// 	})
+		// 	heroAnim.to('#heroText1', { x: -300, opacity: 0 })
+		// 	heroAnim.to('#heroText2', { x: 300, opacity: 0 }, '<=')
+		// 	heroAnim.to('#logoLottie', { y: -400 }, '<=')
+		// 	heroAnim.to('#about', { y: -450, opacity: 1 }, '<=')
+		// }
+
+		// Регистрация медиазапросов
+		// mm.add('(min-width: 521px)', animateForLargeScreens)
+		// mm.add('(max-width: 520px)', animateForSmallScreens)
+
+		const createAnimation = (x1, x2, y, aboutY) => {
 			const heroAnim = gsap.timeline({
 				scrollTrigger: {
 					trigger: '#hero',
@@ -134,15 +161,14 @@ function Home() {
 					refreshPriority: 1,
 				},
 			})
-			heroAnim.to('#heroText1', { x: -300, opacity: 0 })
-			heroAnim.to('#heroText2', { x: 300, opacity: 0 }, '<')
-			heroAnim.to('#logoLottie', { y: -400 }, '<')
-			heroAnim.to('#about', { y: -450, opacity: 1 }, '<')
+			heroAnim.to('#heroText1', { x: x1, opacity: 0 })
+			heroAnim.to('#heroText2', { x: x2, opacity: 0 }, '<')
+			heroAnim.to('#logoLottie', { y }, '<')
+			heroAnim.to('#about', { y: aboutY, opacity: 1 }, '<')
 		}
 
-		// Регистрация медиазапросов
-		mm.add('(min-width: 521px)', animateForLargeScreens)
-		mm.add('(max-width: 520px)', animateForSmallScreens)
+		mm.add('(min-width: 521px)', () => createAnimation(-200, 200, -300, -550))
+		mm.add('(max-width: 520px)', () => createAnimation(-300, 300, -400, -450))
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
@@ -154,9 +180,12 @@ function Home() {
 		<main className={styles.main} ref={container}>
 			<Header />
 			<section
-				className={styles.main_heroSection}
+				className={
+					isTopRemoved
+						? styles.main_heroSection
+						: styles.main_heroSection + ' ' + styles.main_heroSection_active
+				}
 				id='hero'
-				style={{ top: isTopRemoved ? null : '0' }}
 			>
 				<div className='gradient-bg'>
 					<svg xmlns='http://www.w3.org/2000/svg'>
@@ -242,9 +271,9 @@ function Home() {
 				<div>
 					{workTabs.map(wt => (
 						<WorkTab
+							key={wt.id}
 							name={wt.name}
 							order={wt.id}
-							key={wt.id}
 							type={wt.type}
 							isTop={wt.isTop}
 							isBottom={wt.isBottom}
