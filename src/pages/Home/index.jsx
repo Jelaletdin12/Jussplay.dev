@@ -106,7 +106,7 @@ function Home() {
 	useEffect(() => {
 		const handleScroll = debounce(() => {
 			// Оптимизация управления флагами
-			setFlag(window.scrollY > 790)
+			setFlag(window.scrollY >= 790)
 			setIsTopRemoved(window.scrollY >= 1650)
 		}, 100)
 
