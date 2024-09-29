@@ -1,0 +1,92 @@
+.launch-games {
+  padding: 50px 30px 40px 30px;
+  h2{
+    font-size: 58px;
+  }
+  p{
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    &__item {
+      flex: 1 1 30%;
+      margin: 20px;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      &__icon {
+        margin-bottom: 15px;
+      }
+  
+      &__title {
+        font-size: 25px;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+  
+      &__description {
+        font-size: 18px;
+        color: #ffffff !important;
+      }
+    }
+  }
+  
+
+  .top-rated-company {
+    padding: 50px 30px 40px 30px;
+    h2{
+      font-size: 58px;
+    }
+    p{
+      color: #ffffff;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+    
+    &__points {
+      display: flex;
+      flex-direction: column;
+      padding: 50px 0px 0 0px;
+      gap: 75px;
+    }
+   
+    
+    &__point {
+      display: flex;
+      align-items: center;
+      
+      &__imgFrame{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+      }
+      &__content{
+        width: 50%;
+      }
+      &__title {
+        font-size: 25px;
+        color: #ffffff;
+      }
+  
+      &__description {
+        font-size: 18px;
+        color: #ffffff;
+      }
+    }
+    &__point:nth-of-type(odd) {
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 25px;
+    }
+  }
+  

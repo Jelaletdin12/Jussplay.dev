@@ -15,6 +15,7 @@ import Home from '../pages/Home'
 import Industry from '../pages/Industry'
 import Service from '../pages/Service'
 import TokenNFT from '../pages/Token'
+import Blockcahin_4 from '../pages/Blockchain4'
 
 const BubbleError = () => {
 	const error = useRouteError()
@@ -70,6 +71,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: 'metaverse',
+				element: '',
+				errorElement: <BubbleError />,
+			},
+			{
+				path: 'blockchain_4',
 				element: '',
 				errorElement: <BubbleError />,
 			},

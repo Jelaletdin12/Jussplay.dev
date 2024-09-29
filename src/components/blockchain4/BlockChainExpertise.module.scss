@@ -1,0 +1,114 @@
+.game-development-container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 30px 40px 30px;
+  h2 {
+    font-size: 58px;
+    color: #ffffff;
+  }
+  p {
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+}
+.game-development {
+  padding: 50px 30px 40px 30px;
+  display: flex;
+  gap: 25px;
+  p {
+    color: #ffffff;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    &__content {
+      display: flex;
+      h2 {
+        font-size: 25px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+      &__first {
+        position: relative;
+        top: -50px;
+        width: 38%;
+      }
+      &__second {
+        position: relative;
+        top: 10px;
+        width: 45%;
+        left: 50px;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    &__content {
+      display: flex;
+      h2 {
+        font-size: 25px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+      &__first {
+        position: relative;
+        top: 10px;
+        width: 48%;
+        left: 55px;
+        text-align: right;
+      }
+      &__second {
+        position: relative;
+        top: -125px;
+        left: 110px;
+        width: 38%;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.blockchain-expertise {
+  padding: 50px 30px 40px 30px;
+  h2{
+    font-size: 58px;
+  }
+
+  &__items {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 25px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+
+    &__title {
+      font-size: 1.2rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+      color: #ccc;
+    }
+  }
+}
