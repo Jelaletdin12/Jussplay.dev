@@ -19,7 +19,9 @@
     :nth-child(even){
       margin-top: 100px;
     }
-   
+    @media screen and (max-width: 520px) {
+      flex-direction: column;
+    }
   }
   
   .reasonCard {

@@ -7,6 +7,10 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    @media screen and (max-width: 520px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -15,6 +19,11 @@
     margin: 15px;
     padding: 20px;
     text-align: left;
+    @media screen and (max-width: 520px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
     img {
       width: 125px;
       height: 125px;
@@ -37,6 +46,9 @@
   h2 {
     font-size: 58px;
     text-align: center;
+    @media screen and (max-width: 520px) {
+      font-size: 32px;
+    }
   }
   &__cards {
     display: flex;
@@ -93,12 +105,18 @@
   color: #fff;
   margin-bottom: 20px;
   font-size: 58px;
+  @media screen and (max-width: 520px) {
+    font-size: 32px;
+  }
 }
 
 .marketplaceCards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  @media screen and (max-width: 520px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 .marketplaceCard {

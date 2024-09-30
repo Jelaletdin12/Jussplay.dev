@@ -7,6 +7,9 @@
       display: grid;
       grid-template-columns: repeat(5, 2fr);
       gap: 25PX;
+      @media screen and (max-width: 520px) {
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      }
     }
   
     &__logo {

@@ -4,7 +4,12 @@ import SuccessStorySection from "../../components/blockchain4/SuccessStorySectio
 import RevenueSection from "../../components/blockchain4/RevenueSection";
 import BlockchainExpertiseSection from "../../components/blockchain4/BlockChainExpertise";
 import GameDevelopmentProcessSection from "../../components/blockchain4/GameDevelopmentProcessSection";
-// import BestCompanySection from '../../components/blockchain4/BestCompanySection';
+import {
+	subTitleNFTTokenHeaderBlockchain,
+	titleNFTTokenHeaderBlockchain,
+} from '../../components/Util/dataBlockchainPage'
+import Header from '../../components/Header'
+import { HeaderBlockchain } from '../../components/Blockchain/HeaderBlockchain'
 import Footer from "../../components/Footer";
 import styles from "./blockchain4.module.scss";
 import nyc1 from "../../assets/blockchain4/nyc1.png";
@@ -15,33 +20,38 @@ import nyc4 from "../../assets/blockchain4/nyc4.png";
 function Blockchain_4() {
   const reasons = [
     {
-      title: "Core Team of NFT Experts",
+      title: "Highly Secured",
       description:
         "We have a team of skilled and experienced blockchain experts with in-depth knowledge of blockchain protocols and NFT standards.",
       img: nyc1,
     },
     {
-      title: "Project Confidentiality",
+      title: "Master of Blockchain",
       description:
-        "As a reliable NFT development company, we sign a non-disclosure agreement to assure our customers that we never reveal any project-related information.",
+        "We have a team of skilled and experienced blockchain experts with in-depth knowledge of blockchain protocols and NFT standards.",
       img: nyc2,
     },
     {
-      title: "Expertise in Blockchain Platforms",
+      title: "Quick Launch",
       description:
-        "Our NFT development team has expertise in working on multiple blockchain platforms, including Ethereum",
+        "We have a team of skilled and experienced blockchain experts with in-depth knowledge of blockchain protocols and NFT standards.",
       img: nyc3,
     },
     {
-      title: "Quick and Agile Development",
+      title: "24*7 Support",
       description:
-        "Our team implements an agile development approach to provide on-time delivery of continuously tested NFTs.",
+        "We have a team of skilled and experienced blockchain experts with in-depth knowledge of blockchain protocols and NFT standards.",
       img: nyc4,
     },
   ];
 
   return (
     <div>
+      <Header />
+				<HeaderBlockchain
+					title={titleNFTTokenHeaderBlockchain}
+					subtitle={subTitleNFTTokenHeaderBlockchain}
+				/>
       <ServiceSection />
       <LaunchGamesSection />
       <SuccessStorySection />

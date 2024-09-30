@@ -64,14 +64,23 @@
     &__point {
       display: flex;
       align-items: center;
+      @media screen and (max-width: 520px) {
+        flex-direction: column;
+      }
       
       &__imgFrame{
         width: 50%;
         display: flex;
         justify-content: center;
+        @media screen and (max-width: 520px) {
+          width: auto;
+        }
       }
       &__content{
         width: 50%;
+        @media screen and (max-width: 520px) {
+          width: auto;
+        }
       }
       &__title {
         font-size: 25px;
@@ -87,6 +96,9 @@
       flex-direction: row-reverse;
       align-items: center;
       gap: 25px;
+      @media screen and (max-width: 520px) {
+        flex-direction: column;
+      }
     }
   }
   

@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   padding: 50px 30px 40px 30px;
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+  }
   h2 {
     font-size: 58px;
     color: #ffffff;
@@ -16,6 +19,9 @@
   padding: 50px 30px 40px 30px;
   display: flex;
   gap: 25px;
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+  }
   p {
     color: #ffffff;
   }
@@ -24,8 +30,14 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    @media screen and (max-width: 520px) {
+     width: auto;
+    }
     &__content {
       display: flex;
+      @media screen and (max-width: 520px) {
+        flex-direction: column;
+      }
       h2 {
         font-size: 25px;
         text-transform: uppercase;
@@ -36,7 +48,7 @@
       }
       &__first {
         position: relative;
-        top: -50px;
+        top: -120px;
         width: 38%;
       }
       &__second {
@@ -52,8 +64,14 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    @media screen and (max-width: 520px) {
+      width: auto;
+    }
     &__content {
       display: flex;
+      @media screen and (max-width: 520px) {
+        flex-direction: column;
+      }
       h2 {
         font-size: 25px;
         text-transform: uppercase;
@@ -90,7 +108,10 @@
    display: grid;
    grid-template-columns: repeat(5, 1fr);
    gap: 25px;
+   @media screen and (max-width: 520px) {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   }
+}
 
   &__item {
     display: flex;
