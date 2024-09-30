@@ -97,7 +97,6 @@ const BlockchainExpertiseSection = () => {
               <h3 className={styles["blockchain-expertise__item__title"]}>
                 {item.title}
               </h3>
-              
             </div>
           ))}
         </div>

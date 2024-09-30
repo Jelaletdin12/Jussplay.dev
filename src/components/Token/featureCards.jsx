@@ -31,22 +31,26 @@ const FeatureCards = () => {
   const standards = [
     {
       title: "ERC-721",
-      description: "Being the most common NFT standard, each of the tokens are unique and can also be priced separately.",
+      description:
+        "Being the most common NFT standard, each of the tokens are unique and can also be priced separately.",
       img: tok1,
     },
     {
       title: "ERC-1155",
-      description: "Users can trade fungible and non-fungible tokens with the same smart contract and address.",
+      description:
+        "Users can trade fungible and non-fungible tokens with the same smart contract and address.",
       img: tok2,
     },
     {
       title: "ERC-998",
-      description: "ERC-998 enables digital assets to be composed into complex positions and trade them as a single owner.",
+      description:
+        "ERC-998 enables digital assets to be composed into complex positions and trade them as a single owner.",
       img: tok3,
     },
     {
       title: "TRC-721",
-      description: "TRC-721 is made up of a set of parameters that issues non-fungible tokens on the TRON blockchain.",
+      description:
+        "TRC-721 is made up of a set of parameters that issues non-fungible tokens on the TRON blockchain.",
       img: tok4,
     },
   ];
@@ -74,20 +78,25 @@ const FeatureCards = () => {
       <section className={styles.featureCardsContainer}>
         <h2>NFT Token Development Company For Your Niche NFT Project</h2>
         <div className={styles.frameCards}>
-        {cards.map((card, index) => (
-          <div key={index} className={styles.featureCard}>
-            <div className={styles.cardIcon}><img src={card.icon} alt="" /></div>
-            <h3 className={styles.cardTitle}>{card.title}</h3>
-            <p className={styles.cardDescription}>{card.description}</p>
-          </div>
-        ))}
+          {cards.map((card, index) => (
+            <div key={index} className={styles.featureCard}>
+              <div className={styles.cardIcon}>
+                <img src={card.icon} alt="" />
+              </div>
+              <h3 className={styles.cardTitle}>{card.title}</h3>
+              <p className={styles.cardDescription}>{card.description}</p>
+            </div>
+          ))}
         </div>
       </section>
       <section className={styles.expertiseContainer}>
         <h2 className={styles.expertiseTitle}>
-        Our Expertise as an Non Fungible Token Development Company
+          Our Expertise as an Non Fungible Token Development Company
         </h2>
-        <p>The most common types of NFT token standards are ERC-721, ERC-1155, ERC-998, and TRC-721</p>
+        <p>
+          The most common types of NFT token standards are ERC-721, ERC-1155,
+          ERC-998, and TRC-721
+        </p>
         <div className={styles.tokenStandards}>
           {standards.map((standard, index) => (
             <div key={index} className={styles.standardCard}>
@@ -100,13 +109,20 @@ const FeatureCards = () => {
       </section>
       <div className={styles.marketplaceContainer}>
         <h2 className={styles.marketplaceTitle}>
-        Market Your NFT Token Marketplace Where it Matters
+          Market Your NFT Token Marketplace Where it Matters
         </h2>
-        <p>Our RisingMax leaders are determined to follow and create their own strategy plans to pitch your business revenue. Along with that, we provide suggestions to develop products that set the market trends to lead your business journey.</p>
+        <p>
+          Our RisingMax leaders are determined to follow and create their own
+          strategy plans to pitch your business revenue. Along with that, we
+          provide suggestions to develop products that set the market trends to
+          lead your business journey.
+        </p>
         <div className={styles.marketplaceCards}>
           {marketPlaceCards.map((card, index) => (
             <div key={index} className={styles.marketplaceCard}>
-              <div className={styles.cardIcon}><img src={glass} alt="" /></div>
+              <div className={styles.cardIcon}>
+                <img src={glass} alt="" />
+              </div>
               <h3 className={styles.cardTitle}>{card.title}</h3>
               <p className={styles.cardDescription}>{card.description}</p>
             </div>

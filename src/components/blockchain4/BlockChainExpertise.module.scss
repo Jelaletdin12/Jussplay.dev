@@ -8,6 +8,10 @@
   h2 {
     font-size: 58px;
     color: #ffffff;
+    @media screen and (max-width: 520px) {
+      font-size: 25px;
+      text-align: center;
+    }
   }
   p {
     font-size: 20px;
@@ -31,12 +35,14 @@
     flex-direction: column;
     width: 50%;
     @media screen and (max-width: 520px) {
-     width: auto;
+      width: auto;
+      gap: 25px;
     }
     &__content {
       display: flex;
       @media screen and (max-width: 520px) {
         flex-direction: column;
+        gap: 25px;
       }
       h2 {
         font-size: 25px;
@@ -50,12 +56,22 @@
         position: relative;
         top: -120px;
         width: 38%;
+        @media screen and (max-width: 520px) {
+          position: static;
+          width: auto;
+          text-align: center;
+        }
       }
       &__second {
         position: relative;
         top: 10px;
         width: 45%;
         left: 50px;
+        @media screen and (max-width: 520px) {
+          position: static;
+          width: auto;
+          text-align: center;
+        }
       }
     }
   }
@@ -66,11 +82,13 @@
     width: 50%;
     @media screen and (max-width: 520px) {
       width: auto;
+      gap: 25px;
     }
     &__content {
       display: flex;
       @media screen and (max-width: 520px) {
         flex-direction: column;
+        gap: 25px;
       }
       h2 {
         font-size: 25px;
@@ -86,6 +104,11 @@
         width: 48%;
         left: 55px;
         text-align: right;
+        @media screen and (max-width: 520px) {
+          position: static;
+          width: auto;
+          text-align: center;
+        }
       }
       &__second {
         position: relative;
@@ -93,6 +116,11 @@
         left: 110px;
         width: 38%;
         text-align: right;
+        @media screen and (max-width: 520px) {
+          position: static;
+          width: auto;
+          text-align: center;
+        }
       }
     }
   }
@@ -100,18 +128,23 @@
 
 .blockchain-expertise {
   padding: 50px 30px 40px 30px;
-  h2{
+  h2 {
     font-size: 58px;
+    @media screen and (max-width: 520px) {
+      font-size: 25px;
+      text-align: center;
+    }
   }
 
   &__items {
-   display: grid;
-   grid-template-columns: repeat(5, 1fr);
-   gap: 25px;
-   @media screen and (max-width: 520px) {
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    @media screen and (max-width: 520px) {
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 10px;
+    }
   }
-}
 
   &__item {
     display: flex;

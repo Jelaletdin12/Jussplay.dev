@@ -19,8 +19,14 @@ const Services = () => {
         Jussplay Developments your reliable P2E NFT Game development partner
       </h2>
       <div className={styles.mobileHead}>
-      <h2>Our Full Suite of Non-Fungible Token Development Services</h2>
-      <p>As a leading non fungible token development company, we build next-gen artistic marketplaces for the creation and exchange of NFTs. Leveraging our expertise in a variety of blockchain technologies like Ethereum, TRON, Binance, and Solana, we can build a custom NFT platform as per your business idea.</p>
+        <h2>Our Full Suite of Non-Fungible Token Development Services</h2>
+        <p>
+          As a leading non fungible token development company, we build next-gen
+          artistic marketplaces for the creation and exchange of NFTs.
+          Leveraging our expertise in a variety of blockchain technologies like
+          Ethereum, TRON, Binance, and Solana, we can build a custom NFT
+          platform as per your business idea.
+        </p>
       </div>
       <div className={styles.serviceList}>
         <div className={styles.serviceItem}>
@@ -99,7 +105,9 @@ const Services = () => {
       <h2 className={styles.desktopHead}>
         Jussplay Developments your reliable P2E NFT Game development partner
       </h2>
-      <h2 className={styles.mobileHead}>Ready-to-Launch NFT Marketplace Solutions By NFT Development Company</h2>
+      <h2 className={styles.mobileHead}>
+        Ready-to-Launch NFT Marketplace Solutions By NFT Development Company
+      </h2>
       <p>
         With our proven work experience in NFT project development, we have
         successfully delivered profitable solutions to our clients. Our

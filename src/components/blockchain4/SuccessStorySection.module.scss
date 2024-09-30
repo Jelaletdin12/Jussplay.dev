@@ -1,35 +1,41 @@
 .success-story {
   padding: 50px 30px 40px 30px;
-  h2{
+  h2 {
     font-size: 58px;
-  }
-    &__logos {
-      display: grid;
-      grid-template-columns: repeat(5, 2fr);
-      gap: 25PX;
-      @media screen and (max-width: 520px) {
-        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      }
-    }
-  
-    &__logo {
-      background-color: #222222;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      border-radius: 10px;
-      padding: 25px
-      ;
-  
-      img {
-       
-      }
-      p{
-        color: #ffffff;
-        font-size: 25px;
-      }
+    @media screen and (max-width: 520px) {
+      font-size: 25px;
+      text-align: center;
     }
   }
-  
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    gap: 25px;
+    @media screen and (max-width: 520px) {
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 10px;
+    }
+  }
+
+  &__logo {
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-radius: 10px;
+    padding: 25px;
+    @media screen and (max-width: 520px) {
+      padding: 10px;
+      text-align: center;
+    }
+
+    img {
+    }
+    p {
+      color: #ffffff;
+      font-size: 25px;
+    }
+  }
+}

@@ -87,8 +87,8 @@
       gap: 15px;
       align-items: center;
       @media screen and (max-width: 520px) {
-       flex-direction: column; 
-       text-align: center;
+        flex-direction: column;
+        text-align: center;
       }
       p {
         color: #ffffff;
@@ -106,9 +106,9 @@
     gap: 25px;
     padding-top: 50px;
     @media screen and (max-width: 520px) {
-     flex-direction: column; 
-     align-items: center;  
-     text-align: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     h2 {
@@ -125,7 +125,7 @@
       gap: 15px;
       width: 50%;
       @media screen and (max-width: 520px) {
-       width: 100%; 
+        width: 100%;
       }
     }
   }

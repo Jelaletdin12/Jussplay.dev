@@ -5,19 +5,20 @@ import RevenueSection from "../../components/blockchain4/RevenueSection";
 import BlockchainExpertiseSection from "../../components/blockchain4/BlockChainExpertise";
 import GameDevelopmentProcessSection from "../../components/blockchain4/GameDevelopmentProcessSection";
 import {
-	subTitleNFTTokenHeaderBlockchain,
-	titleNFTTokenHeaderBlockchain,
-} from '../../components/Util/dataBlockchainPage'
-import Header from '../../components/Header'
-import { HeaderBlockchain } from '../../components/Blockchain/HeaderBlockchain'
+  subTitleNFTTokenHeaderBlockchain,
+  titleNFTTokenHeaderBlockchain,
+} from "../../components/Util/dataBlockchainPage";
+import Header from "../../components/Header";
+import { HeaderBlockchain } from "../../components/Blockchain/HeaderBlockchain";
 import Footer from "../../components/Footer";
 import styles from "./blockchain4.module.scss";
 import nyc1 from "../../assets/blockchain4/nyc1.png";
 import nyc2 from "../../assets/blockchain4/nyc2.png";
 import nyc3 from "../../assets/blockchain4/nyc3.png";
 import nyc4 from "../../assets/blockchain4/nyc4.png";
+import transition from "../../pageTransition";
 
-function Blockchain_4() {
+const Blockchain_4 = () => {
   const reasons = [
     {
       title: "Highly Secured",
@@ -48,10 +49,10 @@ function Blockchain_4() {
   return (
     <div>
       <Header />
-				<HeaderBlockchain
-					title={titleNFTTokenHeaderBlockchain}
-					subtitle={subTitleNFTTokenHeaderBlockchain}
-				/>
+      <HeaderBlockchain
+        title={titleNFTTokenHeaderBlockchain}
+        subtitle={subTitleNFTTokenHeaderBlockchain}
+      />
       <ServiceSection />
       <LaunchGamesSection />
       <SuccessStorySection />
@@ -79,4 +80,4 @@ function Blockchain_4() {
   );
 }
 
-export default Blockchain_4;
+export default transition(Blockchain_4);

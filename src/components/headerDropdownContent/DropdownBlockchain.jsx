@@ -69,10 +69,12 @@ export const DropdownBlockchain = () => {
 							<div>
 								<img src={webGame} alt='' />
 							</div>
+							<Link to='/blockchain_4'>
 							<div>
 								<h6>Web3 Game Development</h6>
 								<p>Launch P2E, M2E, NFT cards &amp; immersive web3 games.</p>
 							</div>
+							</Link>
 						</div>
 					</li>
 					<li>

@@ -83,26 +83,30 @@ const topRatedPoints = [
   {
     id: 1,
     icon: web3,
-    title: 'Web3 Metaverse GameFI',
-    description: 'metaverse game development service is a complicated process and requires prior consideration of gameplay, scenario, characters, and more. Our team use state-of-the-art development tools and cutting-edge technologies to build metaverse games that help you stand out. With an element of blockchain, we',
+    title: "Web3 Metaverse GameFI",
+    description:
+      "metaverse game development service is a complicated process and requires prior consideration of gameplay, scenario, characters, and more. Our team use state-of-the-art development tools and cutting-edge technologies to build metaverse games that help you stand out. With an element of blockchain, we",
   },
   {
     id: 2,
     icon: landfi,
-    title: 'LandFi Metaverse',
-    description: 'Leverage our expertise in game development to build web3 games that thrill mobile gamers. Our team takes care of your entire metaverse game project, from game design to development and deployment. We follow a flexible web3 game development process to build powerful games with the right blend of technology to enhance players’ gaming experience.',
+    title: "LandFi Metaverse",
+    description:
+      "Leverage our expertise in game development to build web3 games that thrill mobile gamers. Our team takes care of your entire metaverse game project, from game design to development and deployment. We follow a flexible web3 game development process to build powerful games with the right blend of technology to enhance players’ gaming experience.",
   },
   {
     id: 3,
-    title: 'Move & Earn Web3 Game',
+    title: "Move & Earn Web3 Game",
     icon: king,
-    description: 'Dominate the new gaming era with the development of innovative move & earn games with web3 game developers in the USA. With integrated GPS and movement sensors, you can launch a move-and-earn game that rewards users based on physical activities such as running, cycling, walking, and more. With our expertise in web3 game development, we build attractive in-game assets and tokens to deliver an amazing gaming experience.',
+    description:
+      "Dominate the new gaming era with the development of innovative move & earn games with web3 game developers in the USA. With integrated GPS and movement sensors, you can launch a move-and-earn game that rewards users based on physical activities such as running, cycling, walking, and more. With our expertise in web3 game development, we build attractive in-game assets and tokens to deliver an amazing gaming experience.",
   },
   {
     id: 4,
     icon: warior,
-    title: 'Engaging Web3 UI/UX',
-    description: 'Build engaging metaverse games with attractive UI/UX design to attract millennials and Gen Z to your platforms. With the right expertise in metaverse game development, we help you launch web3 games with the right development tech-stack to guarantee success. Partner with the USA s top-tier web3 game development company to build robust metaverse games with engaging UI/UX interfaces.'
+    title: "Engaging Web3 UI/UX",
+    description:
+      "Build engaging metaverse games with attractive UI/UX design to attract millennials and Gen Z to your platforms. With the right expertise in metaverse game development, we help you launch web3 games with the right development tech-stack to guarantee success. Partner with the USA s top-tier web3 game development company to build robust metaverse games with engaging UI/UX interfaces.",
   },
 ];
 
@@ -143,20 +147,26 @@ const LaunchGamesSection = () => {
         <h2>
           Top-Rated Web3 Game Development Company To Build Powerful Web3 Games
         </h2>
-        <p>Unlock the future of the virtual gaming world with the best NYC-based web3 game development company. Build killer web3 games that offer players immersive gaming experiences and endless earning opportunities for players. Build the finest blockchain-based gaming solutions for millennials and Gen Z players.</p>
+        <p>
+          Unlock the future of the virtual gaming world with the best NYC-based
+          web3 game development company. Build killer web3 games that offer
+          players immersive gaming experiences and endless earning opportunities
+          for players. Build the finest blockchain-based gaming solutions for
+          millennials and Gen Z players.
+        </p>
         <div className={styles["top-rated-company__points"]}>
           {topRatedPoints.map((point) => (
             <div key={point.id} className={styles["top-rated-company__point"]}>
               <div className={styles["top-rated-company__point__imgFrame"]}>
-                  <img src={point.icon} alt="" />
+                <img src={point.icon} alt="" />
               </div>
               <div className={styles["top-rated-company__point__content"]}>
-              <h3 className={styles["top-rated-company__point__title"]}>
-                {point.title}
-              </h3>
-              <p className={styles["top-rated-company__point__description"]}>
-                {point.description}
-              </p>
+                <h3 className={styles["top-rated-company__point__title"]}>
+                  {point.title}
+                </h3>
+                <p className={styles["top-rated-company__point__description"]}>
+                  {point.description}
+                </p>
               </div>
             </div>
           ))}

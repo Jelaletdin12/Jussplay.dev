@@ -49,7 +49,9 @@ const Features = () => {
             Become a frontrunner in the virtual space with our reliable NFT
             marketplace development services.
           </p>
-          <button>Meet with us <IoIosArrowForward /></button>
+          <button>
+            Meet with us <IoIosArrowForward />
+          </button>
         </div>
       </div>
 
@@ -58,7 +60,9 @@ const Features = () => {
           <img src={mix} alt="" />
         </div>
         <div className={styles.platformItems}>
-          <h2 className={styles.headerMobile}>Indispensable Features Of Non Fungible Tokens</h2>
+          <h2 className={styles.headerMobile}>
+            Indispensable Features Of Non Fungible Tokens
+          </h2>
           {platformInfo.map((info, index) => (
             <div key={index} className={styles.platformItem}>
               <img src={info.img} alt={info.title} />

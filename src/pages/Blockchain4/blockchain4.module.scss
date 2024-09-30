@@ -1,46 +1,52 @@
 .whyUsContainer {
-    padding: 60px 20px;
-    background-color: #000;
-  
-  
+  padding: 60px 20px;
+  background-color: #000;
+
   .title {
     color: #fff;
-   font-size: 58px;
+    font-size: 58px;
     margin-bottom: 40px;
+    @media screen and (max-width: 520px) {
+      font-size: 25px;
+      text-align: center;
+    }
   }
-  .titledes{
+  .titledes {
     color: #ffffff;
     font-size: 20px;
   }
-  
+
   .reasonsGrid {
     display: flex;
     gap: 20px;
-    :nth-child(even){
+    :nth-child(even) {
       margin-top: 100px;
+      @media screen and (max-width: 520px) {
+        margin-top: 0;
+      }
     }
     @media screen and (max-width: 520px) {
       flex-direction: column;
     }
   }
-  
+
   .reasonCard {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 20px;
-    :nth-child(even){
+    :nth-child(even) {
       margin-top: 100px;
     }
   }
-  
+
   .cardTitle {
     color: #fff;
     font-size: 25px;
     margin-top: 10px !important;
   }
-  
+
   .cardDescription {
     color: #ffffff;
     font-size: 18px;

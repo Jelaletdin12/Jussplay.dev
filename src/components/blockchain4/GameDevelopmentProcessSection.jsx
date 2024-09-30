@@ -40,8 +40,11 @@ const processSteps = [
 const GameDevelopmentProcessSection = () => {
   return (
     <>
-      <div >
-        <h2 className={styles.desktopHead}>Why RisingMax Inc. a Reliable Web3 Game Development & Service Provider Company?</h2>
+      <div>
+        <h2 className={styles.desktopHead}>
+          Why RisingMax Inc. a Reliable Web3 Game Development & Service Provider
+          Company?
+        </h2>
       </div>
       <div className={styles.serviceList}>
         <div className={styles.serviceItem}>
@@ -119,18 +122,22 @@ const GameDevelopmentProcessSection = () => {
         </h2>
         <div className={styles["game-development-process__steps"]}>
           <img src={metaglass} alt="" />
-          <div className={styles["game-development-process__container"]}> 
-          {processSteps.map((step) => (
-            <div
-            key={step.id}
-            className={styles["game-development-process__step"]}
-            >
-              <div className={styles["game-development-process__step__numbers"]} ><p>{step.id}</p></div>
-              <h3 className={styles["game-development-process__step__title"]}>
-                {step.title}
-              </h3>
-            </div>
-          ))}
+          <div className={styles["game-development-process__container"]}>
+            {processSteps.map((step) => (
+              <div
+                key={step.id}
+                className={styles["game-development-process__step"]}
+              >
+                <div
+                  className={styles["game-development-process__step__numbers"]}
+                >
+                  <p>{step.id}</p>
+                </div>
+                <h3 className={styles["game-development-process__step__title"]}>
+                  {step.title}
+                </h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>

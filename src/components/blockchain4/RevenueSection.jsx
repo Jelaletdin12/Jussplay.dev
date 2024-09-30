@@ -43,7 +43,6 @@ const revenueItems = [
       "Players need to buy game tokens or pay a fixed amount to access new game content or keep on playing the game. Buy-to-play is a popular revenue generation model in premium web3 games.",
     icon: buy,
   },
-  
 ];
 
 const services = [
@@ -147,33 +146,40 @@ const RevenueSection = () => {
       </section>
 
       <section className={styles["service-section"]}>
-      <h2>How Will Web3 Game Development Change The Future?</h2>
-      <div className={styles["service-section__cards"]}>
-        {services.map((service) => (
-          <div key={service.id} className={styles["service-card"]}>
-            <img
-              src={service.icon}
-              alt={service.title}
-              className={styles["service-card__icon"]}
-            />
-            <h3 className={styles["service-card__title"]}>{service.title}</h3>
-            <p className={styles["service-card__description"]}>
-              {service.description}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section>
+        <h2>How Will Web3 Game Development Change The Future?</h2>
+        <div className={styles["service-section__cards"]}>
+          {services.map((service) => (
+            <div key={service.id} className={styles["service-card"]}>
+              <img
+                src={service.icon}
+                alt={service.title}
+                className={styles["service-card__icon"]}
+              />
+              <h3 className={styles["service-card__title"]}>{service.title}</h3>
+              <p className={styles["service-card__description"]}>
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-    <div className={styles.marketplaceContainer}>
+      <div className={styles.marketplaceContainer}>
         <h2 className={styles.marketplaceTitle}>
-        Market Your NFT Token Marketplace Where it Matters
+          Market Your NFT Token Marketplace Where it Matters
         </h2>
-        <p>Our RisingMax leaders are determined to follow and create their own strategy plans to pitch your business revenue. Along with that, we provide suggestions to develop products that set the market trends to lead your business journey.</p>
+        <p>
+          Our RisingMax leaders are determined to follow and create their own
+          strategy plans to pitch your business revenue. Along with that, we
+          provide suggestions to develop products that set the market trends to
+          lead your business journey.
+        </p>
         <div className={styles.marketplaceCards}>
           {marketPlaceCards.map((card, index) => (
             <div key={index} className={styles.marketplaceCard}>
-              <div className={styles.cardIcon}><img src={glass} alt="" /></div>
+              <div className={styles.cardIcon}>
+                <img src={glass} alt="" />
+              </div>
               <h3 className={styles.cardTitle}>{card.title}</h3>
               <p className={styles.cardDescription}>{card.description}</p>
             </div>

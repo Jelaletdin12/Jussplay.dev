@@ -1,127 +1,155 @@
 .featureCardsContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 50px 30px 40px 30px;
-    //align-items: center;
-    background-color: #000;
-    gap: 25px;
-    h2{
-      font-size: 58px;
-    }
-  }
-  .frameCards{
-    display: flex;
-    justify-content: space-between;
-  }
-  .featureCard {
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cardIcon {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .cardTitle {
-    color: #fff;
-    font-size: 1.5rem;
-  }
-  
-  .cardDescription {
-    color: #aaa;
-    font-size: 1rem;
-  }
-  
-
-  .expertiseContainer {
-    padding: 50px 30px 40px 30px;
-    background-color: #000;
-    p{
-      color: #fff;
-      font-size: 21px;
-      padding-bottom: 25px;
-    }
-  }
-  
-  .expertiseTitle {
-    color: #fff;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 30px 40px 30px;
+  //align-items: center;
+  background-color: #000;
+  gap: 25px;
+  h2 {
     font-size: 58px;
+    @media screen and (max-width: 520px) {
+      font-size: 25px;
+      text-align: center;
+    }
   }
-  
-  .tokenStandards {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .standardCard {
-    display: flex;
+}
+.frameCards {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 520px) {
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 22%;
-    text-align: center;
-    border-radius: 8px;
-    gap: 10px;
   }
-  
-  .cardTitle {
+}
+.featureCard {
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: 520px) {
+    width: auto;
+  }
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.cardDescription {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.expertiseContainer {
+  padding: 50px 30px 40px 30px;
+  background-color: #000;
+  p {
     color: #fff;
+    font-size: 21px;
+    padding-bottom: 25px;
+  }
+}
+
+.expertiseTitle {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 58px;
+  @media screen and (max-width: 520px) {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+.tokenStandards {
+  display: flex;
+  justify-content: space-around;
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+  }
+}
+
+.standardCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 22%;
+  text-align: center;
+  border-radius: 8px;
+  gap: 10px;
+  @media screen and (max-width: 520px) {
+    width: auto;
+  }
+}
+
+.cardTitle {
+  color: #fff;
+  font-size: 25px;
+}
+
+.cardDescription {
+  color: #aaa;
+  font-size: 18px;
+}
+
+.marketplaceContainer {
+  padding: 50px 30px 40px 30px;
+  background-color: #000;
+  p {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.marketplaceTitle {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 58px;
+  @media screen and (max-width: 520px) {
     font-size: 25px;
   }
-  
-  .cardDescription {
-    color: #aaa;
-    font-size: 18px;
-  }
+}
 
-  .marketplaceContainer {
-    padding: 50px 30px 40px 30px;
-    background-color: #000;
-    p{
-      text-transform: uppercase;
-      color: #fff;
-      font-size: 20px;
-      padding-bottom: 20px;
-    }
+.marketplaceCards {
+  display: flex;
+  justify-content: space-around;
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+    gap: 15px;
   }
-  
-  .marketplaceTitle {
-    color: #fff;
-    margin-bottom: 20px;
-    font-size: 58px;
+}
+
+.marketplaceCard {
+  background-color: #333;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  border-radius: 10px;
+  @media screen and (max-width: 520px) {
+    width: auto;
   }
-  
-  .marketplaceCards {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .marketplaceCard {
-    background-color: #333;
-    padding: 20px;
-    width: 30%;
-    text-align: center;
-    border-radius: 8px;
-  }
-  
-  .cardIcon {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .cardTitle {
-    color: #fff;
-  }
-  
-  .cardDescription {
-    color: #fff;
-    text-transform: none !important;
-  }
-  
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  color: #fff;
+}
+
+.cardDescription {
+  color: #fff;
+  text-transform: none !important;
+}

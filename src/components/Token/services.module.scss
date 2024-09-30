@@ -18,18 +18,19 @@
       text-align: center;
     }
   }
-  h2, p{
+  h2,
+  p {
     font-family: SGrotReg;
   }
-  .mobileHead{
+  .mobileHead {
     display: none;
     @media screen and (max-width: 520px) {
       display: block;
       text-align: center;
-      h2{
+      h2 {
         font-size: 25px;
       }
-      p{
+      p {
         font-size: 20px;
       }
     }
