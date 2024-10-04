@@ -23,6 +23,7 @@ const Token = lazy(() => import('./pages/Token'))
 const Metaverse = lazy(() => import('./pages/Metaverse'))
 const Blockchain_4 = lazy(() => import('./pages/Blockchain4'))
 
+
 export default function App() {
 	const location = useLocation()
 	const audioRef = useRef(null)

@@ -41,6 +41,9 @@
       text-align: left;
       justify-content: center;
       align-items: flex-start;
+      button{
+        width: 200px;
+      }
       @media screen and (max-width: 520px) {
         text-align: center;
         align-items: center;

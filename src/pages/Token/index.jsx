@@ -33,10 +33,12 @@ const token = () => {
         <Features />
         <div className={styles.frame}>
           <div className={styles.header}>
-            <h2>Non Fungible Token and Blockchain Relationship</h2>
+            <h2>Understanding the Connection Between NFTs and Blockchain</h2>
             <p>
-              Do not confuse the NFT with crypto. The only thing they have in
-              common is Blockchain. Have a look at it how ?
+              NFTs (Non-Fungible Tokens) are often confused with
+              cryptocurrencies, but their only shared element is the blockchain
+              technology. Here’s how the relationship between NFTs and
+              blockchain works:
             </p>
           </div>
           <div className={styles.service}>
@@ -44,8 +46,7 @@ const token = () => {
               <img src={icon3} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                  NFT is stored securely in Blockchain, which means the tokens
-                  can never be removed, destroyed, or replicated no matter what.
+                1. Immutable Record: NFTs are permanently recorded on the blockchain, ensuring their existence cannot be erased or altered.
                 </p>
               </div>
             </div>
@@ -53,8 +54,7 @@ const token = () => {
               <img src={icon4} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                  NFT is stored securely in Blockchain, which means the tokens
-                  can never be removed, destroyed, or replicated no matter what.
+                2.	Proof of Ownership: Blockchain provides a transparent ledger that proves ownership of NFTs, making it verifiable and secure.
                 </p>
               </div>
             </div>
@@ -62,8 +62,7 @@ const token = () => {
               <img src={icon2} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                  NFT is stored securely in Blockchain, which means the tokens
-                  can never be removed, destroyed, or replicated no matter what.
+                3.	Storage: Unlike traditional systems, blockchain stores NFTs in a decentralized way, ensuring no single party can control or alter the assets.
                 </p>
               </div>
             </div>
@@ -71,8 +70,7 @@ const token = () => {
               <img src={icon1} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                  NFT is stored securely in Blockchain, which means the tokens
-                  can never be removed, destroyed, or replicated no matter what.
+                4.	Smart Contracts: NFTs are governed by smart contracts on the blockchain, automating transactions and enforcing the terms without the need for intermediaries.
                 </p>
               </div>
             </div>
@@ -80,8 +78,7 @@ const token = () => {
               <img src={icon3} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                  NFT is stored securely in Blockchain, which means the tokens
-                  can never be removed, destroyed, or replicated no matter what.
+                5.	Interoperability: NFTs can interact with multiple blockchain platforms, allowing seamless movement and trading across different systems.
                 </p>
               </div>
             </div>
@@ -89,8 +86,7 @@ const token = () => {
               <img src={icon4} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                  NFT is stored securely in Blockchain, which means the tokens
-                  can never be removed, destroyed, or replicated no matter what.
+                6.	Traceability: Blockchain provides a full history of an NFT’s ownership and transaction details, ensuring authenticity and provenance.
                 </p>
               </div>
             </div>
@@ -98,8 +94,7 @@ const token = () => {
               <img src={icon2} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                  NFT is stored securely in Blockchain, which means the tokens
-                  can never be removed, destroyed, or replicated no matter what.
+                7.	Security: Blockchain’s cryptographic structure protects NFTs from hacking and unauthorized access, making digital assets secure.
                 </p>
               </div>
             </div>
@@ -107,8 +102,7 @@ const token = () => {
               <img src={icon1} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                  NFT is stored securely in Blockchain, which means the tokens
-                  can never be removed, destroyed, or replicated no matter what.
+                8.	Seamless Transactions: Blockchain streamlines the process of buying, selling, and transferring NFTs, reducing delays and eliminating third-party verification
                 </p>
               </div>
             </div>

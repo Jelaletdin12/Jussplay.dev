@@ -32,12 +32,12 @@ const Services = () => {
         <div className={styles.serviceItem}>
           <img src={nft5} alt="" />
           <div className={styles.serviceItemContent}>
-            <h3>NFT Marketplace Design & Development</h3>
+            <h3>NFT Marketplace Development</h3>
             <p>
-              With our affordable NFT marketplace development service, we turn
-              your NFT project idea into reality. Our in-depth knowledge of ERC
-              token stands enable us to build a user-centric NFT marketplace
-              platform.
+              Our team provide affordable solutions for developing NFT
+              marketplaces. We build user-friendly platforms with the deep
+              understanding of ERC token standards, turning your ideas into
+              reality.
             </p>
           </div>
         </div>
@@ -46,9 +46,10 @@ const Services = () => {
           <div className={styles.serviceItemContent}>
             <h3>NFT Smart Contract Development & Audit</h3>
             <p>
-              Avail of our NFT smart contract development and audit services to
-              ensure creators and investors about immutability and transparency.
-              Join the smart contract bandwagon and secure NFT ownership.
+              We offer contract development and audit services to ensure
+              security and transparency in your NFT transactions. You can
+              protect your assets with immutable smart contracts with the
+              guarantee that we provide.
             </p>
           </div>
         </div>
@@ -57,10 +58,9 @@ const Services = () => {
           <div className={styles.serviceItemContent}>
             <h3>NFT Marketplace Support & Maintenance</h3>
             <p>
-              We as an NFT Marketplace Development Company continuously monitor,
-              maintain, and support for managing third-party upgrades, OS
-              release, and ensure that the nodes run in the smoothest manner
-              possible.
+              Jussplay offers continuous support and maintenance for NFT
+              marketplaces. We provide assistance with third-party updates, OS
+              releases, and node management.
             </p>
           </div>
         </div>
@@ -69,10 +69,10 @@ const Services = () => {
           <div className={styles.serviceItemContent}>
             <h3>NFT Minting Platform Development</h3>
             <p>
-              Empower artists and creators worldwide to digitise creations into
-              NFTs and build their own digital asset collection. Our robust NFT
-              minting platforms make it easy for creators to mint digital
-              assets.
+              Jussplay develops platforms that allow artists and creators to
+              digitize their work and build unique collections of digital
+              assets. Our NFT minting platforms make it easy for creators to
+              mint and showcase their NFTs.
             </p>
           </div>
         </div>
@@ -81,10 +81,10 @@ const Services = () => {
           <div className={styles.serviceItemContent}>
             <h3>NFT Exchange Platform Development</h3>
             <p>
-              Venture into the highly profitable digital asset space with our
-              advanced NFT exchange platform. Integrated with blockchain, create
-              a secure environment for buying, selling, and exchange of non
-              fungible tokens.
+              You have an exclusive opportunity to become a member of the
+              profitable world of digital assets. It’s all possible with our
+              advanced NFT exchange platform. It provides a secure environment
+              for buying, selling, and trading NFTs.
             </p>
           </div>
         </div>

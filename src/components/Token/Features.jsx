@@ -12,27 +12,27 @@ import { IoIosArrowForward } from "react-icons/io";
 const Features = () => {
   const platformInfo = [
     {
-      title: "Indestructible",
+      title: "Flawless Security",
       content:
-        "NFTs are stored and managed through Blockchain that brings a greater level of security for them and can never be destroyed.",
+        "NFTs are secured through the blockchain, ensuring the highest level of protection. Once created, they cannot be deleted or edited, guaranteeing the safety of your digital assets.",
       img: frame1,
     },
     {
-      title: "Interoperable",
+      title: "Cross-Platform Compatibility",
       content:
-        "NFTs follow the standard ERC-721 and are interoperable, which means information stored in them cannot be exchanged or used.",
+        "Built on the ERC-721 standard, NFTs are universally compatible across platforms. This ensures that your assets maintain their functionality and value, no matter where they are used.",
       img: frame2,
     },
     {
-      title: "Transparency",
+      title: "Complete Transparency",
       content:
-        "NFT are developed on a decentralized ecosystem and the information regarding the transactions are verified publicly.",
+        "Every transaction involving NFTs is recorded on blockchain, making the entire process transparent. Buyers and sellers have full confidence knowing the data is verifiable.",
       img: frame3,
     },
     {
-      title: "Reliability",
+      title: "Dependable Stability",
       content:
-        "NFTs assure they are resistant to modifications, removal, or replacement increasing the reliability and value of exchange that took place.",
+        "NFTs are designed to resist any alterations or deletions. They offer consistent reliability that will save the value of each token through time.",
       img: frame4,
     },
   ];
@@ -50,7 +50,7 @@ const Features = () => {
             marketplace development services.
           </p>
           <button>
-            Meet with us <IoIosArrowForward />
+            Let’s Get Started <IoIosArrowForward />
           </button>
         </div>
       </div>
@@ -78,19 +78,17 @@ const Features = () => {
       <div className={styles.nftBenefits}>
         <div className={styles.benefitsGrid}>
           <h2>
-            Build Future Digital Asset Trading Platforms With an NFT Token
-            Development Company
+            Unlock the Future of Digital Asset Trading with Expert NFT
+            Development
           </h2>
           <p>
-            RisingMax is a reliable non fungible token development company that
-            offers affordable NFT token development services to launch platforms
-            that revolutionize the trading of digital assets. We understand the
-            trade-offs that a start-up needs to make big bucks in the NFT
-            industry. Our NFT marketplace development team leverages its
-            expertise in blockchain technology to help clients upsurge the NFT
-            world. We follow robust development methodologies to build countless
-            NFT projects, such as NFT exchange platforms, NFT lending &
-            borrowing platforms, NFT minting platforms, and more.
+            At JustPlay, we are a trusted NFT development company offering
+            customized solutions to build innovative platforms. We understand
+            the challenges startups face and provide exclusive offers to help
+            them in the competitive NFT market. With a deep understanding of
+            blockchain, our team of experts specializes in creating a wide range
+            of NFT platforms. Let us help you make your NFT project for you that
+            will open more opportunities in the future.
           </p>
         </div>
         <img src={big} alt="" />

@@ -7,37 +7,37 @@ const NftCards = () => {
     {
       title: "NFT For Art",
       description:
-        "Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.",
+        "Transform the world of digital art by allowing artists to tokenize their work. Programmable art is the most common non-fungible token use case, blending creativity, technology, and flexibility. Artists can ensure authenticity and ownership of their unique pieces through blockchain.",
       imgSrc: nftArt,
     },
     {
-      title: "NFT For Art",
+      title: "NFT for Music",
       description:
-        "Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.",
+        "Revolutionize the music industry by enabling artists to tokenize their work. Musicians can mint NFTs for albums, songs, and unique sound clips, offering fans exclusive access to rare content while ensuring ownership rights through blockchain.",
       imgSrc: nftArt,
     },
     {
-      title: "NFT For Art",
+      title: "NFT for Gaming",
       description:
-        "Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.",
+        "Fuel the next generation of gaming with NFT-based in-game assets. Create secure, tradable digital items that enhance player engagement and create real-world value. From avatars to rare items, NFT technology can seamlessly integrate with gaming platforms.",
       imgSrc: nftArt,
     },
     {
-      title: "NFT For Art",
+      title: "NFT for Real Estate",
       description:
-        "Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.",
+        "Bring innovation to real estate by tokenizing property assets. Our NFT solutions enable fractional ownership, making real estate investment accessible to more people. Secure and transparent transactions simplify ownership transfers and investment opportunities.",
       imgSrc: nftArt,
     },
     {
-      title: "NFT For Art",
+      title: "NFT for Fashion",
       description:
-        "Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.",
+        "Empower the fashion world with digital collectibles and limited-edition virtual wearables. Designers can tokenize their creations, allowing customers to own unique, verified digital fashion pieces. NFT fashion blends style with tech-driven exclusivity.",
       imgSrc: nftArt,
     },
     {
-      title: "NFT For Art",
+      title: "NFT for Sports",
       description:
-        "Programmable art is the most common non-fungible token use case that brings a mix of creativity, technology, and flexibility.",
+        "Enhance fan experiences by minting NFTs for exclusive sports memorabilia, player cards, and digital collectibles. Sports teams and athletes can engage with fans on a deeper level, offering limited-edition content secured on the blockchain.",
       imgSrc: nftArt,
     },
   ];
