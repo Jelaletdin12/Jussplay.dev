@@ -18,7 +18,6 @@ import { Platform } from '../../components/Metaverse/Platform/Platform'
 import { CustomScroll } from '../../components/scroll/CustomScroll'
 // Utils
 import {
-	spanTextHeaderBlockchain,
 	subTitleFutureScopeNFT,
 	subTitleHeaderBlockchain,
 	subTitlePlayToEarnNFT,
@@ -44,7 +43,7 @@ const Blockchain = () => {
 				<HeaderBlockchain
 					title={titleHeaderBlockchain}
 					subtitle={subTitleHeaderBlockchain}
-					spanText={spanTextHeaderBlockchain}
+					// spanText={spanTextHeaderBlockchain}
 				/>
 				<main className={styles.blockchain__main}>
 					<BlockchainContent />
