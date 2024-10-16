@@ -70,10 +70,10 @@ export const DropdownBlockchain = () => {
 								<img src={webGame} alt='' />
 							</div>
 							<Link to='/blockchain_4'>
-							<div>
-								<h6>Web3 Game Development</h6>
-								<p>Launch P2E, M2E, NFT cards &amp; immersive web3 games.</p>
-							</div>
+								<div>
+									<h6>Web3 Game Development</h6>
+									<p>Launch P2E, M2E, NFT cards &amp; immersive web3 games.</p>
+								</div>
 							</Link>
 						</div>
 					</li>
@@ -96,18 +96,20 @@ export const DropdownBlockchain = () => {
 								<p>Build web, mobile, and desktop multi-currency wallets.</p>
 							</div>
 						</div>
-						<div className={styles.dropdown__wrap}>
-							<div>
-								<img src={webDev} alt='' />
+						<Link to={'/web3'}>
+							<div className={styles.dropdown__wrap}>
+								<div>
+									<img src={webDev} alt='' />
+								</div>
+								<div>
+									<h6>Web3 Game Development</h6>
+									<p>
+										Transform your business with our high-end web3 project
+										development.
+									</p>
+								</div>
 							</div>
-							<div>
-								<h6>Web3 Game Development</h6>
-								<p>
-									Transform your business with our high-end web3 project
-									development.
-								</p>
-							</div>
-						</div>
+						</Link>
 					</li>
 				</ul>
 				<div className={styles.dropdown__leftBottom}>

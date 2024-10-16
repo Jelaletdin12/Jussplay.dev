@@ -253,6 +253,9 @@
 	top: -0.8em;
 	left: 0;
 	transition: all ease-in-out 0.3s;
+	@media (max-width: 375px) {
+		top: -2.2em;
+	}
 	@media (max-width: 320px) {
 		top: -2em;
 	}

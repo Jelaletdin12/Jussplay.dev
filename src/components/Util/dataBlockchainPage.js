@@ -45,20 +45,22 @@ import rewardingFooter08 from '../../assets//blockchain/PopularNFTP2EGames/icons
 import rewardingFooter09 from '../../assets//blockchain/PopularNFTP2EGames/icons/09.svg'
 // Main page
 export const titleHeaderBlockchain = 'Custom Android App Development Company'
+
 export const subTitleHeaderBlockchain = `
-	Leverage our custom Android app development services to build fully
-	functional & secure Android app solutions while taking advantage of all
-	the latest technologies. Our expert Android mobile app developers create
-	highly intuitive, cost-efficient & feature-rich apps that maximize brand
-	loyalty.
-`
-export const spanTextHeaderBlockchain = `
-	Our robust Android solutions solve complex business challenges across
-	the globe.
+	Welcome to the World of BLOCKCHAIN, where Jussplay Company is your reliable partner and guide!
+We provide innovative solutions for any projects that use blockchain technology, including Play-to-Earn (P2E), Web3, cryptocurrency, and more. With our team of over 30 experts, you can create a unique product that will help your business thrive and grow in the digital era.
 `
 
-export const titleNFT =
-	'Jussplay Developments your reliable P2E NFT Game development partner'
+// export const spanTextHeaderBlockchain = `
+// 	Our robust Android solutions solve complex business challenges across
+// 	the globe.
+// `
+
+export const titleGamingWorld =
+	'Reinventing the Gaming World With Next-Gen NFT Game Development Solutions'
+
+export const subTitleGamingWorld =
+	'We are passionate about developing metaverse solutions that meet any business goals. We develop metaverse apps that can significantly impact the virtual world.'
 
 // Have An Idea for Your NFT Gaming Platform ============
 export const titleIdeaNFT =
