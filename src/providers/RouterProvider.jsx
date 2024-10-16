@@ -8,6 +8,7 @@ import {
 import App from '../App'
 import About from '../pages/About'
 import Blockchain from '../pages/Blockchain'
+import Blockchain4 from '../pages/Blockchain4'
 import Career from '../pages/Career'
 import ContactUs from '../pages/ContactUs'
 import { NotFoundPage } from '../pages/Error/NotFoundPage'
@@ -16,6 +17,7 @@ import Industry from '../pages/Industry'
 import Metaverse from '../pages/Metaverse'
 import Service from '../pages/Service'
 import TokenNFT from '../pages/Token'
+import Web3 from '../pages/Web3'
 
 const BubbleError = () => {
 	const error = useRouteError()
@@ -76,12 +78,12 @@ const router = createBrowserRouter([
 			},
 			{
 				path: 'blockchain_4',
-				element: '',
+				element: <Blockchain4 />,
 				errorElement: <BubbleError />,
 			},
 			{
 				path: 'web3',
-				element: '',
+				element: <Web3 />,
 				errorElement: <BubbleError />,
 			},
 			{
