@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from '../../../pages/Web3/web3.module.scss'
 
 export const USACard = ({ image, title, text }) => {
