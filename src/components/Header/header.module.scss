@@ -18,7 +18,7 @@
   }
   &__logo {
     display: none;
-    @media (max-width: 430px) {
+    @media (max-width: 768px) {
       display: block;
     }
   }
@@ -39,7 +39,7 @@
 
     ul {
       display: flex;
-      align-items: center;
+      // align-items: center;
       gap: 8px;
 
       li {
@@ -51,6 +51,9 @@
         text-transform: uppercase;
         transition: all 0.2s;
         & a:hover {
+          color: $white;
+        }
+        &:hover {
           color: $white;
         }
 

@@ -150,7 +150,7 @@ function Home() {
 		// mm.add('(min-width: 521px)', animateForLargeScreens)
 		// mm.add('(max-width: 520px)', animateForSmallScreens)
 
-		const createAnimation = (x1, x2, y, aboutY) => {
+		const createAnimation = (x1, x2, x, y, aboutY) => {
 			const heroAnim = gsap.timeline({
 				scrollTrigger: {
 					trigger: '#hero',
@@ -163,12 +163,15 @@ function Home() {
 			})
 			heroAnim.to('#heroText1', { x: x1, opacity: 0 })
 			heroAnim.to('#heroText2', { x: x2, opacity: 0 }, '<')
-			heroAnim.to('#logoLottie', { y }, '<')
+			heroAnim.to('#logoLottie', { x }, '<')
+			heroAnim.to('#logoLottie', { y }, '>')
 			heroAnim.to('#about', { y: aboutY, opacity: 1 }, '<')
 		}
 
-		mm.add('(min-width: 521px)', () => createAnimation(-200, 200, -300, -550))
-		mm.add('(max-width: 520px)', () => createAnimation(-300, 300, -400, -450))
+		mm.add('(min-width: 521px)', () => createAnimation(-200, 200, 400, 0, -550))
+		mm.add('(max-width: 520px)', () =>
+			createAnimation(-300, 300, 0, -400, -450)
+		)
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll)

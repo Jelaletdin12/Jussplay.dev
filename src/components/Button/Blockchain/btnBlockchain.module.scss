@@ -1,0 +1,21 @@
+.blockchainBtn {
+	background-color: transparent;
+	color: white;
+	border: 1px solid white;
+	padding: 10px 20px;
+	font-size: 18px;
+	width: 176px;
+	border-radius: 99px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: background-color 0.3s ease 0s;
+	@media (max-width: 640px) {
+		margin: 0 auto;
+	}
+	&:hover {
+		background-color: white;
+		color: black;
+	}
+}
