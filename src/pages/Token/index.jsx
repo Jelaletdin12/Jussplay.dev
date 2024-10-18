@@ -46,7 +46,9 @@ const token = () => {
               <img src={icon3} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                1. Immutable Record: NFTs are permanently recorded on the blockchain, ensuring their existence cannot be erased or altered.
+                  1. Immutable Record: NFTs are permanently recorded on the
+                  blockchain, ensuring their existence cannot be erased or
+                  altered.
                 </p>
               </div>
             </div>
@@ -54,7 +56,9 @@ const token = () => {
               <img src={icon4} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                2.	Proof of Ownership: Blockchain provides a transparent ledger that proves ownership of NFTs, making it verifiable and secure.
+                  2. Proof of Ownership: Blockchain provides a transparent
+                  ledger that proves ownership of NFTs, making it verifiable and
+                  secure.
                 </p>
               </div>
             </div>
@@ -62,7 +66,9 @@ const token = () => {
               <img src={icon2} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                3.	Storage: Unlike traditional systems, blockchain stores NFTs in a decentralized way, ensuring no single party can control or alter the assets.
+                  3. Storage: Unlike traditional systems, blockchain stores NFTs
+                  in a decentralized way, ensuring no single party can control
+                  or alter the assets.
                 </p>
               </div>
             </div>
@@ -70,7 +76,9 @@ const token = () => {
               <img src={icon1} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                4.	Smart Contracts: NFTs are governed by smart contracts on the blockchain, automating transactions and enforcing the terms without the need for intermediaries.
+                  4. Smart Contracts: NFTs are governed by smart contracts on
+                  the blockchain, automating transactions and enforcing the
+                  terms without the need for intermediaries.
                 </p>
               </div>
             </div>
@@ -78,7 +86,9 @@ const token = () => {
               <img src={icon3} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                5.	Interoperability: NFTs can interact with multiple blockchain platforms, allowing seamless movement and trading across different systems.
+                  5. Interoperability: NFTs can interact with multiple
+                  blockchain platforms, allowing seamless movement and trading
+                  across different systems.
                 </p>
               </div>
             </div>
@@ -86,7 +96,9 @@ const token = () => {
               <img src={icon4} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                6.	Traceability: Blockchain provides a full history of an NFT’s ownership and transaction details, ensuring authenticity and provenance.
+                  6. Traceability: Blockchain provides a full history of an
+                  NFT’s ownership and transaction details, ensuring authenticity
+                  and provenance.
                 </p>
               </div>
             </div>
@@ -94,7 +106,9 @@ const token = () => {
               <img src={icon2} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                7.	Security: Blockchain’s cryptographic structure protects NFTs from hacking and unauthorized access, making digital assets secure.
+                  7. Security: Blockchain’s cryptographic structure protects
+                  NFTs from hacking and unauthorized access, making digital
+                  assets secure.
                 </p>
               </div>
             </div>
@@ -102,7 +116,9 @@ const token = () => {
               <img src={icon1} alt="" />
               <div className={styles.itemsContent}>
                 <p>
-                8.	Seamless Transactions: Blockchain streamlines the process of buying, selling, and transferring NFTs, reducing delays and eliminating third-party verification
+                  8. Seamless Transactions: Blockchain streamlines the process
+                  of buying, selling, and transferring NFTs, reducing delays and
+                  eliminating third-party verification
                 </p>
               </div>
             </div>
