@@ -1,0 +1,90 @@
+.walletDevelopmentSection {
+    padding: 50px 30px 40px 30px;
+    background-color: #000;
+    color: #fff;
+    text-align: left;
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .title {
+      font-size: 45px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+  
+    .description {
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+  
+    .walletFeatures {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 60px;
+  
+      .featureItem {
+        width: 45%;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: flex-start;
+  
+        .icon {
+          width: 40px;
+          margin-right: 20px;
+        }
+  
+        .featureContent {
+          text-align: left;
+  
+          .featureTitle {
+            font-size: 25px;
+            margin-bottom: 10px;
+          }
+  
+          .featureDescription {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  
+    .investmentSection {
+      margin-top: 40px;
+  
+      h3 {
+        font-size: 48px;
+        margin-bottom: 30px;
+      }
+  
+      .investmentReasons {
+        display: flex;
+        gap: 15px;
+        
+        .reasonItem {
+          background-color: #222222;
+          width: 30%;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 15px;
+  
+          .icon {
+           
+            margin-bottom: 10px;
+          }
+  
+          .reasonTitle {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+  

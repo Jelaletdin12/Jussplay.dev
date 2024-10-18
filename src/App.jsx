@@ -22,6 +22,7 @@ const Blockchain = lazy(() => import('./pages/Blockchain'))
 const Token = lazy(() => import('./pages/Token'))
 const Metaverse = lazy(() => import('./pages/Metaverse'))
 const Blockchain_4 = lazy(() => import('./pages/Blockchain4'))
+const Blockchain_6 = lazy(() => import('./pages/Blockchain6'))
 const Web3 = lazy(() => import('./pages/Web3'))
 
 export default function App() {
@@ -107,6 +108,7 @@ export default function App() {
 					<Route path='/token' element={<Token />} />
 					<Route path='/metaverse' element={<Metaverse />} />
 					<Route path='/blockchain_4' element={<Blockchain_4 />} />
+					<Route path='/blockchain_6' element={<Blockchain_6 />} />
 					<Route path='/web3' element={<Web3 />} />
 					<Route path='*' element={<NotFoundPage />} />
 					<Route path='' element={<NotFoundPage />} />

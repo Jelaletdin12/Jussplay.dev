@@ -1,0 +1,97 @@
+.gridSection {
+ // padding: 50px 30px 40px 30px;
+  color: #fff;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .gridItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      margin-bottom: 40px;
+      text-align: center;
+
+      .icon {
+        max-width: 80px;
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.cryptoSection {
+  padding: 50px 0;
+  background-color: #111;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+
+  .cryptoContents {
+    display: flex;
+    flex-direction: column;
+    //align-items: left;
+    justify-content: center;
+    text-align: left;
+    padding: 150px;
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
+  }
+
+  .cryptoIcons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .cryptoIcon {
+      //max-width: 60px;
+    }
+  }
+
+  .meetButton {
+    border: 1px solid #fff !important;
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+}

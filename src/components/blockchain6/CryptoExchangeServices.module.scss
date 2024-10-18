@@ -1,0 +1,53 @@
+.servicesSection {
+  padding: 50px 30px 40px 30px;
+  //background-color: #121212;
+  text-align: left;
+  color: #fff;
+}
+
+.title {
+  font-size: 58px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.description {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.servicesGrid {
+  padding: 0px 50px 0px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.serviceCard {
+  background: linear-gradient(
+    180deg,
+    rgba(34, 23, 74, 1) 0%,
+    rgba(145, 73, 237, 0) 100%
+  );
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.iconContainer {
+  margin-bottom: 15px;
+}
+
+.serviceTitle {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.serviceDescription {
+  font-size: 18px;
+  color: #fff;
+}

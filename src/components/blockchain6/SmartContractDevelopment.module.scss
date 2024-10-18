@@ -1,0 +1,95 @@
+.smartContractSection {
+  padding: 50px 20px;
+  background-color: #000;
+  color: #fff;
+  text-align: left;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .description {
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+
+  .smartContractFeatures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    .featureItem {
+      // width: 45%;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .icon {
+        margin-bottom: 20px;
+      }
+
+      .featureContent {
+        text-align: center;
+
+        .featureTitle {
+          font-size: 25px;
+          margin-bottom: 10px;
+        }
+
+        .featureDescription {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .promoSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #151515;
+    padding: 40px;
+    border-radius: 8px;
+    height: 361px;
+
+    .promoImage {
+      width: 40%;
+      border-radius: 8px;
+      
+    }
+
+    .promoContent {
+      text-align: left;
+      width: 55%;
+
+      h3 {
+        font-size: 38px;
+        margin-bottom: 20px;
+      }
+
+      .meetButton {
+        border: 1px solid #fff !important;
+        border-radius: 99px;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 18px;
+       
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+  }
+}

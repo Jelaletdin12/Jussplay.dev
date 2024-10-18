@@ -82,10 +82,10 @@ export const DropdownBlockchain = () => {
 							<div>
 								<img src={cryptoEx} alt='' />
 							</div>
-							<div>
+							<Link to='/blockchain_6'>
 								<h6>Crypto Exchange Development</h6>
 								<p>Unlock new revenue stream with crypto exchange software.</p>
-							</div>
+							</Link>
 						</div>
 						<div className={styles.dropdown__wrap}>
 							<div>

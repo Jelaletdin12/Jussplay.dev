@@ -9,6 +9,7 @@ import App from '../App'
 import About from '../pages/About'
 import Blockchain from '../pages/Blockchain'
 import Blockchain4 from '../pages/Blockchain4'
+import Blockchain6 from '../pages/Blockchain6'
 import Career from '../pages/Career'
 import ContactUs from '../pages/ContactUs'
 import { NotFoundPage } from '../pages/Error/NotFoundPage'
@@ -79,6 +80,11 @@ const router = createBrowserRouter([
 			{
 				path: 'blockchain_4',
 				element: <Blockchain4 />,
+				errorElement: <BubbleError />,
+			},
+			{
+				path: 'blockchain_6',
+				element: <Blockchain6 />,
 				errorElement: <BubbleError />,
 			},
 			{
