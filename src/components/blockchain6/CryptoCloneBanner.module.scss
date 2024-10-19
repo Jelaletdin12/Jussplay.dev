@@ -1,6 +1,9 @@
 .bannerSection {
   padding: 50px 150px 40px 150px;
   color: #fff;
+  @media screen and (max-width: 520px) {
+    padding: 50px 25px 50px 25px;
+  }
 }
 
 .container {
@@ -11,6 +14,12 @@
   gap: 20px;
   background: #222222;
   border-radius: 10px;
+  @media screen and (max-width: 520px) {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px 30px 25px;
+    text-align: center;
+  }
 }
 
 .imageWrapper {
@@ -25,17 +34,26 @@
 .content {
   flex: 1;
   text-align: left;
+  @media screen and (max-width: 520px) {
+    text-align: center;
+  }
 }
 
 .title {
   font-size: 38px;
   font-weight: 400;
   margin-bottom: 20px;
+  @media screen and (max-width: 520px) {
+    font-size: 24px;
+  }
 }
 
 .description {
   font-size: 25px;
   margin-bottom: 20px;
+  @media screen and (max-width: 520px) {
+    font-size: 18px;
+  }
 }
 
 .featuresList {
@@ -60,9 +78,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #fff;
+  gap: 10px;
+  //width: 155px;
+  @media screen and (max-width: 520px) {
+    width: 177px;
   }
 }

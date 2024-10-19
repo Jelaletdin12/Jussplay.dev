@@ -1,90 +1,121 @@
 .container {
-    padding: 50px 30px 40px 30px;
-    background-color: #000;
-    color: #fff;
-  }
-  
-  .title {
-    font-size: 48px;
-    font-weight: 400;
-    margin-bottom: 1rem;
-  }
-  
-  .subtitle {
-    font-size: 20px;
-    color: #fff;
-    margin-bottom: 2rem;
-  }
-  
-  .processFlow, .engagementModels, .features {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-  }
-  .features{
-    padding: 0 60px 0 60px;
-  }
-  
-  .step {
-    background-color: #222;
-    padding: 1.5rem;
-    border-radius: 5px;
-    flex: 1;
-    margin: 0 0.5rem;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    p{
-        font-size: 20px;
-        color: #fff;
-    }
-  }
-  
-  .stepImage, .modelImage {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 1rem;
-  }
-  
-  .model h3 {
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 1rem;
-  }
-  
-  .model ul, .featuresList {
-    list-style: disc;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .model li {
-    font-size: 18p;
-    margin-bottom: 0.5rem;
-  }
-  .featuresList li{
-    font-size: 33px;
-    font-weight: 400;
-  }
-  
-  .highlightTitle {
-    font-size: 48px;
-    font-weight: 400;
-    margin-bottom: 2rem;
+  padding: 50px 30px 40px 30px;
+  background-color: #000;
+  color: #fff;
+  @media screen and (max-width: 520px) {
     text-align: center;
   }
-  .line{
-    display: flex;
-    justify-content: center;
-  }
-  
-.model{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
 }
-.engagementModels{
-    padding: 50px 180px 0 150px;
+
+.title {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  @media screen and (max-width: 520px) {
+    font-size: 25px;
+  }
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.processFlow,
+.engagementModels,
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.features {
+  padding: 0 60px 0 60px;
+  @media screen and (max-width: 520px) {
+    padding: 0 10px;
+    font-size: 18px;
+    text-align: left;
+  }
+}
+
+.step {
+  background-color: #222;
+  padding: 1.5rem;
+  border-radius: 5px;
+  flex: 1;
+  margin: 0 0.5rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  p {
+    font-size: 20px;
+    color: #fff;
+  }
+}
+
+.stepImage,
+.modelImage {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+}
+
+.model h3 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.model ul,
+.featuresList {
+  list-style: disc;
+  padding: 0;
+  margin: 0;
+}
+
+.model li {
+  font-size: 18p;
+  margin-bottom: 0.5rem;
+}
+.featuresList li {
+  font-size: 33px;
+  font-weight: 400;
+}
+
+.highlightTitle {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-align: center;
+  @media screen and (max-width: 520px) {
+    font-size: 25px;
+  }
+}
+.line {
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 520px) {
+    display: none;
+  }
+}
+
+.model {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  @media screen and (max-width: 520px) {
+    align-items: flex-start;
+  }
+}
+.engagementModels {
+  padding: 50px 180px 0 150px;
+  @media screen and (max-width: 520px) {
+    padding: 0;
+  }
 }

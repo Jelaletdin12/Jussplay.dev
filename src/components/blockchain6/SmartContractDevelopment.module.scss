@@ -3,6 +3,9 @@
   background-color: #000;
   color: #fff;
   text-align: left;
+  @media screen and (max-width: 520px) {
+    text-align: center;
+  }
 
   .container {
     max-width: 1200px;
@@ -12,7 +15,10 @@
   .title {
     font-size: 48px;
     margin-bottom: 20px;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    @media screen and (max-width: 520px) {
+      font-size: 25px;
+    }
   }
 
   .description {
@@ -26,6 +32,9 @@
     gap: 15px;
     justify-content: space-between;
     margin-bottom: 60px;
+    @media screen and (max-width: 520px) {
+      grid-template-columns: 1fr;
+    }
 
     .featureItem {
       // width: 45%;
@@ -62,20 +71,36 @@
     padding: 40px;
     border-radius: 8px;
     height: 361px;
+    @media screen and (max-width: 520px) {
+      flex-direction: column;
+      height: auto;
+    }
 
     .promoImage {
       width: 40%;
       border-radius: 8px;
-      
+      @media screen and (max-width: 520px) {
+        width: auto;
+      }
     }
 
     .promoContent {
       text-align: left;
       width: 55%;
+      @media screen and (max-width: 520px) {
+        width: auto;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
 
       h3 {
         font-size: 38px;
         margin-bottom: 20px;
+        @media screen and (max-width: 520px) {
+          font-size: 25px;
+        }
       }
 
       .meetButton {
@@ -85,9 +110,8 @@
         padding: 10px 20px;
         cursor: pointer;
         font-size: 18px;
-       
-        &:hover {
-          background-color: #f0f0f0;
+        @media screen and (max-width: 520px) {
+          width: 177px;
         }
       }
     }

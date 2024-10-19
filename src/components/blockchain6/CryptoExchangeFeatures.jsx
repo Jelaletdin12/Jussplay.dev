@@ -11,7 +11,7 @@ import uiIcon from "../../assets/blockchain6/ML07.png";
 import escrowIcon from "../../assets/blockchain6/ML08.png";
 import adminPanelIcon from "../../assets/blockchain6/admin-crytpon.png";
 import dexServiceImage from "../../assets/blockchain6/page6.png";
-
+import { IoIosArrowForward } from "react-icons/io";
 const cryptoExchangeFeatures = [
   { title: "High TPS", icon: tpsIcon },
   { title: "Powerful trade engine", icon: tradeEngineIcon },
@@ -66,7 +66,9 @@ const CryptoExchangeFeatures = () => {
               testers, and others. Hire the best team for the development of
               your exchange platform.
             </p>
-            <button className={styles.meetButton}>Meet with us {">"}</button>
+            <button className={styles.meetButton}>
+              Meet with us <IoIosArrowForward />
+            </button>
           </div>
         </div>
       </div>
