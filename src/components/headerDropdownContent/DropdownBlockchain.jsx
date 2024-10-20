@@ -87,15 +87,17 @@ export const DropdownBlockchain = () => {
 								<p>Unlock new revenue stream with crypto exchange software.</p>
 							</Link>
 						</div>
-						<div className={styles.dropdown__wrap}>
-							<div>
-								<img src={cryptoWallet} alt='' />
+						<Link to={'/wallet'}>
+							<div className={styles.dropdown__wrap}>
+								<div>
+									<img src={cryptoWallet} alt='' />
+								</div>
+								<div>
+									<h6>Crypto Wallet Development</h6>
+									<p>Build web, mobile, and desktop multi-currency wallets.</p>
+								</div>
 							</div>
-							<div>
-								<h6>Crypto Wallet Development</h6>
-								<p>Build web, mobile, and desktop multi-currency wallets.</p>
-							</div>
-						</div>
+						</Link>
 						<Link to={'/web3'}>
 							<div className={styles.dropdown__wrap}>
 								<div>

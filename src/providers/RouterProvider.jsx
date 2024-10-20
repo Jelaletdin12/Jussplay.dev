@@ -18,6 +18,7 @@ import Industry from '../pages/Industry'
 import Metaverse from '../pages/Metaverse'
 import Service from '../pages/Service'
 import TokenNFT from '../pages/Token'
+import Wallet from '../pages/Wallet'
 import Web3 from '../pages/Web3'
 
 const BubbleError = () => {
@@ -90,6 +91,11 @@ const router = createBrowserRouter([
 			{
 				path: 'web3',
 				element: <Web3 />,
+				errorElement: <BubbleError />,
+			},
+			{
+				path: 'wallet',
+				element: <Wallet />,
 				errorElement: <BubbleError />,
 			},
 			{

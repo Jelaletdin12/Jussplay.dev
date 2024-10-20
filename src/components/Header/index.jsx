@@ -211,7 +211,14 @@ export default memo(function Header({ children }) {
 						<SwiperSlide>
 							<li>
 								<Link to='/web3' style={{ color: '#fff' }}>
-									web3
+									Web3
+								</Link>
+							</li>
+						</SwiperSlide>
+						<SwiperSlide>
+							<li>
+								<Link to='/wallet' style={{ color: '#fff' }}>
+									Crypto <br /> wallet
 								</Link>
 							</li>
 						</SwiperSlide>
