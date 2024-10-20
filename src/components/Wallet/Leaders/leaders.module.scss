@@ -1,0 +1,42 @@
+.leaders {
+	&__content {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-bottom: 90px;
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+	}
+	&__item {
+		@media (max-width: 768px) {
+			flex: 1 1 auto;
+			&:not(:last-child) {
+				margin-bottom: 40px;
+			}
+		}
+		text-align: center;
+		h2 {
+			display: block;
+			font-weight: 400;
+			font-size: 18px;
+
+			/* line-height: 24px; */
+			line-height: 1.33333;
+			letter-spacing: 0.02em;
+			text-align: center;
+			color: #fff;
+		}
+		span {
+			font-weight: 700;
+			font-size: 80px;
+
+			/* line-height: 80px; */
+			line-height: 1;
+			letter-spacing: -0.03em;
+			text-align: center;
+			color: #b0d9ff;
+		}
+	}
+}
