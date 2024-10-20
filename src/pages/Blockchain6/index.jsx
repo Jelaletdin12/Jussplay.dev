@@ -7,6 +7,8 @@ import SmartContract from "../../components/blockchain6/SmartContractDevelopment
 import CryptoExchangeFeatures from "../../components/blockchain6/CryptoExchangeFeatures";
 import CryptoSecurityFeatures from "../../components/blockchain6/CryptoSecurityFeatures";
 import DevelopmentProcess from "../../components/blockchain6/DevelopmentProcess";
+import bg from "../../assets/blockchain/01.png";
+import { CustomScroll } from "../../components/scroll/CustomScroll";
 
 import {
   subTitleNFTTokenHeaderBlockchain,
@@ -20,7 +22,8 @@ import transition from "../../pageTransition";
 
 const Blockchain_6 = () => {
   return (
-    <div>
+    <CustomScroll>
+    <div className={styles.appContainer}> 
       <Header />
       <HeaderBlockchain
         title={titleNFTTokenHeaderBlockchain}
@@ -35,8 +38,10 @@ const Blockchain_6 = () => {
       <CryptoExchangeFeatures/>
       <CryptoSecurityFeatures/>
       <DevelopmentProcess />
+      <img className={styles.bgImg} src={bg} alt="" />
       <Footer />
     </div>
+    </CustomScroll>
   );
 };
 

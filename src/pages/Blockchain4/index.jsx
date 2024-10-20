@@ -17,6 +17,8 @@ import nyc2 from "../../assets/blockchain4/nyc2.png";
 import nyc3 from "../../assets/blockchain4/nyc3.png";
 import nyc4 from "../../assets/blockchain4/nyc4.png";
 import transition from "../../pageTransition";
+import { CustomScroll } from "../../components/scroll/CustomScroll";
+import bg from "../../assets/blockchain/01.png";
 
 const Blockchain_4 = () => {
   const reasons = [
@@ -47,7 +49,8 @@ const Blockchain_4 = () => {
   ];
 
   return (
-    <div>
+    <CustomScroll>
+    <div className={styles.appContainer}>
       <Header />
       <HeaderBlockchain
         title={titleNFTTokenHeaderBlockchain}
@@ -75,8 +78,10 @@ const Blockchain_4 = () => {
           ))}
         </div>
       </div>
+      <img className={styles.bgImg} src={bg} alt="" />
       <Footer />
     </div>
+    </CustomScroll>
   );
 }
 

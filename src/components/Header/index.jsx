@@ -127,7 +127,7 @@ export default memo(function Header({ children }) {
 									offset={50}
 									onClick={() => setIsMenuActive(false)}
 								>
-									home
+									Home
 								</HashLink>
 							</li>
 						</SwiperSlide>
@@ -146,7 +146,7 @@ export default memo(function Header({ children }) {
 									offset={-50}
 									onClick={() => setIsMenuActive(false)}
 								>
-									projects
+									Projects
 								</HashLink>
 							</li>
 						</SwiperSlide>
@@ -158,7 +158,7 @@ export default memo(function Header({ children }) {
 									offset={25}
 									onClick={() => setIsMenuActive(false)}
 								>
-									services
+									Services
 								</HashLink>
 							</li>
 						</SwiperSlide>
@@ -211,14 +211,21 @@ export default memo(function Header({ children }) {
 						<SwiperSlide>
 							<li>
 								<Link to='/web3' style={{ color: '#fff' }}>
-									Web3
+									web3
+								</Link>
+							</li>
+						</SwiperSlide>
+						<SwiperSlide>
+							<li>
+								<Link to='/blockchain_6' style={{ color: '#fff' }}>
+									Chain6
 								</Link>
 							</li>
 						</SwiperSlide>
 						<SwiperSlide>
 							<li>
 								<Link to='/wallet' style={{ color: '#fff' }}>
-									Crypto <br /> wallet
+									Crypto <br /> Wallet
 								</Link>
 							</li>
 						</SwiperSlide>
