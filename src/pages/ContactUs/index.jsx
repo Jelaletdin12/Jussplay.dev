@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-import FlipButton from '../../components/FlipButton'
 import Footer from '../../components/Footer'
 
 import transition from '../../pageTransition'
@@ -17,10 +16,28 @@ import { FaPhoneVolume } from 'react-icons/fa6'
 import { IoMdMail } from 'react-icons/io'
 import { IoLocation } from 'react-icons/io5'
 
+import { yupResolver } from '@hookform/resolvers/yup'
+import emailjs from 'emailjs-com'
+import { useForm } from 'react-hook-form'
+import * as yup from 'yup'
 import ellipseOne from '../../assets/ellipse1.png'
 import ellipseTwo from '../../assets/ellipse2.png'
 import Header from '../../components/Header'
 import { CustomScroll } from '../../components/scroll/CustomScroll'
+
+const schema = yup.object().shape({
+	firstName: yup.string().required('First Name is required'),
+	lastName: yup.string().required('Last Name is required'),
+	email: yup
+		.string()
+		.email('Invalid email format')
+		.required('Email is required'),
+	phone: yup
+		.string()
+		.matches(/^\+?[1-9]\d{1,14}$/, 'Phone must be a number')
+		.required('Phone is required'),
+	message: yup.string().required('Message is required'),
+})
 
 function ContactUs() {
 	const [isFocusedArr, setIsFocusedArr] = useState({
@@ -31,8 +48,8 @@ function ContactUs() {
 		input5: false,
 	})
 	const [isChangedArr, setIsChangedArr] = useState({
-		firstname: false,
-		lastname: false,
+		firstName: false,
+		lastName: false,
 		email: false,
 		phone: false,
 		message: false,
@@ -47,6 +64,50 @@ function ContactUs() {
 		company: 'TM',
 		country: 'TM',
 	})
+
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+		reset,
+	} = useForm({ resolver: yupResolver(schema) })
+
+	const { input1, input2, input3, input4, input5 } = isFocusedArr
+	const { firstName, lastName, email, phone, message } = isChangedArr
+
+	const onBlurAndFocusedHandler = (name, value) => {
+		setIsFocusedArr(prevState => ({ ...prevState, [name]: value }))
+	}
+	const onChangeInputHandler = (e, key) => {
+		setUserData(prevState => ({ ...prevState, [key]: e.target.value }))
+
+		if (e.target.value === '') {
+			setIsChangedArr(prevStateArr => ({
+				...prevStateArr,
+				[key]: false,
+			}))
+			return
+		}
+
+		setIsChangedArr(prevStateArr => ({
+			...prevStateArr,
+			[key]: true,
+		}))
+	}
+
+	const onSubmit = data => {
+		emailjs
+			.send('service_98xj0q7', 'template_p4ocvai', data, 'hYHKOzXlqLTNIQct5')
+			.then(result => {
+				console.log('Email successfully sent:', result.text)
+			})
+			.catch(error => {
+				console.error('Error sending email:', error.text)
+			})
+		console.log(data)
+		reset()
+	}
+
 	return (
 		<CustomScroll>
 			<Header />
@@ -108,194 +169,128 @@ function ContactUs() {
 							<img src={ellipseTwo} alt='' />
 						</div>
 					</div>
-					<div className={styles.inputContainer}>
+					<form
+						onSubmit={handleSubmit(onSubmit)}
+						className={styles.inputContainer}
+					>
 						<div className={styles.inputCol}>
 							<label>
 								<span className={styles.inputWrapper}>
 									<input
-										onBlur={() =>
-											setIsFocusedArr({
-												...isFocusedArr,
-												input1: false,
-											})
-										}
-										onFocus={() =>
-											setIsFocusedArr({
-												...isFocusedArr,
-												input1: true,
-											})
-										}
+										onBlur={() => onBlurAndFocusedHandler('input1', false)}
+										onFocus={() => onBlurAndFocusedHandler('input1', true)}
+										onChange={e => onChangeInputHandler(e, 'firstName')}
 										type='text'
-										onChange={e => {
-											setUserData({
-												...userData,
-												firstName: e.target.value,
-											})
-											if (e.target.value === '') {
-												setIsChangedArr({
-													...isChangedArr,
-													firstname: false,
-												})
-												return
-											}
-											setIsChangedArr({
-												...isChangedArr,
-												firstname: true,
-											})
-										}}
+										{...register('firstName')}
 									/>
 								</span>
-								<span
-									className={`${styles.placeholder} ${
-										isFocusedArr.input1 || isChangedArr.firstname
-											? styles.placeholderActive
-											: null
-									} `}
-								>
-									First Name
-								</span>
-							</label>
-						</div>
-
-						<div className={styles.inputCol}>
-							<label>
-								<span className={styles.inputWrapper}>
-									<input
-										onBlur={() =>
-											setIsFocusedArr({
-												...isFocusedArr,
-												input2: false,
-											})
-										}
-										onFocus={() =>
-											setIsFocusedArr({
-												...isFocusedArr,
-												input2: true,
-											})
-										}
-										onChange={e => {
-											setUserData({
-												...userData,
-												lastName: e.target.value,
-											})
-											if (e.target.value === '') {
-												setIsChangedArr({
-													...isChangedArr,
-													lastname: false,
-												})
-												return
-											}
-											setIsChangedArr({
-												...isChangedArr,
-												lastname: true,
-											})
-										}}
-										type='text'
-									/>
-								</span>
-								<span
-									className={`${styles.placeholder} ${
-										isFocusedArr.input2 || isChangedArr.lastname
-											? styles.placeholderActive
-											: null
-									}`}
-								>
-									Last Name
-								</span>
+								{errors.firstName ? (
+									<span
+										className={`${styles.placeholder__error} ${
+											input1 || firstName ? styles.placeholderError : null
+										}`}
+									>
+										{errors.firstName.message}
+									</span>
+								) : (
+									<span
+										className={`${styles.placeholder} ${
+											input1 || firstName ? styles.placeholderActive : null
+										}`}
+									>
+										First Name
+									</span>
+								)}
 							</label>
 						</div>
 						<div className={styles.inputCol}>
 							<label>
 								<span className={styles.inputWrapper}>
 									<input
-										onBlur={() =>
-											setIsFocusedArr({
-												...isFocusedArr,
-												input3: false,
-											})
-										}
-										onFocus={() =>
-											setIsFocusedArr({
-												...isFocusedArr,
-												input3: true,
-											})
-										}
-										onChange={e => {
-											setUserData({
-												...userData,
-												email: e.target.value,
-											})
-											if (e.target.value === '') {
-												setIsChangedArr({
-													...isChangedArr,
-													email: false,
-												})
-												return
-											}
-											setIsChangedArr({
-												...isChangedArr,
-												email: true,
-											})
-										}}
+										onBlur={() => onBlurAndFocusedHandler('input2', false)}
+										onFocus={() => onBlurAndFocusedHandler('input2', true)}
+										onChange={e => onChangeInputHandler(e, 'lastName')}
+										type='text'
+										{...register('lastName')}
+									/>
+								</span>
+								{errors.lastName ? (
+									<span
+										className={`${styles.placeholder__error} ${
+											input2 || lastName ? styles.placeholderError : null
+										}`}
+									>
+										{errors.lastName.message}
+									</span>
+								) : (
+									<span
+										className={`${styles.placeholder} ${
+											input2 || firstName ? styles.placeholderActive : null
+										}`}
+									>
+										Last Name
+									</span>
+								)}
+							</label>
+						</div>
+						<div className={styles.inputCol}>
+							<label>
+								<span className={styles.inputWrapper}>
+									<input
+										onBlur={() => onBlurAndFocusedHandler('input3', false)}
+										onFocus={() => onBlurAndFocusedHandler('input3', true)}
+										onChange={e => onChangeInputHandler(e, 'email')}
 										type='email'
+										{...register('email')}
 									/>
 								</span>
-								<span
-									className={`${styles.placeholder} ${
-										isFocusedArr.input3 || isChangedArr.email
-											? styles.placeholderActive
-											: null
-									}`}
-								>
-									Email
-								</span>
+								{errors.email ? (
+									<span
+										className={`${styles.placeholder__error} ${
+											input3 || email ? styles.placeholderError : null
+										}`}
+									>
+										{errors.email.message}
+									</span>
+								) : (
+									<span
+										className={`${styles.placeholder} ${
+											input3 || email ? styles.placeholderActive : null
+										}`}
+									>
+										Email
+									</span>
+								)}
 							</label>
 						</div>
 						<div className={styles.inputCol}>
 							<label>
 								<span className={styles.inputWrapper}>
 									<input
-										onBlur={() =>
-											setIsFocusedArr({
-												...isFocusedArr,
-												input4: false,
-											})
-										}
-										onFocus={() =>
-											setIsFocusedArr({
-												...isFocusedArr,
-												input4: true,
-											})
-										}
-										onChange={e => {
-											setUserData({
-												...userData,
-												phoneNumber: e.target.value,
-											})
-											if (e.target.value === '') {
-												setIsChangedArr({
-													...isChangedArr,
-													phone: false,
-												})
-												return
-											}
-											setIsChangedArr({
-												...isChangedArr,
-												phone: true,
-											})
-										}}
-										type='text'
+										onBlur={() => onBlurAndFocusedHandler('input4', false)}
+										onFocus={() => onBlurAndFocusedHandler('input4', true)}
+										onChange={e => onChangeInputHandler(e, 'phone')}
+										type='tel'
+										{...register('phone')}
 									/>
 								</span>
-								<span
-									className={`${styles.placeholder} ${
-										isFocusedArr.input4 || isChangedArr.phone
-											? styles.placeholderActive
-											: null
-									}`}
-								>
-									Phone Number
-								</span>
+								{errors.phone ? (
+									<span
+										className={`${styles.placeholder__error} ${
+											input4 || phone ? styles.placeholderError : null
+										}`}
+									>
+										{errors.phone.message}
+									</span>
+								) : (
+									<span
+										className={`${styles.placeholder} ${
+											input4 || phone ? styles.placeholderActive : null
+										}`}
+									>
+										Phone
+									</span>
+								)}
 							</label>
 						</div>
 						<div
@@ -307,46 +302,29 @@ function ContactUs() {
 							<label>
 								<span className={styles.inputWrapper}>
 									<textarea
-										onBlur={() =>
-											setIsFocusedArr({
-												...isFocusedArr,
-												input5: false,
-											})
-										}
-										onFocus={() =>
-											setIsFocusedArr({
-												...isFocusedArr,
-												input5: true,
-											})
-										}
-										onChange={e => {
-											setUserData({
-												...userData,
-												message: e.target.value,
-											})
-											if (e.target.value === '') {
-												setIsChangedArr({
-													...isChangedArr,
-													message: false,
-												})
-												return
-											}
-											setIsChangedArr({
-												...isChangedArr,
-												message: true,
-											})
-										}}
+										onBlur={() => onBlurAndFocusedHandler('input5', false)}
+										onFocus={() => onBlurAndFocusedHandler('input5', true)}
+										onChange={e => onChangeInputHandler(e, 'message')}
+										{...register('message')}
 									></textarea>
 								</span>
-								<span
-									className={`${styles.placeholder}  ${
-										isFocusedArr.input5 || isChangedArr.message
-											? styles.placeholderActiveArea
-											: null
-									}`}
-								>
-									Message
-								</span>
+								{errors.message ? (
+									<span
+										className={`${styles.placeholder__error} ${
+											input5 || message ? styles.placeholderError : null
+										}`}
+									>
+										{errors.message.message}
+									</span>
+								) : (
+									<span
+										className={`${styles.placeholder} ${
+											input5 || message ? styles.placeholderActive : null
+										}`}
+									>
+										Message
+									</span>
+								)}
 							</label>
 						</div>
 						<div
@@ -356,13 +334,18 @@ function ContactUs() {
 								width: '100%',
 							}}
 						>
-							<FlipButton
-								bgColor={'#000'}
-								insideText={'Send Message'}
-								textColor={'#fff'}
-							/>
+							<button
+								type='submit'
+								style={{
+									backgroundColor: '#000',
+									color: '#fff',
+								}}
+								data-back={'Send Message ?'}
+								data-front={'Send Message'}
+								className={styles.form__btn}
+							></button>
 						</div>
-					</div>
+					</form>
 				</div>
 			</main>
 			<Footer />

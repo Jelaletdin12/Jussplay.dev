@@ -17,7 +17,7 @@ export default function FlipButton({
 				backgroundColor: bgColor,
 				color: textColor,
 			}}
-			download
+			download={isDownload}
 			href={href}
 			className={`${styles.btnFlip}  `}
 			data-back={insideText}
