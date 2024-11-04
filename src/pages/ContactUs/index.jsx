@@ -17,7 +17,6 @@ import { IoMdMail } from 'react-icons/io'
 import { IoLocation } from 'react-icons/io5'
 
 import { yupResolver } from '@hookform/resolvers/yup'
-import emailjs from 'emailjs-com'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import ellipseOne from '../../assets/ellipse1.png'
@@ -78,6 +77,7 @@ function ContactUs() {
 	const onBlurAndFocusedHandler = (name, value) => {
 		setIsFocusedArr(prevState => ({ ...prevState, [name]: value }))
 	}
+
 	const onChangeInputHandler = (e, key) => {
 		setUserData(prevState => ({ ...prevState, [key]: e.target.value }))
 
@@ -95,17 +95,26 @@ function ContactUs() {
 		}))
 	}
 
-	const onSubmit = data => {
-		emailjs
-			.send('service_98xj0q7', 'template_p4ocvai', data, 'hYHKOzXlqLTNIQct5')
-			.then(result => {
-				console.log('Email successfully sent:', result.text)
-			})
-			.catch(error => {
-				console.error('Error sending email:', error.text)
-			})
-		console.log(data)
+	const onSubmit = async data => {
+		// try {
+		// 	const emailSubmit = await emailjs.send(
+		// 		'service_98xj0q7',
+		// 		'template_p4ocvai',
+		// 		data,
+		// 		'hYHKOzXlqLTNIQct5'
+		// 	)
+		// 	const result = console.log(
+		// 		'Email successfully sent:',
+		// 		emailSubmit.text,
+		// 		emailSubmit.status
+		// 	)
+		// 	reset()
+		// 	return result
+		// } catch (error) {
+		// 	console.error('Error sending email:', error.text)
+		// }
 		reset()
+		console.log('Send data to form:', data)
 	}
 
 	return (
