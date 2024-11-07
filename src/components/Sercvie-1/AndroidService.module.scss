@@ -1,0 +1,106 @@
+.container {
+  padding: 2rem;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+
+  h2 {
+    font-size: 58px;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  .description {
+    font-size: 20px;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 1.5rem;
+}
+
+.serviceCard {
+  background-color: #1c1c1c;
+  padding: 1.5rem;
+  border-top: 1px solid #7843ff;
+  color: #fff;
+  text-align: left;
+
+  h3 {
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+  }
+}
+
+.promoSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #151515;
+  padding: 15px 50px;
+  border-radius: 10px;
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+  }
+
+  .promoImage {
+    width: 40%;
+    border-radius: 8px;
+    @media screen and (max-width: 520px) {
+      width: auto;
+    }
+  }
+
+  .promoContent {
+    text-align: left;
+    width: 55%;
+    @media screen and (max-width: 520px) {
+      width: auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h3 {
+      font-size: 38px;
+      margin-bottom: 20px;
+      font-weight: 400;
+      @media screen and (max-width: 520px) {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      font-size: 25px;
+      margin-bottom: 20px;
+      font-weight: 400;
+      color: #fff;
+      @media screen and (max-width: 520px) {
+        font-size: 18px;
+      }
+    }
+
+    .meetButton {
+      border: 1px solid #fff;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 99px;
+
+      @media screen and (max-width: 520px) {
+        width: 177px;
+      }
+    }
+  }
+}

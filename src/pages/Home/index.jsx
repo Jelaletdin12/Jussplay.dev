@@ -259,10 +259,10 @@ function Home() {
             </p>
             <p>Our team of experts are here, and</p>
             <p>
-              <span>WE</span>manage every project professionally.
+              <span>WE</span> manage every project professionally.
             </p>
             <p>
-              Our principal is to <span>MAKE</span>your vision a reality.{" "}
+              Our principal is to <span>MAKE</span> your vision a reality.{" "}
             </p>
             <p>Trust us with your ideas,</p>
             <p>

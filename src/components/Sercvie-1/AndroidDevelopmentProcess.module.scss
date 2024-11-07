@@ -1,0 +1,68 @@
+.container {
+  color: #fff;
+  background-color: #000;
+
+  h2 {
+    font-size: 58px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+    
+   
+    color: #b0b0b0;
+  }
+}
+
+.infoSection {
+  display: flex;
+  align-items: flex-start;
+  background-color: #1a1537;
+  color: #fff;
+  justify-content: space-between;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .meetButton {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #78aaff;
+    color: #78aaff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    span {
+      margin-left: 0.5rem;
+    }
+
+    &:hover {
+      background-color: #78aaff;
+      color: #1c1e3b;
+    }
+  }
+
+  &_content {
+    width: 45%;
+    margin: 70px;
+  }
+  &_img {
+    width: 40%;
+  }
+}

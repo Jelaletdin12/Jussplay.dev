@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  padding-top: 150px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  background-color: #000;
+  color: #fff;
+
+  .statItem {
+    text-align: center;
+
+    h2 {
+      font-size: 60px;
+      color: #b0d9ff;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+.infoSection {
+  display: flex;
+  align-items: flex-start;
+  background-color: #1a1537;
+  color: #fff;
+  justify-content: space-between;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .meetButton {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #78aaff;
+    color: #78aaff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    span {
+      margin-left: 0.5rem;
+    }
+
+    &:hover {
+      background-color: #78aaff;
+      color: #1c1e3b;
+    }
+  }
+
+  &_content {
+    width: 45%;
+    margin: 70px;
+  }
+  &_img {
+    width: 40%;
+  }
+}

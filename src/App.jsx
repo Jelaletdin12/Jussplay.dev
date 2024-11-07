@@ -25,6 +25,7 @@ const Blockchain_4 = lazy(() => import('./pages/Blockchain4'))
 const Blockchain_6 = lazy(() => import('./pages/Blockchain6'))
 const Web3 = lazy(() => import('./pages/Web3'))
 const Wallet = lazy(() => import('./pages/Wallet'))
+const Service_1 = lazy(() => import('./pages/Service_1'))
 
 export default function App() {
 	const location = useLocation()
@@ -111,6 +112,7 @@ export default function App() {
 					<Route path='/blockchain_4' element={<Blockchain_4 />} />
 					<Route path='/blockchain_6' element={<Blockchain_6 />} />
 					<Route path='/web3' element={<Web3 />} />
+					<Route path='/service-1' element={<Service_1 />} />
 					<Route path='/wallet' element={<Wallet />} />
 					<Route path='*' element={<NotFoundPage />} />
 					<Route path='' element={<NotFoundPage />} />
