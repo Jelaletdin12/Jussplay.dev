@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./AndroidDevelopmentProcess.module.scss";
 import Rectangle from "../../assets/Service_1/Rectangle.png";
 import android from "../../assets/Service_1/android.png";
+import mob from "../../assets/Service_1/mob.png"; // Mobile image
 
 const AndroidDevelopmentProcess = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Function to check window size
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 520); // Set isMobile to true if width is <= 520px
+    };
+
+    // Check screen size on mount
+    checkScreenSize();
+
+    // Set up event listener to check screen size on window resize
+    window.addEventListener("resize", checkScreenSize);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.infoSection}>
@@ -25,7 +44,7 @@ const AndroidDevelopmentProcess = () => {
           </button>
         </div>
         <div className={styles.infoSection_img}>
-          <img src={Rectangle} alt="" />
+          <img src={Rectangle} alt="Rectangle" />
         </div>
       </div>
       <h2>Android App Development Process We Follow</h2>
@@ -36,7 +55,12 @@ const AndroidDevelopmentProcess = () => {
         the desired solution.
       </p>
       <div className={styles.processSteps}></div>
-      <img src={android} alt="" />
+      {/* Render the appropriate image based on screen size */}
+      <img
+        className={styles.responsiveImg}
+        src={isMobile ? mob : android}
+        alt="Android App"
+      />
     </div>
   );
 };

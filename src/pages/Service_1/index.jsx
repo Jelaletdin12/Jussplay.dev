@@ -11,6 +11,7 @@ import AndroidStatsComponent from "../../components/Sercvie-1/AndroidStatsCompon
 import AndroidService from "../../components/Sercvie-1/AndroidServices";
 import AndroidDevelopmentProcess from "../../components/Sercvie-1/AndroidDevelopmentProcess";
 import CuttingEdgeTech from "../../components/Sercvie-1/CuttingEdgeTech";
+import Scroll from "../../components/Sercvie-1/ScrollSec";
 import Footer from "../../components/Footer";
 import styles from "./Service.module.scss";
 import transition from "../../pageTransition";
@@ -27,6 +28,7 @@ const Service_1 = () => {
         <AndroidStatsComponent />
         <AndroidService />
         <AndroidDevelopmentProcess />
+        <Scroll />
         <CuttingEdgeTech />
         <img className={styles.bgImg} src={bg} alt="" />
         <Footer />

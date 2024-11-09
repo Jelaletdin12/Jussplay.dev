@@ -229,6 +229,13 @@ export default memo(function Header({ children }) {
 								</Link>
 							</li>
 						</SwiperSlide>
+						<SwiperSlide>
+							<li>
+								<Link to='/service-1' style={{ color: '#fff' }}>
+									Servive-1
+								</Link>
+							</li>
+						</SwiperSlide>
 					</Swiper>
 				</ul>
 

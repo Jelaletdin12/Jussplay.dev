@@ -1,21 +1,21 @@
 .container {
   color: #fff;
-  background-color: #000;
 
   h2 {
     font-size: 58px;
     margin-bottom: 1rem;
     margin-top: 1rem;
     text-align: center;
+    @media screen and (max-width: 520px) {
+      font-size: 25px;
+    }
   }
 
   .description {
     font-size: 20px;
     text-align: center;
     margin-bottom: 2rem;
-    
-   
-    color: #b0b0b0;
+    color: #fff;
   }
 }
 
@@ -25,16 +25,27 @@
   background-color: #1a1537;
   color: #fff;
   justify-content: space-between;
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
   h2 {
-    font-size: 2rem;
+    font-size: 58px;
     margin-bottom: 1rem;
+    @media screen and (max-width: 520px) {
+      font-size: 25px;
+    }
   }
 
   p {
-    font-size: 1rem;
+    font-size: 20px;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    @media screen and (max-width: 520px) {
+      text-align: center;
+    }
   }
 
   .meetButton {
@@ -61,8 +72,17 @@
   &_content {
     width: 45%;
     margin: 70px;
+    @media screen and (max-width: 520px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: auto;
+    }
   }
   &_img {
     width: 40%;
+    @media screen and (max-width: 520px) {
+      width: 100%;
+    }
   }
 }
