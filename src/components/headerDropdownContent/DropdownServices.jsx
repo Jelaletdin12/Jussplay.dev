@@ -1,6 +1,6 @@
 import { PiTriangleFill } from 'react-icons/pi'
-import styles from './dropdown.module.scss' // Assume you have appropriate CSS
 import { Link } from 'react-router-dom'
+import styles from './dropdown.module.scss' // Assume you have appropriate CSS
 
 // Import Icons Service
 import ai_developmet from '../../assets/service/ai-development-icon.svg'
@@ -40,8 +40,8 @@ export const DropdownServices = () => {
 							</div>
 							<div>
 								<Link to={'/service-1'}>
-								<h6>Anddroid App</h6>
-								<p>Build native mobile apps for unmatched user experience.</p>
+									<h6>Anddroid App</h6>
+									<p>Build native mobile apps for unmatched user experience.</p>
 								</Link>
 							</div>
 						</div>
@@ -50,10 +50,12 @@ export const DropdownServices = () => {
 								<img src={ios} alt='' />
 							</div>
 							<div>
-								<h6>Ios App App</h6>
-								<p>
-									Develop reliable and dynamic iOS Apps for iPhone &amp; iPad.
-								</p>
+								<Link to={'/service-ios'}>
+									<h6>Ios App App</h6>
+									<p>
+										Develop reliable and dynamic iOS Apps for iPhone &amp; iPad.
+									</p>
+								</Link>
 							</div>
 						</div>
 						<div className={styles.dropdown__wrap}>
