@@ -67,7 +67,9 @@ a {
   justify-content: center !important;
   align-items: center !important;
   opacity: 0.3;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 .swiper-slide-active {
   opacity: 1;
@@ -79,7 +81,8 @@ a {
   opacity: 0.3;
   transform: scale(0.5);
 }
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev,
+.swiper-button-next {
   color: #ffffff;
 }
 

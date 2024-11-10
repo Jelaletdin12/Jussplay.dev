@@ -17,10 +17,11 @@ import Home from '../pages/Home'
 import Industry from '../pages/Industry'
 import Metaverse from '../pages/Metaverse'
 import Service from '../pages/Service'
+import Service_1 from '../pages/Service_1'
+import ServiceIOS from '../pages/ServiceIOS'
 import TokenNFT from '../pages/Token'
 import Wallet from '../pages/Wallet'
 import Web3 from '../pages/Web3'
-import Service_1 from '../pages/Service_1'
 
 const BubbleError = () => {
 	const error = useRouteError()
@@ -101,7 +102,12 @@ const router = createBrowserRouter([
 			},
 			{
 				path: 'service-1',
-				element: <Service_1/>,
+				element: <Service_1 />,
+				errorElement: <BubbleError />,
+			},
+			{
+				path: 'service-ios',
+				element: <ServiceIOS />,
 				errorElement: <BubbleError />,
 			},
 			{

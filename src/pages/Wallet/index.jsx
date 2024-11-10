@@ -17,14 +17,14 @@ import {
 import { AboutWallet } from '../../components/Wallet/About/AboutWallet'
 import { BlockchainProduct } from '../../components/Wallet/BP/BlockchainProduct'
 import { Cryptocurrency } from '../../components/Wallet/Cryptocurrency/Cryptocurrency'
+import { Functionality } from '../../components/Wallet/Functionality/Functionality'
 import { Leaders } from '../../components/Wallet/Leaders/Leaders'
+import { RisingMax } from '../../components/Wallet/RisingMax/RisingMax'
 import { Security } from '../../components/Wallet/Security/Security'
 import { WalletService } from '../../components/Wallet/Service/WalletService'
 import transition from '../../pageTransition'
 import blockchainStyle from '../Blockchain/blockchain.module.scss'
 import styles from './wallet.module.scss'
-import { RisingMax } from '../../components/Wallet/RisingMax/RisingMax'
-import { Functionality } from '../../components/Wallet/Functionality/Functionality'
 
 const Wallet = () => {
 	return (
