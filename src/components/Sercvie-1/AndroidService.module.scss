@@ -1,19 +1,29 @@
 .container {
   padding: 2rem;
   color: #fff;
-  background-color: #000;
   text-align: center;
+  padding: 50px 150px 40px 150px;
+  @media screen and (max-width: 520px) {
+    padding: 50px;
+  }
 
   h2 {
     font-size: 58px;
     margin-bottom: 1rem;
     text-align: left;
+    @media screen and (max-width: 520px) {
+      font-size: 25px;
+      text-align: center;
+    }
   }
 
   .description {
     font-size: 20px;
     margin-bottom: 2rem;
     text-align: left;
+    @media screen and (max-width: 520px) {
+      text-align: center;
+    }
   }
 }
 
@@ -21,6 +31,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   gap: 1.5rem;
+  @media screen and (max-width: 520px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .serviceCard {
@@ -29,16 +42,25 @@
   border-top: 1px solid #7843ff;
   color: #fff;
   text-align: left;
+  @media screen and (max-width: 520px) {
+    text-align: center;
+  }
 
   h3 {
     font-size: 28px;
     margin-bottom: 0.5rem;
+    @media screen and (max-width: 520px) {
+      text-align: center;
+    }
   }
 
   p {
     font-size: 20px;
     line-height: 1.5;
     color: #fff;
+    @media screen and (max-width: 520px) {
+      text-align: center;
+    }
   }
 }
 
@@ -47,10 +69,11 @@
   align-items: center;
   justify-content: space-between;
   background-color: #151515;
-  padding: 15px 50px;
+  margin: 20px 150px;
   border-radius: 10px;
   @media screen and (max-width: 520px) {
     flex-direction: column;
+    margin: 20px;
   }
 
   .promoImage {
@@ -70,6 +93,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin: 20px;
     }
 
     h3 {
