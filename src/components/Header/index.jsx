@@ -37,7 +37,7 @@ export default memo(function Header({ children }) {
 
   return (
     <header className={styles.header}>
-      <div>
+      <div className={styles.logo}>
         <Link to={"/home"} onClick={playSound}>
           <img
             width={90}
@@ -65,11 +65,11 @@ export default memo(function Header({ children }) {
               <DropdownContent dropdownType="services" />
             )}
           </li>
-          <li>
+          {/* <li>
             <Link to="/industry" onClick={playSound}>
               Industries
             </Link>
-          </li>
+          </li> */}
           <li
             onMouseEnter={() => handleMouseEnter("blockchain")}
             onMouseLeave={handleMouseLeave}
@@ -144,13 +144,13 @@ export default memo(function Header({ children }) {
                 </HashLink>
               </li>
             </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <li className="links">
                 <Link to="/industry" onClick={() => setIsMenuActive(false)}>
                   Industries
                 </Link>
               </li>
-            </SwiperSlide>
+            </SwiperSlide> */}
             <SwiperSlide>
               <li className="links">
                 <HashLink

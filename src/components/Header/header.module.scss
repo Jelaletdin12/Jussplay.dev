@@ -234,3 +234,8 @@
 //   opacity: 1;
 //  }
 // }
+.logo {
+  @media screen and (max-width: 520px) {
+    display: none;
+  }
+}
