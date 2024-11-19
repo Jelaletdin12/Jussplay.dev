@@ -223,7 +223,7 @@ function Home() {
         <div className={styles.heroSecWithVideo}>
           <h1 className={styles.main_heroSection_motto}>
             <div className={styles.heroText1} id="heroText1">
-              just say it
+              JUST SAY IT
             </div>
             <div id="logoLottie">
               <LogoLottie></LogoLottie>
@@ -232,7 +232,7 @@ function Home() {
               id="heroText2"
               className={styles.main_heroSection_motto_lowerText}
             >
-              we will make it
+              WE WILL Make IT
             </div>
           </h1>
         </div>

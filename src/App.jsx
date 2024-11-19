@@ -86,6 +86,7 @@ export default function App() {
 					<h1
 						ref={titleAudiRef}
 						className={isPlaying ? 'title-lottie__anim' : 'title-lottie'}
+						style={{color: 'gray'}}
 					>
 						For Better Experience Please Turn On Sound
 					</h1>
