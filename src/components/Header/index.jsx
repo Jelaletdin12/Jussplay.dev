@@ -11,6 +11,7 @@ import DropdownContent from "../../components/headerDropdownContent/index";
 import styles from "./header.module.scss";
 import logo from "../../assets/logo.png";
 
+import { useSound } from "../../providers/soundContext";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -22,6 +23,8 @@ export default memo(function Header({ children }) {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const audio = new Audio(select);
 
+  const { isPlaying } = useSound();
+
   const handleMouseEnter = useCallback((dropdown) => {
     setActiveDropdown(dropdown);
   }, []);
@@ -31,8 +34,14 @@ export default memo(function Header({ children }) {
   }, []);
 
   // Function to play sound
+  // const playSound = () => {
+  //   audio.play();
+  // };
+
   const playSound = () => {
-    audio.play();
+    if (isPlaying) {
+      audio.play();
+    }
   };
 
   return (
