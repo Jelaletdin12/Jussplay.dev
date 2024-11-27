@@ -39,7 +39,6 @@
 
     ul {
       display: flex;
-      // align-items: center;
       gap: 8px;
 
       li {
@@ -107,7 +106,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    // animation: disappearToTop 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
     display: none;
   }
 
@@ -121,7 +119,6 @@
     display: block;
     align-items: center;
     justify-content: center;
-    // animation: appearFromTop 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
     width: 100%;
   }
 
@@ -134,8 +131,6 @@
       height: 100vh;
       flex-direction: column;
 
-      // transform: rotate(-30deg) ;
-
       li {
         font-family: SGrotReg, sans-serif;
         font-size: 38px;
@@ -146,8 +141,6 @@
         transition: all 0.2s;
         text-transform: uppercase;
 
-        // transform: rotate(30deg) translate(-500px);
-        // animation: appearFromTopLetters 1s cubic-bezier(0.77, 0, 0.175, 1) 0.4s forwards;
         margin: 70px 0;
         & a:hover {
           opacity: 0.8;
@@ -172,6 +165,7 @@
     }
 
     &_socials {
+      color: #fff;
       position: absolute;
       bottom: 3%;
       left: 5%;
@@ -201,39 +195,6 @@
   }
 }
 
-// @keyframes appearFromTop {
-//   0% {
-//     top: -100%;
-//     opacity: 0;
-//   }
-//   100% {
-//     top: 0;
-//     opacity: 1;
-//     visibility: visible;
-//   }
-// }
-
-// @keyframes disappearToTop {
-//   from {
-//     opacity: 1;
-//     top: 0;
-//   }
-//   to {
-//     top: -100%;
-//     opacity: 0;
-//   }
-// }
-
-// @keyframes appearFromTopLetters {
-//  0%{
-//   transform: rotate(90deg) translateY(-500px);
-//   opacity: 0;
-//  }
-//  100%{
-//   transform:  rotate(90deg) translateY(0);
-//   opacity: 1;
-//  }
-// }
 .logo {
   @media screen and (max-width: 520px) {
     display: none;

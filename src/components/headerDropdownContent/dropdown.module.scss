@@ -1,10 +1,10 @@
 .dropdown {
   display: flex;
   justify-content: space-between;
-  width: 1140px;
+  width: 1220px;
   position: absolute;
   top: 150%;
-  left: -700%;
+  right: -300%;
   background: #0d0c27;
   color: black;
   //padding: 10px;
@@ -57,7 +57,7 @@
     svg {
       position: absolute;
       top: -2.3%;
-      right: 39%;
+      right: 22%;
       color: #0d0c27;
     }
     h4,
