@@ -2,7 +2,7 @@
 // DropdownContent.jsx
 import { DropdownBlockchain } from "./DropdownBlockchain";
 import { DropdownServices } from "./DropdownServices";
-import { DropdownSolutions } from "./DropdownSolutions";
+
 
 const DropdownContent = ({ dropdownType }) => {
   if (dropdownType === "services") {
@@ -10,9 +10,6 @@ const DropdownContent = ({ dropdownType }) => {
   }
   if (dropdownType === "blockchain") {
     return <DropdownBlockchain />;
-  }
-  if (dropdownType === "solutions") {
-    return <DropdownSolutions />;
   }
   return null;
 };

@@ -71,6 +71,7 @@ const CuttingEdgeTech = () => {
         </p>
         {technologies.map((tech, index) => (
           <div key={index} className={styles.card}>
+            <div className={styles.borderTop}></div>
             <h2 className={styles.cardTitle}>{tech.title}</h2>
             <ul className={styles.list}>
               {tech.items.map((item, idx) => (

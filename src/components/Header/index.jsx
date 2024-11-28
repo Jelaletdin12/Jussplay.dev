@@ -1,16 +1,15 @@
-import { useRef, useState } from 'react'
 import classNames from 'classnames'
-import { memo } from 'react'
+import { memo, useRef, useState } from 'react'
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import DropdownContent from '../../components/headerDropdownContent/index'
-import styles from './header.module.scss'
 import logo from '../../assets/logo.png'
 import select from '../../assets/select_V2.wav'
+import DropdownContent from '../../components/headerDropdownContent/index'
 import { useSound } from '../../providers/soundContext'
+import styles from './header.module.scss'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -25,7 +24,7 @@ const menuItems = [
 	{ name: 'Contact us', path: '/contactus' },
 ]
 
-export default memo(function Header({ children }) {
+export default memo(function Header({ children, position }) {
 	const [isMenuActive, setIsMenuActive] = useState(false)
 	const [activeDropdown, setActiveDropdown] = useState(null)
 
@@ -48,7 +47,13 @@ export default memo(function Header({ children }) {
 	}
 
 	return (
-		<header className={styles.header}>
+		<header
+			className={styles.header}
+			style={{
+				position: position,
+				width: '100%',
+			}}
+		>
 			<div className={styles.logo}>
 				<Link to='/home' onClick={playSound}>
 					<img src={logo} alt='Logo' width={90} height={90} />
@@ -94,7 +99,7 @@ export default memo(function Header({ children }) {
 			>
 				menu
 			</div>
-			<div className={styles.header__logo}>{children}</div>
+			{/* <div className={styles.header__logo}>{children}</div> */}
 			<div
 				className={classNames(styles.header_menu, {
 					[styles.header_menu_active]: isMenuActive,

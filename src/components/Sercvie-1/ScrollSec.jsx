@@ -3,9 +3,10 @@ import styles from "./ScrollSec.module.scss";
 import rec1 from "../../assets/Service_1/rec1.png";
 import rec2 from "../../assets/Service_1/rec2.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
+import "swiper/css/effect-coverflow";
 import "swiper/css";
-//import "swiper/css/navigation";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const menuItems = [
@@ -54,18 +55,6 @@ const cards = [
       "Revolutionizing the learning sector with 3D modeling. Hire our metaverse app developers...",
     img: rec1,
   },
-  {
-    title: "METAVERSE E-LEARNING APP",
-    content:
-      "Revolutionizing the learning sector with 3D modeling. Hire our metaverse app developers...",
-    img: rec1,
-  },
-  {
-    title: "METAVERSE E-LEARNING APP",
-    content:
-      "Revolutionizing the learning sector with 3D modeling. Hire our metaverse app developers...",
-    img: rec1,
-  },
 ];
 
 const Scroll = () => {
@@ -83,10 +72,20 @@ const Scroll = () => {
       <div className={styles.container}>
         {isMobile ? (
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, EffectCoverflow]}
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
             slidesPerView={1}
             spaceBetween={10}
-            navigation={true}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            navigation
             onSlideChange={(swiper) =>
               setSelectedItem(menuItems[swiper.activeIndex])
             }
@@ -131,32 +130,36 @@ const Scroll = () => {
         </p>
 
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, EffectCoverflow]}
+          effect="coverflow"
           slidesPerView={1}
           spaceBetween={30}
+          centeredSlides={true}
           grabCursor={true}
-          navigation={true}
-          className={styles.cardContainer}
-          breakpoints={{
-            520: { slidesPerView: 1, centeredSlides: false, spaceBetween: 10 },
-            768: { slidesPerView: 2, centeredSlides: false },
-            1024: { slidesPerView: 3, centeredSlides: true, pagination: true },
+          navigation
+          pagination={{ clickable: true }}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
           }}
+          breakpoints={{
+            520: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className={styles.cardContainer}
         >
           {cards.map((card, index) => (
-            <SwiperSlide
-              key={index}
-              className={styles.card}
-              style={{ display: "block" }}
-            >
+            <SwiperSlide key={index} className={styles.card}>
               <img src={card.img} alt={card.title} />
               <h2>{card.title}</h2>
               <p>{card.content}</p>
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* <div className={styles.customprevbutton} />
-        <div className={styles.customnextbutton} /> */}
       </div>
     </div>
   );
