@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import platformImage from '../../../assets/web3/img/platform.png'
 import styles from '../../../pages/ServiceIOS/ios.module.scss'
+import { BtnBlockchain } from '../../Button/Blockchain/BtnBlockchain'
 
 export const PlatformNewYork = ({ children, title }) => {
 	return (
@@ -13,6 +14,9 @@ export const PlatformNewYork = ({ children, title }) => {
 					<div className={styles.platform__ios_item__body}>
 						<h1>{title}</h1>
 						{children}
+					</div>
+					<div className={styles.platform__ios_btn__mobile}>
+						<BtnBlockchain />
 					</div>
 				</div>
 			</div>
