@@ -1,46 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
 import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer"; // Import Intersection Observer
+import { useInView } from "react-intersection-observer";
 import styles from "./AndroidStatsComponent.module.scss";
 import Rectangle from "../../assets/Service_1/Rectangle.png";
-import { IoIosArrowForward } from 'react-icons/io'
+import { IoIosArrowForward } from "react-icons/io";
+
+const statsData = [
+  { end: 4000, suffix: "+", description: "Android App Developed Successfully", duration: 3 },
+  { end: 10, suffix: "M+", description: "Android Apps Downloads", duration: 3.5 },
+  { end: 250, suffix: "+", description: "Technology Experts", duration: 2.5 },
+  { end: 15, suffix: "+", description: "Industries Served", duration: 2 },
+];
 
 const AndroidStatsComponent = () => {
-  // Using Intersection Observer to trigger animation on scroll
   const [statsRef, inView] = useInView({
-    triggerOnce: true, // Animation runs only once
-    threshold: 0.3, // Trigger when 30% of the element is visible
+    triggerOnce: true,
+    threshold: 0.3,
   });
+
+  const renderStats = () =>
+    statsData.map((stat, index) => (
+      <div className={styles.statItem} key={index}>
+        <h2>
+          {inView && (
+            <CountUp
+              start={0}
+              end={stat.end}
+              duration={stat.duration}
+              separator=","
+            />
+          )}
+          {stat.suffix}
+        </h2>
+        <p>{stat.description}</p>
+      </div>
+    ));
 
   return (
     <div className={styles.container}>
       <div className={styles.stats} ref={statsRef}>
-        <div className={styles.statItem}>
-          <h2>
-            {inView && <CountUp start={0} end={4000} duration={3} separator="," />}+
-          </h2>
-          <p>Android App Developed Successfully</p>
-        </div>
-        <div className={styles.statItem}>
-          <h2>
-            {inView && <CountUp start={0} end={10} duration={3.5} separator="," />}M+
-          </h2>
-          <p>Android Apps Downloads</p>
-        </div>
-        <div className={styles.statItem}>
-          <h2>
-            {inView && <CountUp start={0} end={250} duration={2.5} separator="," />}+
-          </h2>
-          <p>Technology Experts</p>
-        </div>
-        <div className={styles.statItem}>
-          <h2>
-            {inView && <CountUp start={0} end={15} duration={2} separator="," />}+
-          </h2>
-          <p>Industries Served</p>
-        </div>
+        {renderStats()}
       </div>
-      <div className={styles.infoSection}>
+      <section className={styles.infoSection}>
         <div className={styles.infoSection_content}>
           <h2>Why Develop An Android App?</h2>
           <p>
@@ -59,9 +60,9 @@ const AndroidStatsComponent = () => {
           </button>
         </div>
         <div className={styles.infoSection_img}>
-          <img src={Rectangle} alt="" />
+          <img src={Rectangle} alt="Why Develop Android App" />
         </div>
-      </div>
+      </section>
     </div>
   );
 };

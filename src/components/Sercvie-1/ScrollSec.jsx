@@ -10,31 +10,49 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const menuItems = [
-  { title: "Android Wearable App Development", content: "Wearable app content..." },
+  {
+    title: "Android Wearable App Development",
+    content: "Wearable app content...",
+  },
   { title: "Android Social Media App", content: "Social media app content..." },
   { title: "Multimedia App", content: "Multimedia app content..." },
   { title: "Android Web-based App", content: "Web-based app content..." },
   { title: "Android Game Development", content: "Game development content..." },
-  { title: "Business App Development", content: "Business app development content..." },
-  { title: "Android TV App Development", content: "TV app development content..." },
-  { title: "Android Tablet App Development", content: "Tablet app development content..." },
-  { title: "Android Foldable App Development", content: "Foldable app development content..." },
+  {
+    title: "Business App Development",
+    content: "Business app development content...",
+  },
+  {
+    title: "Android TV App Development",
+    content: "TV app development content...",
+  },
+  {
+    title: "Android Tablet App Development",
+    content: "Tablet app development content...",
+  },
+  {
+    title: "Android Foldable App Development",
+    content: "Foldable app development content...",
+  },
 ];
 
 const cards = [
   {
     title: "METAVERSE APP DEVELOPMENT",
-    content: "Hire our expert development team to launch groundbreaking metaverse applications...",
+    content:
+      "Hire our expert development team to launch groundbreaking metaverse applications...",
     img: rec1,
   },
   {
     title: "METAVERSE CONSULTING",
-    content: "Leverage our top-notch metaverse app development services to build engaging metaverse games...",
+    content:
+      "Leverage our top-notch metaverse app development services to build engaging metaverse games...",
     img: rec2,
   },
   {
     title: "METAVERSE E-LEARNING APP",
-    content: "Revolutionizing the learning sector with 3D modeling. Hire our metaverse app developers...",
+    content:
+      "Revolutionizing the learning sector with 3D modeling. Hire our metaverse app developers...",
     img: rec1,
   },
 ];
@@ -68,7 +86,9 @@ const Scroll = () => {
               slideShadows: true,
             }}
             navigation
-            onSlideChange={(swiper) => setSelectedItem(menuItems[swiper.activeIndex])}
+            onSlideChange={(swiper) =>
+              setSelectedItem(menuItems[swiper.activeIndex])
+            }
             className={styles.carousel}
           >
             {menuItems.map((item, index) => (
@@ -82,7 +102,9 @@ const Scroll = () => {
             {menuItems.map((item, index) => (
               <div
                 key={index}
-                className={`${styles.menuItem} ${selectedItem.title === item.title ? styles.active : ""}`}
+                className={`${styles.menuItem} ${
+                  selectedItem.title === item.title ? styles.active : ""
+                }`}
                 onClick={() => setSelectedItem(item)}
               >
                 {item.title}
@@ -97,9 +119,14 @@ const Scroll = () => {
       </div>
 
       <div className={styles.container2}>
-        <h1>Industry-Specific Expertise We Serve With Our Custom Android App Development Services</h1>
+        <h1>
+          Industry-Specific Expertise We Serve With Our Custom Android App
+          Development Services
+        </h1>
         <p>
-          With over ten years of experience in Android development, we have gained extensive knowledge across various industries. We have the expertise to tackle a wide range of app development projects.
+          With over ten years of experience in Android development, we have
+          gained extensive knowledge across various industries. We have the
+          expertise to tackle a wide range of app development projects.
         </p>
 
         <Swiper

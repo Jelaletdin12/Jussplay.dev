@@ -97,7 +97,6 @@ const CuttingEdgeTech = () => {
         <div className={styles["service-section__cards"]}>
           {services.map((service) => (
             <div key={service.id} className={styles["service-card"]}>
-              
               <h3 className={styles["service-card__title"]}>{service.title}</h3>
               <p className={styles["service-card__description"]}>
                 {service.description}

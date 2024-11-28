@@ -1,67 +1,61 @@
 import React, { useState, useEffect } from "react";
 import styles from "./AndroidDevelopmentProcess.module.scss";
-import Rectangle from "../../assets/Service_1/Rectangle.png";
-import android from "../../assets/Service_1/android.png";
-import mob from "../../assets/Service_1/mob.png"; // Mobile image
-import { IoIosArrowForward } from 'react-icons/io'
+import RectangleImage from "../../assets/Service_1/Rectangle.png";
+import AndroidImage from "../../assets/Service_1/android.png";
+import MobileImage from "../../assets/Service_1/mob.png";
+import { IoIosArrowForward } from "react-icons/io";
 
 const AndroidDevelopmentProcess = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 520);
 
   useEffect(() => {
-    // Function to check window size
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth <= 520); // Set isMobile to true if width is <= 520px
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 520);
     };
 
-    // Check screen size on mount
-    checkScreenSize();
-
-    // Set up event listener to check screen size on window resize
-    window.addEventListener("resize", checkScreenSize);
-
-    // Cleanup event listener on unmount
-    return () => window.removeEventListener("resize", checkScreenSize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const renderResponsiveImage = () => (
+    <img
+      className={styles.responsiveImg}
+      src={isMobile ? MobileImage : AndroidImage}
+      alt="Android App"
+    />
+  );
 
   return (
     <div className={styles.container}>
-      <div className={styles.infoSection}>
+      <section className={styles.infoSection}>
         <div className={styles.infoSection_content}>
           <h2>Why Develop An Android App?</h2>
           <p>
-            Android OS is the clear leader in the mobile application market,
-            with a market share of over 86% in application development. Thus,
-            Android is the ideal platform for reaching users worldwide with your
-            app. At RisingMax, our expertise lies in the Android platform,
-            enabling us to develop tailored apps that perfectly align with your
-            requirements. Our Android app development services are designed to
-            enhance brand engagement and foster loyalty. We achieve this by
-            leveraging advanced technology, incorporating user-centric features,
-            and following intuitive design principles.
+            Android OS dominates the mobile application market with over 86%
+            market share. Developing an Android app ensures global reach for
+            your audience. At RisingMax, we specialize in creating custom
+            Android apps tailored to your needs. Our services enhance brand
+            engagement and loyalty using advanced technologies, user-focused
+            features, and intuitive designs.
           </p>
           <button className={styles.meetButton}>
             Meet with us <IoIosArrowForward />
           </button>
         </div>
         <div className={styles.infoSection_img}>
-          <img src={Rectangle} alt="Rectangle" />
+          <img src={RectangleImage} alt="Android Development Process" />
         </div>
-      </div>
+      </section>
       <h2>Android App Development Process We Follow</h2>
       <p className={styles.description}>
-        We handle every aspect of Android development, from the initial concept
-        to the final app deployment, ensuring a smooth and efficient process. We
-        implement an intelligent approach to ensure our esteemed clients receive
-        the desired solution.
+        From concept to deployment, we manage every step of Android development
+        efficiently. Our intelligent approach ensures clients receive optimal
+        solutions tailored to their needs.
       </p>
-      <div className={styles.processSteps}></div>
-      {/* Render the appropriate image based on screen size */}
-      <img
-        className={styles.responsiveImg}
-        src={isMobile ? mob : android}
-        alt="Android App"
-      />
+      <div className={styles.processSteps}>
+        {/* Add process steps here */}
+      </div>
+      {renderResponsiveImage()}
     </div>
   );
 };
