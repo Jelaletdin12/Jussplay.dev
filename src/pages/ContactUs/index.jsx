@@ -19,6 +19,7 @@ import { IoLocation } from 'react-icons/io5'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
+
 import ellipseOne from '../../assets/ellipse1.png'
 import ellipseTwo from '../../assets/ellipse2.png'
 import Header from '../../components/Header'
