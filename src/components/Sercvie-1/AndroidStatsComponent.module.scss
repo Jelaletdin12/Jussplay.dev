@@ -70,12 +70,12 @@
   .meetButton {
     display: flex;
     align-items: center;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 176px;
     background-color: transparent;
     border: 1px solid #78aaff;
     color: #78aaff;
-    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 
     span {

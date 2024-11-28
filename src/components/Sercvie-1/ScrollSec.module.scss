@@ -100,6 +100,7 @@ h2 {
 }
 
 .card {
+  flex-direction: column;
   width: 376px !important;
   height: 440px;
   min-width: 250px;

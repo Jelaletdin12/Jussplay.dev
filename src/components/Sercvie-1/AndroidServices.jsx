@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./AndroidService.module.scss";
 import { IoIosArrowForward } from "react-icons/io";
 import dexServiceImage from "../../assets/blockchain6/page6.png";
@@ -37,6 +37,31 @@ const services = [
 ];
 
 const AndroidServicesComponent = () => {
+  const serviceRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = serviceRefs.current.indexOf(entry.target);
+            if (index !== -1) {
+              setTimeout(() => {
+                entry.target.classList.add(styles.fadeIn);
+              }, index * 300);
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    serviceRefs.current.forEach((ref) => ref && observer.observe(ref));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <div className={styles.container}>
@@ -51,7 +76,12 @@ const AndroidServicesComponent = () => {
         </p>
         <div className={styles.servicesGrid}>
           {services.map((service, index) => (
-            <div key={index} className={styles.serviceCard}>
+            <div
+              key={index}
+              className={`${styles.serviceCard}`}
+              ref={(el) => (serviceRefs.current[index] = el)}
+            >
+              <div className={styles.borderTop}></div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </div>

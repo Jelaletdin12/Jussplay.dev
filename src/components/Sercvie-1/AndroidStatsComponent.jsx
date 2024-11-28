@@ -1,25 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer"; // Import Intersection Observer
 import styles from "./AndroidStatsComponent.module.scss";
 import Rectangle from "../../assets/Service_1/Rectangle.png";
+import { IoIosArrowForward } from 'react-icons/io'
 
 const AndroidStatsComponent = () => {
+  // Using Intersection Observer to trigger animation on scroll
+  const [statsRef, inView] = useInView({
+    triggerOnce: true, // Animation runs only once
+    threshold: 0.3, // Trigger when 30% of the element is visible
+  });
+
   return (
     <div className={styles.container}>
-      <div className={styles.stats}>
+      <div className={styles.stats} ref={statsRef}>
         <div className={styles.statItem}>
-          <h2>4000+</h2>
+          <h2>
+            {inView && <CountUp start={0} end={4000} duration={3} separator="," />}+
+          </h2>
           <p>Android App Developed Successfully</p>
         </div>
         <div className={styles.statItem}>
-          <h2>10M+</h2>
+          <h2>
+            {inView && <CountUp start={0} end={10} duration={3.5} separator="," />}M+
+          </h2>
           <p>Android Apps Downloads</p>
         </div>
         <div className={styles.statItem}>
-          <h2>250+</h2>
+          <h2>
+            {inView && <CountUp start={0} end={250} duration={2.5} separator="," />}+
+          </h2>
           <p>Technology Experts</p>
         </div>
         <div className={styles.statItem}>
-          <h2>15+</h2>
+          <h2>
+            {inView && <CountUp start={0} end={15} duration={2} separator="," />}+
+          </h2>
           <p>Industries Served</p>
         </div>
       </div>
@@ -38,7 +55,7 @@ const AndroidStatsComponent = () => {
             and following intuitive design principles.
           </p>
           <button className={styles.meetButton}>
-            Meet with us <span>&#x2192;</span>
+            Meet with us <IoIosArrowForward />
           </button>
         </div>
         <div className={styles.infoSection_img}>

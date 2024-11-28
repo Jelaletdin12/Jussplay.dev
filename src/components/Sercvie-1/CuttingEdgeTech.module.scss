@@ -35,9 +35,7 @@
 }
 
 .card {
-  padding: 20px;
   background-color: #1a1a1a;
-  border-top: 3px solid #9b59b6;
 }
 
 .cardTitle {
@@ -45,11 +43,13 @@
   font-weight: 400;
   margin-bottom: 10px;
   color: #fff;
+  margin: 20px;
 }
 
 .list {
   list-style-type: none;
   padding: 25px;
+  margin: 20px;
 }
 
 .listItem {
@@ -126,4 +126,9 @@
   @media screen and (max-width: 520px) {
     text-align: center;
   }
+}
+
+.borderTop {
+  background: linear-gradient(to left top, #ef26c0, #9945ff);
+  height: 3px;
 }

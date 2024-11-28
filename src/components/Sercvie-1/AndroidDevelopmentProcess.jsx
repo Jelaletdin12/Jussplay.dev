@@ -3,6 +3,7 @@ import styles from "./AndroidDevelopmentProcess.module.scss";
 import Rectangle from "../../assets/Service_1/Rectangle.png";
 import android from "../../assets/Service_1/android.png";
 import mob from "../../assets/Service_1/mob.png"; // Mobile image
+import { IoIosArrowForward } from 'react-icons/io'
 
 const AndroidDevelopmentProcess = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -40,7 +41,7 @@ const AndroidDevelopmentProcess = () => {
             and following intuitive design principles.
           </p>
           <button className={styles.meetButton}>
-            Meet with us <span>&#x2192;</span>
+            Meet with us <IoIosArrowForward />
           </button>
         </div>
         <div className={styles.infoSection_img}>
