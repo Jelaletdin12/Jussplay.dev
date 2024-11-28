@@ -28,6 +28,7 @@ const Web3 = lazy(() => import("./pages/Web3"));
 const Wallet = lazy(() => import("./pages/Wallet"));
 const Service_1 = lazy(() => import("./pages/Service_1"));
 const ServiceIos = lazy(() => import("./pages/ServiceIOS"));
+const WebApp = lazy(() => import("./pages/WebApp"));
 
 export default function App() {
   const location = useLocation();
@@ -133,6 +134,7 @@ export default function App() {
           <Route path="/service-ios" element={<ServiceIos />} />
           <Route path="*" element={<NotFoundPage />} />
           <Route path="" element={<NotFoundPage />} />
+          <Route path="/web-app" element={<WebApp />} />
         </Routes>
       </Suspense>
     </AnimatePresence>

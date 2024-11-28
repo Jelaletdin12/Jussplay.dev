@@ -25,7 +25,7 @@ const menuItems = [
   { name: "Contact us", path: "/contactus" },
 ];
 
-export default memo(function Header({ children }) {
+export default memo(function Header({ children, position }) {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
@@ -48,7 +48,13 @@ export default memo(function Header({ children }) {
   };
 
   return (
-    <header className={styles.header}>
+    <header
+      className={styles.header}
+      style={{
+        position: position,
+        width: "100%",
+      }}
+    >
       <div className={styles.logo}>
         <Link to="/home" onClick={playSound}>
           <img src={logo} alt="Logo" width={90} height={90} />
@@ -94,7 +100,7 @@ export default memo(function Header({ children }) {
       >
         menu
       </div>
-      <div className={styles.header__logo}>{children}</div>
+      {/* <div className={styles.header__logo}>{children}</div> */}
       <div
         className={classNames(styles.header_menu, {
           [styles.header_menu_active]: isMenuActive,
@@ -143,11 +149,7 @@ export default memo(function Header({ children }) {
 
         <div className={styles.header_menu_socials}>
           <div className={styles.header_menu_socials_icons}>
-            <a
-              href="https://wa.me/9377913945"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://wa.me/9377913945" target="_blank" rel="noreferrer">
               <FaWhatsapp />
             </a>
             <a

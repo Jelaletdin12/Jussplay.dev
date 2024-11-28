@@ -1,280 +1,281 @@
 @import "../../constants/colors.scss";
 
 .page__blockchain {
-	background-color: #000;
-	color: #fff;
-	min-height: 100vh;
-	position: relative;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
 }
 
 .bgImg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 800px;
-	border-radius: 0px, 0px, 65px, 65px;
-	@media (max-width: 1024px) {
-		display: none;
-	}
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  border-radius: 0px, 0px, 65px, 65px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .headerBlockchain {
-	position: relative;
-	z-index: 1;
-	padding: 50px 0 0 0;
+  position: relative;
+  z-index: 1;
+  padding: 50px 0 0 0;
 }
 
 .blockchainContainer {
-	max-width: 1620px;
-	margin: 0 auto;
-	padding: 0 30px;
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 .headerBlockchainRow {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	@media (max-width: 1024px) {
-		flex-wrap: wrap;
-		gap: 20px;
-	}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }
 
 // Title
 .headerTitle {
-	max-width: 777px;
-	h1 {
-		font-weight: 400;
-		font-size: 58px;
-		@media (max-width: 1024px) {
-			font-size: 45px;
-		}
-		/* line-height: 58px; */
-		line-height: 0.99862;
-		color: #fff;
-	}
-	p {
-		font-weight: 400;
-		font-size: 20px;
-		max-width: 640px;
+  max-width: 777px;
+  h1 {
+    font-weight: 400;
+    font-size: 58px;
+    @media (max-width: 1024px) {
+      font-size: 45px;
+    }
+    /* line-height: 58px; */
+    line-height: 0.99862;
+    color: #fff;
+  }
+  p {
+    font-weight: 400;
+    font-size: 20px;
+    max-width: 640px;
 
-		/* line-height: 25px; */
-		line-height: 1.25;
-		text-transform: uppercase;
-		color: #fff;
-		margin: 38px 0 55px 0;
-		span {
-			display: block;
-			margin: 20px 0 0 0;
-		}
-		@media (max-width: 1024px) {
-			font-size: 16px;
-		}
-	}
-	@media (max-width: 430px) {
-		h1 {
-			font-size: 25px;
+    /* line-height: 25px; */
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 38px 0 55px 0;
+    span {
+      display: block;
+      margin: 20px 0 0 0;
+    }
+    @media (max-width: 1024px) {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 430px) {
+    h1 {
+      font-size: 25px;
 
-			/* line-height: 30px; */
-			line-height: 1.2;
-			text-align: center;
-		}
-		p {
-			font-size: 20px;
+      /* line-height: 30px; */
+      line-height: 1.2;
+      text-align: center;
+    }
+    p {
+      font-size: 20px;
 
-			/* line-height: 25px; */
-			line-height: 1.25;
-			text-transform: uppercase;
-			text-align: center;
-		}
-		button {
-			margin: 0 auto;
-		}
-	}
+      /* line-height: 25px; */
+      line-height: 1.25;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    button {
+      margin: 0 auto;
+    }
+  }
 }
 
 .title__blockchain {
-	margin-bottom: 80px;
-	h1 {
-		width: 85%;
-		font-weight: 400;
-		font-size: 58px;
-		margin-bottom: 50px;
-		/* line-height: 58px; */
-		line-height: 0.99862;
-		color: #fff;
-	}
-	p {
-		font-weight: 400;
-		font-size: 20px;
+  margin-bottom: 80px;
+  h1 {
+    width: 85%;
+    font-weight: 400;
+    font-size: 58px;
+    margin-bottom: 50px;
+    /* line-height: 58px; */
+    line-height: 0.99862;
+    color: #fff;
+  }
+  p {
+    font-weight: 400;
+    font-size: 20px;
 
-		/* line-height: 25px; */
-		line-height: 1.25;
-		text-transform: uppercase;
-		color: #fff;
-	}
-	@media (max-width: 430px) {
-		h1 {
-			font-size: 25px;
+    /* line-height: 25px; */
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  @media (max-width: 430px) {
+    h1 {
+      font-size: 25px;
 
-			/* line-height: 30px; */
-			line-height: 1.2;
-			text-align: center;
-			margin: 0 auto 50px auto;
-		}
-		p {
-			font-size: 20px;
+      /* line-height: 30px; */
+      line-height: 1.2;
+      text-align: center;
+      margin: 0 auto 50px auto;
+    }
+    p {
+      font-size: 20px;
 
-			/* line-height: 25px; */
-			line-height: 1.25;
-			text-transform: uppercase;
-			text-align: center;
-		}
-	}
+      /* line-height: 25px; */
+      line-height: 1.25;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
 }
 .blockchainBtn {
-	background-color: transparent;
-	color: white;
-	border: 1px solid white;
-	padding: 10px 20px;
-	font-size: 18px;
-	width: 176px;
-	border-radius: 99px;
-	margin-top: 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 18px;
+  width: 176px;
+  border-radius: 99px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-	&:hover {
-		background-color: white;
-		color: black;
-	}
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 }
 
 // Form
 .blockchainForm {
-	background-color: #fff;
-	border-radius: 10px;
-	@media (max-width: 430px) {
-		flex: 1 1 auto;
-		margin: 50px 0;
-	}
-	@media (max-width: 1024px) {
-		margin: 50px auto;
-	}
+  background-color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  @media (max-width: 430px) {
+    flex: 1 1 auto;
+    margin: 50px 0;
+  }
+  @media (max-width: 1024px) {
+    margin: 50px 0;
+  }
 }
 .form {
-	padding: 59px 53px 42px 46px;
-	@media (max-width: 1024px) {
-		padding: 40px;
-	}
-	@media (max-width: 430px) {
-		padding: 30px;
-		h1 {
-			font-size: 20px;
-		}
-	}
+  padding: 59px 53px 42px 46px;
+  @media (max-width: 1024px) {
+    padding: 40px;
+  }
+  @media (max-width: 430px) {
+    padding: 30px;
+    h1 {
+      font-size: 20px;
+    }
+  }
 }
 .formTitle {
-	font-weight: 500;
-	font-size: 28px;
-	color: #000;
-	margin: 0 0 50px 0;
+  font-weight: 500;
+  font-size: 28px;
+  color: #000;
+  margin: 0 0 50px 0;
 }
 
 // Input
 
 @mixin input {
-	border: none;
-	border-bottom: 1px solid #8d8d8d;
-	outline: none;
-	font-size: 12px;
-	color: #888;
-	font-family: MontReg, MontR, sans-serif;
-	padding: 14px 0 5px 0;
-	background-color: transparent;
-	width: 85%;
-	@media (max-width: 768px) {
-		padding: 24px 0 5px 0;
-	}
-	@media (max-width: 430px) {
-		width: 100%;
-	}
+  border: none;
+  border-bottom: 1px solid #8d8d8d;
+  outline: none;
+  font-size: 12px;
+  color: #888;
+  font-family: MontReg, MontR, sans-serif;
+  padding: 14px 0 5px 0;
+  background-color: transparent;
+  width: 85%;
+  @media (max-width: 768px) {
+    padding: 24px 0 5px 0;
+  }
+  @media (max-width: 430px) {
+    width: 100%;
+  }
 }
 
 .inputCol label {
-	position: relative;
-	width: 100%;
-	display: block;
-	margin: 50px 0 0 0;
-	@media (max-width: 320px) {
-		margin-top: 70px;
-	}
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 50px 0 0 0;
+  @media (max-width: 320px) {
+    margin-top: 70px;
+  }
 }
 
 .inputCol input {
-	@include input;
+  @include input;
 }
 
 .inputColMessage input {
-	@include input;
-	width: 500px;
-	@media (max-width: 430px) {
-		max-width: 100%;
-	}
+  @include input;
+  width: 500px;
+  @media (max-width: 430px) {
+    max-width: 100%;
+  }
 }
 
 .inputColMessage label {
-	position: relative;
-	width: 100%;
-	display: block;
-	margin: 50px 0 0 0;
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 50px 0 0 0;
 }
 
 .inputColMessage textarea {
-	resize: none;
-	overflow-y: hidden;
-	@include input;
+  resize: none;
+  overflow-y: hidden;
+  @include input;
 }
 
 .inputCol textarea {
-	resize: none;
-	overflow-y: hidden;
-	@include input;
+  resize: none;
+  overflow-y: hidden;
+  @include input;
 }
 
 .placeholder {
-	color: $backgroundBlack;
-	font-family: SGrotReg, sans-serif;
+  color: $backgroundBlack;
+  font-family: SGrotReg, sans-serif;
 
-	font-size: 18px;
-	position: absolute;
-	text-align: start;
-	top: -0.8em;
-	left: 0;
-	transition: all ease-in-out 0.3s;
-	@media (max-width: 420px) {
-		top: -2.2em;
-	}
-	@media (max-width: 320px) {
-		top: -2em;
-	}
+  font-size: 18px;
+  position: absolute;
+  text-align: start;
+  top: -0.8em;
+  left: 0;
+  transition: all ease-in-out 0.3s;
+  @media (max-width: 420px) {
+    top: -2.2em;
+  }
+  @media (max-width: 320px) {
+    top: -2em;
+  }
 }
 
 .placeholderActive {
-	transform: scale(0.8571) translateY(-1.7rem);
-	left: -4px;
-	color: $backgroundBlack;
+  transform: scale(0.8571) translateY(-1.7rem);
+  left: -4px;
+  color: $backgroundBlack;
 }
 .placeholderActivePhone {
-	transform: scale(0.8571) translateY(-1.7rem);
-	left: -20px;
-	color: $backgroundBlack;
+  transform: scale(0.8571) translateY(-1.7rem);
+  left: -20px;
+  color: $backgroundBlack;
 }
 .placeholderActiveArea {
-	transform: scale(0.8571) translateY(-1.9rem);
-	left: -5px;
-	color: $backgroundBlack;
+  transform: scale(0.8571) translateY(-1.9rem);
+  left: -5px;
+  color: $backgroundBlack;
 }
 
 // Flip BTN
@@ -282,314 +283,319 @@
 $speed: 0.3s;
 
 .btnForm {
-	display: flex;
-	justify-content: start;
-	align-items: center;
-	margin: 30px 0 0 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 30px 0 0 0;
 }
 
 .btnFlipBlockchain {
-	opacity: 1;
-	outline: 0;
+  opacity: 1;
+  outline: 0;
 
-	line-height: 40px;
-	position: relative;
-	text-align: center;
-	letter-spacing: 1px;
-	display: inline-block;
-	text-decoration: none;
-	font-family: SGrotReg, sans-serif;
-	text-transform: uppercase;
-	border-radius: 50px;
-	font-size: 14px;
-	// cursor: pointer;
-	font-weight: 400;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: SGrotReg, sans-serif;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-size: 14px;
+  // cursor: pointer;
+  font-weight: 400;
 
-	@media (max-width: 768px) {
-		border-radius: 15px;
-		width: 100%;
-	}
+  @media (max-width: 768px) {
+    border-radius: 15px;
+    width: 100%;
+  }
 
-	@media (max-width: 430px) {
-		border-radius: 10px;
-		margin: 0 auto;
-		width: max-content;
-	}
+  @media (max-width: 430px) {
+    border-radius: 10px;
+    margin: 0 auto;
+    width: max-content;
+  }
 
-	&:hover {
-		&:after {
-			opacity: 1;
-			transform: translateY(0) rotateX(0);
-		}
+  &:hover {
+    &:after {
+      opacity: 1;
+      transform: translateY(0) rotateX(0);
+    }
 
-		&:before {
-			opacity: 0;
-			transform: translateY(-50%) rotateX(-90deg);
-		}
-	}
+    &:before {
+      opacity: 0;
+      transform: translateY(-50%) rotateX(-90deg);
+    }
+  }
 
-	&:after {
-		top: 0;
-		left: 0;
-		opacity: 0;
-		width: 100%;
-		display: block;
-		transition: $speed;
-		position: absolute;
-		content: attr(data-back);
-		transform: translateY(50%) rotateX(-90deg);
-		padding: 10px 0;
-	}
+  &:after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    display: block;
+    transition: $speed;
+    position: absolute;
+    content: attr(data-back);
+    transform: translateY(50%) rotateX(-90deg);
+    padding: 10px 0;
+  }
 
-	&:before {
-		top: 0;
-		left: 0;
-		opacity: 1;
-		display: block;
-		padding: 5px 30px;
-		line-height: 40px;
-		transition: $speed;
-		position: relative;
-		content: attr(data-front);
-		transform: translateY(0) rotateX(0);
-	}
+  &:before {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    display: block;
+    padding: 5px 30px;
+    line-height: 40px;
+    transition: $speed;
+    position: relative;
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+  }
 }
 
 // Content
 .sectionContent {
-	margin: 250px 0 120px 0;
-	@media (max-width: 430px) {
-		margin: 50px 0 120px 0;
-	}
+  margin: 250px 0 120px 0;
+  @media (max-width: 430px) {
+    margin: 50px 0 120px 0;
+  }
 }
 
 .contentTitle {
-	margin: 175px auto;
-	h1 {
-		font-weight: 400;
-		font-size: 58px;
-		max-width: 90%;
+  margin: 175px auto;
+  h1 {
+    font-weight: 400;
+    font-size: 58px;
+    max-width: 90%;
 
-		/* line-height: 58px; */
-		line-height: 0.99862;
-		color: #fff;
-	}
+    /* line-height: 58px; */
+    line-height: 0.99862;
+    color: #fff;
+  }
 }
 
 .blockchain__cards_row {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 376px));
-	place-content: center;
-	gap: 15px;
-	@media (max-width: 768px) {
-		grid-template-columns: repeat(2, minmax(0, 376px));
-	}
-	@media (max-width: 430px) {
-		grid-template-columns: repeat(1, minmax(0, 1fr));
-	}
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 376px));
+  place-content: center;
+  gap: 15px;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 376px));
+  }
+  @media (max-width: 430px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
 .card {
-	padding: 25px 31px;
-	border-radius: 10px;
-	text-align: center;
-	background: linear-gradient(180deg, rgba(72, 49, 157, 0.5) 0%, rgba(72, 49, 157, 0.1) 100%);
-	&__image {
-		img {
-			margin: 0 auto;
-			width: 86px;
-			height: 86px;
-		}
-	}
-	&__content {
-		h1 {
-			margin: 20px 0 15px 0;
-			font-weight: 400;
-			font-size: 25px;
+  padding: 25px 31px;
+  border-radius: 10px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(72, 49, 157, 0.5) 0%,
+    rgba(72, 49, 157, 0.1) 100%
+  );
+  &__image {
+    img {
+      margin: 0 auto;
+      width: 86px;
+      height: 86px;
+    }
+  }
+  &__content {
+    h1 {
+      margin: 20px 0 15px 0;
+      font-weight: 400;
+      font-size: 25px;
 
-			/* line-height: 25px; */
-			line-height: 1;
-			letter-spacing: -0.04em;
-			color: #fff;
-		}
-		p {
-			font-weight: 400;
-			font-size: 18px;
+      /* line-height: 25px; */
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: #fff;
+    }
+    p {
+      font-weight: 400;
+      font-size: 18px;
 
-			/* line-height: 25px; */
-			line-height: 1.38889;
-			letter-spacing: -0.04em;
-			text-align: center;
-			color: #fff;
-		}
-	}
+      /* line-height: 25px; */
+      line-height: 1.38889;
+      letter-spacing: -0.04em;
+      text-align: center;
+      color: #fff;
+    }
+  }
 }
 
 // Expertise ====================
 .section__expertise {
-	margin-bottom: 97px;
+  margin-bottom: 97px;
 }
 
 // Design Process ==================
 
 .section__design_process {
-	margin: 0 0 97px 0;
-	padding: 93px 0 0px 0;
-	height: 1178px;
-	background: url(../../assets/blockchain/Design-Process/bg.jpg) center / auto no-repeat;
-	@media (max-width: 1024px) {
-		background-image: none;
-		height: 100%;
-	}
+  margin: 0 0 97px 0;
+  padding: 93px 0 0px 0;
+  height: 1178px;
+  background: url(../../assets/blockchain/Design-Process/bg.jpg) center / auto
+    no-repeat;
+  @media (max-width: 1024px) {
+    background-image: none;
+    height: 100%;
+  }
 }
 
 // Chat
 .chat__block {
-	position: relative;
-	height: 100%;
-	@media (max-width: 1024px) {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		place-items: center;
-		gap: 15px;
-		text-align: center;
-	}
-	@media (max-width: 768px) {
-		grid-template-columns: repeat(1, minmax(0, 1fr));
-	}
+  position: relative;
+  height: 100%;
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    place-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
 .wrapper__chat {
-	position: absolute;
-	border-radius: 10px;
-	width: 400px;
-	@media (max-width: 1025px) {
-		display: none;
-	}
+  position: absolute;
+  border-radius: 10px;
+  width: 400px;
+  @media (max-width: 1025px) {
+    display: none;
+  }
 }
 .wrapper__chat_mobile {
-	display: none;
-	@media (max-width: 1025px) {
-		display: block;
-		border-radius: 10px;
-	}
+  display: none;
+  @media (max-width: 1025px) {
+    display: block;
+    border-radius: 10px;
+  }
 }
 .chat {
-	position: relative;
-	padding: 14px 20px;
-	h1 {
-		font-weight: 500;
-		font-size: 25px;
+  position: relative;
+  padding: 14px 20px;
+  h1 {
+    font-weight: 500;
+    font-size: 25px;
 
-		/* line-height: 29px; */
-		line-height: 1.15838;
-		letter-spacing: -0.01em;
-		color: #111;
-	}
-	p {
-		font-weight: 400;
-		font-size: 18px;
+    /* line-height: 29px; */
+    line-height: 1.15838;
+    letter-spacing: -0.01em;
+    color: #111;
+  }
+  p {
+    font-weight: 400;
+    font-size: 18px;
 
-		/* line-height: 21px; */
-		line-height: 1.15838;
-		letter-spacing: -0.01em;
-		color: rgba(0, 0, 0, 0.85);
-		z-index: 10;
-	}
-	img {
-		position: absolute;
-		// z-index: 10;
-		@media (max-width: 1024px) {
-			display: none;
-		}
-		@media (max-width: 430px) {
-			h1 {
-				font-size: 21px;
+    /* line-height: 21px; */
+    line-height: 1.15838;
+    letter-spacing: -0.01em;
+    color: rgba(0, 0, 0, 0.85);
+    z-index: 10;
+  }
+  img {
+    position: absolute;
+    // z-index: 10;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+    @media (max-width: 430px) {
+      h1 {
+        font-size: 21px;
 
-				/* line-height: 25px; */
-				line-height: 1.18017;
-				text-align: center;
-			}
-			p {
-				font-size: 21px;
+        /* line-height: 25px; */
+        line-height: 1.18017;
+        text-align: center;
+      }
+      p {
+        font-size: 21px;
 
-				/* line-height: 25px; */
-				line-height: 1.18017;
-				text-align: center;
-			}
-		}
-	}
+        /* line-height: 25px; */
+        line-height: 1.18017;
+        text-align: center;
+      }
+    }
+  }
 }
 
 // Features Best ===============
 .section__features_best {
-	margin-bottom: 97px;
+  margin-bottom: 97px;
 }
 // Rewarding =====================
 .section__rewarding {
-	margin-bottom: 97px;
+  margin-bottom: 97px;
 }
 // Counted =========================
 .section__counted {
-	margin-bottom: 97px;
+  margin-bottom: 97px;
 }
 // Digital Solutions ==============
 .section__digital_solutions {
-	margin-bottom: 421px;
-	@media (max-width: 430px) {
-		margin-bottom: 130px;
-	}
+  margin-bottom: 421px;
+  @media (max-width: 430px) {
+    margin-bottom: 130px;
+  }
 }
 .digital_solutions__row {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	grid-template-rows: auto;
-	@media (max-width: 768px) {
-		grid-template-columns: repeat(1, minmax(0, 1fr));
-		place-items: center;
-	}
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    place-items: center;
+  }
 }
 
 .digital__col {
-	&:last-child {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		place-content: center;
-		@media (max-width: 430px) {
-			grid-template-columns: repeat(1, minmax(0, 1fr));
-		}
-	}
+  &:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    place-content: center;
+    @media (max-width: 430px) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
 }
 .digital__items_col {
-	display: flex;
-	flex-direction: column;
-	justify-content: end;
-	gap: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 25px;
 }
 
 .digital__item {
-	display: flex;
-	align-items: center;
-	gap: 20px;
-	@media (max-width: 430px) {
-		display: block;
-		margin: 0 auto;
-		text-align: center;
-	}
-	img {
-		width: 55px;
-		height: 55px;
-		@media (max-width: 430px) {
-			margin: 10px auto;
-		}
-	}
-	h1 {
-		font-weight: 400;
-		font-size: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @media (max-width: 430px) {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  img {
+    width: 55px;
+    height: 55px;
+    @media (max-width: 430px) {
+      margin: 10px auto;
+    }
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 25px;
 
-		/* line-height: 25px; */
-		line-height: 1;
-		color: #fff;
-		margin-bottom: 0;
-	}
+    /* line-height: 25px; */
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 0;
+  }
 }

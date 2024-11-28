@@ -10,10 +10,8 @@
   font-family: "Space Grotesk";
   @media (max-width: 768px) {
     justify-content: space-between;
-    flex-direction: row-reverse;
     img {
       display: block;
-      padding: 0 0 0 30px;
     }
   }
   &__logo {
