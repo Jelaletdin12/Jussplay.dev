@@ -14,9 +14,9 @@ import Career from '../pages/Career'
 import ContactUs from '../pages/ContactUs'
 import { NotFoundPage } from '../pages/Error/NotFoundPage'
 import Home from '../pages/Home'
-import Industry from '../pages/Industry'
+import Service from '../pages/Industry'
 import Metaverse from '../pages/Metaverse'
-import Service from '../pages/Service'
+// import Service from '../pages/Service'
 import Service_1 from '../pages/Service_1'
 import ServiceIOS from '../pages/ServiceIOS'
 import TokenNFT from '../pages/Token'
@@ -48,11 +48,6 @@ const router = createBrowserRouter([
 			{
 				path: 'career',
 				element: <Career />,
-				errorElement: <BubbleError />,
-			},
-			{
-				path: 'industry',
-				element: <Industry />,
 				errorElement: <BubbleError />,
 			},
 			{

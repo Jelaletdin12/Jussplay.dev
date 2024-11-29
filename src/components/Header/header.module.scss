@@ -9,7 +9,7 @@
   z-index: 5;
   font-family: "Space Grotesk";
   @media (max-width: 768px) {
-    justify-content: space-between;
+    justify-content: flex-end;
     img {
       display: block;
     }

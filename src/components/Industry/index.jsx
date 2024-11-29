@@ -1,6 +1,7 @@
-import PropTypes from "prop-types"
-import { useEffect, useRef, useState } from "react"
-import Typewriter from "typewriter-effect/dist/core"
+import PropTypes from "prop-types";
+import { useEffect, useRef, useState } from "react";
+import Typewriter from "typewriter-effect/dist/core";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Section = ({ title, description, imageSrc, frameClassName }) => {
   const titleRef = useRef(null);
@@ -19,7 +20,7 @@ const Section = ({ title, description, imageSrc, frameClassName }) => {
         });
       },
       {
-        threshold: 0.1, 
+        threshold: 0.1,
       }
     );
 
@@ -63,7 +64,9 @@ const Section = ({ title, description, imageSrc, frameClassName }) => {
       typewriterDescription
         .typeString(description)
         .callFunction(() => {
-          const cursor = descriptionRef.current.querySelector(".Typewriter__cursor");
+          const cursor = descriptionRef.current.querySelector(
+            ".Typewriter__cursor"
+          );
           if (cursor) {
             cursor.style.display = "none";
           }
@@ -73,10 +76,13 @@ const Section = ({ title, description, imageSrc, frameClassName }) => {
   }, [isVisible, title, description]);
 
   return (
-    <div className="section" ref={sectionRef}>
+    <div className="sectionService" ref={sectionRef}>
       <div className="section-content">
         <h2 ref={titleRef}></h2>
         <p ref={descriptionRef}></p>
+        <button className="button">
+          Meet with us <IoIosArrowForward />
+        </button>
       </div>
       <div className={`frame ${frameClassName}`}>
         <img src={imageSrc} alt={title} className="section-image" />

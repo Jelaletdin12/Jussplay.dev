@@ -2,44 +2,7 @@
   background-color: #000000;
   color: #fff;
 
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 150px 87px 150px 87px;
-    font-family: "Space Grotesk";
-    gap: 15px;
-    @media screen and (max-width: 500px) {
-      flex-direction: column;
-      text-align: center;
-      padding: 30px 10px 30px 10px;
-    }
-    h1 {
-      font-size: 58px;
-      font-weight: 400;
-      line-height: 58px;
-      color: #ffffff;
-      text-transform: uppercase;
-      width: 330px;
-      @media screen and (max-width: 500px) {
-        font-size: 40px;
-        width: auto;
-      }
-    }
-    p {
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 20px;
-      text-transform: uppercase;
-      margin-top: 45px;
-      width: 440px;
-      @media screen and (max-width: 500px) {
-        width: auto;
-      }
-    }
-  }
-
-  .section {
+  .sectionService {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
@@ -58,8 +21,8 @@
       }
     }
     .frame {
-      width: 500px;
-      height: 500px;
+      width: 300px;
+      height: 300px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -72,6 +35,8 @@
       }
 
       &.design-ai-frame {
+        width: 250px;
+        height: 250px;
         @media screen and (max-width: 500px) {
           width: 200px;
           height: 150px;
@@ -79,6 +44,8 @@
       }
 
       &.networking-frame {
+        width: 225px;
+        height: 225px;
         @media screen and (max-width: 500px) {
           width: 300px;
           height: 200px;
@@ -86,7 +53,7 @@
       }
 
       &.it-maintenance-frame {
-        width: 500px;
+        width: 250px;
         height: 350px;
         @media screen and (max-width: 500px) {
           width: 300px;
@@ -95,8 +62,8 @@
       }
 
       &.social-media-frame {
-        width: 400px;
-        height: 400px;
+        width: 250px;
+        height: 250px;
         @media screen and (max-width: 500px) {
           width: 200px;
           height: 200px;
@@ -104,8 +71,8 @@
       }
 
       &.google-meta-frame {
-        width: 250px;
-        height: 255px;
+        width: 300px;
+        height: 300px;
         @media screen and (max-width: 500px) {
           width: 150px;
           height: 200px;
@@ -116,7 +83,7 @@
     .section-image {
       width: 100%;
       height: auto;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     .section-content {
@@ -148,4 +115,83 @@
       }
     }
   }
+}
+
+.up {
+  height: 79vh;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 0;
+  background-color: #000;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 18px;
+  width: 176px;
+  border-radius: 99px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+  @media screen and (max-width: 520px) {
+    font-size: 15px;
+    width: 150px;
+  }
+}
+
+.header {
+  text-align: center;
+  //margin: 20px 0;
+  top: 150px;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 56px;
+  //font-weight: bold;
+  color: #fff;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 58px;
+    font-weight: 400;
+    font-family: "Space Grotesk";
+  }
+}
+
+.down {
+  position: relative;
+
+  //z-index: 1;
+}
+.down_header {
+  margin: 0 35px 0 35px;
 }

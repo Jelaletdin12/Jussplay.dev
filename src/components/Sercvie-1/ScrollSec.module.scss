@@ -78,7 +78,7 @@ h2 {
 .cardContainer {
   overflow-x: auto;
   display: flex;
-  //justify-content: center;
+  
   margin-top: 20px;
   cursor: grab;
   width: 100%;
@@ -101,6 +101,7 @@ h2 {
 
 .card {
   flex-direction: column;
+  justify-content:flex-start !important;
   width: 376px !important;
   height: 440px;
   min-width: 250px;

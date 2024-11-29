@@ -19,10 +19,23 @@ import { Navigation } from "swiper/modules";
 
 const menuItems = [
   { name: "Home", path: "/home/#hero" },
-  { name: "Projects", path: "/home/#projects" },
-  { name: "Services", path: "/home/#work" },
+  // { name: "Projects", path: "/home/#projects" },
+  { name: "Service", path: "/service" },
   { name: "About us", path: "/aboutus" },
   { name: "Contact us", path: "/contactus" },
+  { name: "Blockchain", path: "/blockchain" },
+  { name: "Token", path: "/token" },
+  { name: "Metaverse ", path: "/metaverse" },
+  { name: "Blockchain_4 ", path: "/blockchain_4" },
+  { name: "Web3 ", path: "/web3" },
+  { name: "Chain6 ", path: "/blockchain_6" },
+  { name: "Crypto ", path: "/wallet" },
+  { name: "Servive-1 ", path: "/servive-1" },
+  { name: " Servive-ios ", path: "/service-ios" },
+  { name: " WebApp ", path: "/web-app" },
+  
+  
+  
 ];
 
 export default memo(function Header({ children, position }) {

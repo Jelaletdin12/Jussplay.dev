@@ -16,9 +16,9 @@ const Home = lazy(() => import("./pages/Home"));
 const Loader = lazy(() => import("./pages/Loader"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
 const Career = lazy(() => import("./pages/Career"));
-const Industry = lazy(() => import("./pages/Industry"));
+const Service = lazy(() => import("./pages/Industry"));
 const About = lazy(() => import("./pages/About"));
-const Service = lazy(() => import("./pages/Service"));
+// const Service = lazy(() => import("./pages/Service"));
 const Blockchain = lazy(() => import("./pages/Blockchain"));
 const Token = lazy(() => import("./pages/Token"));
 const Metaverse = lazy(() => import("./pages/Metaverse"));
@@ -120,7 +120,7 @@ export default function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/career" element={<Career />} />
-          <Route path="/industry" element={<Industry />} />
+          {/* <Route path="/industry" element={<Industry />} /> */}
           <Route path="/aboutus" element={<About />} />
           <Route path="/service" element={<Service />} />
           <Route path="/blockchain" element={<Blockchain />} />
