@@ -1,122 +1,77 @@
-import { AnimatePresence } from 'framer-motion'
-import { lazy, Suspense, useCallback, useRef, useState } from 'react'
-import { Route, Routes, useLocation } from 'react-router-dom'
-import sound from './assets/lottieSound.json'
-import pause from './assets/pause.png'
-import play from './assets/play.png'
-import playing from './assets/playing.png'
-import CustomCursor from './components/cursor'
-//import Blockchain from './pages/Blockchain'
-//import Token from './pages/Token'
-import { NotFoundPage } from './pages/Error/NotFoundPage'
-// import CustomScroll from './components/scroll/CustomScroll'
-import { useSound } from './providers/soundContext'
+import { AnimatePresence } from "framer-motion";
+import { lazy, Suspense, useCallback, useRef, useState } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import pause from "./assets/pause.png";
+import play from "./assets/play.png";
+import playing from "./assets/playing.png";
+import CustomCursor from "./components/cursor";
+import { NotFoundPage } from "./pages/Error/NotFoundPage";
+import { useSound } from "./providers/soundContext";
 
-<<<<<<< HEAD
-const Home = lazy(() => import("./pages/Home"));
-const Loader = lazy(() => import("./pages/Loader"));
-const ContactUs = lazy(() => import("./pages/ContactUs"));
-const Career = lazy(() => import("./pages/Career"));
-const Service = lazy(() => import("./pages/Industry"));
-const About = lazy(() => import("./pages/About"));
-// const Service = lazy(() => import("./pages/Service"));
-const Blockchain = lazy(() => import("./pages/Blockchain"));
-const Token = lazy(() => import("./pages/Token"));
-const Metaverse = lazy(() => import("./pages/Metaverse"));
-const Blockchain_4 = lazy(() => import("./pages/Blockchain4"));
-const Blockchain_6 = lazy(() => import("./pages/Blockchain6"));
-const Web3 = lazy(() => import("./pages/Web3"));
-const Wallet = lazy(() => import("./pages/Wallet"));
-const Service_1 = lazy(() => import("./pages/Service_1"));
-const ServiceIos = lazy(() => import("./pages/ServiceIOS"));
-const WebApp = lazy(() => import("./pages/WebApp"));
-=======
-const Home = lazy(() => import('./pages/Home'))
-const Loader = lazy(() => import('./pages/Loader'))
-const ContactUs = lazy(() => import('./pages/ContactUs'))
-const Career = lazy(() => import('./pages/Career'))
-const Industry = lazy(() => import('./pages/Industry'))
-const About = lazy(() => import('./pages/About'))
-const Service = lazy(() => import('./pages/Service'))
-const Blockchain = lazy(() => import('./pages/Blockchain'))
-const Token = lazy(() => import('./pages/Token'))
-const Metaverse = lazy(() => import('./pages/Metaverse'))
-const Blockchain_4 = lazy(() => import('./pages/Blockchain4'))
-const Blockchain_6 = lazy(() => import('./pages/Blockchain6'))
-const Web3 = lazy(() => import('./pages/Web3'))
-const Wallet = lazy(() => import('./pages/Wallet'))
-const Service_1 = lazy(() => import('./pages/Service_1'))
-const ServiceIos = lazy(() => import('./pages/ServiceIOS'))
-const WebApp = lazy(() => import('./pages/WebApp'))
->>>>>>> 4acbf3199064316684c2e9658088179e86412196
+const pages = {
+  Home: lazy(() => import("./pages/Home/index.jsx")),
+  Loader: lazy(() => import("./pages/Loader/index.jsx")),
+  ContactUs: lazy(() => import("./pages/ContactUs/index.jsx")),
+  Career: lazy(() => import("./pages/Career/index.jsx")),
+  Service: lazy(() => import("./pages/Industry/index.jsx")),
+  About: lazy(() => import("./pages/About/index.jsx")),
+  Blockchain: lazy(() => import("./pages/Blockchain/index.jsx")),
+  Token: lazy(() => import("./pages/Token/index.jsx")),
+  Metaverse: lazy(() => import("./pages/Metaverse/index.jsx")),
+  Blockchain4: lazy(() => import("./pages/Blockchain4/index.jsx")),
+  Blockchain6: lazy(() => import("./pages/Blockchain6/index.jsx")),
+  Web3: lazy(() => import("./pages/Web3/index.jsx")),
+  Wallet: lazy(() => import("./pages/Wallet/index.jsx")),
+  Service1: lazy(() => import("./pages/Service_1/index.jsx")),
+  ServiceIos: lazy(() => import("./pages/ServiceIOS/index.jsx")),
+  WebApp: lazy(() => import("./pages/WebApp/index.jsx")),
+};
+
+const AUDIO_SRC = "/MenuSound.m4a";
+const ICON_SIZE = "40px";
+const STYLES = {
+  audioControl: {
+    position: "fixed",
+    bottom: 20,
+    right: 20,
+    zIndex: 1000,
+    display: "flex",
+    alignItems: "center",
+    gap: 15,
+  },
+};
 
 export default function App() {
-	const location = useLocation()
-	const audioRef = useRef(null)
-	const [isPaused, setIsPaused] = useState(false)
-	const titleAudiRef = useRef(null)
+  const location = useLocation();
+  const audioRef = useRef(null);
+  const titleAudiRef = useRef(null);
+  const { isPlaying, setIsPlaying } = useSound();
+  const [isPaused, setIsPaused] = useState(false);
 
-	const { isPlaying, setIsPlaying } = useSound()
+  const handleLottieClick = useCallback(() => {
+    if (!audioRef.current) return;
 
-	const lottieOptions = {
-		loop: true,
-		autoplay: false,
-		animationData: sound,
-		rendererSettings: {
-			preserveAspectRatio: 'xMidYMid slice',
-		},
-	}
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPaused(true);
+    } else {
+      audioRef.current.play();
+      setIsPaused(false);
+      titleAudiRef.current?.classList.add("title-lottie__anim");
+      setTimeout(() => {
+        titleAudiRef.current && (titleAudiRef.current.style.display = "none");
+      }, 500);
+    }
 
-	// const handleLottieClick = useCallback(() => {
-	// 	if (audioRef.current) {
-	// 		if (isPlaying) {
-	// 			audioRef.current.pause()
-	// 			setIsPaused(true)
-	// 		} else {
-	// 			audioRef.current.play()
-	// 			setIsPaused(false)
-	// 			if (titleAudiRef.current) {
-	// 				titleAudiRef.current.classList.add('title-lottie__anim')
-	// 			}
+    setIsPlaying((prevState) => !prevState);
+  }, [isPlaying, setIsPlaying]);
 
-	// 			setTimeout(() => {
-	// 				if (titleAudiRef.current) {
-	// 					titleAudiRef.current.style.display = 'none'
-	// 				}
-	// 			}, 500)
-	// 		}
-	// 		setIsPlaying(prevState => !prevState)
-	// 	}
-	// }, [isPlaying])
-
-	const handleLottieClick = useCallback(() => {
-		if (audioRef.current) {
-			if (isPlaying) {
-				audioRef.current.pause()
-			} else {
-				audioRef.current.play()
-			}
-			setIsPlaying(prevState => !prevState)
-		}
-	}, [isPlaying])
-
-<<<<<<< HEAD
   return (
     <AnimatePresence mode="wait">
       <CustomCursor />
-      <audio ref={audioRef} src="/MenuSound.m4a" type="audio/mpeg" loop />
-      <div
-        style={{
-          position: "fixed",
-          bottom: 20,
-          right: 20,
-          zIndex: 1000,
-          display: "flex",
-          alignItems: "center",
-          gap: 15,
-        }}
-        onClick={handleLottieClick}
-      >
+      <audio ref={audioRef} src={AUDIO_SRC} type="audio/mpeg" loop />
+
+      <div style={STYLES.audioControl} onClick={handleLottieClick}>
         {location.pathname === "/" && (
           <h1
             ref={titleAudiRef}
@@ -126,97 +81,34 @@ export default function App() {
             For Better Experience Please Turn On Sound
           </h1>
         )}
-        {!isPlaying && !isPaused && (
-          <img src={play} alt="Play" style={{ width: "40px" }} />
-        )}
-        {isPlaying && !isPaused && (
-          <img src={playing} style={{ width: "40px" }} alt="Playing" />
-        )}
-        {isPaused && <img src={pause} alt="Pause" style={{ width: "40px" }} />}
+        <img
+          src={isPaused ? pause : isPlaying ? playing : play}
+          alt={isPaused ? "Pause" : isPlaying ? "Playing" : "Play"}
+          style={{ width: ICON_SIZE }}
+        />
       </div>
+
       <Suspense fallback={<div>Loading...</div>}>
         <Routes location={location} key={location.pathname}>
-          <Route index element={<Loader />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/contactus" element={<ContactUs />} />
-          <Route path="/career" element={<Career />} />
-          {/* <Route path="/industry" element={<Industry />} /> */}
-          <Route path="/aboutus" element={<About />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/blockchain" element={<Blockchain />} />
-          <Route path="/token" element={<Token />} />
-          <Route path="/metaverse" element={<Metaverse />} />
-          <Route path="/blockchain_4" element={<Blockchain_4 />} />
-          <Route path="/blockchain_6" element={<Blockchain_6 />} />
-          <Route path="/web3" element={<Web3 />} />
-          <Route path="/service-1" element={<Service_1 />} />
-          <Route path="/wallet" element={<Wallet />} />
-          <Route path="/service-ios" element={<ServiceIos />} />
+          <Route index element={<pages.Loader />} />
+          <Route path="/home" element={<pages.Home />} />
+          <Route path="/contactus" element={<pages.ContactUs />} />
+          <Route path="/career" element={<pages.Career />} />
+          <Route path="/aboutus" element={<pages.About />} />
+          <Route path="/service" element={<pages.Service />} />
+          <Route path="/blockchain" element={<pages.Blockchain />} />
+          <Route path="/token" element={<pages.Token />} />
+          <Route path="/metaverse" element={<pages.Metaverse />} />
+          <Route path="/blockchain_4" element={<pages.Blockchain4 />} />
+          <Route path="/blockchain_6" element={<pages.Blockchain6 />} />
+          <Route path="/web3" element={<pages.Web3 />} />
+          <Route path="/service-1" element={<pages.Service1 />} />
+          <Route path="/wallet" element={<pages.Wallet />} />
+          <Route path="/service-ios" element={<pages.ServiceIos />} />
+          <Route path="/web-app" element={<pages.WebApp />} />
           <Route path="*" element={<NotFoundPage />} />
-          <Route path="" element={<NotFoundPage />} />
-          <Route path="/web-app" element={<WebApp />} />
         </Routes>
       </Suspense>
     </AnimatePresence>
   );
-=======
-	return (
-		<AnimatePresence mode='wait'>
-			<CustomCursor />
-			<audio ref={audioRef} src='/MenuSound.m4a' type='audio/mpeg' loop />
-			<div
-				style={{
-					position: 'fixed',
-					bottom: 20,
-					right: 20,
-					zIndex: 1000,
-					display: 'flex',
-					alignItems: 'center',
-					gap: 15,
-				}}
-				onClick={handleLottieClick}
-			>
-				{location.pathname === '/' && (
-					<h1
-						ref={titleAudiRef}
-						className={isPlaying ? 'title-lottie__anim' : 'title-lottie'}
-						style={{ color: 'gray' }}
-					>
-						For Better Experience Please Turn On Sound
-					</h1>
-				)}
-				{!isPlaying && !isPaused && (
-					<img src={play} alt='Play' style={{ width: '40px' }} />
-				)}
-				{isPlaying && !isPaused && (
-					<img src={playing} style={{ width: '40px' }} alt='Playing' />
-				)}
-				{isPaused && <img src={pause} alt='Pause' style={{ width: '40px' }} />}
-			</div>
-			<Suspense fallback={<div>Loading...</div>}>
-				<Routes location={location} key={location.pathname}>
-					<Route index element={<Loader />} />
-					<Route path='/home' element={<Home />} />
-					<Route path='/contactus' element={<ContactUs />} />
-					<Route path='/career' element={<Career />} />
-					<Route path='/industry' element={<Industry />} />
-					<Route path='/aboutus' element={<About />} />
-					<Route path='/service' element={<Service />} />
-					<Route path='/blockchain' element={<Blockchain />} />
-					<Route path='/token' element={<Token />} />
-					<Route path='/metaverse' element={<Metaverse />} />
-					<Route path='/blockchain_4' element={<Blockchain_4 />} />
-					<Route path='/blockchain_6' element={<Blockchain_6 />} />
-					<Route path='/web3' element={<Web3 />} />
-					<Route path='/service-1' element={<Service_1 />} />
-					<Route path='/wallet' element={<Wallet />} />
-					<Route path='/service-ios' element={<ServiceIos />} />
-					<Route path='/web-app' element={<WebApp />} />
-					<Route path='*' element={<NotFoundPage />} />
-					<Route path='' element={<NotFoundPage />} />
-				</Routes>
-			</Suspense>
-		</AnimatePresence>
-	)
->>>>>>> 4acbf3199064316684c2e9658088179e86412196
 }

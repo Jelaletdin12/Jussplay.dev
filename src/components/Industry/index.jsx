@@ -1,11 +1,8 @@
 import PropTypes from "prop-types";
 import { useEffect, useRef, useState } from "react";
-import Typewriter from "typewriter-effect/dist/core";
 import { IoIosArrowForward } from "react-icons/io";
 
 const Section = ({ title, description, imageSrc, frameClassName }) => {
-  const titleRef = useRef(null);
-  const descriptionRef = useRef(null);
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -19,67 +16,24 @@ const Section = ({ title, description, imageSrc, frameClassName }) => {
           }
         });
       },
-      {
-        threshold: 0.1,
-      }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
+    return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    if (isVisible && titleRef.current) {
-      const typewriterTitle = new Typewriter(titleRef.current, {
-        loop: false,
-        delay: 75,
-        cursor: "|",
-      });
-
-      typewriterTitle
-        .typeString(title)
-        .callFunction(() => {
-          const cursor = titleRef.current.querySelector(".Typewriter__cursor");
-          if (cursor) {
-            cursor.style.display = "none";
-          }
-        })
-        .start();
-    }
-
-    if (isVisible && descriptionRef.current) {
-      const typewriterDescription = new Typewriter(descriptionRef.current, {
-        loop: false,
-        delay: 75,
-        cursor: "|",
-      });
-
-      typewriterDescription
-        .typeString(description)
-        .callFunction(() => {
-          const cursor = descriptionRef.current.querySelector(
-            ".Typewriter__cursor"
-          );
-          if (cursor) {
-            cursor.style.display = "none";
-          }
-        })
-        .start();
-    }
-  }, [isVisible, title, description]);
-
   return (
-    <div className="sectionService" ref={sectionRef}>
+    <div
+      className={`sectionService ${isVisible ? "fade-in" : ""}`}
+      ref={sectionRef}
+    >
       <div className="section-content">
-        <h2 ref={titleRef}></h2>
-        <p ref={descriptionRef}></p>
+        <h2>{title}</h2>
+        <p>{description}</p>
         <button className="button">
           Meet with us <IoIosArrowForward />
         </button>

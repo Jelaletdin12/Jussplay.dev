@@ -1,9 +1,5 @@
 import softwareDevImage from "../../assets/image_2.png";
 import networkingImage from "../../assets/image_5.png";
-// import designAIImage from '../../assets/image_17.png'
-// import itMaintenanceImage from '../../assets/image_3.png'
-// import socialMediaImage from '../../assets/image_8.png'
-// import googleMetaImage from '../../assets/image_9.png'
 import ai from "../../assets/NewService/ai.png";
 import android from "../../assets/NewService/android.png";
 import chatbot from "../../assets/NewService/chatbot.png";
@@ -36,6 +32,7 @@ const Service = () => {
       setIsAnimatingBg(true);
     }, 400);
   }, []);
+
   return (
     <div className="industry-page">
       <Header />
@@ -43,14 +40,14 @@ const Service = () => {
         <div className="bg">
           <motion.img
             initial={{ opacity: 0, scale: 0, y: "-100vh", x: "-100vh" }}
-            animate={isAnimatingBg ? { opacity: 2, scale: 1, y: 0, x: 0 } : {}}
+            animate={isAnimatingBg ? { opacity: 1, scale: 1, y: 0, x: 0 } : {}}
             transition={{ duration: 1, ease: "easeInOut" }}
             src={left}
             alt="left image"
           />
           <motion.img
             initial={{ opacity: 0, scale: 0, y: "-100vh", x: "100vh" }}
-            animate={isAnimatingBg ? { opacity: 2, scale: 1, y: 0, x: 0 } : {}}
+            animate={isAnimatingBg ? { opacity: 1, scale: 1, y: 0, x: 0 } : {}}
             transition={{ duration: 1, ease: "easeInOut" }}
             src={right}
             alt="right image"
@@ -72,10 +69,16 @@ const Service = () => {
 
       <div className="down">
         <div className="down_header">
-
-        <h1>Our Services</h1>
-        <p>At Jussplay Developments, we pride ourselves on our commitment to excellence and our dedication to our clients' success. We believe that collaboration and communication are key to success, which is why we prioritize transparency and open communication with our clients</p>
+          <h1>Our Services</h1>
+          <p>
+            At Jussplay Developments, we pride ourselves on our commitment to
+            excellence and our dedication to our clients' success. We believe
+            that collaboration and communication are key to success, which is
+            why we prioritize transparency and open communication with our
+            clients.
+          </p>
         </div>
+
         <Section
           title="Web/App development"
           description="Our IT experts are delivering a range of IT services to our customers. We develop cross-platform apps, that upgrade your business to another level."

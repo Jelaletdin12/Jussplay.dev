@@ -5,18 +5,26 @@
   .sectionService {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
-    padding: 10px 155px 10px 155px;
-    gap: 10px;
     justify-content: space-between;
-    @media screen and (max-width: 500px) {
+    margin-bottom: 40px;
+    padding: 10px 155px;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.9s ease-out;
+
+    &.fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media screen and (max-width: 528px) {
       flex-direction: column-reverse;
       padding: 10px 50px 10px 50px;
     }
 
     &:nth-child(odd) {
       flex-direction: row-reverse;
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 528px) {
         flex-direction: column-reverse;
       }
     }
@@ -28,17 +36,17 @@
       align-items: center;
 
       &.software-dev-frame {
-        @media screen and (max-width: 500px) {
-          width: 300px;
-          height: 200px;
+        @media screen and (max-width: 528px) {
+          width: 200px;
+          height: 150px;
         }
       }
 
       &.design-ai-frame {
         width: 250px;
         height: 250px;
-        @media screen and (max-width: 500px) {
-          width: 200px;
+        @media screen and (max-width: 528px) {
+          width: 150px;
           height: 150px;
         }
       }
@@ -46,25 +54,25 @@
       &.networking-frame {
         width: 225px;
         height: 225px;
-        @media screen and (max-width: 500px) {
-          width: 300px;
-          height: 200px;
+        @media screen and (max-width: 528px) {
+          width: 150px;
+          height: 160px;
         }
       }
 
       &.it-maintenance-frame {
         width: 250px;
         height: 350px;
-        @media screen and (max-width: 500px) {
-          width: 300px;
-          height: 150px;
+        @media screen and (max-width: 528px) {
+          width: 200px;
+          height: 200px;
         }
       }
 
       &.social-media-frame {
         width: 250px;
         height: 250px;
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 528px) {
           width: 200px;
           height: 200px;
         }
@@ -73,9 +81,9 @@
       &.google-meta-frame {
         width: 300px;
         height: 300px;
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 528px) {
           width: 150px;
-          height: 200px;
+          height: 150px;
         }
       }
     }
@@ -88,6 +96,11 @@
 
     .section-content {
       max-width: 600px;
+      @media screen and (max-width: 528px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
       h2 {
         font-size: 50px;
@@ -95,7 +108,7 @@
         color: #ffffff;
         margin-bottom: 10px;
         line-height: 63px;
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 528px) {
           font-size: 28px;
           text-align: center;
           line-height: 40px;
@@ -108,7 +121,7 @@
         line-height: 1.5;
         color: #ffffff;
         text-transform: uppercase;
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 528px) {
           text-align: center;
           font-size: 15px;
         }
@@ -117,8 +130,22 @@
   }
 }
 
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .up {
   height: 79vh;
+  @media screen and (max-width: 528px) {
+    height: 60vh;
+  }
 }
 
 .bg {
@@ -131,6 +158,10 @@
   justify-content: space-between;
   z-index: 0;
   background-color: #000;
+  @media screen and (max-width: 528px) {
+    width: 300px;
+    height: 324px;
+  }
 }
 
 button {
@@ -164,12 +195,18 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 528px) {
+    top: 175px;
+  }
 }
 
 .title {
   font-size: 56px;
   //font-weight: bold;
   color: #fff;
+  @media screen and (max-width: 528px) {
+    font-size: 25px;
+  }
 }
 
 .content {
@@ -185,6 +222,9 @@ button {
     font-weight: 400;
     font-family: "Space Grotesk";
   }
+  @media screen and (max-width: 528px) {
+    top: 200px;
+  }
 }
 
 .down {
@@ -194,4 +234,13 @@ button {
 }
 .down_header {
   margin: 0 35px 0 35px;
+  @media screen and (max-width: 528px) {
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    text-align: center;
+    p{
+      text-align: center;
+    }
+  }
 }
