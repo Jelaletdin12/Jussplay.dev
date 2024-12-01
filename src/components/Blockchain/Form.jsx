@@ -3,256 +3,128 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react'
 import styles from '../../pages/Blockchain/blockchain.module.scss'
+import styleBtnForm from '../../pages/ContactUs/contactus.module.scss'
+
+import { yupResolver } from '@hookform/resolvers/yup'
+import { useForm } from 'react-hook-form'
+import * as yup from 'yup'
+
+const schema = yup.object().shape({
+	firstName: yup.string().required('First Name is required'),
+	email: yup
+		.string()
+		.email('Invalid email format')
+		.required('Email is required'),
+	phone: yup
+		.string()
+		.matches(/^\+?[1-9]\d{1,14}$/, 'Phone must be a number')
+		.required('Phone is required'),
+	message: yup.string().required('Message is required'),
+})
 
 export const Form = () => {
-	const [isFocusedArr, setIsFocusedArr] = useState({
-		input1: false,
-		input2: false,
-		input3: false,
-		input4: false,
-	})
-	const [isChangedArr, setIsChangedArr] = useState({
-		fullName: false,
-		email: false,
-		phone: false,
-		message: false,
-	})
-	const [userData, setUserData] = useState({
-		firstName: '',
-		phoneNumber: '',
-		email: '',
-		message: '',
-	})
+	const [focusStates, setFocusStates] = useState({})
+	const [inputValues, setInputValues] = useState({})
+
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+		reset,
+	} = useForm({ resolver: yupResolver(schema) })
+
+	const handleFocusChange = (field, isFocused) => {
+		setFocusStates(prev => ({ ...prev, [field]: isFocused }))
+	}
+
+	const handleInputChange = e => {
+		const { name, value } = e.target
+		setInputValues(prev => ({ ...prev, [name]: value }))
+	}
+
+	const onSubmit = async data => {
+		// try {
+		// 	const emailSubmit = await emailjs.send(
+		// 		'service_98xj0q7',
+		// 		'template_p4ocvai',
+		// 		data,
+		// 		'hYHKOzXlqLTNIQct5'
+		// 	)
+		// 	const result = console.log(
+		// 		'Email successfully sent:',
+		// 		emailSubmit.text,
+		// 		emailSubmit.status
+		// 	)
+		// 	reset()
+		// 	return result
+		// } catch (error) {
+		// 	console.error('Error sending email:', error.text)
+		// }
+		reset()
+		console.log('Send data to form:', data)
+	}
+
+	const getPlaceholderClass = field => {
+		return focusStates[field] || inputValues[field]
+			? styles.placeholderActive
+			: ''
+	}
+
+	const getErrorClass = field => {
+		return errors[field] ? styles.placeholderError : ''
+	}
 
 	return (
 		<div className={styles.blockchainForm}>
-			<form action='#' method='get' className={styles.form}>
+			<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 				<h1 className={styles.formTitle}>BOOK A CONSULTATION</h1>
-				<div className={styles.inputCol}>
-					<label>
-						<span className={styles.inputWrapper}>
-							<input
-								onBlur={() =>
-									setIsFocusedArr({
-										...isFocusedArr,
-										input1: false,
-									})
-								}
-								onFocus={() =>
-									setIsFocusedArr({
-										...isFocusedArr,
-										input1: true,
-									})
-								}
-								type='text'
-								onChange={e => {
-									setUserData({
-										...userData,
-										firstName: e.target.value,
-									})
-									if (e.target.value === '') {
-										setIsChangedArr({
-											...isChangedArr,
-											firstname: false,
-										})
-										return
-									}
-									setIsChangedArr({
-										...isChangedArr,
-										firstname: true,
-									})
-								}}
-							/>
-						</span>
-						<span
-							className={`${styles.placeholder} ${
-								isFocusedArr.input1 || isChangedArr.firstname
-									? styles.placeholderActive
-									: null
-							} `}
-						>
-							Full Name
-						</span>
-					</label>
-				</div>
-				<div className={styles.inputCol}>
-					<label>
-						<span className={styles.inputWrapper}>
-							<input
-								placeholder='+1 012 3456 789'
-								onBlur={() =>
-									setIsFocusedArr({
-										...isFocusedArr,
-										input2: false,
-									})
-								}
-								onFocus={() =>
-									setIsFocusedArr({
-										...isFocusedArr,
-										input2: true,
-									})
-								}
-								type='text'
-								onChange={e => {
-									setUserData({
-										...userData,
-										phone: e.target.value,
-									})
-									if (e.target.value === '') {
-										setIsChangedArr({
-											...isChangedArr,
-											phone: false,
-										})
-										return
-									}
-									setIsChangedArr({
-										...isChangedArr,
-										phone: true,
-									})
-								}}
-							/>
-						</span>
-						<span
-							className={`${styles.placeholder} ${
-								isFocusedArr.input2 || isChangedArr.phone
-									? styles.placeholderActivePhone
-									: null
-							} `}
-						>
-							Phone Number with country code
-						</span>
-					</label>
-				</div>
-				<div className={styles.inputCol}>
-					<label>
-						<span className={styles.inputWrapper}>
-							<input
-								onBlur={() =>
-									setIsFocusedArr({
-										...isFocusedArr,
-										input3: false,
-									})
-								}
-								onFocus={() =>
-									setIsFocusedArr({
-										...isFocusedArr,
-										input3: true,
-									})
-								}
-								type='text'
-								onChange={e => {
-									setUserData({
-										...userData,
-										email: e.target.value,
-									})
-									if (e.target.value === '') {
-										setIsChangedArr({
-											...isChangedArr,
-											email: false,
-										})
-										return
-									}
-									setIsChangedArr({
-										...isChangedArr,
-										email: true,
-									})
-								}}
-							/>
-						</span>
-						<span
-							className={`${styles.placeholder} ${
-								isFocusedArr.input3 || isChangedArr.email
-									? styles.placeholderActive
-									: null
-							} `}
-						>
-							Email
-						</span>
-					</label>
-				</div>
-				<div className={styles.inputColMessage}>
-					<label>
-						<span className={styles.inputWrapper}>
-							<input
-								placeholder='Your project description..'
-								onBlur={() =>
-									setIsFocusedArr({
-										...isFocusedArr,
-										input4: false,
-									})
-								}
-								onFocus={() =>
-									setIsFocusedArr({
-										...isFocusedArr,
-										input4: true,
-									})
-								}
-								type='text'
-								onChange={e => {
-									setUserData({
-										...userData,
-										message: e.target.value,
-									})
-									if (e.target.value === '') {
-										setIsChangedArr({
-											...isChangedArr,
-											message: false,
-										})
-										return
-									}
-									setIsChangedArr({
-										...isChangedArr,
-										message: true,
-									})
-								}}
-							/>
-						</span>
-						<span
-							className={`${styles.placeholder} ${
-								isFocusedArr.input4 || isChangedArr.message
-									? styles.placeholderActive
-									: null
-							} `}
-						>
-							Message
-						</span>
-					</label>
-				</div>
+				{['firstName', 'email', 'phone', 'message'].map(field => (
+					<div key={field} className={styles.inputCol}>
+						<label>
+							<span className={styles.inputWrapper}>
+								{field === 'message' ? (
+									<textarea
+										name={field}
+										onBlur={() => handleFocusChange(field, false)}
+										onFocus={() => handleFocusChange(field, true)}
+										onChange={handleInputChange}
+										{...register(field)}
+									></textarea>
+								) : (
+									<input
+										name={field}
+										type={field === 'email' ? 'email' : 'text'}
+										onBlur={() => handleFocusChange(field, false)}
+										onFocus={() => handleFocusChange(field, true)}
+										onChange={handleInputChange}
+										{...register(field)}
+									/>
+								)}
+							</span>
+							<span
+								className={`${styles.placeholder} ${getPlaceholderClass(
+									field
+								)} ${getErrorClass(field)}`}
+							>
+								{errors[field]?.message ||
+									field.charAt(0).toUpperCase() + field.slice(1)}
+							</span>
+						</label>
+					</div>
+				))}
 				<div className={styles.btnForm}>
-					<FlipButtonBlockchain
-						bgColor={'#000'}
-						insideText={'Send Message'}
-						textColor={'#fff'}
-					/>
+					<button
+						type='submit'
+						style={{
+							backgroundColor: '#000',
+							color: '#fff',
+						}}
+						data-back={'Send Message ?'}
+						data-front={'Send Message'}
+						className={styleBtnForm.form__btn}
+					></button>
 				</div>
 			</form>
 		</div>
-	)
-}
-
-const FlipButtonBlockchain = ({
-	insideText,
-	bgColor,
-	border,
-	textColor,
-	onClick,
-	isDownload,
-	href,
-}) => {
-	return (
-		<a
-			style={{
-				backgroundColor: bgColor,
-
-				color: textColor,
-			}}
-			download
-			href={href}
-			className={`${styles.btnFlipBlockchain}  `}
-			data-back={insideText}
-			data-front={insideText}
-			data-text-color={'#000'}
-			onClick={onClick}
-		></a>
 	)
 }
