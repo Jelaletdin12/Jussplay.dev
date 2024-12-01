@@ -98,9 +98,9 @@ export default function App() {
           <Route path="/aboutus" element={<pages.About />} />
           <Route path="/service" element={<pages.Service />} />
           <Route path="/blockchain" element={<pages.Blockchain />} />
-          <Route path="/token" element={<pages.Token />} />
+          <Route path="/nft-token-development" element={<pages.Token />} />
           <Route path="/metaverse" element={<pages.Metaverse />} />
-          <Route path="/blockchain_4" element={<pages.Blockchain4 />} />
+          <Route path="/web3-game-development" element={<pages.Blockchain4 />} />
           <Route path="/blockchain_6" element={<pages.Blockchain6 />} />
           <Route path="/web3" element={<pages.Web3 />} />
           <Route path="/service-1" element={<pages.Service1 />} />

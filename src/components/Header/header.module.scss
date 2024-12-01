@@ -5,9 +5,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 5;
   font-family: "Space Grotesk";
+  transition: transform 0.4s ease;
+	transform: translateX(0);
+  &.hidden {
+		transform: translateX(100%);
+	}
+
   @media (max-width: 768px) {
     justify-content: flex-end;
     img {
@@ -197,4 +204,13 @@
   @media screen and (max-width: 520px) {
     display: none;
   }
+}
+
+.toggleButton {
+	background: transparent;
+	color: #fff;
+	border: none;
+	padding: 10px 10px;
+	font-size: 25px;
+  width: auto;
 }

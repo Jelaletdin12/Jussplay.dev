@@ -79,7 +79,7 @@ function Home() {
 		}
 
 		mm.add('(min-width: 521px)', () =>
-			createAnimation({ x1: -200, x2: 200, x: 400, y: 0, aboutY: -550 })
+			createAnimation({ x1: -200, x2: 200, x: 400, y: 0, aboutY: -650 })
 		)
 		mm.add('(max-width: 520px)', () =>
 			createAnimation({ x1: -150, x2: 150, x: 0, y: -350, aboutY: -400 })

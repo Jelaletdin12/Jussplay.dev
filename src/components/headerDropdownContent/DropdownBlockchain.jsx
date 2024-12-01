@@ -64,7 +64,7 @@ const renderLeftContentBlock = () => {
     },
     {
       src: nftToken,
-      link: "/token",
+      link: "/nft-token-development",
       title: "NFT Token Development",
       desc: "Launch NFT tokens on Ethereum, Binance, Solana, and others.",
     },
@@ -76,7 +76,7 @@ const renderLeftContentBlock = () => {
     },
     {
       src: webGame,
-      link: "/blockchain_4",
+      link: "/web3-game-development",
       title: "Web3 Game Development",
       desc: "Launch P2E, M2E, NFT cards & immersive web3 games.",
     },
