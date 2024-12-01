@@ -1,9 +1,6 @@
 import { useState } from 'react'
-
 import Footer from '../../components/Footer'
-
 import transition from '../../pageTransition'
-
 import styles from './contactus.module.scss'
 
 import {
@@ -40,31 +37,8 @@ const schema = yup.object().shape({
 })
 
 function ContactUs() {
-	const [isFocusedArr, setIsFocusedArr] = useState({
-		input1: false,
-		input2: false,
-		input3: false,
-		input4: false,
-		input5: false,
-	})
-	const [isChangedArr, setIsChangedArr] = useState({
-		firstName: false,
-		lastName: false,
-		email: false,
-		phone: false,
-		message: false,
-	})
-
-	const [userData, setUserData] = useState({
-		firstName: '',
-		lastName: '',
-		phoneNumber: '',
-		email: '',
-		message: '',
-		company: 'TM',
-		country: 'TM',
-	})
-
+	const [focusStates, setFocusStates] = useState({})
+	const [inputValues, setInputValues] = useState({})
 	const {
 		register,
 		handleSubmit,
@@ -72,28 +46,12 @@ function ContactUs() {
 		reset,
 	} = useForm({ resolver: yupResolver(schema) })
 
-	const { input1, input2, input3, input4, input5 } = isFocusedArr
-	const { firstName, lastName, email, phone, message } = isChangedArr
+	const handleFocusChange = (field, isFocused) =>
+		setFocusStates(prev => ({ ...prev, [field]: isFocused }))
 
-	const onBlurAndFocusedHandler = (name, value) => {
-		setIsFocusedArr(prevState => ({ ...prevState, [name]: value }))
-	}
-
-	const onChangeInputHandler = (e, key) => {
-		setUserData(prevState => ({ ...prevState, [key]: e.target.value }))
-
-		if (e.target.value === '') {
-			setIsChangedArr(prevStateArr => ({
-				...prevStateArr,
-				[key]: false,
-			}))
-			return
-		}
-
-		setIsChangedArr(prevStateArr => ({
-			...prevStateArr,
-			[key]: true,
-		}))
+	const handleInputChange = e => {
+		const { name, value } = e.target
+		setInputValues(prev => ({ ...prev, [name]: value }))
 	}
 
 	const onSubmit = async data => {
@@ -114,9 +72,14 @@ function ContactUs() {
 		// } catch (error) {
 		// 	console.error('Error sending email:', error.text)
 		// }
-		reset()
 		console.log('Send data to form:', data)
+		reset()
 	}
+
+	const getPlaceholderClass = field =>
+		focusStates[field] || inputValues[field] ? styles.placeholderActive : ''
+
+	const getErrorClass = field => (errors[field] ? styles.placeholderError : '')
 
 	return (
 		<CustomScroll>
@@ -183,160 +146,42 @@ function ContactUs() {
 						onSubmit={handleSubmit(onSubmit)}
 						className={styles.inputContainer}
 					>
-						<div className={styles.inputCol}>
-							<label>
-								<span className={styles.inputWrapper}>
-									<input
-										onBlur={() => onBlurAndFocusedHandler('input1', false)}
-										onFocus={() => onBlurAndFocusedHandler('input1', true)}
-										onChange={e => onChangeInputHandler(e, 'firstName')}
-										type='text'
-										{...register('firstName')}
-									/>
-								</span>
-								{errors.firstName ? (
-									<span
-										className={`${styles.placeholder__error} ${
-											input1 || firstName ? styles.placeholderError : null
-										}`}
-									>
-										{errors.firstName.message}
-									</span>
-								) : (
-									<span
-										className={`${styles.placeholder} ${
-											input1 || firstName ? styles.placeholderActive : null
-										}`}
-									>
-										First Name
-									</span>
-								)}
-							</label>
-						</div>
-						<div className={styles.inputCol}>
-							<label>
-								<span className={styles.inputWrapper}>
-									<input
-										onBlur={() => onBlurAndFocusedHandler('input2', false)}
-										onFocus={() => onBlurAndFocusedHandler('input2', true)}
-										onChange={e => onChangeInputHandler(e, 'lastName')}
-										type='text'
-										{...register('lastName')}
-									/>
-								</span>
-								{errors.lastName ? (
-									<span
-										className={`${styles.placeholder__error} ${
-											input2 || lastName ? styles.placeholderError : null
-										}`}
-									>
-										{errors.lastName.message}
-									</span>
-								) : (
-									<span
-										className={`${styles.placeholder} ${
-											input2 || firstName ? styles.placeholderActive : null
-										}`}
-									>
-										Last Name
-									</span>
-								)}
-							</label>
-						</div>
-						<div className={styles.inputCol}>
-							<label>
-								<span className={styles.inputWrapper}>
-									<input
-										onBlur={() => onBlurAndFocusedHandler('input3', false)}
-										onFocus={() => onBlurAndFocusedHandler('input3', true)}
-										onChange={e => onChangeInputHandler(e, 'email')}
-										type='email'
-										{...register('email')}
-									/>
-								</span>
-								{errors.email ? (
-									<span
-										className={`${styles.placeholder__error} ${
-											input3 || email ? styles.placeholderError : null
-										}`}
-									>
-										{errors.email.message}
-									</span>
-								) : (
-									<span
-										className={`${styles.placeholder} ${
-											input3 || email ? styles.placeholderActive : null
-										}`}
-									>
-										Email
-									</span>
-								)}
-							</label>
-						</div>
-						<div className={styles.inputCol}>
-							<label>
-								<span className={styles.inputWrapper}>
-									<input
-										onBlur={() => onBlurAndFocusedHandler('input4', false)}
-										onFocus={() => onBlurAndFocusedHandler('input4', true)}
-										onChange={e => onChangeInputHandler(e, 'phone')}
-										type='tel'
-										{...register('phone')}
-									/>
-								</span>
-								{errors.phone ? (
-									<span
-										className={`${styles.placeholder__error} ${
-											input4 || phone ? styles.placeholderError : null
-										}`}
-									>
-										{errors.phone.message}
-									</span>
-								) : (
-									<span
-										className={`${styles.placeholder} ${
-											input4 || phone ? styles.placeholderActive : null
-										}`}
-									>
-										Phone
-									</span>
-								)}
-							</label>
-						</div>
-						<div
-							className={styles.inputCol}
-							style={{
-								width: '100%',
-							}}
-						>
-							<label>
-								<span className={styles.inputWrapper}>
-									<textarea
-										onBlur={() => onBlurAndFocusedHandler('input5', false)}
-										onFocus={() => onBlurAndFocusedHandler('input5', true)}
-										onChange={e => onChangeInputHandler(e, 'message')}
-										{...register('message')}
-									></textarea>
-								</span>
-								{errors.message ? (
-									<span
-										className={`${styles.placeholder__error} ${
-											input5 || message ? styles.placeholderError : null
-										}`}
-									>
-										{errors.message.message}
-									</span>
-								) : (
-									<span
-										className={`${styles.placeholder} ${
-											input5 || message ? styles.placeholderActive : null
-										}`}
-									>
-										Message
-									</span>
-								)}
-							</label>
-						</div>
+						{['firstName', 'lastName', 'email', 'phone', 'message'].map(
+							field => (
+								<div key={field} className={styles.inputCol}>
+									<label>
+										<span className={styles.inputWrapper}>
+											{field === 'message' ? (
+												<textarea
+													name={field}
+													onBlur={() => handleFocusChange(field, false)}
+													onFocus={() => handleFocusChange(field, true)}
+													onChange={handleInputChange}
+													{...register(field)}
+												></textarea>
+											) : (
+												<input
+													name={field}
+													type={field === 'email' ? 'email' : 'text'}
+													onBlur={() => handleFocusChange(field, false)}
+													onFocus={() => handleFocusChange(field, true)}
+													onChange={handleInputChange}
+													{...register(field)}
+												/>
+											)}
+										</span>
+										<span
+											className={`${styles.placeholder} ${getPlaceholderClass(
+												field
+											)} ${getErrorClass(field)}`}
+										>
+											{errors[field]?.message ||
+												field.charAt(0).toUpperCase() + field.slice(1)}
+										</span>
+									</label>
+								</div>
+							)
+						)}
 						<div
 							style={{
 								display: 'flex',

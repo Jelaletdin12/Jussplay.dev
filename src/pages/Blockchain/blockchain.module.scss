@@ -278,6 +278,22 @@
   color: $backgroundBlack;
 }
 
+.placeholder__error {
+  color: red;
+  font-family: SGrotReg, sans-serif;
+  font-size: 18px;
+  position: absolute;
+  // top: 0.75em;
+  left: 0;
+  transition: all ease-in-out 0.3s;
+}
+
+.placeholderError {
+  transform: scale(0.8571) translateY(-1.7rem);
+  left: -5px;
+  color: red;
+}
+
 // Flip BTN
 
 $speed: 0.3s;
@@ -394,11 +410,7 @@ $speed: 0.3s;
   padding: 25px 31px;
   border-radius: 10px;
   text-align: center;
-  background: linear-gradient(
-    180deg,
-    rgba(72, 49, 157, 0.5) 0%,
-    rgba(72, 49, 157, 0.1) 100%
-  );
+  background: linear-gradient(180deg, rgba(72, 49, 157, 0.5) 0%, rgba(72, 49, 157, 0.1) 100%);
   &__image {
     img {
       margin: 0 auto;
@@ -441,8 +453,7 @@ $speed: 0.3s;
   margin: 0 0 97px 0;
   padding: 93px 0 0px 0;
   height: 1178px;
-  background: url(../../assets/blockchain/Design-Process/bg.jpg) center / auto
-    no-repeat;
+  background: url(../../assets/blockchain/Design-Process/bg.jpg) center / auto no-repeat;
   @media (max-width: 1024px) {
     background-image: none;
     height: 100%;
