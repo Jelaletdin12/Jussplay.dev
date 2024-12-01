@@ -8,6 +8,7 @@ import CustomCursor from "./components/cursor";
 import { NotFoundPage } from "./pages/Error/NotFoundPage";
 import { useSound } from "./providers/soundContext";
 
+
 const pages = {
   Home: lazy(() => import("./pages/Home/index.jsx")),
   Loader: lazy(() => import("./pages/Loader/index.jsx")),
@@ -107,6 +108,7 @@ export default function App() {
           <Route path="/service-ios" element={<pages.ServiceIos />} />
           <Route path="/web-app" element={<pages.WebApp />} />
           <Route path="*" element={<NotFoundPage />} />
+         
         </Routes>
       </Suspense>
     </AnimatePresence>

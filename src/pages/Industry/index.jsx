@@ -20,6 +20,7 @@ import "./industry.scss";
 import right from "../../assets/img1.png";
 import left from "../../assets/img2.png";
 
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
