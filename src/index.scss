@@ -62,29 +62,29 @@ a {
   color: $inactiveGray;
 }
 
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center !important;
-  opacity: 0.3;
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-}
-.swiper-slide-active {
-  opacity: 1;
-  transform: scale(1.1);
-  color: #ffffff;
-}
-.swiper-slide-prev,
-.swiper-slide-next {
-  opacity: 0.3;
-  transform: scale(0.5);
-}
-.swiper-button-prev,
-.swiper-button-next {
-  color: #ffffff;
-}
+// .swiper-slide {
+//   display: flex;
+//   //justify-content: center !important;
+//   align-items: center !important;
+//   opacity: 0.3;
+//   transition:
+//     opacity 0.3s ease,
+//     transform 0.3s ease;
+// }
+// .swiper-slide-active {
+//   opacity: 1;
+//   transform: scale(1.1);
+//   color: #ffffff;
+// }
+// .swiper-slide-prev,
+// .swiper-slide-next {
+//   opacity: 0.3;
+//   transform: scale(0.5);
+// }
+// .swiper-button-prev,
+// .swiper-button-next {
+//   color: #ffffff;
+// }
 
 .mySwiper {
   height: 300px;

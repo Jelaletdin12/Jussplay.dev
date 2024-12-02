@@ -1,23 +1,23 @@
 .aboutSection {
   display: flex;
-  background-color: #050505; 
-  color: #fff; 
+  background-color: #050505;
+  color: #fff;
   text-align: center;
   flex-direction: column;
   background: linear-gradient(40deg, rgb(0, 0, 0) 50%, rgb(105, 43, 113) 100%);
-  animation: fadeInAnimation ease 5s;
+  // animation: fadeInAnimation ease 5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+// @keyframes fadeInAnimation {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
 .upside {
   display: flex;
@@ -56,6 +56,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.4s;
 
   &:hover {
     background-color: white;
@@ -72,8 +73,8 @@
     @media screen and (max-width: 520px) {
       padding-right: 0;
       width: 420px;
+    }
   }
-}
 }
 .bubbleContainer {
   display: flex;
@@ -83,7 +84,7 @@
   margin-top: 30px;
   position: absolute;
   height: 500px;
-  @media screen and (max-width:520px) {
+  @media screen and (max-width: 520px) {
     width: 100%;
   }
 }
@@ -102,11 +103,11 @@
   &.green {
     top: 25%;
     right: 40%;
-    @media screen and (max-width:520px) {
+    @media screen and (max-width: 520px) {
       right: 20%;
       margin: 0;
     }
-    @media screen and (max-width:429px) {
+    @media screen and (max-width: 429px) {
       right: 17%;
     }
   }
@@ -114,7 +115,7 @@
   &.yellow {
     top: -20%;
     left: 12%;
-    @media screen and (max-width:520px) {
+    @media screen and (max-width: 520px) {
       top: -20%;
       left: -2% !important;
       margin: 0;
@@ -124,7 +125,7 @@
   &.purple {
     bottom: 9%;
     left: 30%;
-    @media screen and (max-width:520px) {
+    @media screen and (max-width: 520px) {
       left: 20% !important;
       margin: 0;
     }
@@ -133,151 +134,328 @@
   &.blue {
     bottom: 5%;
     right: 40%;
-    @media screen and (max-width:520px) {
+    @media screen and (max-width: 520px) {
       right: 6%;
       margin: 0;
     }
-    @media screen and (max-width:429px) {
+    @media screen and (max-width: 429px) {
       right: 5%;
     }
   }
 }
 
-.bottom {
-  display: flex;
-  flex-direction: column;
-  background-color: #323232;
-  border-radius: 64px;
-  h1 {
-    font-family: "Space Grotesk";
-    font-size: 56px;
-    
-    @media screen and (max-width:520px) {
+.bigTContainer {
+  padding: 0 113px;
+  margin-top: 65px;
+  margin-bottom: 45px;
+  text-align: left;
+
+  @media screen and (max-width: 768px) {
+    & {
+      text-align: center;
+      margin-top: 70px;
+      padding: 0 60px;
+    }
+  }
+}
+
+.bigT {
+  font-size: 58px;
+  color: white;
+  margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    & {
       font-size: 35px;
     }
   }
 }
-.addContent {
-  display: flex;
-  padding: 48px;
-  gap: 24px;
-  h1 {
-    font-size: 40px;
-    font-family: "Space Grotesk";
-  }
-  @media screen and (max-width:520px) {
-    flex-direction: column;
-    h1{
-      font-size: 30px;
+
+.regularP {
+  font-size: 20px;
+  line-height: 25px;
+  color: white;
+  @media screen and (max-width: 768px) {
+    & {
+      font-size: 20px;
+      text-transform: uppercase;
+      text-align: center;
     }
   }
 }
-.primary {
-  justify-content: space-between;
+
+.timeline {
   display: flex;
-  flex-direction: column;
-  width: 50%;
-  gap: 20px;
-  @media screen and (max-width:520px) {
-    width: auto;
+  padding: 0 135px 0 270px;
+  gap: 62px;
+  @media screen and (max-width: 850px) {
+    & {
+      padding-left: 135px;
+    }
   }
-}
-.vision {
-  border-radius: 24px;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-align: left;
-  width: 50%;
-  @media screen and (max-width:520px) {
-    width: auto;
-  }
-}
-.foundation {
-  display: flex;
-  flex-direction: column;
-}
-.primaryArea {
-  background-color: #3a5c45;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding: 40px;
-  border-radius: 24px;
-  gap: 15px;
-  button {
-    font-size: 18px;
-    border-radius: 99px;
-    border-color: transparent;
-    width: 184px;
-    height: 48px;
-    font-family: "Space Grotesk";
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    @media screen and (max-width:520px){
-      font-size: 15px;
-      width: 150px;
+  @media screen and (max-width: 768px) {
+    & {
+      gap: 30px;
+      padding: 0 30px;
     }
   }
 }
-.visionFuture {
-  background-color: #b1d8fc;
+
+.years {
   display: flex;
   flex-direction: column;
-  text-align: left;
-  padding: 40px;
-  border-radius: 24px;
-  gap: 15px;
-  button {
-    font-size: 18px;
-    border-radius: 99px;
-    border-color: transparent;
-    width: 284px;
-    height: 48px;
-    font-family: "Space Grotesk";
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    @media screen and (max-width:520px){
-      font-size: 15px;
-      width: 250px;
-    }
-    @media screen and (max-width:429px){
-      font-size: 15px;
-      width: 180px;
-      text-align: left;
+  gap: 260px;
+  margin-top: 62px;
+  @media screen and (max-width: 768px) {
+    & {
+      display: none;
     }
   }
 }
-.statistics {
+
+.year {
+  font-size: 45px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(#720bb6, #c20577);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chevron {
+  background: -webkit-linear-gradient(#720bb6, #c20577);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.indicator {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 60px;
-  padding: 40px;
-  @media screen and (max-width:520px) {
-    flex-direction: column;
+  gap: 10px;
+  margin-bottom: 45px;
+}
+
+.firstLine {
+  height: 63px;
+  width: 4px;
+  background: linear-gradient(to bottom, #720bb6, #c20577);
+}
+
+.circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.line {
+  height: 283px;
+  width: 4px;
+  background: linear-gradient(to bottom, #720bb6, #c20577);
+  @media screen and (max-width: 768px) {
+    & {
+      height: 465px;
+    }
   }
 }
-.statItem {
+
+.lastLine {
+  height: 196px;
+  width: 4px;
+  background: linear-gradient(to bottom, #720bb6, #c20577);
+  @media screen and (max-width: 768px) {
+    & {
+      height: 439px;
+    }
+  }
+}
+
+.textBlocks {
+  margin-top: 65px;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  h1 {
-    font-size: 80px;
-    color: #b0d9ff;
-    font-family: "Space Grotesk";
+  gap: 171px;
+  @media screen and (max-width: 768px) {
+    & {
+      gap: 240px;
+    }
   }
+  @media screen and (max-width: 640px) {
+    & {
+      gap: 210px;
+    }
+  }
+  @media screen and (max-width: 585px) {
+    & {
+      gap: 180px;
+    }
+  }
+  @media screen and (max-width: 535px) {
+    & {
+      gap: 160px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    & {
+      gap: 90px;
+    }
+  }
+  @media screen and (max-width: 460px) {
+    & {
+      gap: 80px;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    & {
+      gap: 30px;
+    }
+  }
+}
+
+.textBlocks p {
+  text-align: left;
+}
+
+.textBlock {
+  text-align: left;
+}
+
+.biggerText {
+  font-size: 35px;
+  @media screen and (max-width: 768px) {
+    & {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.values {
+  background-color: #323232;
+  padding-bottom: 88px;
+  margin-bottom: 80px;
+}
+
+.valuesWrapper {
+  padding: 0 113px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 30px;
+  row-gap: 65px;
+
+  @media screen and (max-width: 950px) {
+    & {
+      padding: 0 20px;
+    }
+  }
+  @media screen and (max-width: 860px) {
+    & {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media screen and (max-width: 700px) {
+    & {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+}
+
+.valueBlock {
+  text-align: left;
+  display: flex;
+  gap: 25px;
+}
+
+.valueGradient {
+  background: linear-gradient(to bottom, #fc006f, #ab0799);
+  height: 100%;
+  width: 8px;
+}
+
+.valueTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.valueTitle {
+  font-size: 25px;
+  color: white;
+}
+
+.valueP {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.teamMemberCard {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #de007a, #850e8b);
+  width: 100%;
+  align-items: center;
+  border-radius: 20px;
+  padding: 51px 35px;
+}
+
+.teamMemberImg {
+  width: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.personName {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-size: 33px;
+  font-weight: 600;
+  font-family: SGrotBold;
+}
+
+.bioText {
+  font-size: 28px;
+  font-weight: SGrotLight;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiperContainer {
+  width: 95%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  gap: 15px;
+}
+
+.contactBlock {
+  display: flex;
+  padding: 0 170px;
+  margin: 130px 0;
+  align-items: center;
   p {
-    font-size: 18px;
-    font-family: "Space Grotesk";
+    font-size: 50px;
+    min-width: 50%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    & {
+      padding: 0 120px;
+      flex-direction: column;
+      gap: 60px;
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    & {
+      padding: 0 60px;
+    }
   }
 }

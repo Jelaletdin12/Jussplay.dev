@@ -220,7 +220,7 @@
 .inputColMessage input {
   @include input;
   width: 500px;
-  @media (max-width: 430px) {
+  @media (max-width: 768px) {
     max-width: 100%;
   }
 }
