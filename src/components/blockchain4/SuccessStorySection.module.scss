@@ -11,6 +11,10 @@
     display: grid;
     grid-template-columns: repeat(5, 2fr);
     gap: 25px;
+    @media screen and (max-width: 769px) {
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 10px;
+    }
     @media screen and (max-width: 520px) {
       grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
       gap: 10px;

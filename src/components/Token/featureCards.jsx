@@ -9,6 +9,34 @@ import tok3 from "../../assets/token/tok3.png";
 import tok4 from "../../assets/token/tok4.png";
 import glass from "../../assets/token/glass.png";
 
+const FeatureCard = ({ icon, title, description }) => (
+  <div className={styles.featureCard}>
+    <div className={styles.cardIcon}>
+      <img src={icon} alt={title} />
+    </div>
+    <h3 className={styles.cardTitle}>{title}</h3>
+    <p className={styles.cardDescription}>{description}</p>
+  </div>
+);
+
+const StandardCard = ({ img, title, description }) => (
+  <div className={styles.standardCard}>
+    <img src={img} alt={title} />
+    <h3 className={styles.cardTitle}>{title}</h3>
+    <p className={styles.cardDescription}>{description}</p>
+  </div>
+);
+
+const MarketplaceCard = ({ icon, title, description }) => (
+  <div className={styles.marketplaceCard}>
+    <div className={styles.cardIcon}>
+      <img src={icon} alt={title} />
+    </div>
+    <h3 className={styles.cardTitle}>{title}</h3>
+    <p className={styles.cardDescription}>{description}</p>
+  </div>
+);
+
 const FeatureCards = () => {
   const cards = [
     {
@@ -64,68 +92,71 @@ const FeatureCards = () => {
     {
       title: "Social Media Marketing",
       description:
-        "It has been a myth that NFT is only limited to crypto experts; it is also essential for the general audience. The NFT not only eases up the process but aware the broad audience of why and how it is necessary to be a part of atrend or a digital img",
+        "NFT is not only limited to crypto experts but also targets the general audience. It eases up the process and raises awareness about the importance of digital assets.",
     },
     {
       title: "Building Community",
       description:
-        "It has been tested and proven that crypto projects run or operate in a community only. NFT will never be an exception. Therefore the community of such people not only supports your NFT token platform ",
+        "Crypto projects thrive within communities, and NFT is no exception. Building a supportive community ensures the success of your NFT token platform.",
     },
   ];
 
   return (
     <>
+      {/* Feature Cards Section */}
       <section className={styles.featureCardsContainer}>
         <h2>NFT Token Development Company For Your Niche NFT Project</h2>
         <div className={styles.frameCards}>
           {cards.map((card, index) => (
-            <div key={index} className={styles.featureCard}>
-              <div className={styles.cardIcon}>
-                <img src={card.icon} alt="" />
-              </div>
-              <h3 className={styles.cardTitle}>{card.title}</h3>
-              <p className={styles.cardDescription}>{card.description}</p>
-            </div>
+            <FeatureCard
+              key={index}
+              title={card.title}
+              description={card.description}
+              icon={card.icon}
+            />
           ))}
         </div>
       </section>
+
+      {/* Expertise Section */}
       <section className={styles.expertiseContainer}>
         <h2 className={styles.expertiseTitle}>
-          Our Expertise as an Non Fungible Token Development Company
+          Our Expertise as a Non-Fungible Token Development Company
         </h2>
         <p>
           The most common types of NFT token standards are ERC-721, ERC-1155,
-          ERC-998, and TRC-721
+          ERC-998, and TRC-721.
         </p>
         <div className={styles.tokenStandards}>
           {standards.map((standard, index) => (
-            <div key={index} className={styles.standardCard}>
-              <img src={standard.img} alt="" />
-              <h3 className={styles.cardTitle}>{standard.title}</h3>
-              <p className={styles.cardDescription}>{standard.description}</p>
-            </div>
+            <StandardCard
+              key={index}
+              title={standard.title}
+              description={standard.description}
+              img={standard.img}
+            />
           ))}
         </div>
       </section>
+
+      {/* Marketplace Section */}
       <div className={styles.marketplaceContainer}>
         <h2 className={styles.marketplaceTitle}>
-          Market Your NFT Token Marketplace Where it Matters
+          Market Your NFT Token Marketplace Where it Matters
         </h2>
         <p>
-          Our RisingMax leaders are determined to follow and create their own
-          strategy plans to pitch your business revenue. Along with that, we
-          provide suggestions to develop products that set the market trends to
-          lead your business journey.
+          Our leaders at RisingMax follow custom strategies to pitch your
+          business and provide valuable insights for product development,
+          setting market trends, and driving business success.
         </p>
         <div className={styles.marketplaceCards}>
           {marketPlaceCards.map((card, index) => (
-            <div key={index} className={styles.marketplaceCard}>
-              <div className={styles.cardIcon}>
-                <img src={glass} alt="" />
-              </div>
-              <h3 className={styles.cardTitle}>{card.title}</h3>
-              <p className={styles.cardDescription}>{card.description}</p>
-            </div>
+            <MarketplaceCard
+              key={index}
+              title={card.title}
+              description={card.description}
+              icon={glass}
+            />
           ))}
         </div>
       </div>

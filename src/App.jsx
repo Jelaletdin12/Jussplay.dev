@@ -7,7 +7,7 @@ import playing from "./assets/playing.png";
 import CustomCursor from "./components/cursor";
 import { NotFoundPage } from "./pages/Error/NotFoundPage";
 import { useSound } from "./providers/soundContext";
-
+import Header from "./components/Header/index.jsx";
 
 const pages = {
   Home: lazy(() => import("./pages/Home/index.jsx")),
@@ -90,6 +90,7 @@ export default function App() {
       </div>
 
       <Suspense fallback={<div>Loading...</div>}>
+      {/* <Header/> */}
         <Routes location={location} key={location.pathname}>
           <Route index element={<pages.Loader />} />
           <Route path="/home" element={<pages.Home />} />
