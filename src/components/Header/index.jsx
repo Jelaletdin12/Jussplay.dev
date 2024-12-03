@@ -24,10 +24,10 @@ const menuItems = [
   { name: "About us", path: "/aboutus" },
   { name: "Contact us", path: "/contactus" },
   { name: "Blockchain", path: "/blockchain" },
-  { name: "Token", path: "/token" },
+  { name: "Token", path: "/nft-token-development" },
   { name: "Metaverse ", path: "/metaverse" },
   { name: "Blockchain_4 ", path: "/blockchain_4" },
-  { name: "Web3 ", path: "/web3" },
+  { name: "Web3 ", path: "/web3-game-development" },
   { name: "Chain6 ", path: "/blockchain_6" },
   { name: "Crypto ", path: "/wallet" },
   { name: "Servive-1 ", path: "/servive-1" },
@@ -61,26 +61,29 @@ export default memo(function Header({ children, position }) {
   };
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
+    let lastScrollY = 0;
 
-    const handleScroll = () => {
-      // Sadece genişlik 768px'den büyükse çalış
+    const handleScroll = (event) => {
+      const scrollTop = event.detail ? event.detail.scrollTop : window.scrollY;
+
       if (window.innerWidth > 768) {
-        if (window.scrollY > lastScrollY) {
-          // Aşağı kaydırma
+        if (scrollTop > lastScrollY) {
           setIsHeaderVisible(false);
           setIsUserScrollingUp(false);
         } else {
-          // Yukarı kaydırma
           setIsUserScrollingUp(true);
         }
-        lastScrollY = window.scrollY;
+        lastScrollY = scrollTop;
       }
     };
 
+    
+    window.addEventListener("customScroll", handleScroll);
+   
     window.addEventListener("scroll", handleScroll);
 
     return () => {
+      window.removeEventListener("customScroll", handleScroll);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
