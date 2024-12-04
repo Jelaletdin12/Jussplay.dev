@@ -71,7 +71,7 @@
     padding: 40px;
     border-radius: 8px;
     height: 361px;
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 769px) {
       flex-direction: column;
       height: auto;
     }
@@ -79,7 +79,7 @@
     .promoImage {
       width: 40%;
       border-radius: 8px;
-      @media screen and (max-width: 520px) {
+      @media screen and (max-width: 769px) {
         width: auto;
       }
     }
@@ -87,6 +87,9 @@
     .promoContent {
       text-align: left;
       width: 55%;
+      @media screen and (max-width: 769px) {
+        width: auto;
+      }
       @media screen and (max-width: 520px) {
         width: auto;
         text-align: center;

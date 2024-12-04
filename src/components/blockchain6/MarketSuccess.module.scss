@@ -82,7 +82,7 @@
   color: #fff;
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 769px) {
     flex-direction: column;
   }
 
