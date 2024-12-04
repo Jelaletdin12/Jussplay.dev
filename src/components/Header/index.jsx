@@ -28,7 +28,7 @@ const menuItems = [
   { name: "Metaverse ", path: "/metaverse" },
   { name: "Blockchain_4 ", path: "/blockchain_4" },
   { name: "Web3 ", path: "/web3-game-development" },
-  { name: "Chain6 ", path: "/blockchain_6" },
+  { name: "Chain6 ", path: "/crypto-exchange-software-development" },
   { name: "Crypto ", path: "/wallet" },
   { name: "Servive-1 ", path: "/servive-1" },
   { name: " Servive-ios ", path: "/service-ios" },

@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./WalletDevelopmentServices.module.scss";
 
-
 import tick from "../../assets/blockchain6/Vector.png";
 
 import fasterToMarketIcon from "../../assets/blockchain6/faster-to-market.png";
@@ -10,7 +9,6 @@ import customizableIcon from "../../assets/blockchain6/Customizable.png";
 import liquiditySecurityIcon from "../../assets/blockchain6/security-integrations.png";
 import bugFreeIcon from "../../assets/blockchain6/Bug-free-solution.png";
 import localFavoritesIcon from "../../assets/blockchain6/Local-Favorites.png";
-
 
 const walletFeatures = [
   {
@@ -54,7 +52,6 @@ const walletFeatures = [
       "Our white label crypto wallets are compatible across blockchain platforms, devices, and operating systems.",
   },
 ];
-
 
 const investmentReasons = [
   { title: "Faster to market", icon: fasterToMarketIcon },
