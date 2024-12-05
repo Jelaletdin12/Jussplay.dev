@@ -30,7 +30,7 @@ const menuItems = [
   { name: "Web3 ", path: "/web3-game-development" },
   { name: "Chain6 ", path: "/crypto-exchange-software-development" },
   { name: "Crypto ", path: "/wallet" },
-  { name: "Servive-1 ", path: "/servive-1" },
+  { name: "Android App", path: "/android-app-development-company" },
   { name: " Servive-ios ", path: "/service-ios" },
   { name: " WebApp ", path: "/web-app" },
 ];

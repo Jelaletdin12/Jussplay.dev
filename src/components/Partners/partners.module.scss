@@ -22,16 +22,16 @@
   }
 }
 
-.framecon{
+.framecon {
   width: auto;
   margin-left: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width:520px){
+  @media screen and (max-width: 520px) {
     margin-left: 5px;
   }
-  img{
+  img {
     width: auto;
     object-fit: contain;
     max-width: 100%;

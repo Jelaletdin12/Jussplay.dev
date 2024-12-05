@@ -39,7 +39,7 @@ export const DropdownServices = () => {
                 <img src={android} alt="" />
               </div>
               <div>
-                <Link to={"/service-1"}>
+                <Link to={"/android-app-development-company"}>
                   <h6>Anddroid App</h6>
                   <p>Build native mobile apps for unmatched user experience.</p>
                 </Link>

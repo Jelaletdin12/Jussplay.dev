@@ -104,7 +104,7 @@ export default function App() {
           <Route path="/web3-game-development" element={<pages.Blockchain4 />} />
           <Route path="/crypto-exchange-software-development" element={<pages.Blockchain6 />} />
           <Route path="/web3" element={<pages.Web3 />} />
-          <Route path="/service-1" element={<pages.Service1 />} />
+          <Route path="/android-app-development-company" element={<pages.Service1 />} />
           <Route path="/wallet" element={<pages.Wallet />} />
           <Route path="/service-ios" element={<pages.ServiceIos />} />
           <Route path="/web-app" element={<pages.WebApp />} />
