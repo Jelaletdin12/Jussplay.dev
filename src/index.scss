@@ -88,6 +88,11 @@ a {
 
 .mySwiper {
   height: 300px;
+  &:last-child {
+  }
+}
+.mySubSwiper {
+  height: 200px;
 }
 
 //Loader experience part
