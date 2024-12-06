@@ -3,7 +3,7 @@
   //background-color: #121212;
   text-align: left;
   color: #fff;
-  @media screen and (max-width:520px) {
+  @media screen and (max-width: 520px) {
     padding: 50px 30px 40px 30px;
   }
 }
@@ -33,6 +33,10 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 20px;
+  @media screen and (max-width: 769px) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
   @media screen and (max-width: 520px) {
     grid-template-columns: repeat(1, 1fr);
     padding: 0;

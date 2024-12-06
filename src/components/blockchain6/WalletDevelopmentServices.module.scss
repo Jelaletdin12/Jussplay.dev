@@ -82,6 +82,11 @@
     .investmentReasons {
       display: flex;
       gap: 15px;
+      @media screen and (max-width: 769px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+      }
       @media screen and (max-width: 520px) {
         flex-direction: column;
         align-items: center;
@@ -97,6 +102,9 @@
         justify-content: center;
         text-align: center;
         padding: 15px;
+        @media screen and (max-width: 769px) {
+          width: auto;
+        }
         @media screen and (max-width: 520px) {
           width: 50%;
         }

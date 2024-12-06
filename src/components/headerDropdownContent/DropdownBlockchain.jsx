@@ -101,7 +101,7 @@ const renderRightContentBlock = () => {
   const items = [
     {
       src: cryptoEx,
-      link: "/blockchain_6",
+      link: "/crypto-exchange-software-development",
       title: "Crypto Exchange Development",
       desc: "Unlock new revenue stream with crypto exchange software.",
     },

@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useLayoutEffect  } from "react";
+import React, { useRef, useState, useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -15,14 +15,12 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 const ScrollSection = () => {
   const containerRef = useRef(null);
   const pinRef = useRef(null);
-  // const animElRef = useRef(null); 
-  const [index, setIndex] = useState(0);
+  
 
-  useLayoutEffect (() => {
+  useLayoutEffect(() => {
     const handleResize = debounce(() => {
       const container = containerRef.current;
       const pin = pinRef.current;
-      // const animEl = animElRef.current; 
 
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 
@@ -61,16 +59,6 @@ const ScrollSection = () => {
           },
         });
 
-        // const updateAnimEl = () => {
-        //   const bounds = animEl.getBoundingClientRect();
-        //   animEl.style.width = `${bounds.width}px`;
-        //   animEl.style.height = `${bounds.height}px`;
-        //   animEl.style.transform = `translate3d(0, ${bounds.top}px, 0)`;
-
-        //   window.requestAnimationFrame(updateAnimEl);
-        // };
-
-        // updateAnimEl();
         ScrollTrigger.refresh();
       } else {
         // Mobile
@@ -86,10 +74,6 @@ const ScrollSection = () => {
           img.style.height = "auto";
           img.style.objectFit = "cover";
         });
-
-        // animEl.style.transform = `none`;
-        // animEl.style.width = "auto";
-        // animEl.style.height = "auto";
       }
     }, 200);
 
@@ -206,12 +190,6 @@ const ScrollSection = () => {
           </span>
         </div>
       </div>
-
-      {/* <div className="anim-block">
-        <div className="anim-block__item" ref={animElRef}>
-          <span></span>
-        </div>
-      </div> */}
     </>
   );
 };

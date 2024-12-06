@@ -23,24 +23,24 @@ import transition from "../../pageTransition";
 const Blockchain_6 = () => {
   return (
     <CustomScroll>
-    <div className={styles.appContainer}> 
-      <Header />
-      <HeaderBlockchain
-        title={titleNFTTokenHeaderBlockchain}
-        subtitle={subTitleNFTTokenHeaderBlockchain}
-      />
-      <CryptoExchangeServices />
-      <CryptoCloneBanner />
-      <CryptoPlatformGrid />
-      <MarketSuccess />
-      <WalletDev />
-      <SmartContract/>
-      <CryptoExchangeFeatures/>
-      <CryptoSecurityFeatures/>
-      <DevelopmentProcess />
-      <img className={styles.bgImg} src={bg} alt="" />
-      <Footer />
-    </div>
+      <div className={styles.appContainer}>
+        <Header />
+        <HeaderBlockchain
+          title={titleNFTTokenHeaderBlockchain}
+          subtitle={subTitleNFTTokenHeaderBlockchain}
+        />
+        <CryptoExchangeServices />
+        <CryptoCloneBanner />
+        <CryptoPlatformGrid />
+        <MarketSuccess />
+        <WalletDev />
+        <SmartContract />
+        <CryptoExchangeFeatures />
+        <CryptoSecurityFeatures />
+        <DevelopmentProcess />
+        <img className={styles.bgImg} src={bg} alt="" />
+        <Footer />
+      </div>
     </CustomScroll>
   );
 };

@@ -1,7 +1,7 @@
 .bannerSection {
   padding: 50px 150px 40px 150px;
   color: #fff;
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 769px) {
     padding: 50px 25px 50px 25px;
   }
 }
@@ -14,7 +14,7 @@
   gap: 20px;
   background: #222222;
   border-radius: 10px;
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 769px) {
     display: flex;
     flex-direction: column;
     padding: 30px 25px 30px 25px;

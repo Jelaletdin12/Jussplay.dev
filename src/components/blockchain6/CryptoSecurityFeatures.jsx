@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./CryptoSecurityFeatures.module.scss";
 
-
 import httpAuthIcon from "../../assets/blockchain6/HTTP.png";
 import encryptionIcon from "../../assets/blockchain6/Data-Encryption.png";
 import jailLoginIcon from "../../assets/blockchain6/jail-login.png";
@@ -10,7 +9,6 @@ import forgeryIcon from "../../assets/blockchain6/server-side.png";
 import csrfIcon from "../../assets/blockchain6/crosssite.png";
 import ddosIcon from "../../assets/blockchain6/distributor.png";
 import pollutionIcon from "../../assets/blockchain6/parameter.png";
-
 
 import bankingIcon from "../../assets/blockchain6/Banking-Finance.png";
 import communicationIcon from "../../assets/blockchain6/Communication2222.png";
@@ -22,7 +20,6 @@ import infoServicesIcon from "../../assets/blockchain6/Information-Services.png"
 import mediaIcon from "../../assets/blockchain6/Media.png";
 import advisoryIcon from "../../assets/blockchain6/Advisory.png";
 import tourismIcon from "../../assets/blockchain6/Tourism.png";
-
 
 const securityFeatures = [
   {
@@ -71,7 +68,6 @@ const securityFeatures = [
     icon: pollutionIcon,
   },
 ];
-
 
 const industries = [
   { title: "Banking & Finance", icon: bankingIcon },
