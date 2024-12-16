@@ -1,40 +1,17 @@
 import { useState } from 'react'
-import Footer from '../../components/Footer'
-import transition from '../../pageTransition'
-import styles from './contactus.module.scss'
-
-import {
-	FaInstagram,
-	FaLinkedinIn,
-	FaTelegramPlane,
-	FaWhatsapp,
-} from 'react-icons/fa'
-import { FaPhoneVolume } from 'react-icons/fa6'
-import { IoMdMail } from 'react-icons/io'
-import { IoLocation } from 'react-icons/io5'
-
+// React-hook-form
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
-import * as yup from 'yup'
-
-import ellipseOne from '../../assets/ellipse1.png'
-import ellipseTwo from '../../assets/ellipse2.png'
+// Components
+import { ContactForm } from '../../components/ContactUs/ContactForm'
+import { ContactInfo } from '../../components/ContactUs/ContactInfo'
+import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import { CustomScroll } from '../../components/scroll/CustomScroll'
-
-const schema = yup.object().shape({
-	firstName: yup.string().required('First Name is required'),
-	lastName: yup.string().required('Last Name is required'),
-	email: yup
-		.string()
-		.email('Invalid email format')
-		.required('Email is required'),
-	phone: yup
-		.string()
-		.matches(/^\+?[1-9]\d{1,14}$/, 'Phone must be a number')
-		.required('Phone is required'),
-	message: yup.string().required('Message is required'),
-})
+import transition from '../../pageTransition'
+// Styles
+import { schema } from '../../components/Util/validation/contact-us'
+import styles from './contactus.module.scss'
 
 function ContactUs() {
 	const [focusStates, setFocusStates] = useState({})
@@ -90,117 +67,17 @@ function ContactUs() {
 					<p>Any question or remarks? Just write us a message!</p>
 				</div>
 				<div className={styles.contactus_mainbody}>
-					<div className={styles.contactus_mainbody_left}>
-						<div className={styles.contactus_mainbody_left_title}>
-							Contact Information
-						</div>
-						<p>Say something to start a live chat!</p>
-
-						<div className={styles.contactus_mainbody_left_contactinfo}>
-							<div className={styles.contactus_mainbody_left_contactinfo_row}>
-								<FaPhoneVolume /> +993 77 77 77 77
-							</div>
-							<div className={styles.contactus_mainbody_left_contactinfo_row}>
-								<IoMdMail /> contact@jussplay.dev
-							</div>
-							<div className={styles.contactus_mainbody_left_contactinfo_row}>
-								<IoLocation /> Dubai, UAE
-							</div>
-						</div>
-
-						<div className={styles.contactus_mainbody_left_links}>
-							<div className={styles.contactus_mainbody_left_links_icon}>
-								<FaLinkedinIn />
-							</div>
-							<div className={styles.contactus_mainbody_left_links_icon}>
-								<a
-									style={{ height: 22, color: '#fff' }}
-									href='http://www.instagram.com/jussplay.dev'
-								>
-									<FaInstagram />
-								</a>
-							</div>
-							<div className={styles.contactus_mainbody_left_links_icon}>
-								<FaTelegramPlane />
-							</div>
-							<div className={styles.contactus_mainbody_left_links_icon}>
-								<a
-									style={{ height: 22, color: '#fff' }}
-									href='https://wa.me/+905389499878'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									<FaWhatsapp />
-								</a>
-							</div>
-						</div>
-
-						<div id='one' className={styles.contactus_mainbody_left_ellipse1}>
-							<img src={ellipseOne} alt='' />
-						</div>
-						<div id='two' className={styles.contactus_mainbody_left_ellipse2}>
-							<img src={ellipseTwo} alt='' />
-						</div>
-					</div>
-					<form
-						onSubmit={handleSubmit(onSubmit)}
-						className={styles.inputContainer}
-					>
-						{['firstName', 'lastName', 'email', 'phone', 'message'].map(
-							field => (
-								<div key={field} className={styles.inputCol}>
-									<label>
-										<span className={styles.inputWrapper}>
-											{field === 'message' ? (
-												<textarea
-													name={field}
-													onBlur={() => handleFocusChange(field, false)}
-													onFocus={() => handleFocusChange(field, true)}
-													onChange={handleInputChange}
-													{...register(field)}
-												></textarea>
-											) : (
-												<input
-													name={field}
-													type={field === 'email' ? 'email' : 'text'}
-													onBlur={() => handleFocusChange(field, false)}
-													onFocus={() => handleFocusChange(field, true)}
-													onChange={handleInputChange}
-													{...register(field)}
-												/>
-											)}
-										</span>
-										<span
-											className={`${styles.placeholder} ${getPlaceholderClass(
-												field
-											)} ${getErrorClass(field)}`}
-										>
-											{errors[field]?.message ||
-												field.charAt(0).toUpperCase() + field.slice(1)}
-										</span>
-									</label>
-								</div>
-							)
-						)}
-						<div
-							style={{
-								display: 'flex',
-								justifyContent: 'center',
-								width: '100%',
-							}}
-						>
-							<button
-								type='submit'
-								style={{
-									backgroundColor: '#000',
-									color: '#fff',
-								}}
-								data-back={'Send Message ?'}
-								data-front={'Send Message'}
-								className={styles.form__btn}
-							></button>
-						</div>
-					</form>
+					<ContactInfo />
+					<ContactForm
+						handleSubmit={handleSubmit}
+						onSubmit={onSubmit}
+						handleFocusChange={handleFocusChange}
+						handleInputChange={handleInputChange}
+						register={register}
+						getPlaceholderClass={getPlaceholderClass}
+						getErrorClass={getErrorClass}
+						errors={errors}
+					/>
 				</div>
 			</main>
 			<Footer />

@@ -2,25 +2,17 @@
 /* eslint-disable no-empty-pattern */
 /* eslint-disable no-unused-vars */
 import { useState } from 'react'
-import styles from '../../pages/Blockchain/blockchain.module.scss'
+// Assets
+import formImg from '../../assets/form-bg.png'
 import styleBtnForm from '../../pages/ContactUs/contactus.module.scss'
-
+// Tools
 import { yupResolver } from '@hookform/resolvers/yup'
+import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
-import * as yup from 'yup'
-
-const schema = yup.object().shape({
-	firstName: yup.string().required('First Name is required'),
-	email: yup
-		.string()
-		.email('Invalid email format')
-		.required('Email is required'),
-	phone: yup
-		.string()
-		.matches(/^\+?[1-9]\d{1,14}$/, 'Phone must be a number')
-		.required('Phone is required'),
-	message: yup.string().required('Message is required'),
-})
+// Utils
+import { schemaBlockchain } from '../Util/validation/blockchain-form'
+// Styles
+import styles from '../../pages/Blockchain/blockchain.module.scss'
 
 export const Form = () => {
 	const [focusStates, setFocusStates] = useState({})
@@ -31,7 +23,7 @@ export const Form = () => {
 		handleSubmit,
 		formState: { errors },
 		reset,
-	} = useForm({ resolver: yupResolver(schema) })
+	} = useForm({ resolver: yupResolver(schemaBlockchain) })
 
 	const handleFocusChange = (field, isFocused) => {
 		setFocusStates(prev => ({ ...prev, [field]: isFocused }))
@@ -75,8 +67,27 @@ export const Form = () => {
 	}
 
 	return (
-		<div className={styles.blockchainForm}>
-			<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ type: 'spring', duration: 300, ease: 'easeOut' }}
+			className={styles.blockchain_form}
+		>
+			<motion.div
+				initial={{ x: -100 }}
+				animate={{ x: 0 }}
+				transition={{ duration: 1, ease: 'linear' }}
+				className={styles.blockchain_img}
+			>
+				<img src={formImg} alt='' />
+			</motion.div>
+			<motion.form
+				initial={{ x: 100 }}
+				animate={{ x: 0 }}
+				transition={{ duration: 1, ease: 'linear' }}
+				onSubmit={handleSubmit(onSubmit)}
+				className={styles.form}
+			>
 				<h1 className={styles.formTitle}>BOOK A CONSULTATION</h1>
 				{['firstName', 'email', 'phone', 'message'].map(field => (
 					<div key={field} className={styles.inputCol}>
@@ -124,7 +135,7 @@ export const Form = () => {
 						className={styleBtnForm.form__btn}
 					></button>
 				</div>
-			</form>
-		</div>
+			</motion.form>
+		</motion.div>
 	)
 }
