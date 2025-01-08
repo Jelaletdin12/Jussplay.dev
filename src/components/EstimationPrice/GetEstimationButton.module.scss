@@ -1,0 +1,26 @@
+.buttonContainer {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(150%);
+    z-index: 1000;
+    rotate: -90deg;
+    
+  }
+  
+  .estimationButton {
+    background: linear-gradient(135deg, #6e00f5, #b100b7);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    width: 200px;
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  
