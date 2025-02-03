@@ -81,7 +81,7 @@ export default function App() {
         <div className="form-overlay" onClick={toggleForm}>
           <div
             className="form-wrapper"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the form
+            // Prevent closing when clicking inside the form
           >
             <GetEstimationForm />
           </div>

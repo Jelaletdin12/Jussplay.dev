@@ -13,8 +13,9 @@ import { useForm } from "react-hook-form";
 import { schemaBlockchain } from "../Util/validation/blockchain-form";
 // Styles
 import styles from "../../pages/Blockchain/blockchain.module.scss";
+import { IoCloseSharp } from "react-icons/io5";
 
-export const Form = () => {
+export const Form = ({ toggleForm }) => {
   const [focusStates, setFocusStates] = useState({});
   const [inputValues, setInputValues] = useState({});
 
@@ -88,8 +89,21 @@ export const Form = () => {
         transition={{ duration: 1, ease: "linear" }}
         onSubmit={handleSubmit(onSubmit)}
         className={styles.form}
+        style={{ position: "relative" }}
       >
-        <div>x</div>
+        <div
+          onClick={toggleForm}
+          style={{
+            position: "absolute",
+            top: "30px",
+            right: "-180px",
+            cursor: "pointer",
+          }}
+        >
+          <IoCloseSharp
+            style={{ width: "24px", height: "24px", cursor: "pointer" }}
+          />
+        </div>
         <h1 className={styles.formTitle}>BOOK A CONSULTATION</h1>
         {["firstName", "email", "phone", "message"].map((field) => (
           <div key={field} className={styles.inputCol}>

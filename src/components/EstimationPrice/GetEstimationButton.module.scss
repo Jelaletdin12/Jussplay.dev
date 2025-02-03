@@ -5,7 +5,9 @@
     transform: translateY(150%);
     z-index: 1000;
     rotate: -90deg;
-    
+    @media screen and (max-width:1023px){
+      display: none;
+    }
   }
   
   .estimationButton {
