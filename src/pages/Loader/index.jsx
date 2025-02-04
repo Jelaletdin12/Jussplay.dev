@@ -122,7 +122,7 @@ function Loader() {
 	return (
 		<CustomScroll>
 			<main className={styles.loader}>
-				<audio ref={audioRef} src='/Loading.m4a'></audio>
+				<audio ref={audioRef} src='/Loading.mp3'></audio>
 				<div
 					style={{
 						display: 'flex',

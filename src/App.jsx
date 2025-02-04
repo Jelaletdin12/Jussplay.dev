@@ -7,8 +7,8 @@ import playing from "./assets/playing.png";
 import CustomCursor from "./components/cursor";
 import { NotFoundPage } from "./pages/Error/NotFoundPage";
 import { useSound } from "./providers/soundContext";
-import GetEstimationButton from "./components/EstimationPrice/GetEstimationButton.jsx"; // Import Button
-import GetEstimationForm from "./components/EstimationPrice/index.jsx"; // Import Button
+import GetEstimationButton from "./components/EstimationPrice/GetEstimationButton.jsx";
+import GetEstimationForm from "./components/EstimationPrice/index.jsx";
 
 const pages = {
   Home: lazy(() => import("./pages/Home/index.jsx")),
@@ -29,7 +29,7 @@ const pages = {
   WebApp: lazy(() => import("./pages/WebApp/index.jsx")),
 };
 
-const AUDIO_SRC = "/MenuSound.m4a";
+const AUDIO_SRC = "/MenuSound.mp3";
 const ICON_SIZE = "40px";
 const STYLES = {
   audioControl: {
@@ -81,7 +81,6 @@ export default function App() {
         <div className="form-overlay" onClick={toggleForm}>
           <div
             className="form-wrapper"
-            // Prevent closing when clicking inside the form
           >
             <GetEstimationForm />
           </div>
