@@ -437,9 +437,10 @@
   padding: 0 170px;
   margin: 130px 0;
   align-items: center;
+  gap: 3rem;
   p {
     font-size: 50px;
-    min-width: 50%;
+    width: 1200px;
   }
 
   @media screen and (max-width: 1200px) {
