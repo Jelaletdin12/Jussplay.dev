@@ -122,5 +122,10 @@ const router = createBrowserRouter([
 ])
 
 export const BrowserRouter = ({ children }) => {
-	return <RouterProvider router={router}>{children}</RouterProvider>
+	return (
+		<RouterProvider router={router}>
+			<div className=''></div>
+			{children}
+		</RouterProvider>
+	)
 }

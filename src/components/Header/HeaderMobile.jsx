@@ -85,7 +85,7 @@ export const HeaderMobile = ({
 											pagination={false}
 											modules={Navigation}
 											slidesPerView={3}
-											spaceBetween={5}
+											spaceBetween={20}
 											centeredSlides={true}
 											className='mySubSwiper'
 											onSlideChange={() => {
@@ -97,7 +97,7 @@ export const HeaderMobile = ({
 										>
 											{item.list.map((subItem, index) => (
 												<SwiperSlide key={index}>
-													<li style={{ fontSize: 36 }}>
+													<li style={{ fontSize: 26 }}>
 														<HashLink to={subItem.path}>
 															{subItem.name}
 														</HashLink>
