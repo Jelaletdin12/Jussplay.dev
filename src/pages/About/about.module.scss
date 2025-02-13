@@ -99,6 +99,9 @@
   position: relative;
   height: 49px;
   font-size: 24px;
+  @media screen and (max-width: 520px) {
+   padding: 0;
+  }
 
   &.green {
     top: 25%;
@@ -450,6 +453,7 @@
       gap: 60px;
       p {
         text-align: center;
+        width: auto;
       }
     }
   }

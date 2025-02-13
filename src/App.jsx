@@ -76,14 +76,14 @@ export default function App() {
 	return (
 		<AnimatePresence mode='wait'>
 			<CustomCursor />
-			<GetEstimationButton onClick={toggleForm} />
-			{showForm && (
+			{/* <GetEstimationButton onClick={toggleForm} /> */}
+			{/* {showForm && (
 				<div className='form-overlay' onClick={toggleForm}>
 					<div className='form-wrapper'>
 						<GetEstimationForm />
 					</div>
 				</div>
-			)}
+			)} */}
 			<audio ref={audioRef} src={AUDIO_SRC} type='audio/mpeg' loop />
 
 			<div style={STYLES.audioControl} onClick={handleLottieClick}>
