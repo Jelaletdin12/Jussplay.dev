@@ -1,5 +1,6 @@
 import classNames from 'classnames'
 import { motion } from 'framer-motion'
+import { FaChevronDown } from 'react-icons/fa'
 import { HashLink } from 'react-router-hash-link'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -16,6 +17,7 @@ export const HeaderMobile = ({
 	activeSubMenuIndex,
 	setIsMenuActive,
 	toggleSubMenu,
+	navigate,
 }) => {
 	return (
 		<div
@@ -31,7 +33,7 @@ export const HeaderMobile = ({
 					pagination={false}
 					modules={Navigation}
 					slidesPerView={3}
-					spaceBetween={10}
+					spaceBetween={30}
 					centeredSlides={true}
 					className='mySwiper'
 					onSlideChange={() => {
@@ -46,7 +48,7 @@ export const HeaderMobile = ({
 							<li
 								style={{
 									...(index === 5 && activeSubMenuIndex === 4
-										? { marginTop: 150 }
+										? { marginTop: 160 }
 										: {}),
 								}}
 							>
@@ -62,18 +64,19 @@ export const HeaderMobile = ({
 										animate={{
 											rotate: activeSubMenuIndex === index ? 180 : 0,
 										}}
-										style={{ zIndex: 1000 }}
 										transition={{ duration: 0.3, ease: 'backInOut' }}
-										onClick={() => toggleSubMenu(index)}
 									>
-										{item.icon}
+										<FaChevronDown
+											size={35}
+											onClick={() => toggleSubMenu(index)}
+										/>
 									</motion.div>
 								)}
 							</li>
 							{activeSubMenuIndex === index && (
 								<motion.div
 									animate={{
-										y: activeSubMenuIndex ? -30 : -50,
+										y: activeSubMenuIndex ? -50 : 50,
 										opacity: activeSubMenuIndex ? 1 : 0,
 									}}
 									transition={{ duration: 0.4, ease: 'easeOut' }}
@@ -96,12 +99,13 @@ export const HeaderMobile = ({
 											}}
 										>
 											{item.list.map((subItem, index) => (
-												<SwiperSlide key={index}>
-													<li style={{ fontSize: 26 }}>
-														<HashLink to={subItem.path}>
-															{subItem.name}
-														</HashLink>
-													</li>
+												<SwiperSlide
+													key={index}
+													onClick={() => navigate(subItem.path)}
+												>
+													{/* <HashLink to={subItem.path}> */}
+													<li style={{ fontSize: 26 }}>{subItem.name}</li>
+													{/* </HashLink> */}
 												</SwiperSlide>
 											))}
 										</Swiper>
