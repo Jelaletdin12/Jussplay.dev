@@ -1,11 +1,11 @@
 import classNames from 'classnames'
 import { memo, useEffect, useRef, useState } from 'react'
-import { FaChevronDown } from 'react-icons/fa'
 
 import select from '../../assets/select_V2.wav'
 import { useSound } from '../../providers/soundContext'
 import styles from './header.module.scss'
 
+import { useNavigate } from 'react-router-dom'
 import { HeaderButton } from './HeaderButton'
 import { HeaderLogo } from './HeaderLogo'
 import { HeaderMobile } from './HeaderMobile'
@@ -20,7 +20,6 @@ const menuItems = [
 	{
 		name: 'Servive-1 ',
 		path: '/servive-1',
-		icon: <FaChevronDown />,
 		list: [
 			{ name: ' Servive-ios ', path: '/service-ios' },
 			{ name: ' WebApp ', path: '/web-app' },
@@ -30,7 +29,6 @@ const menuItems = [
 	{
 		name: 'Blockchain',
 		path: '/blockchain',
-		icon: <FaChevronDown />,
 		list: [
 			{ name: 'Token', path: '/nft-token-development' },
 			{ name: 'Metaverse ', path: '/metaverse' },
@@ -49,6 +47,8 @@ export default memo(function Header({ children, position }) {
 
 	const [isHeaderVisible, setIsHeaderVisible] = useState(true)
 	const [isUserScrollingUp, setIsUserScrollingUp] = useState(false)
+
+	const navigate = useNavigate()
 
 	const audioRef = useRef(new Audio(select))
 	const { isPlaying } = useSound()
@@ -128,6 +128,7 @@ export default memo(function Header({ children, position }) {
 					activeSubMenuIndex={activeSubMenuIndex}
 					setIsMenuActive={setIsMenuActive}
 					toggleSubMenu={toggleSubMenu}
+					navigate={navigate}
 				/>
 			</header>
 			{/* Show Button When Header is Hidden */}
