@@ -28,7 +28,8 @@
       }
 
       &_lowerText {
-        margin-left: 850px;
+        display: flex;
+        justify-content: flex-end;
         will-change: opacity;
         will-change: transform;
       }
@@ -36,10 +37,10 @@
       @media screen and (max-width: 768px) {
         & {
           font-size: 44px;
-          &_lowerText {
-            margin-left: 15px;
-            margin-top: 15px;
-          }
+          // &_lowerText {
+          //   margin-left: 15px;
+          //   margin-top: 15px;
+          // }
         }
       }
       @media screen and (max-width: 550px) {
@@ -70,8 +71,8 @@
       flex-direction: column;
       width: 100%;
       padding: 10px;
-      will-change: opacity;
-      will-change: transform;
+     
+      will-change: transform, opacity;
     }
     p {
       font-size: 25px;

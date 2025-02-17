@@ -50,6 +50,7 @@ function Home() {
             x,
             y,
             force3D: true,
+            willChange: "transform",
           });
         }
       });
