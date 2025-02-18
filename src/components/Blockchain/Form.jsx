@@ -10,8 +10,10 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 // Utils
-import { schemaBlockchain } from '../Util/validation/blockchain-form'
+import { schema } from '../Util/validation/contact-us'
 // Styles
+import axios from 'axios'
+import { API_EMAIL_SEND } from '../../constants/api'
 import styles from '../../pages/Blockchain/blockchain.module.scss'
 
 export const Form = () => {
@@ -23,7 +25,7 @@ export const Form = () => {
 		handleSubmit,
 		formState: { errors },
 		reset,
-	} = useForm({ resolver: yupResolver(schemaBlockchain) })
+	} = useForm({ resolver: yupResolver(schema) })
 
 	const handleFocusChange = (field, isFocused) => {
 		setFocusStates(prev => ({ ...prev, [field]: isFocused }))
@@ -35,25 +37,23 @@ export const Form = () => {
 	}
 
 	const onSubmit = async data => {
-		// try {
-		// 	const emailSubmit = await emailjs.send(
-		// 		'service_98xj0q7',
-		// 		'template_p4ocvai',
-		// 		data,
-		// 		'hYHKOzXlqLTNIQct5'
-		// 	)
-		// 	const result = console.log(
-		// 		'Email successfully sent:',
-		// 		emailSubmit.text,
-		// 		emailSubmit.status
-		// 	)
-		// 	reset()
-		// 	return result
-		// } catch (error) {
-		// 	console.error('Error sending email:', error.text)
-		// }
-		reset()
-		console.log('Send data to form:', data)
+		try {
+			if (!API_EMAIL_SEND) {
+				throw new Error('API_SEND_EMAIL is not defined')
+			}
+
+			const request = await axios.post(API_EMAIL_SEND, data, {
+				headers: { 'Content-Type': 'application/json' },
+			})
+			console.log('Send data to form:', request.data)
+		} catch (error) {
+			console.error(
+				'Ошибка запроса:',
+				error instanceof Error ? error.message : error
+			)
+		} finally {
+			reset?.()
+		}
 	}
 
 	const getPlaceholderClass = field => {
@@ -89,7 +89,7 @@ export const Form = () => {
 				className={styles.form}
 			>
 				<h1 className={styles.formTitle}>BOOK A CONSULTATION</h1>
-				{['firstName', 'email', 'phone', 'message'].map(field => (
+				{['firstName', 'lastName', 'email', 'phone', 'message'].map(field => (
 					<div key={field} className={styles.inputCol}>
 						<label>
 							<span className={styles.inputWrapper}>
