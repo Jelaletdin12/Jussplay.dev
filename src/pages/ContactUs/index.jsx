@@ -10,8 +10,11 @@ import Header from '../../components/Header'
 import { CustomScroll } from '../../components/scroll/CustomScroll'
 import transition from '../../pageTransition'
 // Styles
+import axios from 'axios'
 import { schema } from '../../components/Util/validation/contact-us'
 import styles from './contactus.module.scss'
+
+const API_EMAIL_SEND = import.meta.env.VITE_API_SEND_EMAIL
 
 function ContactUs() {
 	const [focusStates, setFocusStates] = useState({})
@@ -32,25 +35,23 @@ function ContactUs() {
 	}
 
 	const onSubmit = async data => {
-		// try {
-		// 	const emailSubmit = await emailjs.send(
-		// 		'service_98xj0q7',
-		// 		'template_p4ocvai',
-		// 		data,
-		// 		'hYHKOzXlqLTNIQct5'
-		// 	)
-		// 	const result = console.log(
-		// 		'Email successfully sent:',
-		// 		emailSubmit.text,
-		// 		emailSubmit.status
-		// 	)
-		// 	reset()
-		// 	return result
-		// } catch (error) {
-		// 	console.error('Error sending email:', error.text)
-		// }
-		console.log('Send data to form:', data)
-		reset()
+		try {
+			if (!API_EMAIL_SEND) {
+				throw new Error('API_SEND_EMAIL is not defined')
+			}
+
+			const request = await axios.post(API_EMAIL_SEND, data, {
+				headers: { 'Content-Type': 'application/json' },
+			})
+			console.log('Send data to form:', request.data)
+		} catch (error) {
+			console.error(
+				'Ошибка запроса:',
+				error instanceof Error ? error.message : error
+			)
+		} finally {
+			reset?.()
+		}
 	}
 
 	const getPlaceholderClass = field =>
