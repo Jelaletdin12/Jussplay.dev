@@ -12,9 +12,8 @@ import transition from '../../pageTransition'
 // Styles
 import axios from 'axios'
 import { schema } from '../../components/Util/validation/contact-us'
+import { API_EMAIL_SEND } from '../../constants/api'
 import styles from './contactus.module.scss'
-
-const API_EMAIL_SEND = import.meta.env.VITE_API_SEND_EMAIL
 
 function ContactUs() {
 	const [focusStates, setFocusStates] = useState({})
