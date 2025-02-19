@@ -9,7 +9,7 @@ export const schema = yup.object().shape({
 		.required('Email is required'),
 	phone: yup
 		.string()
-		.matches(/^\+?[1-9]\d{1,14}$/, 'Phone must be a number')
+		.matches(/^\+\d{7,15}$/, 'Phone number must be between 7 and 15 digits')
 		.required('Phone is required'),
 	message: yup.string().required('Message is required'),
 })

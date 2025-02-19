@@ -35,6 +35,7 @@ function ContactUs() {
 
 	const onSubmit = async data => {
 		try {
+			console.log(data)
 			if (!API_EMAIL_SEND) {
 				throw new Error('API_SEND_EMAIL is not defined')
 			}
@@ -49,7 +50,7 @@ function ContactUs() {
 				error instanceof Error ? error.message : error
 			)
 		} finally {
-			reset?.()
+			reset()
 		}
 	}
 
