@@ -76,7 +76,7 @@ const router = createBrowserRouter([
 				errorElement: <BubbleError />,
 			},
 			{
-				path: 'blockchain_4',
+				path: 'blockchain-4',
 				element: <Blockchain4 />,
 				errorElement: <BubbleError />,
 			},

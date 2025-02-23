@@ -41,7 +41,12 @@ canvas {
   position: relative;
   text-align: center;
   background-color: #0a0a0a;
-  //margin-top: 120px;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden; // Safari'de görsel bozulmaları önler
+  @media  screen and (max-width:520px){
+    -webkit-transform: translateZ(0); // Hardware acceleration
+  }
+    
   z-index: 1;
   &__chapters {
     display: flex;

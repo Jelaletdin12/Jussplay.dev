@@ -32,7 +32,7 @@ const menuItems = [
 		list: [
 			{ name: 'Token', path: '/nft-token-development' },
 			{ name: 'Metaverse ', path: '/metaverse' },
-			{ name: 'Blockchain_4 ', path: '/blockchain_4' },
+			{ name: 'Blockchain_4 ', path: '/blockchain-4' },
 			{ name: 'Web3 ', path: '/web3' },
 			{ name: 'Chain6 ', path: '/crypto-exchange-software-development' },
 			{ name: 'Crypto ', path: '/wallet' },
