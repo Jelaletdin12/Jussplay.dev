@@ -7,8 +7,6 @@ import playing from './assets/playing.png'
 import CustomCursor from './components/cursor'
 import { NotFoundPage } from './pages/Error/NotFoundPage'
 import { useSound } from './providers/soundContext'
-import GetEstimationButton from './components/EstimationPrice/GetEstimationButton.jsx'
-import GetEstimationForm from './components/EstimationPrice/index.jsx'
 
 const pages = {
 	Home: lazy(() => import('./pages/Home/index.jsx')),
@@ -27,6 +25,7 @@ const pages = {
 	Service1: lazy(() => import('./pages/Service_1/index.jsx')),
 	ServiceIos: lazy(() => import('./pages/ServiceIOS/index.jsx')),
 	WebApp: lazy(() => import('./pages/WebApp/index.jsx')),
+	ChatBot: lazy(() => import('./pages/ChatBot/index.jsx')),
 }
 
 const AUDIO_SRC = '/MenuSound.mp3'
@@ -131,6 +130,7 @@ export default function App() {
 					<Route path='/wallet' element={<pages.Wallet />} />
 					<Route path='/service-ios' element={<pages.ServiceIos />} />
 					<Route path='/web-app' element={<pages.WebApp />} />
+					<Route path='/service-chat-bot' element={<pages.ChatBot />} />
 					<Route path='*' element={<NotFoundPage />} />
 				</Routes>
 			</Suspense>
