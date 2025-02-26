@@ -24,6 +24,7 @@ const menuItems = [
 			{ name: ' Servive-ios ', path: '/service-ios' },
 			{ name: ' WebApp ', path: '/web-app' },
 			{ name: 'Android App', path: '/android-app-development-company' },
+			{ name: 'Chatbot', path: '/service-chatbot' },
 		],
 	},
 	{

@@ -1,5 +1,3 @@
-// Header service Chat-bot
-export const titleHeaderService = 'AI Chatbot Development Company'
 // Businesses AI Chatbot
 import businessesAIChatbotImage from '../../../../assets/chatbot/BusinessesAIChatbot/01.png'
 //  AI Chatbot Development Services We Offer
@@ -10,7 +8,7 @@ import cardsImageAIChatbotOffer04 from '../../../../assets/chatbot/AIChatbotServ
 import cardsImageAIChatbotOffer05 from '../../../../assets/chatbot/AIChatbotServiceOffer/05.png'
 import cardsImageAIChatbotOffer06 from '../../../../assets/chatbot/AIChatbotServiceOffer/06.png'
 // Need An Intelligent Conversational AI Chatbot Solution?
-import imgIntelligentConversational from '../../../../assets/chatbot/InteractionAIChatbot/01.png'
+import imgIntelligentConversational from '../../../../assets/chatbot/AIChatbotSolution/01.png'
 // Our AI Chatbot Development Services For Different Business Verticals
 import cardsImageAIChatbotBusinessVerticals01 from '../../../../assets/chatbot/AIChatbotBusinessVerticals/01.png'
 import cardsImageAIChatbotBusinessVerticals02 from '../../../../assets/chatbot/AIChatbotBusinessVerticals/02.png'
@@ -28,16 +26,17 @@ import imgRisingMax01 from '../../../../assets/chatbot/RisingMaxChatbot/01.svg'
 import imgRisingMax02 from '../../../../assets/chatbot/RisingMaxChatbot/02.svg'
 import imgRisingMax03 from '../../../../assets/chatbot/RisingMaxChatbot/03.svg'
 import imgRisingMax04 from '../../../../assets/chatbot/RisingMaxChatbot/04.svg'
-
 // =====================
+// Header service Chat-bot
+export const titleHeaderService = 'AI Chatbot Development Company'
 export const textHeaderService =
 	'JUSSPLAY DEVELOPMENTS offers full-scale AI chatbot development services to startups and enterprises worldwide. Integrate our AI-powered conversational bots to transform how your business connects with customers and derive more meaningful interactions'
 
 // Businesses Need AI Chatbot ============================
-export const titleBusinessesAIChatbot =
+export const titleBusinessesNeedAI =
 	'Why Do Businesses Need Our AI Chatbot Development Services?'
 
-export const textBusinessesAIChatbot = `Nowadays, AI-based chatbots are deployed in different business verticals such as e-commerce, entertainment, retail, customer support, healthcare, travel & hospitality and more. AI-enabled chatbots aren't just limited to chat; they can do wonders. The AI chatbot solutions we offer provide seamless integration and various benefits for your business.`
+export const textBusinessesNeedAI = `Nowadays, AI-based chatbots are deployed in different business verticals such as e-commerce, entertainment, retail, customer support, healthcare, travel & hospitality and more. AI-enabled chatbots aren't just limited to chat; they can do wonders. The AI chatbot solutions we offer provide seamless integration and various benefits for your business.`
 export const imageBusinessesAIChatbot = businessesAIChatbotImage
 
 // AI Chatbot Development Services We Offer ============================

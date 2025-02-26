@@ -130,7 +130,7 @@ export default function App() {
 					<Route path='/wallet' element={<pages.Wallet />} />
 					<Route path='/service-ios' element={<pages.ServiceIos />} />
 					<Route path='/web-app' element={<pages.WebApp />} />
-					<Route path='/service-chat-bot' element={<pages.ChatBot />} />
+					<Route path='/service-chatbot' element={<pages.ChatBot />} />
 					<Route path='*' element={<NotFoundPage />} />
 				</Routes>
 			</Suspense>

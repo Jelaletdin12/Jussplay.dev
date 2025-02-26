@@ -63,7 +63,7 @@ export const DropdownServices = () => {
 								<img src={ar_vr} alt='' />
 							</div>
 							<div>
-								<Link to={'/service-chat-bot'}>
+								<Link to={'/service-chatbot'}>
 									<h6>AR/VR App</h6>
 									<p>
 										Create near to REALITY AR/VR, 3D, &amp; Mixed reality
