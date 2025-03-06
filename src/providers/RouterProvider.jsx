@@ -22,6 +22,7 @@ import ServiceIOS from '../pages/ServiceIOS'
 import TokenNFT from '../pages/Token'
 import Wallet from '../pages/Wallet'
 import Web3 from '../pages/Web3'
+import Ai from '../pages/Ai'
 
 const BubbleError = () => {
 	const error = useRouteError()
@@ -103,6 +104,11 @@ const router = createBrowserRouter([
 			{
 				path: 'service-ios',
 				element: <ServiceIOS />,
+				errorElement: <BubbleError />,
+			},
+			{
+				path: 'ai-service',
+				element: <Ai/>,
 				errorElement: <BubbleError />,
 			},
 			{

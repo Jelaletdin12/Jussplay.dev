@@ -26,6 +26,7 @@ const pages = {
 	ServiceIos: lazy(() => import('./pages/ServiceIOS/index.jsx')),
 	WebApp: lazy(() => import('./pages/WebApp/index.jsx')),
 	ChatBot: lazy(() => import('./pages/ChatBot/index.jsx')),
+	Ai: lazy(() => import('./pages/Ai/index.jsx')),
 }
 
 const AUDIO_SRC = '/MenuSound.mp3'
@@ -131,6 +132,7 @@ export default function App() {
 					<Route path='/service-ios' element={<pages.ServiceIos />} />
 					<Route path='/web-app' element={<pages.WebApp />} />
 					<Route path='/service-chatbot' element={<pages.ChatBot />} />
+					<Route path='/ai-service' element={<pages.Ai />} />
 					<Route path='*' element={<NotFoundPage />} />
 				</Routes>
 			</Suspense>

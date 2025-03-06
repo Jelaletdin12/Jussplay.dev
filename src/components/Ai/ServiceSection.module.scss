@@ -1,0 +1,226 @@
+.container {
+  
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  padding-top: 150px;
+  @media screen and (max-width: 520px) {
+    padding-top: 100px;
+  }
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  background-color: #000;
+  color: #fff;
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .statItem {
+    text-align: center;
+
+    h2 {
+      font-size: 60px;
+      color: #b0d9ff;
+      @media screen and (max-width: 520px) {
+        font-weight: 700;
+      }
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+.infoSection {
+  display: flex;
+  align-items: flex-start;
+  background-color: #1a1537;
+  color: #fff;
+  justify-content: space-between;
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 58px;
+    margin-bottom: 1rem;
+    @media screen and (max-width: 520px) {
+      font-size: 25px;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    @media screen and (max-width: 520px) {
+      text-align: center;
+    }
+  }
+
+  .meetButton {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 176px;
+    background-color: transparent;
+    border: 1px solid #78aaff;
+    color: #78aaff;
+    transition: background-color 0.3s, color 0.3s;
+
+    span {
+      margin-left: 0.5rem;
+    }
+
+    &:hover {
+      background-color: #78aaff;
+      color: #1c1e3b;
+    }
+  }
+
+  &_content {
+    width: 45%;
+    margin: 70px;
+    @media screen and (max-width: 520px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: auto;
+    }
+  }
+  &_img {
+    width: 40%;
+    @media screen and (max-width: 520px) {
+      width: 100%;
+    }
+  }
+}
+
+.marketplaceCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+
+  @media screen and (max-width: 769px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.marketplaceCard {
+  background-color: #111111;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  color: #fff;
+}
+
+.cardDescription {
+  color: #fff;
+  text-transform: none !important;
+}
+
+.bannerSection {
+  padding: 50px 150px 40px 150px;
+  color: #fff;
+  @media screen and (max-width: 769px) {
+    padding: 50px 25px 50px 25px;
+  }
+}
+
+.container2 {
+  padding: 30px 60px 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: #222222;
+  border-radius: 10px;
+  @media screen and (max-width: 769px) {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px 30px 25px;
+    text-align: center;
+  }
+}
+
+.imageWrapper {
+  flex: 1;
+  img {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+.content {
+  flex: 1;
+  text-align: left;
+  @media screen and (max-width: 520px) {
+    text-align: center;
+  }
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  @media screen and (max-width: 520px) {
+    font-size: 24px;
+  }
+}
+
+.description {
+  font-size: 25px;
+  margin-bottom: 20px;
+  @media screen and (max-width: 520px) {
+    font-size: 18px;
+  }
+}
+
+.featuresList {
+  list-style: disc !important;
+  padding: 0;
+  margin-bottom: 30px;
+
+  li {
+    font-size: 25px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+.meetButton {
+  color: #fff;
+  padding: 12px 24px;
+  border: 1 px solid #fff;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  //width: 155px;
+  @media screen and (max-width: 520px) {
+    width: 177px;
+  }
+}

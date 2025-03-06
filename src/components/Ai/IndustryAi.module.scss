@@ -1,0 +1,268 @@
+.container {
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+  padding: 50px 150px 40px 150px;
+  @media screen and (max-width: 520px) {
+    padding: 50px;
+  }
+
+  h2 {
+    font-size: 58px;
+    margin-bottom: 1rem;
+    text-align: left;
+    @media screen and (max-width: 520px) {
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+
+  .description {
+    font-size: 20px;
+    margin-bottom: 2rem;
+    text-align: left;
+    @media screen and (max-width: 520px) {
+      text-align: center;
+    }
+  }
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 1.5rem;
+
+  @media screen and (max-width: 520px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.serviceCard {
+  background-color: #1c1c1c;
+  text-align: left;
+
+  opacity: 0;
+  transform: translateY(30px);
+
+  @media screen and (max-width: 520px) {
+    text-align: center;
+  }
+  h3 {
+    font-size: 28px;
+    margin: 1.5rem;
+    @media screen and (max-width: 520px) {
+      text-align: center;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    margin: 1.5rem;
+    @media screen and (max-width: 520px) {
+      text-align: center;
+    }
+  }
+  &.fadeIn {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+}
+
+.bannerSection {
+  padding: 50px 150px 40px 150px;
+  color: #fff;
+  @media screen and (max-width: 769px) {
+    padding: 50px 25px 50px 25px;
+  }
+}
+
+.container2 {
+  padding: 30px 60px 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: #222222;
+  border-radius: 10px;
+  @media screen and (max-width: 769px) {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px 30px 25px;
+    text-align: center;
+  }
+}
+
+.imageWrapper {
+  flex: 1;
+  img {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+.content {
+  flex: 1;
+  text-align: left;
+  @media screen and (max-width: 520px) {
+    text-align: center;
+  }
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  @media screen and (max-width: 520px) {
+    font-size: 24px;
+  }
+}
+
+.description {
+  font-size: 25px;
+  margin-bottom: 20px;
+  @media screen and (max-width: 520px) {
+    font-size: 18px;
+  }
+}
+
+.featuresList {
+  list-style: disc !important;
+  padding: 0;
+  margin-bottom: 30px;
+
+  li {
+    font-size: 25px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+.meetButton {
+  color: #fff;
+  padding: 12px 24px;
+  border: 1 px solid #fff;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  //width: 155px;
+  @media screen and (max-width: 520px) {
+    width: 177px;
+  }
+}
+
+.borderTop {
+  background: linear-gradient(to left top, #ef26c0, #9945ff);
+  height: 3px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.frame {
+  display: flex;
+  padding: 0 30px 40px 30px;
+  background-color: #000;
+  @media screen and (max-width: 769px) {
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    @media screen and (max-width: 769px) {
+      width: 100%;
+    }
+    p {
+      color: #ffffff;
+    }
+  }
+
+  .service {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 50%;
+    @media screen and (max-width: 769px) {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .items {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 45%;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+      @media screen and (max-width: 769px) {
+        width: 100%;
+        flex-direction: row;
+      }
+      @media screen and (max-width: 528px) {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.marketplaceCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+
+  @media screen and (max-width: 769px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.marketplaceCard {
+  background-color: #111111;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  color: #fff;
+}
+
+.cardDescription {
+  color: #fff;
+  text-transform: none !important;
+}
