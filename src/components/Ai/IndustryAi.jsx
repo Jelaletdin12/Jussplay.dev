@@ -168,8 +168,10 @@ const IndustryAi = () => {
           ))}
         </div>
       </div>
-      <h2>AI Development Process: Bringing Your Unique Ideas To Life</h2>
-      <p>
+      <h2 style={{ paddingLeft: "50px", paddingRight: "50px" }}>
+        AI Development Process: Bringing Your Unique Ideas To Life
+      </h2>
+      <p style={{ paddingLeft: "50px", paddingRight: "50px" }}>
         Jussplay Developments, a leading Artificial Intelligence development
         company in NYC, USA, builds future-proof AI solutions for clients in
         different business verticals. Our experienced Artificial Intelligence
@@ -180,11 +182,13 @@ const IndustryAi = () => {
 
       <div className={styles.frame}>
         <div className={styles.header}>
-          <img src={big} alt="" /> 
+          <img src={big} alt="" />
         </div>
         <div className={styles.service}>
           <div className={styles.items}>
-            <img src={stick} alt="" /> <p>Project Consultation</p>
+            <div className={styles.frameTitle}>
+              <img src={stick} alt="" /> <p>Project Consultation</p>
+            </div>
             <div className={styles.itemsContent}>
               <p>
                 We connect with our clients over a free consultation call and
@@ -193,7 +197,9 @@ const IndustryAi = () => {
             </div>
           </div>
           <div className={styles.items}>
-            <img src={stick} alt="" /> <p>Project Planning</p>
+            <div className={styles.frameTitle}>
+              <img src={stick} alt="" /> <p>Project Planning</p>
+            </div>
             <div className={styles.itemsContent}>
               <p>
                 Our development team creates a project development roadmap to
@@ -203,7 +209,9 @@ const IndustryAi = () => {
             </div>
           </div>
           <div className={styles.items}>
-            <img src={stick} alt="" /> <p>Quality Testing</p>
+            <div className={styles.frameTitle}>
+              <img src={stick} alt="" /> <p>Quality Testing</p>
+            </div>
             <div className={styles.itemsContent}>
               <p>
                 We follow rigorous testing methodologies to ensure our AI
@@ -212,7 +220,9 @@ const IndustryAi = () => {
             </div>
           </div>
           <div className={styles.items}>
-            <img src={stick} alt="" /> <p>Project Analysis</p>
+            <div className={styles.frameTitle}>
+              <img src={stick} alt="" /> <p>Project Analysis</p>
+            </div>
             <div className={styles.itemsContent}>
               <p>
                 Our expert AI development team carefully analyzes clients' AI
@@ -221,7 +231,9 @@ const IndustryAi = () => {
             </div>
           </div>
           <div className={styles.items}>
-            <img src={stick} alt="" /> <p>Project Development</p>
+            <div className={styles.frameTitle}>
+              <img src={stick} alt="" /> <p>Project Development</p>
+            </div>
             <div className={styles.itemsContent}>
               <p>
                 The expert AI team at RisingMax Inc. strictly follows the
@@ -231,7 +243,9 @@ const IndustryAi = () => {
             </div>
           </div>
           <div className={styles.items}>
-            <img src={stick} alt="" /> <p>Maintenance & Support</p>
+            <div className={styles.frameTitle}>
+              <img src={stick} alt="" /> <p>Maintenance & Support</p>
+            </div>
             <div className={styles.itemsContent}>
               <p>
                 We provide affordable maintenance and support services to ensure

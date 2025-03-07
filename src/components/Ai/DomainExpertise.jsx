@@ -9,10 +9,10 @@ import img6 from "../../assets/Ai/img6.jpg";
 import img7 from "../../assets/Ai/img7.jpg";
 import img8 from "../../assets/Ai/img8.jpg";
 import img9 from "../../assets/Ai/img9.jpg";
-import icon1 from "../../assets/token/ic1.png";
-import icon2 from "../../assets/token/ic2.png";
-import icon3 from "../../assets/token/ic3.png";
-import icon4 from "../../assets/token/ic4.png";
+import icon1 from "../../assets/Ai/icon1.png";
+import icon2 from "../../assets/Ai/icon2.png";
+import icon3 from "../../assets/Ai/icon3.png";
+import icon4 from "../../assets/Ai/icon4.png";
 
 const services = [
   {
@@ -111,7 +111,8 @@ const DomainExpertise = () => {
   return (
     <>
       <section className={styles["service-section"]}>
-        <h2>Web3 game development services for all screens</h2>
+        <h2>Benefits of Implementing AI Business Solutions</h2>
+        <p>As a reputable AI software development company, we design custom AI solutions for our clients in various business domains. Implementing AI business solutions offer myriad of benefits for businesses that include;</p>
         <div className={styles["service-section__cards"]}>
           {services.map((service) => (
             <div key={service.id} className={styles["service-card"]}>
@@ -130,9 +131,9 @@ const DomainExpertise = () => {
       </section>
       <div className={styles.whyUsContainer}>
         <h2 className={styles.title}>
-          WWhat Makes Us The Best Web3 Game Development Company in NYC?
+          What Makes Us The Best Web3 Game Development Company in NYC?
         </h2>
-
+          <p>RisingMax Inc., a top artificial intelligence software development company, assists its clients in integrating next-gen technologies and gaining a competitive edge. Our development team leverages its expertise to build AI-based software solutions for startups and FORTUNE 500 clients.</p>
         <div className={styles.reasonsGrid}>
           {reasons.map((reason, index) => (
             <div key={index} className={styles.reasonCard}>

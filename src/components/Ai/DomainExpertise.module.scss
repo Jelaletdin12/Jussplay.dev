@@ -1,5 +1,5 @@
 .service-section {
-  padding: 110px 30px 40px 30px;
+  padding: 110px 50px 40px 50px;
   h2 {
     font-size: 58px;
     text-align: center;
@@ -22,7 +22,7 @@
     margin: 15px;
     background: linear-gradient(
       180deg,
-      rgba(145, 73, 237, 1) 0%,
+      rgba(34, 23, 74, 1) 0%,
       rgba(145, 73, 237, 0) 100%
     );
     border-radius: 10px;
@@ -39,11 +39,13 @@
     &__title {
       font-size: 25px;
       margin: 10px 0;
+      text-align: center;
       color: #ffffff;
     }
 
     &__description {
       font-size: 18px;
+      text-align: center;
       color: #ffffff;
     }
   }
@@ -57,6 +59,7 @@
     color: #fff;
     font-size: 58px;
     margin-bottom: 40px;
+    
     @media screen and (max-width: 520px) {
       font-size: 25px;
       text-align: center;
@@ -87,12 +90,14 @@
     align-items: center;
     text-align: center;
     padding: 20px;
+    min-width: 22%;
     :nth-child(even) {
       margin-top: 100px;
     }
   }
 
   .cardTitle {
+    text-align: center;
     color: #fff;
     font-size: 25px;
     margin-top: 10px !important;
@@ -101,5 +106,6 @@
   .cardDescription {
     color: #ffffff;
     font-size: 18px;
+    text-align: center;
   }
 }

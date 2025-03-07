@@ -205,7 +205,7 @@
     }
 
     .items {
-      background-color: #1a1a1a;
+      
       color: white;
       padding: 20px;
       border-radius: 10px;
@@ -215,6 +215,13 @@
       align-items: flex-start;
       flex-direction: column;
       gap: 10px;
+      .frameTitle{
+        gap: 10px;
+        display: flex;
+        p{
+          font-size: 28px;
+        }
+      }
       @media screen and (max-width: 769px) {
         width: 100%;
         flex-direction: row;
@@ -235,8 +242,14 @@
     }
   }
 }
-
+.marketplaceContainer{
+  padding: 50px 150px 40px 150px;
+  @media screen and (max-width: 769px) {
+    padding: 50px 25px 50px 25px;
+  }
+}
 .marketplaceCards {
+  margin-top: 25px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
@@ -260,9 +273,11 @@
 
 .cardTitle {
   color: #fff;
+  text-align: center;
 }
 
 .cardDescription {
+  text-align: center;
   color: #fff;
   text-transform: none !important;
 }
