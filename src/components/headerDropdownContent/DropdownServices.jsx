@@ -153,8 +153,10 @@ export const DropdownServices = () => {
 								<img src={ai_developmet} alt='' />
 							</div>
 							<div>
+								<Link to="/ai-service">
 								<h6>AI Developmet</h6>
 								<p>Automate complex business operations with AI software.</p>
+								</Link>
 							</div>
 						</div>
 						<div className={styles.dropdown__wrap}>
