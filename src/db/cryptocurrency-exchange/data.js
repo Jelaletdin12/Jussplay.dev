@@ -576,9 +576,76 @@ export const cardsCCProcess = [
 export const subCardsCCProcess = [
   {
     id: 1,
-    title: ``,
-    image:``,
-    list1: ``,
-    list2: ``,
+    title: `Dedicated Development Model`,
+    image:cardCCProcess06,
+    list1: `Dedicated full-time development`,
+    list2: `Regular reporting`,
+  },
+  {
+    id: 2,
+    title: `Fixed Price Development Model`,
+    image:cardCCProcess07,
+    list1: `Fixed price contract`,
+    list2: `Fixed deadlines and no setup fees`,
+  },
+  {
+    id: 3,
+    title: `Hourly Development Model`,
+    image:cardCCProcess08,
+    list1: `Pay-as-you-go payment model`,
+    list2: `Measurable work`,
+  },
+]
+
+
+
+// WHY CHOOSE RISINGMAX TO BE YOUR PARTNER AS A WHITE LABEL DECENTRALIZED EXCHANGE SOFTWARE DEVELOPMENT COMPANY? =====================================
+
+export const titleCCRisingmax = `WHY CHOOSE RISINGMAX TO BE YOUR PARTNER AS A WHITE LABEL DECENTRALIZED EXCHANGE SOFTWARE DEVELOPMENT COMPANY?`
+
+
+export const listCCRisingmaxLeft = [
+  {
+    id: 1,
+    list: `Mobile-friendly solution`
+  },
+  {
+    id: 2,
+    list: `Multiple payment options`
+  },
+  {
+    id: 3,
+    list: `Hassle-free Cryptocurrency trading`
+  },
+  {
+    id: 4,
+    list: `Alerts & Notifications`
+  },
+  {
+    id: 5,
+    list: `Smart deployment & configuration`
+  },
+]
+
+export const listCCRisingmaxRight = [
+  {
+    id: 1,
+    list: `Customizations`,
+  },
+  {
+    id: 2,
+    list: `Multi-language support`,
+  },
+  {
+    id: 3,
+    list: `Smooth communication`,
+  },
+  {
+    id: 4,
+    list: `24*7 support`,
+  },
+  {
+    id: 5,
+    list: `Bug-free solution`,
   },
 ]
